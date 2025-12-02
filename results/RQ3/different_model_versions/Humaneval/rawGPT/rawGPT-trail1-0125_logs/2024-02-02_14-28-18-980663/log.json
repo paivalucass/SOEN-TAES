@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-18-980663",
+    "task": "\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'clii'\n    >>> int_to_mini_roman(426) == 'cdxxvi'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:18",
+        "task-id": "2024-02-02 14:28:18",
+        "workflow": "2024-02-02 14:28:18",
+        "Prompt": "2024-02-02 14:28:21",
+        "FinalCode": "2024-02-02 14:28:21"
+    },
+    "task-id": "HumanEval/156",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef int_to_mini_roman(number):\\n    \\\"\\\"\\\"\\n    Given a positive integer, obtain its roman numeral equivalent as a string,\\n    and return it in lowercase.\\n    Restrictions: 1 <= num <= 1000\\n\\n    Examples:\\n    >>> int_to_mini_roman(19) == 'xix'\\n    >>> int_to_mini_roman(152) == 'clii'\\n    >>> int_to_mini_roman(426) == 'cdxxvi'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def int_to_mini_roman(number):\n    roman_numerals = {\n        1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x', 40: 'xl', 50: 'l',\n        90: 'xc', 100: 'c', 400: 'cd', 500: 'd', 900: 'cm', 1000: 'm'\n    }\n    result = ''\n    for value in sorted(roman_numerals.keys(), reverse=True):\n        while number >= value:\n            result += roman_numerals[value]\n            number -= value\n    return result.lower()\n\n# Test cases\nprint(int_to_mini_roman(19))   # Output: 'xix'\nprint(int_to_mini_roman(152))  # Output: 'clii'\nprint(int_to_mini_roman(426))  # Output: 'cdxxvi'"
+}

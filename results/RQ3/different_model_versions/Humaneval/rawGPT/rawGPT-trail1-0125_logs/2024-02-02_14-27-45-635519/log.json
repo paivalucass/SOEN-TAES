@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-45-635519",
+    "task": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:45",
+        "task-id": "2024-02-02 14:27:45",
+        "workflow": "2024-02-02 14:27:45",
+        "Prompt": "2024-02-02 14:27:47",
+        "FinalCode": "2024-02-02 14:27:47"
+    },
+    "task-id": "HumanEval/21",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\\n    \\\"\\\"\\\" Given list of numbers (of at least two elements), apply a linear transform to that list,\\n    such that the smallest number will become 0 and the largest will become 1\\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\\n    [0.0, 0.25, 0.5, 0.75, 1.0]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\"\n    Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n    min_num = min(numbers)\n    max_num = max(numbers)\n    return [(num - min_num) / (max_num - min_num) for num in numbers]"
+}

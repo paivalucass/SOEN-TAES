@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-43-252585",
+    "task": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:43",
+        "task-id": "2024-02-02 14:27:43",
+        "workflow": "2024-02-02 14:27:43",
+        "Prompt": "2024-02-02 14:27:44",
+        "FinalCode": "2024-02-02 14:27:44"
+    },
+    "task-id": "HumanEval/10",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef is_palindrome(string: str) -> bool:\\n    \\\"\\\"\\\" Test if given string is a palindrome \\\"\\\"\\\"\\n    return string == string[::-1]\\n\\n\\ndef make_palindrome(string: str) -> str:\\n    \\\"\\\"\\\" Find the shortest palindrome that begins with a supplied string.\\n    Algorithm idea is simple:\\n    - Find the longest postfix of supplied string that is a palindrome.\\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\\n    >>> make_palindrome('')\\n    ''\\n    >>> make_palindrome('cat')\\n    'catac'\\n    >>> make_palindrome('cata')\\n    'catac'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\n"
+}

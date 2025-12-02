@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-43-115542",
+    "task": "\n\ndef count_distinct_characters(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    3\n    >>> count_distinct_characters('Jerry')\n    4\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:43",
+        "task-id": "2024-01-28 20:03:43",
+        "workflow": "2024-01-28 20:03:43",
+        "Prompt": "2024-01-28 20:03:47",
+        "FinalCode": "2024-01-28 20:03:47"
+    },
+    "task-id": "HumanEval/16",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef count_distinct_characters(string: str) -> int:\\n    \\\"\\\"\\\" Given a string, find out how many distinct characters (regardless of case) does it consist of\\n    >>> count_distinct_characters('xyzXYZ')\\n    3\\n    >>> count_distinct_characters('Jerry')\\n    4\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "To count the number of distinct characters in a given string, we can use a set data structure to store unique characters. We can iterate through each character in the string, convert it to lowercase using the `lower()` method, and add it to the set. At the end, we can return the length of the set to get the count of distinct characters.\n\nHere is the code:\n\n```python\ndef count_distinct_characters(string: str) -> int:\n    distinct_chars = set()\n    for char in string:\n        distinct_chars.add(char.lower())\n    return len(distinct_chars)\n\nprint(count_distinct_characters('xyzXYZ'))  # output: 3\nprint(count_distinct_characters('Jerry'))  # output: 4\n```\n\nThe `count_distinct_characters` function takes a string as input and initializes an empty set called `distinct_chars`. It then iterates through each character in the string, converts it to lowercase using the `lower()` method, and adds it to the `distinct_chars` set. Finally, it returns the length of the `distinct_chars` set, which gives us the count of distinct characters in the string."
+}

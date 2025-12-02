@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-52-862875",
+    "task": "from typing import List\n\n\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:52",
+        "task-id": "2024-01-28 20:03:52",
+        "workflow": "2024-01-28 20:03:52",
+        "Prompt": "2024-01-28 20:03:58",
+        "FinalCode": "2024-01-28 20:03:58"
+    },
+    "task-id": "HumanEval/29",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\\n    \\\"\\\"\\\" Filter an input list of strings only for ones that start with a given prefix.\\n    >>> filter_by_prefix([], 'a')\\n    []\\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\\n    ['abc', 'array']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code provided is a Python function named `filter_by_prefix` that takes in two parameters: `strings`, which is a list of strings, and `prefix`, which is a string. The function returns a list of strings that start with the given prefix.\n\nHere's a breakdown of the code:\n\n- The function signature indicates that `filter_by_prefix` takes in a list of strings (`strings`) and a string (`prefix`) as arguments. It also specifies that the function returns a list of strings.\n\n- The docstring provides a brief description of what the function does. It states that the function filters the input list of strings and only keeps the ones that start with the given prefix.\n\n- The function body starts with an empty list (`[]`) as the initial result.\n\n- It then iterates over each string (`s`) in the input list `strings`.\n\n- For each string, it checks whether it starts with the given prefix using the `startswith()` method. If it does, the string is appended to the result list.\n\n- Finally, the result list is returned.\n\nThe code also includes two doctest examples that demonstrate how to use the function. The first example shows that when an empty list is given, the function should return an empty list as well. The second example demonstrates that when a list with multiple strings is given, only the strings that start with the given prefix should be returned in a list.\n\nOverall, this code provides a simple and efficient way to filter a list of strings based on a given prefix."
+}

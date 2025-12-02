@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-59-700436",
+    "task": "\ndef hex_key(num):\n    \"\"\"You have been tasked to write a function that receives \n    a hexadecimal number as a string and counts the number of hexadecimal \n    digits that are primes (prime number, or a prime, is a natural number \n    greater than 1 that is not a product of two smaller natural numbers).\n    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\n    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...\n    So you have to determine a number of the following digits: 2, 3, 5, 7, \n    B (=decimal 11), D (=decimal 13).\n    Note: you may assume the input is always correct or empty string, \n    and symbols A,B,C,D,E,F are always uppercase.\n    Examples:\n    For num = \"AB\" the output should be 1.\n    For num = \"1077E\" the output should be 2.\n    For num = \"ABED1A33\" the output should be 4.\n    For num = \"123456789ABCDEF0\" the output should be 6.\n    For num = \"2020\" the output should be 2.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:59",
+        "task-id": "2024-02-02 14:27:59",
+        "workflow": "2024-02-02 14:27:59",
+        "Prompt": "2024-02-02 14:28:01",
+        "FinalCode": "2024-02-02 14:28:01"
+    },
+    "task-id": "HumanEval/78",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef hex_key(num):\\n    \\\"\\\"\\\"You have been tasked to write a function that receives \\n    a hexadecimal number as a string and counts the number of hexadecimal \\n    digits that are primes (prime number, or a prime, is a natural number \\n    greater than 1 that is not a product of two smaller natural numbers).\\n    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\\n    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...\\n    So you have to determine a number of the following digits: 2, 3, 5, 7, \\n    B (=decimal 11), D (=decimal 13).\\n    Note: you may assume the input is always correct or empty string, \\n    and symbols A,B,C,D,E,F are always uppercase.\\n    Examples:\\n    For num = \\\"AB\\\" the output should be 1.\\n    For num = \\\"1077E\\\" the output should be 2.\\n    For num = \\\"ABED1A33\\\" the output should be 4.\\n    For num = \\\"123456789ABCDEF0\\\" the output should be 6.\\n    For num = \\\"2020\\\" the output should be 2.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\ndef hex_key(num):\n    prime_count = 0\n    for digit in num:\n        decimal = int(digit, 16)\n        if decimal in [2, 3, 5, 7, 11, 13]:\n            prime_count += 1\n    return prime_count\n\n# Test cases\nprint(hex_key(\"AB\")) # 1\nprint(hex_key(\"1077E\")) # 2\nprint(hex_key(\"ABED1A33\")) # 4\nprint(hex_key(\"123456789ABCDEF0\")) # 6\nprint(hex_key(\"2020\")) # 2"
+}

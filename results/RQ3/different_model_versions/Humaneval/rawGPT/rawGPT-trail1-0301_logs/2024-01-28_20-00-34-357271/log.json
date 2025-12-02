@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-34-357271",
+    "task": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:34",
+        "task-id": "2024-01-28 20:00:34",
+        "workflow": "2024-01-28 20:00:34",
+        "Prompt": "2024-01-28 20:00:36",
+        "FinalCode": "2024-01-28 20:00:36"
+    },
+    "task-id": "HumanEval/33",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sort_third(l: list):\\n    \\\"\\\"\\\"This function takes a list l and returns a list l' such that\\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\\n    to the values of the corresponding indicies of l, but sorted.\\n    >>> sort_third([1, 2, 3])\\n    [1, 2, 3]\\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\\n    [2, 6, 3, 4, 8, 9, 5]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def sort_third(l: list):\n    # create a list of indices divisible by 3\n    indices = [i for i in range(len(l)) if i % 3 == 0]\n    \n    # create a list of values at those indices\n    values = [l[i] for i in indices]\n    \n    # sort the values\n    values.sort()\n    \n    # create a new list with the sorted values and the original values at non-divisible indices\n    result = []\n    for i in range(len(l)):\n        if i in indices:\n            result.append(values.pop(0))\n        else:\n            result.append(l[i])\n    \n    return result"
+}

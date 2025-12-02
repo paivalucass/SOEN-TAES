@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-22-747431",
+    "task": "\ndef find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([\"name\", \"of\", \"string\"]) == \"string\"\n    find_max([\"name\", \"enam\", \"game\"]) == \"enam\"\n    find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:22",
+        "task-id": "2024-01-28 20:05:22",
+        "workflow": "2024-01-28 20:05:22",
+        "Prompt": "2024-01-28 20:05:25",
+        "FinalCode": "2024-01-28 20:05:25"
+    },
+    "task-id": "HumanEval/158",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef find_max(words):\\n    \\\"\\\"\\\"Write a function that accepts a list of strings.\\n    The list contains different words. Return the word with maximum number\\n    of unique characters. If multiple strings have maximum number of unique\\n    characters, return the one which comes first in lexicographical order.\\n\\n    find_max([\\\"name\\\", \\\"of\\\", \\\"string\\\"]) == \\\"string\\\"\\n    find_max([\\\"name\\\", \\\"enam\\\", \\\"game\\\"]) == \\\"enam\\\"\\n    find_max([\\\"aaaaaaa\\\", \\\"bb\\\" ,\\\"cc\\\"]) == \\\"\\\"aaaaaaa\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "Here is the corrected code:\n\n```python\ndef find_max(words):\n    max_unique_chars = 0\n    max_word = ''\n    for word in words:\n        unique_chars = len(set(word))\n        if unique_chars > max_unique_chars:\n            max_unique_chars = unique_chars\n            max_word = word\n        elif unique_chars == max_unique_chars and word < max_word:\n            max_word = word\n    return max_word\n\nprint(find_max([\"name\", \"of\", \"string\"]))  # \"string\"\nprint(find_max([\"name\", \"enam\", \"game\"]))  # \"enam\"\nprint(find_max([\"aaaaaaa\", \"bb\", \"cc\"]))  # \"aaaaaaa\"\n```"
+}

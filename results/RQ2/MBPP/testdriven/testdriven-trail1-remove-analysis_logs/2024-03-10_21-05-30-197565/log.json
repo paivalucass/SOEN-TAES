@@ -1,0 +1,13 @@
+{
+    "start_time": "2024-03-10_21-05-30-197565",
+    "task": "def is_not_prime(n):\n'''Write a python function to identify non-prime numbers.\nassert is_not_prime(2) == False'''\n",
+    "datetime": {
+        "task": "2024-03-10 21:05:30",
+        "task-id": "2024-03-10 21:05:30",
+        "workflow": "2024-03-10 21:05:30",
+        "DesignDraft": "2024-03-10 21:05:32"
+    },
+    "task-id": 3,
+    "workflow": "testdriven/testdriven_version_0.0.5_remove.json",
+    "DesignDraft": "Design:\n\nObjective:\nThe objective of this design is to create a Python function that can effectively identify non-prime numbers.\n\nFunction Signature:\ndef is_not_prime(n: int) -> bool\n\nInput:\nThe input parameter, n, will be an integer representing the number to be checked for non-primality.\n\nOutput:\nThe function will return a boolean value, where True indicates that the input number is not prime, and False indicates that the input number is prime.\n\nAlgorithm:\n1. Handle the base cases for n=0, n=1 and n=2 separately and return False for n=2, and True for n=0 and n=1.\n2. For all other values of n, iterate from 2 to the square root of n and check if n is divisible by any of these numbers. If it is, return True to indicate that n is not prime.\n3. If no divisors are found, return False to indicate that n is prime.\n\nExample Usage:\nassert is_not_prime(2) == False\n\nNote:\nThis design provides a high-level description of the algorithm and logic to be used in the function is_not_prime. It guides the developer in writing code by outlining the approach and expected input-output behavior, rather than providing specific implementation details."
+}

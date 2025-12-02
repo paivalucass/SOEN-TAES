@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-43-011834",
+    "task": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:43",
+        "task-id": "2024-02-02 14:27:43",
+        "workflow": "2024-02-02 14:27:43",
+        "Prompt": "2024-02-02 14:27:45",
+        "FinalCode": "2024-02-02 14:27:45"
+    },
+    "task-id": "HumanEval/8",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Tuple\\n\\n\\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\\n    \\\"\\\"\\\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\\n    Empty sum should be equal to 0 and empty product should be equal to 1.\\n    >>> sum_product([])\\n    (0, 1)\\n    >>> sum_product([1, 2, 3, 4])\\n    (10, 24)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\"\n    For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n    total_sum = sum(numbers)\n    total_product = 1\n    for num in numbers:\n        total_product *= num\n    return (total_sum, total_product)"
+}

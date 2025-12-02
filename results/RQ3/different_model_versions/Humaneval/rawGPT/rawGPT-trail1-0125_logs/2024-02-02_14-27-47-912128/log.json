@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-47-912128",
+    "task": "\n\ndef get_positive(l: list):\n    \"\"\"Return only positive numbers in the list.\n    >>> get_positive([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:47",
+        "task-id": "2024-02-02 14:27:47",
+        "workflow": "2024-02-02 14:27:47",
+        "Prompt": "2024-02-02 14:27:49",
+        "FinalCode": "2024-02-02 14:27:49"
+    },
+    "task-id": "HumanEval/30",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef get_positive(l: list):\\n    \\\"\\\"\\\"Return only positive numbers in the list.\\n    >>> get_positive([-1, 2, -4, 5, 6])\\n    [2, 5, 6]\\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\\n    [5, 3, 2, 3, 9, 123, 1]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def get_positive(l: list):\n    \"\"\"Return only positive numbers in the list.\n    >>> get_positive([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n    return [num for num in l if num > 0]"
+}

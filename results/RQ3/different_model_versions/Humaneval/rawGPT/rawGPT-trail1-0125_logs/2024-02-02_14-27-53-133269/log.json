@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-53-133269",
+    "task": "\n\ndef below_threshold(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below threshold t.\n    >>> below_threshold([1, 2, 4, 10], 100)\n    True\n    >>> below_threshold([1, 20, 4, 10], 5)\n    False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:53",
+        "task-id": "2024-02-02 14:27:53",
+        "workflow": "2024-02-02 14:27:53",
+        "Prompt": "2024-02-02 14:27:53",
+        "FinalCode": "2024-02-02 14:27:53"
+    },
+    "task-id": "HumanEval/52",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef below_threshold(l: list, t: int):\\n    \\\"\\\"\\\"Return True if all numbers in the list l are below threshold t.\\n    >>> below_threshold([1, 2, 4, 10], 100)\\n    True\\n    >>> below_threshold([1, 20, 4, 10], 5)\\n    False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def below_threshold(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below threshold t.\n    >>> below_threshold([1, 2, 4, 10], 100)\n    True\n    >>> below_threshold([1, 20, 4, 10], 5)\n    False\n    \"\"\"\n    for num in l:\n        if num >= t:\n            return False\n    return True"
+}

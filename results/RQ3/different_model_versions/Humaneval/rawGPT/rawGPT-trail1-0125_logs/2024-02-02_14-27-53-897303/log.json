@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-53-897303",
+    "task": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    False\n    >>> correct_bracketing(\"<>\")\n    True\n    >>> correct_bracketing(\"<<><>>\")\n    True\n    >>> correct_bracketing(\"><<>\")\n    False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:53",
+        "task-id": "2024-02-02 14:27:53",
+        "workflow": "2024-02-02 14:27:53",
+        "Prompt": "2024-02-02 14:27:55",
+        "FinalCode": "2024-02-02 14:27:55"
+    },
+    "task-id": "HumanEval/56",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef correct_bracketing(brackets: str):\\n    \\\"\\\"\\\" brackets is a string of \\\"<\\\" and \\\">\\\".\\n    return True if every opening bracket has a corresponding closing bracket.\\n\\n    >>> correct_bracketing(\\\"<\\\")\\n    False\\n    >>> correct_bracketing(\\\"<>\\\")\\n    True\\n    >>> correct_bracketing(\\\"<<><>>\\\")\\n    True\\n    >>> correct_bracketing(\\\"><<>\\\")\\n    False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def correct_bracketing(brackets: str):\n    \"\"\"\n    brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    False\n    >>> correct_bracketing(\"<>\")\n    True\n    >>> correct_bracketing(\"<<><>>\")\n    True\n    >>> correct_bracketing(\"><<>\")\n    False\n    \"\"\"\n\n    stack = []\n    for bracket in brackets:\n        if bracket == \"<\":\n            stack.append(bracket)\n        elif bracket == \">\" and stack:\n            stack.pop()\n        else:\n            return False\n\n    return len(stack) == 0"
+}

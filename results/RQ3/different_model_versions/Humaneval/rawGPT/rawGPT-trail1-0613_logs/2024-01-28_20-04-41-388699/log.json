@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-41-388699",
+    "task": "\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b11\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1111\"\n    rounded_avg(20, 33) => \"0b11010\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:41",
+        "task-id": "2024-01-28 20:04:41",
+        "workflow": "2024-01-28 20:04:41",
+        "Prompt": "2024-01-28 20:04:45",
+        "FinalCode": "2024-01-28 20:04:45"
+    },
+    "task-id": "HumanEval/103",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef rounded_avg(n, m):\\n    \\\"\\\"\\\"You are given two positive integers n and m, and your task is to compute the\\n    average of the integers from n through m (including n and m). \\n    Round the answer to the nearest integer and convert that to binary.\\n    If n is greater than m, return -1.\\n    Example:\\n    rounded_avg(1, 5) => \\\"0b11\\\"\\n    rounded_avg(7, 5) => -1\\n    rounded_avg(10, 20) => \\\"0b1111\\\"\\n    rounded_avg(20, 33) => \\\"0b11010\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function rounded_avg(n, m) takes in two positive integers n and m. It computes the average of the integers from n through m (including n and m). The average is rounded to the nearest integer and converted to binary.\n\nIf n is greater than m, the function returns -1.\n\nHere are a few examples:\n\n- For n = 1 and m = 5, the average of 1, 2, 3, 4, and 5 is 3. The rounded average in binary is 0b11.\n\n- For n = 7 and m = 5, n is greater than m so the function returns -1.\n\n- For n = 10 and m = 20, the average of 10, 11, 12, ..., 19, and 20 is 15. The rounded average in binary is 0b1111.\n\n- For n = 20 and m = 33, the average of 20, 21, 22, ..., 32, and 33 is 26. The rounded average in binary is 0b11010."
+}

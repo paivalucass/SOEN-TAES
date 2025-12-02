@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-25-945489",
+    "task": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:25",
+        "task-id": "2024-01-28 20:00:25",
+        "workflow": "2024-01-28 20:00:25",
+        "Prompt": "2024-01-28 20:00:27",
+        "FinalCode": "2024-01-28 20:00:27"
+    },
+    "task-id": "HumanEval/7",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\\n    \\\"\\\"\\\" Filter an input list of strings only for ones that contain given substring\\n    >>> filter_by_substring([], 'a')\\n    []\\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\\n    ['abc', 'bacd', 'array']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "As an AI language model, I cannot see any issues with this code. It defines a function `filter_by_substring` that takes in a list of strings and a substring, and returns a new list that only contains strings that contain the given substring. The function has a type hint for both the input parameters and the return value. \n\nThe function also includes two doctests that demonstrate the expected behavior of the function. When the input list is empty, the function should return an empty list. When the input list contains strings that contain the given substring, the function should only return those strings. \n\nOverall, this code appears to be well-written and tested."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-33-070510",
+    "task": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:33",
+        "task-id": "2024-01-28 20:03:33",
+        "workflow": "2024-01-28 20:03:33",
+        "Prompt": "2024-01-28 20:03:36",
+        "FinalCode": "2024-01-28 20:03:36"
+    },
+    "task-id": "HumanEval/5",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\\n    \\\"\\\"\\\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\\n    >>> intersperse([], 4)\\n    []\\n    >>> intersperse([1, 2, 3], 4)\\n    [1, 4, 2, 4, 3]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `intersperse` takes a list of numbers `numbers` and a number `delimeter` as input and returns a new list where the `delimeter` is inserted between every two consecutive elements of the input list.\n\nHere are some examples:\n\n- If the input list is empty, the output list will also be empty.\n  `>>> intersperse([], 4)`\n  `[]`\n\n- If the input list is `[1, 2, 3]` and the delimeter is `4`, the output list will be `[1, 4, 2, 4, 3]`.\n  `>>> intersperse([1, 2, 3], 4)`\n  `[1, 4, 2, 4, 3]`"
+}

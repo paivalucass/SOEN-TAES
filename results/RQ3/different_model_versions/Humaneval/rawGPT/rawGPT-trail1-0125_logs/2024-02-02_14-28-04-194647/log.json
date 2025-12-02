@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-04-194647",
+    "task": "\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412) should return 16.\n    multiply(19, 28) should return 72.\n    multiply(2020, 1851) should return 0.\n    multiply(14,-15) should return 20.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:04",
+        "task-id": "2024-02-02 14:28:04",
+        "workflow": "2024-02-02 14:28:04",
+        "Prompt": "2024-02-02 14:28:05",
+        "FinalCode": "2024-02-02 14:28:05"
+    },
+    "task-id": "HumanEval/97",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef multiply(a, b):\\n    \\\"\\\"\\\"Complete the function that takes two integers and returns \\n    the product of their unit digits.\\n    Assume the input is always valid.\\n    Examples:\\n    multiply(148, 412) should return 16.\\n    multiply(19, 28) should return 72.\\n    multiply(2020, 1851) should return 0.\\n    multiply(14,-15) should return 20.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def multiply(a, b):\n    # Get the unit digits of both numbers\n    a_unit = abs(a) % 10\n    b_unit = abs(b) % 10\n    \n    # Return the product of the unit digits\n    return a_unit * b_unit\n\n# Test cases\nprint(multiply(148, 412))  # Output: 16\nprint(multiply(19, 28))    # Output: 72\nprint(multiply(2020, 1851))  # Output: 0\nprint(multiply(14, -15))   # Output: 20"
+}

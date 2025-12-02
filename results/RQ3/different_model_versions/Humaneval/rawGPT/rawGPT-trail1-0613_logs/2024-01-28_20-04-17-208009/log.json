@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-17-208009",
+    "task": "\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number of the mango fruits in the basket.\n    for examble:\n    fruit_distribution(\"5 apples and 6 oranges\", 19) ->19 - 5 - 6 = 8\n    fruit_distribution(\"0 apples and 1 oranges\",3) -> 3 - 0 - 1 = 2\n    fruit_distribution(\"2 apples and 3 oranges\", 100) -> 100 - 2 - 3 = 95\n    fruit_distribution(\"100 apples and 1 oranges\",120) -> 120 - 100 - 1 = 19\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:17",
+        "task-id": "2024-01-28 20:04:17",
+        "workflow": "2024-01-28 20:04:17",
+        "Prompt": "2024-01-28 20:04:19",
+        "FinalCode": "2024-01-28 20:04:19"
+    },
+    "task-id": "HumanEval/67",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef fruit_distribution(s,n):\\n    \\\"\\\"\\\"\\n    In this task, you will be given a string that represents a number of apples and oranges \\n    that are distributed in a basket of fruit this basket contains \\n    apples, oranges, and mango fruits. Given the string that represents the total number of \\n    the oranges and apples and an integer that represent the total number of the fruits \\n    in the basket return the number of the mango fruits in the basket.\\n    for examble:\\n    fruit_distribution(\\\"5 apples and 6 oranges\\\", 19) ->19 - 5 - 6 = 8\\n    fruit_distribution(\\\"0 apples and 1 oranges\\\",3) -> 3 - 0 - 1 = 2\\n    fruit_distribution(\\\"2 apples and 3 oranges\\\", 100) -> 100 - 2 - 3 = 95\\n    fruit_distribution(\\\"100 apples and 1 oranges\\\",120) -> 120 - 100 - 1 = 19\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function `fruit_distribution(s,n)` that takes in a string `s` and an integer `n` as input.\n\nThe function aims to determine the number of mango fruits in a basket, given the total number of oranges and apples in the basket.\n\nTo solve the problem, the function subtracts the count of apples and oranges from the total number of fruits in the basket (`n`) and returns the result.\n\nThe function includes examples with expected outputs to demonstrate how it works."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-49-176708",
+    "task": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:49",
+        "task-id": "2024-01-28 20:03:49",
+        "workflow": "2024-01-28 20:03:49",
+        "Prompt": "2024-01-28 20:03:53",
+        "FinalCode": "2024-01-28 20:03:53"
+    },
+    "task-id": "HumanEval/25",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef factorize(n: int) -> List[int]:\\n    \\\"\\\"\\\" Return list of prime factors of given integer in the order from smallest to largest.\\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\\n    Input number should be equal to the product of all factors\\n    >>> factorize(8)\\n    [2, 2, 2]\\n    >>> factorize(25)\\n    [5, 5]\\n    >>> factorize(70)\\n    [2, 5, 7]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code defines a function `factorize` that takes an integer `n` as input and returns a list of its prime factors in ascending order. Each factor is repeated in the list according to the number of times it appears in the factorization.\n\nThe function uses the `typing` module to define the return type of the function as a list of integers.\n\nThe function begins by creating an empty list to store the prime factors. It then checks if the given number `n` is divisible by 2. If it is divisible by 2, the number 2 is added to the list of factors and `n` is divided by 2 repeatedly until it is no longer divisible by 2.\n\nNext, the function checks for other prime factors starting from 3. It does this by iterating over odd numbers from 3 to the square root of `n`. If `n` is divisible by the current number, it is added to the list of factors and `n` is divided by the current number repeatedly until it is no longer divisible by the current number.\n\nFinally, if `n` is greater than 2, it means that the remaining `n` itself is a prime factor and is added to the list of factors.\n\nThe function then returns the list of prime factors."
+}

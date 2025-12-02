@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-54-655004",
+    "task": "\ndef sort_array(array):\n    \"\"\"\n    Given an array of non-negative integers, return a copy of the given array after sorting,\n    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,\n    or sort it in descending order if the sum( first index value, last index value) is even.\n\n    Note:\n    * don't change the given array.\n\n    Examples:\n    * sort_array([]) => []\n    * sort_array([5]) => [5]\n    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]\n    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:54",
+        "task-id": "2024-01-28 20:00:54",
+        "workflow": "2024-01-28 20:00:54",
+        "Prompt": "2024-01-28 20:00:56",
+        "FinalCode": "2024-01-28 20:00:56"
+    },
+    "task-id": "HumanEval/88",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef sort_array(array):\\n    \\\"\\\"\\\"\\n    Given an array of non-negative integers, return a copy of the given array after sorting,\\n    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,\\n    or sort it in descending order if the sum( first index value, last index value) is even.\\n\\n    Note:\\n    * don't change the given array.\\n\\n    Examples:\\n    * sort_array([]) => []\\n    * sort_array([5]) => [5]\\n    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]\\n    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function sort_array takes in an array of non-negative integers as an argument and returns a copy of the given array after sorting. If the sum of the first and last index values of the array is odd, the function sorts the array in ascending order. If the sum is even, the function sorts the array in descending order. The given array is not changed by the function. \n\nThe function includes four examples of how it should work with different input arrays."
+}

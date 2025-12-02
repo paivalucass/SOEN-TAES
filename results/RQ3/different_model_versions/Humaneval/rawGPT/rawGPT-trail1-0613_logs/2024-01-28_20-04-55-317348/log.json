@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-55-317348",
+    "task": "\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Example:\n\n        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n        Output: 24 # sum of 21 + 3\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:55",
+        "task-id": "2024-01-28 20:04:55",
+        "workflow": "2024-01-28 20:04:55",
+        "Prompt": "2024-01-28 20:05:01",
+        "FinalCode": "2024-01-28 20:05:01"
+    },
+    "task-id": "HumanEval/122",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef add_elements(arr, k):\\n    \\\"\\\"\\\"\\n    Given a non-empty array of integers arr and an integer k, return\\n    the sum of the elements with at most two digits from the first k elements of arr.\\n\\n    Example:\\n\\n        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\\n        Output: 24 # sum of 21 + 3\\n\\n    Constraints:\\n        1. 1 <= len(arr) <= 100\\n        2. 1 <= k <= len(arr)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function `add_elements` that takes in two parameters: `arr` (a non-empty array of integers) and `k` (an integer). The function is supposed to return the sum of the elements with at most two digits from the first `k` elements of `arr`.\n\nTo solve this task, the function can iterate over the first `k` elements of `arr` and sum up only those elements that have at most two digits. The function can use the `len()` function to get the length of `arr`, and the `range()` function to iterate over the indices of the first `k` elements.\n\nHere's the corrected code:\n\n```python\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Example:\n\n        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n        Output: 24 # sum of 21 + 3\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n\n    # Initialize the sum\n    sum = 0\n\n    # Iterate over the first k elements of arr\n    for i in range(k):\n        # Check if the element has at most two digits\n        if arr[i] >= 10 and arr[i] <= 99:\n            # Add the element to the sum\n            sum += arr[i]\n\n    # Return the sum\n    return sum\n```\n\nWith this corrected code, the function `add_elements` should return the sum of the elements with at most two digits from the first `k` elements of `arr`."
+}

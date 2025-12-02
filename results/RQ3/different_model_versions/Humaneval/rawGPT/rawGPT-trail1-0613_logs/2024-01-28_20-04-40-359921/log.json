@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-40-359921",
+    "task": "\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:40",
+        "task-id": "2024-01-28 20:04:40",
+        "workflow": "2024-01-28 20:04:40",
+        "Prompt": "2024-01-28 20:04:44",
+        "FinalCode": "2024-01-28 20:04:44"
+    },
+    "task-id": "HumanEval/102",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef choose_num(x, y):\\n    \\\"\\\"\\\"This function takes two positive numbers x and y and returns the\\n    biggest even integer number that is in the range [x, y] inclusive. If \\n    there's no such number, then the function should return -1.\\n\\n    For example:\\n    choose_num(12, 15) = 14\\n    choose_num(13, 12) = -1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `choose_num(x, y)` takes two positive numbers `x` and `y` as input and returns the biggest even integer number that is in the range `[x, y]` inclusive. If there is no such number, the function returns -1.\n\nHere is the code for the `choose_num()` function:\n\n```python\ndef choose_num(x, y):\n    # Check if x is greater than y\n    if x > y:\n        return -1\n    \n    # Initialize the biggest_even variable to -1\n    biggest_even = -1\n    \n    # Iterate through the range [x, y]\n    for num in range(x, y+1):\n        # Check if the number is even and greater than the current biggest_even\n        if num % 2 == 0 and num > biggest_even:\n            biggest_even = num\n    \n    return biggest_even\n```\n\nExample usage:\n\n```python\nprint(choose_num(12, 15))  # Output: 14\nprint(choose_num(13, 12))  # Output: -1\n```"
+}

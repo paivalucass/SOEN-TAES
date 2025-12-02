@@ -1,0 +1,26 @@
+def mul_even_odd(list1):
+    if len(list1) == 0:
+        return "Error: The list is empty."
+    
+    even_number = None
+    odd_number = None
+    
+    for num in list1:
+        if num % 2 == 0 and even_number is None:
+            even_number = num
+        
+        if num % 2 != 0 and odd_number is None:
+            odd_number = num
+        
+        if even_number is not None and odd_number is not None:
+            return even_number * odd_number
+    
+    return "Error: There are no even or odd numbers in the list."
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(mul_even_odd([1,3,5,7,4,1,6,8]), 4)
+
+if __name__ == '__main__':
+    unittest.main()

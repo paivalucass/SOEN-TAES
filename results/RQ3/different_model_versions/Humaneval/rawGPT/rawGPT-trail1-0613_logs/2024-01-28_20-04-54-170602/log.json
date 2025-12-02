@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-54-170602",
+    "task": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([3, 3, 3, 3, 3]) ==> 9\n    solution([30, 13, 24, 321]) ==>0\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:54",
+        "task-id": "2024-01-28 20:04:54",
+        "workflow": "2024-01-28 20:04:54",
+        "Prompt": "2024-01-28 20:04:57",
+        "FinalCode": "2024-01-28 20:04:57"
+    },
+    "task-id": "HumanEval/121",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef solution(lst):\\n    \\\"\\\"\\\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\\n    \\n\\n    Examples\\n    solution([5, 8, 7, 1]) ==> 12\\n    solution([3, 3, 3, 3, 3]) ==> 9\\n    solution([30, 13, 24, 321]) ==>0\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "To solve the problem, we can iterate through the list and check if the element is odd and the index is even. If both conditions are met, we add the element to a running total. Finally, we return the total.\n\nHere is the updated code:\n\n```python\ndef solution(lst):\n    total = 0\n    for i, num in enumerate(lst):\n        if num % 2 != 0 and i % 2 == 0:\n            total += num\n    return total\n```\n\nLet's test the code with the given examples:\n\n```python\nprint(solution([5, 8, 7, 1]))  # Output: 12\nprint(solution([3, 3, 3, 3, 3]))  # Output: 9\nprint(solution([30, 13, 24, 321]))  # Output: 0\n```"
+}

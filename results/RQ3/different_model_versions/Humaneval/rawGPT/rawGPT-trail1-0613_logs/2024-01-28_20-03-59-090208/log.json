@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-59-090208",
+    "task": "\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:59",
+        "task-id": "2024-01-28 20:03:59",
+        "workflow": "2024-01-28 20:03:59",
+        "Prompt": "2024-01-28 20:04:00",
+        "FinalCode": "2024-01-28 20:04:00"
+    },
+    "task-id": "HumanEval/39",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef prime_fib(n: int):\\n    \\\"\\\"\\\"\\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\\n    >>> prime_fib(1)\\n    2\\n    >>> prime_fib(2)\\n    3\\n    >>> prime_fib(3)\\n    5\\n    >>> prime_fib(4)\\n    13\\n    >>> prime_fib(5)\\n    89\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code defines a function named `prime_fib` that takes an integer `n` as input. The function is expected to return the `n`-th number that is both a Fibonacci number and a prime number.\n\nThe function has a docstring that explains its purpose and provides some examples of expected output.\n\nTo determine the `n`-th prime Fibonacci number, the code would need to generate Fibonacci numbers and check if each number is prime."
+}

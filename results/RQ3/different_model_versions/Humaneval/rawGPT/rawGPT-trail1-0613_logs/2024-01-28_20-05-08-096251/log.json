@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-08-096251",
+    "task": "\ndef is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == False\n    is_equal_to_sum_even(6) == False\n    is_equal_to_sum_even(8) == True\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:08",
+        "task-id": "2024-01-28 20:05:08",
+        "workflow": "2024-01-28 20:05:08",
+        "Prompt": "2024-01-28 20:05:10",
+        "FinalCode": "2024-01-28 20:05:10"
+    },
+    "task-id": "HumanEval/138",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_equal_to_sum_even(n):\\n    \\\"\\\"\\\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\\n    Example\\n    is_equal_to_sum_even(4) == False\\n    is_equal_to_sum_even(6) == False\\n    is_equal_to_sum_even(8) == True\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code defines a function called `is_equal_to_sum_even` which takes a number `n` as input.\n\nThe function checks whether the given number `n` can be written as the sum of exactly 4 positive even numbers. It returns `True` if `n` can be written as the sum of 4 positive even numbers, and `False` otherwise.\n\nThe function then provides some examples of calls to the function with different values of `n` and their expected return values. For example, `is_equal_to_sum_even(4)` is expected to return `False`, `is_equal_to_sum_even(6)` is expected to return `False`, and `is_equal_to_sum_even(8)` is expected to return `True`."
+}

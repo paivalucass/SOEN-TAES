@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-05-091933",
+    "task": "\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in ascending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:05",
+        "task-id": "2024-01-28 20:01:05",
+        "workflow": "2024-01-28 20:01:05",
+        "Prompt": "2024-01-28 20:01:06",
+        "FinalCode": "2024-01-28 20:01:06"
+    },
+    "task-id": "HumanEval/116",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef sort_array(arr):\\n    \\\"\\\"\\\"\\n    In this Kata, you have to sort an array of non-negative integers according to\\n    number of ones in their binary representation in ascending order.\\n    For similar number of ones, sort based on decimal value.\\n\\n    It must be implemented like this:\\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The above code defines a function called \"sort_array\" that takes an array of non-negative integers as an input and sorts it according to the number of ones in their binary representation in ascending order. If there are similar numbers of ones, the function sorts based on decimal value. \n\nThe function is implemented using a docstring that provides information about the problem and gives examples of input and output. \n\nThe function can be tested by calling it with different arrays and comparing the output to the expected output."
+}

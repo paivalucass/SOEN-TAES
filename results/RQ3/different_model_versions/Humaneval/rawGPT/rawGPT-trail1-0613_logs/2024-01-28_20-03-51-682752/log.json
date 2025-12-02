@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-51-682752",
+    "task": "\n\ndef flip_case(string: str) -> str:\n    \"\"\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hELLO'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:51",
+        "task-id": "2024-01-28 20:03:51",
+        "workflow": "2024-01-28 20:03:51",
+        "Prompt": "2024-01-28 20:03:53",
+        "FinalCode": "2024-01-28 20:03:53"
+    },
+    "task-id": "HumanEval/27",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef flip_case(string: str) -> str:\\n    \\\"\\\"\\\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\\n    >>> flip_case('Hello')\\n    'hELLO'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "To flip the case of each character in a given string, you can use the `swapcase()` function in Python.\n\nHere's an updated version of the `flip_case()` function:\n\n```python\ndef flip_case(string: str) -> str:\n    \"\"\"\n    For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hELLO'\n    \"\"\"\n    return string.swapcase()\n```\n\nThis function takes a string as input and returns the string with its cases flipped using the `swapcase()` function."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-23-549354",
+    "task": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of 3 prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:23",
+        "task-id": "2024-01-28 20:04:23",
+        "workflow": "2024-01-28 20:04:23",
+        "Prompt": "2024-01-28 20:04:26",
+        "FinalCode": "2024-01-28 20:04:26"
+    },
+    "task-id": "HumanEval/75",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_multiply_prime(a):\\n    \\\"\\\"\\\"Write a function that returns true if the given number is the multiplication of 3 prime numbers\\n    and false otherwise.\\n    Knowing that (a) is less then 100. \\n    Example:\\n    is_multiply_prime(30) == True\\n    30 = 2 * 3 * 5\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def is_multiply_prime(a):\n    prime_count = 0  # keeps track of the number of prime factors\n    for i in range(2, a):\n        if a % i == 0:\n            # check if i is a prime number\n            is_prime = True\n            for j in range(2, int(i/2)+1):\n                if i % j == 0:\n                    is_prime = False\n                    break\n            if is_prime:\n                prime_count += 1\n    return prime_count == 3\n\n# test cases\nprint(is_multiply_prime(30))  # True\nprint(is_multiply_prime(24))  # False\nprint(is_multiply_prime(33))  # False\nprint(is_multiply_prime(56))  # True\nprint(is_multiply_prime(11))  # False"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-57-893185",
+    "task": "\ndef will_it_fly(q,w):\n    '''\n    Write a function that returns True if the object q will fly, and False otherwise.\n    The object q will fly if it's balanced (it is a palindromic list) and the sum of its elements is less than or equal the maximum possible weight w.\n\n    Example:\n    will_it_fly([1, 2], 5) \u279e False \n    # 1+2 is less than the maximum possible weight, but it's unbalanced.\n\n    will_it_fly([3, 2, 3], 1) \u279e False\n    # it's balanced, but 3+2+3 is more than the maximum possible weight.\n\n    will_it_fly([3, 2, 3], 9) \u279e True\n    # 3+2+3 is less than the maximum possible weight, and it's balanced.\n\n    will_it_fly([3], 5) \u279e True\n    # 3 is less than the maximum possible weight, and it's balanced.\n    '''\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:57",
+        "task-id": "2024-02-02 14:27:57",
+        "workflow": "2024-02-02 14:27:57",
+        "Prompt": "2024-02-02 14:27:59",
+        "FinalCode": "2024-02-02 14:27:59"
+    },
+    "task-id": "HumanEval/72",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef will_it_fly(q,w):\\n    '''\\n    Write a function that returns True if the object q will fly, and False otherwise.\\n    The object q will fly if it's balanced (it is a palindromic list) and the sum of its elements is less than or equal the maximum possible weight w.\\n\\n    Example:\\n    will_it_fly([1, 2], 5) \\u279e False \\n    # 1+2 is less than the maximum possible weight, but it's unbalanced.\\n\\n    will_it_fly([3, 2, 3], 1) \\u279e False\\n    # it's balanced, but 3+2+3 is more than the maximum possible weight.\\n\\n    will_it_fly([3, 2, 3], 9) \\u279e True\\n    # 3+2+3 is less than the maximum possible weight, and it's balanced.\\n\\n    will_it_fly([3], 5) \\u279e True\\n    # 3 is less than the maximum possible weight, and it's balanced.\\n    '''\\n\"",
+    "FinalCode": "def will_it_fly(q,w):\n    '''\n    Write a function that returns True if the object q will fly, and False otherwise.\n    The object q will fly if it's balanced (it is a palindromic list) and the sum of its elements is less than or equal the maximum possible weight w.\n\n    Example:\n    will_it_fly([1, 2], 5) \u279e False \n    # 1+2 is less than the maximum possible weight, but it's unbalanced.\n\n    will_it_fly([3, 2, 3], 1) \u279e False\n    # it's balanced, but 3+2+3 is more than the maximum possible weight.\n\n    will_it_fly([3, 2, 3], 9) \u279e True\n    # 3+2+3 is less than the maximum possible weight, and it's balanced.\n\n    will_it_fly([3], 5) \u279e True\n    # 3 is less than the maximum possible weight, and it's balanced.\n    '''\n    if q == q[::-1] and sum(q) <= w:\n        return True\n    else:\n        return False"
+}

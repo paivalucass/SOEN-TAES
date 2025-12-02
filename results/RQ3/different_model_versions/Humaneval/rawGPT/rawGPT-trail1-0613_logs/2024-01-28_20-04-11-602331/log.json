@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-11-602331",
+    "task": "\n\ndef largest_prime_factor(n: int):\n    \"\"\"Return the largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> largest_prime_factor(13195)\n    29\n    >>> largest_prime_factor(2048)\n    2\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:11",
+        "task-id": "2024-01-28 20:04:11",
+        "workflow": "2024-01-28 20:04:11",
+        "Prompt": "2024-01-28 20:04:16",
+        "FinalCode": "2024-01-28 20:04:16"
+    },
+    "task-id": "HumanEval/59",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef largest_prime_factor(n: int):\\n    \\\"\\\"\\\"Return the largest prime factor of n. Assume n > 1 and is not a prime.\\n    >>> largest_prime_factor(13195)\\n    29\\n    >>> largest_prime_factor(2048)\\n    2\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "To find the largest prime factor of a given number `n`, we can start by dividing `n` by 2 repeatedly until it is no longer divisible by 2. This will ensure that the largest prime factor of `n` is at most 2.\n\nAfter dividing out all the 2s, we can then iterate from 3 to the square root of `n`, checking if `n` is divisible by each number. If it is, we divide `n` by that number and continue the loop. This will ensure that we find the largest prime factor of `n`.\n\nHere is the updated code:\n\n```python\nfrom math import isqrt\n\ndef largest_prime_factor(n: int) -> int:\n    while n % 2 == 0:\n        n //= 2\n\n    for i in range(3, isqrt(n) + 1, 2):\n        while n % i == 0:\n            n //= i\n\n    return n\n\nprint(largest_prime_factor(13195))  # Output: 29\nprint(largest_prime_factor(2048))  # Output: 2\n```\n\nThis code will find the largest prime factor of any given number `n` greater than 1 that is not a prime."
+}

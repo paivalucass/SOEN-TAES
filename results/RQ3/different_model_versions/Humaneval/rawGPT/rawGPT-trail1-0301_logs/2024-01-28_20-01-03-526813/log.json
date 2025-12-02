@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-03-526813",
+    "task": "\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1\n    minSubArraySum([-1, -2, -3]) == -6\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:03",
+        "task-id": "2024-01-28 20:01:03",
+        "workflow": "2024-01-28 20:01:03",
+        "Prompt": "2024-01-28 20:01:05",
+        "FinalCode": "2024-01-28 20:01:05"
+    },
+    "task-id": "HumanEval/114",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef minSubArraySum(nums):\\n    \\\"\\\"\\\"\\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\\n    of nums.\\n    Example\\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1\\n    minSubArraySum([-1, -2, -3]) == -6\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a function named \"minSubArraySum\" that takes in a list of integers named \"nums\" as an argument. The function aims to find the minimum possible sum of any contiguous subarray of \"nums\". \n\nThe first example given in the docstring shows an example input and expected output. If the input list is [2, 3, 4, 1, 2, 4], the output should be the minimum sum of any subarray, which in this case is 1. \n\nThe second example in the docstring shows that the input list can contain negative integers. If the input list is [-1, -2, -3], the output should be -6, which is the minimum sum of any subarray. \n\nOverall, the function is looking to solve a common algorithmic problem - finding the minimum sum of a contiguous subarray."
+}

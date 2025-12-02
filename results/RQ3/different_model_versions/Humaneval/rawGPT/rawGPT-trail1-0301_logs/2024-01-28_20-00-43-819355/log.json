@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-43-819355",
+    "task": "\n\ndef sum_to_n(n: int):\n    \"\"\"sum_to_n is a function that sums numbers from 1 to n.\n    >>> sum_to_n(30)\n    465\n    >>> sum_to_n(100)\n    5050\n    >>> sum_to_n(5)\n    15\n    >>> sum_to_n(10)\n    55\n    >>> sum_to_n(1)\n    1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:43",
+        "task-id": "2024-01-28 20:00:43",
+        "workflow": "2024-01-28 20:00:43",
+        "Prompt": "2024-01-28 20:00:45",
+        "FinalCode": "2024-01-28 20:00:45"
+    },
+    "task-id": "HumanEval/60",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sum_to_n(n: int):\\n    \\\"\\\"\\\"sum_to_n is a function that sums numbers from 1 to n.\\n    >>> sum_to_n(30)\\n    465\\n    >>> sum_to_n(100)\\n    5050\\n    >>> sum_to_n(5)\\n    15\\n    >>> sum_to_n(10)\\n    55\\n    >>> sum_to_n(1)\\n    1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "As an AI language model, I can see that the code above defines a function called sum_to_n that takes an integer \"n\" as an argument. The function calculates the sum of all the integers from 1 to \"n\" and returns the result.\n\nThe function has been documented using docstrings, which are Python's way of documenting code. The docstrings provide examples of how to use the function and what output to expect for different inputs.\n\nThe code also includes doctest examples, which are tests that are embedded in the docstrings. These tests ensure that the function is working as expected for different inputs."
+}

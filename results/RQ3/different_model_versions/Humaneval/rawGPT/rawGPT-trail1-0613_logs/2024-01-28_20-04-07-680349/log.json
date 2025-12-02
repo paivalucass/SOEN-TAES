@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-07-680349",
+    "task": "\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:07",
+        "task-id": "2024-01-28 20:04:07",
+        "workflow": "2024-01-28 20:04:07",
+        "Prompt": "2024-01-28 20:04:11",
+        "FinalCode": "2024-01-28 20:04:11"
+    },
+    "task-id": "HumanEval/55",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef fib(n: int):\\n    \\\"\\\"\\\"Return n-th Fibonacci number.\\n    >>> fib(10)\\n    55\\n    >>> fib(1)\\n    1\\n    >>> fib(8)\\n    21\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code is a Python function named \"fib\" that calculates the n-th Fibonacci number. The function takes an integer n as input and returns the n-th Fibonacci number.\n\nThe function definition is as follows:\n\n```python\ndef fib(n: int):\n```\n\nThe function is documented using docstrings. The docstring provides a description of the function's purpose and usage. In this case, it states that the function returns the n-th Fibonacci number. It includes examples of how to use the function along with expected outputs.\n\nThe function body is not provided in the given code snippet. However, based on the function definition, it is expected that the function would contain the necessary code to calculate the Fibonacci number based on the input n.\n\nTo use this function, you need to call it with an integer argument representing the desired n-th Fibonacci number. For example:\n\n```python\nfib(10)  # returns 55\nfib(1)  # returns 1\nfib(8)  # returns 21\n```\n\nThese calls to the `fib` function would return the respective Fibonacci numbers according to the example outputs mentioned in the docstring."
+}

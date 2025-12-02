@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-45-660618",
+    "task": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:45",
+        "task-id": "2024-01-28 20:03:45",
+        "workflow": "2024-01-28 20:03:45",
+        "Prompt": "2024-01-28 20:03:52",
+        "FinalCode": "2024-01-28 20:03:52"
+    },
+    "task-id": "HumanEval/21",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\\n    \\\"\\\"\\\" Given list of numbers (of at least two elements), apply a linear transform to that list,\\n    such that the smallest number will become 0 and the largest will become 1\\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\\n    [0.0, 0.25, 0.5, 0.75, 1.0]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function called `rescale_to_unit` that takes a list of floats as input and returns a new list with the numbers rescaled to a unit interval [0, 1].\n\nThe function starts with importing the `List` type from the `typing` module. This is used to provide type hints for the function parameters and return type.\n\nThe function signature is as follows:\n```python\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n```\nIt takes a single parameter `numbers` which is a list of floats, and the return type is also a list of floats.\n\nThe function then has a docstring which provides a description of the function and an example of how it can be used.\n\nInside the function, it first finds the smallest and largest numbers in the input list using the `min` and `max` functions:\n```python\nmin_num = min(numbers)\nmax_num = max(numbers)\n```\n\nNext, it calculates the range of the numbers by subtracting the smallest number from the largest number:\n```python\nrange_num = max_num - min_num\n```\n\nThen, it creates an empty list called `rescaled_numbers` to store the rescaled values.\n\nAfter that, it iterates over each number in the input list and calculates the rescaled value by subtracting the smallest number from it and dividing by the range of the numbers:\n```python\nfor num in numbers:\n    rescaled_num = (num - min_num) / range_num\n    rescaled_numbers.append(rescaled_num)\n```\n\nFinally, it returns the list of rescaled numbers:\n```python\nreturn rescaled_numbers\n```\n\nOverall, the `rescale_to_unit` function takes a list of numbers, finds the smallest and largest numbers, calculates the range of the numbers, and then rescales each number to a unit interval [0, 1] by subtracting the smallest number and dividing by the range. The rescaled numbers are then returned as a new list."
+}

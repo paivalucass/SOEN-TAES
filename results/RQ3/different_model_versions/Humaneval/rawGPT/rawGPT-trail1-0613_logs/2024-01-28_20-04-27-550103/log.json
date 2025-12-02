@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-27-550103",
+    "task": "\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:27",
+        "task-id": "2024-01-28 20:04:27",
+        "workflow": "2024-01-28 20:04:27",
+        "Prompt": "2024-01-28 20:04:29",
+        "FinalCode": "2024-01-28 20:04:29"
+    },
+    "task-id": "HumanEval/83",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef starts_one_ends(n):\\n    \\\"\\\"\\\"\\n    Given a positive integer n, return the count of the numbers of n-digit\\n    positive integers that start or end with 1.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given function definition is for a function named `starts_one_ends`.\n\nThe function takes in a parameter `n`, which is a positive integer.\n\nThe purpose of the function is to count the number of n-digit positive integers that either start or end with the digit 1.\n\nThe function has a docstring that provides a brief description of what the function does."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-12-097164",
+    "task": "\n\ndef sum_to_n(n: int):\n    \"\"\"sum_to_n is a function that sums numbers from 1 to n.\n    >>> sum_to_n(30)\n    465\n    >>> sum_to_n(100)\n    5050\n    >>> sum_to_n(5)\n    15\n    >>> sum_to_n(10)\n    55\n    >>> sum_to_n(1)\n    1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:12",
+        "task-id": "2024-01-28 20:04:12",
+        "workflow": "2024-01-28 20:04:12",
+        "Prompt": "2024-01-28 20:04:16",
+        "FinalCode": "2024-01-28 20:04:16"
+    },
+    "task-id": "HumanEval/60",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sum_to_n(n: int):\\n    \\\"\\\"\\\"sum_to_n is a function that sums numbers from 1 to n.\\n    >>> sum_to_n(30)\\n    465\\n    >>> sum_to_n(100)\\n    5050\\n    >>> sum_to_n(5)\\n    15\\n    >>> sum_to_n(10)\\n    55\\n    >>> sum_to_n(1)\\n    1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `sum_to_n` takes an integer `n` as input and returns the sum of numbers from 1 to `n`. The function has a docstring that provides examples of how the function should be used and what output to expect.\n\nHere is the code for the function:\n\n```python\ndef sum_to_n(n: int):\n    total = 0\n    for i in range(1, n+1):\n        total += i\n    return total\n```\n\nThe function uses a for loop to iterate over numbers from 1 to `n` and adds them to a running total (`total`). After looping through all the numbers, the function returns the final total.\n\nThe provided examples in the docstring demonstrate how the function works for different input values. For example, `sum_to_n(30)` returns 465 because the sum of numbers from 1 to 30 is 465. Similarly, `sum_to_n(100)` returns 5050 because the sum of numbers from 1 to 100 is 5050."
+}

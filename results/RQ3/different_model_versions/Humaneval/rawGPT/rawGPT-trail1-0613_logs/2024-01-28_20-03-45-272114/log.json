@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-45-272114",
+    "task": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'one three five'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:45",
+        "task-id": "2024-01-28 20:03:45",
+        "workflow": "2024-01-28 20:03:45",
+        "Prompt": "2024-01-28 20:03:48",
+        "FinalCode": "2024-01-28 20:03:48"
+    },
+    "task-id": "HumanEval/19",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef sort_numbers(numbers: str) -> str:\\n    \\\"\\\"\\\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\\n    Return the string with numbers sorted from smallest to largest\\n    >>> sort_numbers('three one five')\\n    'one three five'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code is a function definition for a function named \"sort_numbers\". This function takes a string as input and returns a sorted string of numbers. The input string should be a space-delimited string of numberals from 'zero' to 'nine'. The function is annotated with type hints indicating that the input should be a string and the output will also be a string.\n\nThe function is not implemented yet but there is a docstring that explains what the function should do. According to the docstring, the function should sort the numbers in the input string from smallest to largest and return the sorted string.\n\nThere is also an example in the docstring that demonstrates how the function should work. It shows that if the input string is 'three one five', the expected output should be 'one three five'."
+}

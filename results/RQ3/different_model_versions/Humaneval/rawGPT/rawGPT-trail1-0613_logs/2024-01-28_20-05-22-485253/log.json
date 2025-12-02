@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-22-485253",
+    "task": "\ndef right_angle_triangle(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a right-angled triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    right_angle_triangle(3, 4, 5) == True\n    right_angle_triangle(1, 2, 3) == False\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:22",
+        "task-id": "2024-01-28 20:05:22",
+        "workflow": "2024-01-28 20:05:22",
+        "Prompt": "2024-01-28 20:05:25",
+        "FinalCode": "2024-01-28 20:05:25"
+    },
+    "task-id": "HumanEval/157",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef right_angle_triangle(a, b, c):\\n    '''\\n    Given the lengths of the three sides of a triangle. Return True if the three\\n    sides form a right-angled triangle, False otherwise.\\n    A right-angled triangle is a triangle in which one angle is right angle or \\n    90 degree.\\n    Example:\\n    right_angle_triangle(3, 4, 5) == True\\n    right_angle_triangle(1, 2, 3) == False\\n    '''\\n\"",
+    "FinalCode": "The given code defines a function named `right_angle_triangle` that takes three arguments `a`, `b`, and `c` representing the lengths of the sides of a triangle. The function is supposed to determine whether the triangle is a right-angled triangle or not.\n\nThe function begins with a docstring that provides a brief description of the function and explains what a right-angled triangle is. It also includes two examples of function calls with their expected return values.\n\nTo determine whether the triangle is right-angled or not, we need to check if any of the angles in the triangle is a right angle (90 degrees). However, the code does not include any actual implementation or logic to perform this check.\n\nWe need to add the necessary code to implement the logic for checking if the triangle is right-angled."
+}

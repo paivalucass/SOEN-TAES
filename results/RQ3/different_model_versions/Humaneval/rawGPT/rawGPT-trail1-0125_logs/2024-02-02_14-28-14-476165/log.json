@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-14-476165",
+    "task": "\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    A file's name is considered to be valid if and only if all the following conditions \n    are met:\n    - There should not be more than three digits ('0'-'9') in the file's name.\n    - The file's name contains exactly one dot '.'\n    - The substring before the dot should not be empty, and it starts with a letter from \n    the latin alphapet ('a'-'z' and 'A'-'Z').\n    - The substring after the dot should be one of these: ['txt', 'exe', 'dll']\n    Examples:\n    file_name_check(\"example.txt\") # => 'Yes'\n    file_name_check(\"1example.dll\") # => 'No' (the name should start with a latin alphapet letter)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:14",
+        "task-id": "2024-02-02 14:28:14",
+        "workflow": "2024-02-02 14:28:14",
+        "Prompt": "2024-02-02 14:28:16",
+        "FinalCode": "2024-02-02 14:28:16"
+    },
+    "task-id": "HumanEval/141",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef file_name_check(file_name):\\n    \\\"\\\"\\\"Create a function which takes a string representing a file's name, and returns\\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\\n    A file's name is considered to be valid if and only if all the following conditions \\n    are met:\\n    - There should not be more than three digits ('0'-'9') in the file's name.\\n    - The file's name contains exactly one dot '.'\\n    - The substring before the dot should not be empty, and it starts with a letter from \\n    the latin alphapet ('a'-'z' and 'A'-'Z').\\n    - The substring after the dot should be one of these: ['txt', 'exe', 'dll']\\n    Examples:\\n    file_name_check(\\\"example.txt\\\") # => 'Yes'\\n    file_name_check(\\\"1example.dll\\\") # => 'No' (the name should start with a latin alphapet letter)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def file_name_check(file_name):\n    # Check for more than three digits in the file name\n    if sum(char.isdigit() for char in file_name) > 3:\n        return 'No'\n\n    # Check for exactly one dot in the file name\n    if file_name.count('.') != 1:\n        return 'No'\n\n    # Split the file name into two parts based on the dot\n    name, ext = file_name.split('.')\n\n    # Check if the substring before the dot is not empty and starts with a letter\n    if not name or not name[0].isalpha():\n        return 'No'\n\n    # Check if the substring after the dot is 'txt', 'exe', or 'dll'\n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n\n    return 'Yes'\n\n# Test cases\nprint(file_name_check(\"example.txt\")) # => 'Yes'\nprint(file_name_check(\"1example.dll\")) # => 'No'"
+}

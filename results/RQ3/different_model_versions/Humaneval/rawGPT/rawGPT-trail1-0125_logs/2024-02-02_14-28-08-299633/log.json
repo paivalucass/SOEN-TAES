@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-08-299633",
+    "task": "\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1\n    minSubArraySum([-1, -2, -3]) == -6\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:08",
+        "task-id": "2024-02-02 14:28:08",
+        "workflow": "2024-02-02 14:28:08",
+        "Prompt": "2024-02-02 14:28:09",
+        "FinalCode": "2024-02-02 14:28:09"
+    },
+    "task-id": "HumanEval/114",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef minSubArraySum(nums):\\n    \\\"\\\"\\\"\\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\\n    of nums.\\n    Example\\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1\\n    minSubArraySum([-1, -2, -3]) == -6\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1\n    minSubArraySum([-1, -2, -3]) == -6\n    \"\"\"\n    if not nums:\n        return 0\n    \n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum = min(num, current_sum + num)\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum"
+}

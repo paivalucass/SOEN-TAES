@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-47-519041",
+    "task": "\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}\n    histogram('a b b a') == {'a': 2, 'b': 2}\n    histogram('a b c a b') == {'a': 2, 'b': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:47",
+        "task-id": "2024-01-28 20:04:47",
+        "workflow": "2024-01-28 20:04:47",
+        "Prompt": "2024-01-28 20:04:49",
+        "FinalCode": "2024-01-28 20:04:49"
+    },
+    "task-id": "HumanEval/111",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef histogram(test):\\n    \\\"\\\"\\\"Given a string representing a space separated lowercase letters, return a dictionary\\n    of the letter with the most repetition and containing the corresponding count.\\n    If several letters have the same occurrence, return all of them.\\n    \\n    Example:\\n    histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}\\n    histogram('a b b a') == {'a': 2, 'b': 2}\\n    histogram('a b c a b') == {'a': 2, 'b': 2}\\n    histogram('b b b b a') == {'b': 4}\\n    histogram('') == {}\\n\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function named `histogram` that takes a string as input. The string represents a space-separated set of lowercase letters. The function returns a dictionary that contains the letter with the most repetitions in the input string, along with the corresponding count.\n\nIf multiple letters have the same occurrence, all of them are included in the dictionary.\n\nThe function is then followed by example cases that demonstrate its usage and expected output.\n\nThe code is missing an implementation for the `histogram` function."
+}

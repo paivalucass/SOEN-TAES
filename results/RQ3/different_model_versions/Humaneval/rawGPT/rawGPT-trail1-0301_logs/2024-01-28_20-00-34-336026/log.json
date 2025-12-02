@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-34-336026",
+    "task": "\n\ndef is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    False\n    >>> is_prime(101)\n    True\n    >>> is_prime(11)\n    True\n    >>> is_prime(13441)\n    True\n    >>> is_prime(61)\n    True\n    >>> is_prime(4)\n    False\n    >>> is_prime(1)\n    False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:34",
+        "task-id": "2024-01-28 20:00:34",
+        "workflow": "2024-01-28 20:00:34",
+        "Prompt": "2024-01-28 20:00:35",
+        "FinalCode": "2024-01-28 20:00:35"
+    },
+    "task-id": "HumanEval/31",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef is_prime(n):\\n    \\\"\\\"\\\"Return true if a given number is prime, and false otherwise.\\n    >>> is_prime(6)\\n    False\\n    >>> is_prime(101)\\n    True\\n    >>> is_prime(11)\\n    True\\n    >>> is_prime(13441)\\n    True\\n    >>> is_prime(61)\\n    True\\n    >>> is_prime(4)\\n    False\\n    >>> is_prime(1)\\n    False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a function definition in Python for a function called \"is_prime\". The function takes in one argument, \"n\", which is a number to be tested for primality. The function returns True if the number is prime, and False otherwise.\n\nThe code also includes some doctests, which are tests embedded within the function's docstring (the triple-quoted string that immediately follows the function definition). These tests are meant to demonstrate how the function should be used, and what the expected output should be for certain inputs."
+}

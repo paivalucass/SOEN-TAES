@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-20-187459",
+    "task": "\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, reverse the string.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"4321\"\n    solve(\"ab\") = \"AB\"\n    solve(\"#a@C\") = \"#A@c\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:20",
+        "task-id": "2024-02-02 14:28:20",
+        "workflow": "2024-02-02 14:28:20",
+        "Prompt": "2024-02-02 14:28:21",
+        "FinalCode": "2024-02-02 14:28:21"
+    },
+    "task-id": "HumanEval/161",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef solve(s):\\n    \\\"\\\"\\\"You are given a string s.\\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \\n    otherwise keep it as it is.\\n    If the string contains no letters, reverse the string.\\n    The function should return the resulted string.\\n    Examples\\n    solve(\\\"1234\\\") = \\\"4321\\\"\\n    solve(\\\"ab\\\") = \\\"AB\\\"\\n    solve(\\\"#a@C\\\") = \\\"#A@c\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def solve(s):\n    result = \"\"\n    has_letters = False\n    \n    for char in s:\n        if char.isalpha():\n            has_letters = True\n            if char.isupper():\n                result += char.lower()\n            else:\n                result += char.upper()\n        else:\n            result += char\n    \n    if not has_letters:\n        result = result[::-1]\n    \n    return result\n\nprint(solve(\"1234\")) # \"4321\"\nprint(solve(\"ab\")) # \"AB\"\nprint(solve(\"#a@C\")) # \"#A@c\""
+}

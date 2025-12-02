@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-50-728487",
+    "task": "\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> True\n    iscube(2) ==> False\n    iscube(-1) ==> True\n    iscube(64) ==> True\n    iscube(0) ==> True\n    iscube(180) ==> False\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:50",
+        "task-id": "2024-01-28 20:00:50",
+        "workflow": "2024-01-28 20:00:50",
+        "Prompt": "2024-01-28 20:00:51",
+        "FinalCode": "2024-01-28 20:00:51"
+    },
+    "task-id": "HumanEval/77",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef iscube(a):\\n    '''\\n    Write a function that takes an integer a and returns True \\n    if this ingeger is a cube of some integer number.\\n    Note: you may assume the input is always valid.\\n    Examples:\\n    iscube(1) ==> True\\n    iscube(2) ==> False\\n    iscube(-1) ==> True\\n    iscube(64) ==> True\\n    iscube(0) ==> True\\n    iscube(180) ==> False\\n    '''\\n\"",
+    "FinalCode": "def iscube(a):\n    '''\n    This function takes an integer a and returns True if this integer is a cube of some integer number.\n    '''\n    if a < 0:\n        a = -a\n    \n    root = round(a**(1/3))\n\n    if root**3 == a:\n        return True\n    else:\n        return False"
+}

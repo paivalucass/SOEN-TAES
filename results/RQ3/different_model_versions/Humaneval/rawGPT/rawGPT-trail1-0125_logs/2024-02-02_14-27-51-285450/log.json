@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-51-285450",
+    "task": "\n\ndef change_base(x: int, base: int):\n    \"\"\"Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:51",
+        "task-id": "2024-02-02 14:27:51",
+        "workflow": "2024-02-02 14:27:51",
+        "Prompt": "2024-02-02 14:27:52",
+        "FinalCode": "2024-02-02 14:27:52"
+    },
+    "task-id": "HumanEval/44",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef change_base(x: int, base: int):\\n    \\\"\\\"\\\"Change numerical base of input number x to base.\\n    return string representation after the conversion.\\n    base numbers are less than 10.\\n    >>> change_base(8, 3)\\n    '22'\\n    >>> change_base(8, 2)\\n    '1000'\\n    >>> change_base(7, 2)\\n    '111'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "    result = \"\"\n    while x > 0:\n        remainder = x % base\n        result = str(remainder) + result\n        x = x // base\n    return result\n\nprint(change_base(8, 3))  # '22'\nprint(change_base(8, 2))  # '1000'\nprint(change_base(7, 2))  # '111'"
+}

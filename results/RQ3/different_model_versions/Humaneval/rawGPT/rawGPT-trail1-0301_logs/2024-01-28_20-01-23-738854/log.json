@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-23-738854",
+    "task": "\ndef generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [2, 4, 6, 8]\n    generate_integers(8, 2) => [2, 4, 6, 8]\n    generate_integers(10, 14) => []\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:23",
+        "task-id": "2024-01-28 20:01:23",
+        "workflow": "2024-01-28 20:01:23",
+        "Prompt": "2024-01-28 20:01:26",
+        "FinalCode": "2024-01-28 20:01:26"
+    },
+    "task-id": "HumanEval/163",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef generate_integers(a, b):\\n    \\\"\\\"\\\"\\n    Given two positive integers a and b, return the even digits between a\\n    and b, in ascending order.\\n\\n    For example:\\n    generate_integers(2, 8) => [2, 4, 6, 8]\\n    generate_integers(8, 2) => [2, 4, 6, 8]\\n    generate_integers(10, 14) => []\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "As an AI language model, I can generate code in various programming languages. Here's an implementation of the `generate_integers()` function in Python:\n\n```python\ndef generate_integers(a, b):\n    # Convert a and b to strings to iterate over their digits\n    a_str, b_str = str(a), str(b)\n    result = []\n    \n    # Iterate over the digits of a and b\n    for digit in a_str + b_str:\n        # Check if the digit is even and not already in the result list\n        if digit.isdigit() and int(digit) % 2 == 0 and int(digit) not in result:\n            result.append(int(digit))\n    \n    # Sort and return the result\n    return sorted(result)\n```\n\nThis function first converts the input integers to strings to iterate over their digits. It then iterates over the digits of both numbers and checks if each digit is even and not already in the result list. If so, it adds it to the list. Finally, it sorts the list and returns it. Note that this implementation handles cases where `a` is greater than `b` by simply concatenating their digit strings."
+}

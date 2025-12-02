@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-09-222422",
+    "task": "\ndef prod_signs(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by product of all signs\n    of each number in the array, represented by 1, -1 or 0.\n    Note: return None for empty arr.\n\n    Example:\n    >>> prod_signs([1, 2, 2, -4]) == -9\n    >>> prod_signs([0, 1]) == 0\n    >>> prod_signs([]) == None\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:09",
+        "task-id": "2024-01-28 20:01:09",
+        "workflow": "2024-01-28 20:01:09",
+        "Prompt": "2024-01-28 20:01:11",
+        "FinalCode": "2024-01-28 20:01:11"
+    },
+    "task-id": "HumanEval/128",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef prod_signs(arr):\\n    \\\"\\\"\\\"\\n    You are given an array arr of integers and you need to return\\n    sum of magnitudes of integers multiplied by product of all signs\\n    of each number in the array, represented by 1, -1 or 0.\\n    Note: return None for empty arr.\\n\\n    Example:\\n    >>> prod_signs([1, 2, 2, -4]) == -9\\n    >>> prod_signs([0, 1]) == 0\\n    >>> prod_signs([]) == None\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def prod_signs(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by product of all signs\n    of each number in the array, represented by 1, -1 or 0.\n    Note: return None for empty arr.\n\n    Example:\n    >>> prod_signs([1, 2, 2, -4]) == -9\n    >>> prod_signs([0, 1]) == 0\n    >>> prod_signs([]) == None\n    \"\"\"\n    if len(arr) == 0:\n        return None\n    else:\n        sign_product = 1\n        magnitude_sum = 0\n        for num in arr:\n            if num > 0:\n                sign_product *= 1\n                magnitude_sum += num\n            elif num < 0:\n                sign_product *= -1\n                magnitude_sum += abs(num)\n            else:\n                sign_product *= 0\n        return sign_product * magnitude_sum"
+}

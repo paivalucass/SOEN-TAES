@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-43-350048",
+    "task": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:43",
+        "task-id": "2024-02-02 14:27:43",
+        "workflow": "2024-02-02 14:27:43",
+        "Prompt": "2024-02-02 14:27:44",
+        "FinalCode": "2024-02-02 14:27:44"
+    },
+    "task-id": "HumanEval/11",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef string_xor(a: str, b: str) -> str:\\n    \\\"\\\"\\\" Input are two strings a and b consisting only of 1s and 0s.\\n    Perform binary XOR on these inputs and return result also as a string.\\n    >>> string_xor('010', '110')\\n    '100'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def string_xor(a: str, b: str) -> str:\n    \"\"\"\n    Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n\n    if len(a) != len(b):\n        raise ValueError(\"Input strings must have the same length\")\n\n    result = \"\"\n    for i in range(len(a)):\n        if a[i] == b[i]:\n            result += '0'\n        else:\n            result += '1'\n\n    return result"
+}

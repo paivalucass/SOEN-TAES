@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-55-764649",
+    "task": "\n\ndef unique(l: list):\n    \"\"\"Return sorted unique elements in a list\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [0, 2, 3, 5, 9, 123]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:55",
+        "task-id": "2024-01-28 20:03:55",
+        "workflow": "2024-01-28 20:03:55",
+        "Prompt": "2024-01-28 20:04:00",
+        "FinalCode": "2024-01-28 20:04:00"
+    },
+    "task-id": "HumanEval/34",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef unique(l: list):\\n    \\\"\\\"\\\"Return sorted unique elements in a list\\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\\n    [0, 2, 3, 5, 9, 123]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function called `unique` that takes a list as input and returns a new list containing the sorted unique elements from the input list. \n\nThe function uses the `set` function to remove duplicates from the input list and then converts the resulting set back to a list. It then uses the `sorted` function to sort the list in ascending order and returns the sorted list.\n\nHere's the modified code with improved formatting for better readability:\n\n```python\ndef unique(l: list) -> list:\n    \"\"\"\n    Return sorted unique elements in a list\n\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [0, 2, 3, 5, 9, 123]\n    \"\"\"\n    return sorted(list(set(l)))\n```\n\nThe function has a type hint for the input parameter `l`, specifying that it should be a list. It also has a type hint for the return value, specifying that it should be a list as well. The function has a docstring that describes its purpose and provides an example usage with expected output."
+}

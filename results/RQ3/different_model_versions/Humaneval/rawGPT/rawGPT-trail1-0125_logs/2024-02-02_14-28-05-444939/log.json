@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-05-444939",
+    "task": "\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:05",
+        "task-id": "2024-02-02 14:28:05",
+        "workflow": "2024-02-02 14:28:05",
+        "Prompt": "2024-02-02 14:28:06",
+        "FinalCode": "2024-02-02 14:28:06"
+    },
+    "task-id": "HumanEval/102",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef choose_num(x, y):\\n    \\\"\\\"\\\"This function takes two positive numbers x and y and returns the\\n    biggest even integer number that is in the range [x, y] inclusive. If \\n    there's no such number, then the function should return -1.\\n\\n    For example:\\n    choose_num(12, 15) = 14\\n    choose_num(13, 12) = -1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n    max_even = -1\n    for i in range(x, y+1):\n        if i % 2 == 0 and i > max_even:\n            max_even = i\n    return max_even"
+}

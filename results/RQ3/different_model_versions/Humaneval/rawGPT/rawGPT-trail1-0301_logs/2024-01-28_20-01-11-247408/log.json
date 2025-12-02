@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-11-247408",
+    "task": "\ndef is_nested(string):\n    '''\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') \u279e True\n    is_nested('[]]]]]]][[[[[]') \u279e False\n    is_nested('[][]') \u279e False\n    is_nested('[]') \u279e False\n    is_nested('[[][]]') \u279e True\n    is_nested('[[]][[') \u279e True\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:11",
+        "task-id": "2024-01-28 20:01:11",
+        "workflow": "2024-01-28 20:01:11",
+        "Prompt": "2024-01-28 20:01:13",
+        "FinalCode": "2024-01-28 20:01:13"
+    },
+    "task-id": "HumanEval/132",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_nested(string):\\n    '''\\n    Create a function that takes a string as input which contains only square brackets.\\n    The function should return True if and only if there is a valid subsequence of brackets \\n    where at least one bracket in the subsequence is nested.\\n\\n    is_nested('[[]]') \\u279e True\\n    is_nested('[]]]]]]][[[[[]') \\u279e False\\n    is_nested('[][]') \\u279e False\\n    is_nested('[]') \\u279e False\\n    is_nested('[[][]]') \\u279e True\\n    is_nested('[[]][[') \\u279e True\\n    '''\\n\"",
+    "FinalCode": "def is_nested(string):\n    '''\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') \u279e True\n    is_nested('[]]]]]]][[[[[]') \u279e False\n    is_nested('[][]') \u279e False\n    is_nested('[]') \u279e False\n    is_nested('[[][]]') \u279e True\n    is_nested('[[]][[') \u279e True\n    '''\n    \n    stack = []\n    for char in string:\n        if char == '[':\n            stack.append(char)\n        elif char == ']':\n            if len(stack) == 0:\n                return False\n            stack.pop()\n            if len(stack) > 0:\n                return True\n    return False"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-04-115433",
+    "task": "\n\ndef remove_vowels(text):\n    \"\"\"\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels('')\n    ''\n    >>> remove_vowels(\"abcdef\\nghijklm\")\n    'bcdf\\nghjklm'\n    >>> remove_vowels('abcdef')\n    'bcdf'\n    >>> remove_vowels('aaaaa')\n    ''\n    >>> remove_vowels('aaBAA')\n    'B'\n    >>> remove_vowels('zbcd')\n    'zbcd'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:04",
+        "task-id": "2024-01-28 20:04:04",
+        "workflow": "2024-01-28 20:04:04",
+        "Prompt": "2024-01-28 20:04:07",
+        "FinalCode": "2024-01-28 20:04:07"
+    },
+    "task-id": "HumanEval/51",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef remove_vowels(text):\\n    \\\"\\\"\\\"\\n    remove_vowels is a function that takes string and returns string without vowels.\\n    >>> remove_vowels('')\\n    ''\\n    >>> remove_vowels(\\\"abcdef\\\\nghijklm\\\")\\n    'bcdf\\\\nghjklm'\\n    >>> remove_vowels('abcdef')\\n    'bcdf'\\n    >>> remove_vowels('aaaaa')\\n    ''\\n    >>> remove_vowels('aaBAA')\\n    'B'\\n    >>> remove_vowels('zbcd')\\n    'zbcd'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "To remove vowels from a given string, you can use the following code:\n\n```python\ndef remove_vowels(text):\n    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']\n    result = \"\"\n    for char in text:\n        if char not in vowels:\n            result += char\n    return result\n```\n\nThis function takes a string `text` as an argument and initializes an empty string `result`. It then iterates through each character in `text` and checks if the character is not a vowel (both lowercase and uppercase vowels are considered). If the character is not a vowel, it is appended to `result`. Finally, the function returns the `result` string without any vowels.\n\nYou can test this function with the provided test cases to verify its correctness."
+}

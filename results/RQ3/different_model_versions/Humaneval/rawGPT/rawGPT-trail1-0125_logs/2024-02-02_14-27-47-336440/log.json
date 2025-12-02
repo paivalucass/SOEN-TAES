@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-47-336440",
+    "task": "\n\ndef flip_case(string: str) -> str:\n    \"\"\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hELLO'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:47",
+        "task-id": "2024-02-02 14:27:47",
+        "workflow": "2024-02-02 14:27:47",
+        "Prompt": "2024-02-02 14:27:48",
+        "FinalCode": "2024-02-02 14:27:48"
+    },
+    "task-id": "HumanEval/27",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef flip_case(string: str) -> str:\\n    \\\"\\\"\\\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\\n    >>> flip_case('Hello')\\n    'hELLO'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def flip_case(string: str) -> str:\n    \"\"\"\n    For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hELLO'\n    \"\"\"\n    flipped_string = \"\"\n    for char in string:\n        if char.islower():\n            flipped_string += char.upper()\n        elif char.isupper():\n            flipped_string += char.lower()\n        else:\n            flipped_string += char\n    return flipped_string"
+}

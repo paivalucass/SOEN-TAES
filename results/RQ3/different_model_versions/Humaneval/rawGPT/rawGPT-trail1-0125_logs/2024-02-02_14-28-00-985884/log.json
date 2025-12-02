@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-00-985884",
+    "task": "\ndef solve(N):\n    \"\"\"Given a positive integer N, return the total sum of its digits in binary.\n    \n    Example\n        For N = 1000, the sum of digits will be 1 the output should be \"1\".\n        For N = 150, the sum of digits will be 6 the output should be \"110\".\n        For N = 147, the sum of digits will be 12 the output should be \"1100\".\n    \n    Variables:\n        @N integer\n             Constraints: 0 \u2264 N \u2264 10000.\n    Output:\n         a string of binary number\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:00",
+        "task-id": "2024-02-02 14:28:00",
+        "workflow": "2024-02-02 14:28:00",
+        "Prompt": "2024-02-02 14:28:02",
+        "FinalCode": "2024-02-02 14:28:02"
+    },
+    "task-id": "HumanEval/84",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef solve(N):\\n    \\\"\\\"\\\"Given a positive integer N, return the total sum of its digits in binary.\\n    \\n    Example\\n        For N = 1000, the sum of digits will be 1 the output should be \\\"1\\\".\\n        For N = 150, the sum of digits will be 6 the output should be \\\"110\\\".\\n        For N = 147, the sum of digits will be 12 the output should be \\\"1100\\\".\\n    \\n    Variables:\\n        @N integer\\n             Constraints: 0 \\u2264 N \\u2264 10000.\\n    Output:\\n         a string of binary number\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def solve(N):\n    total_sum = 0\n    binary_sum = ''\n    \n    # Calculate the total sum of digits in binary\n    while N > 0:\n        total_sum += N % 10\n        N = N // 10\n    \n    # Convert the total sum to binary\n    while total_sum > 0:\n        binary_sum = str(total_sum % 2) + binary_sum\n        total_sum = total_sum // 2\n    \n    return binary_sum\n\n# Test cases\nprint(solve(1000)) # Output should be \"1\"\nprint(solve(150)) # Output should be \"110\"\nprint(solve(147)) # Output should be \"1100\""
+}

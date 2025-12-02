@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-30-248101",
+    "task": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:30",
+        "task-id": "2024-01-28 20:00:30",
+        "workflow": "2024-01-28 20:00:30",
+        "Prompt": "2024-01-28 20:00:32",
+        "FinalCode": "2024-01-28 20:00:32"
+    },
+    "task-id": "HumanEval/20",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Tuple\\n\\n\\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\\n    \\\"\\\"\\\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\\n    other and return them in order (smaller number, larger number).\\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\\n    (2.0, 2.2)\\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\\n    (2.0, 2.0)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    # Sort the list of numbers\n    numbers.sort()\n    \n    # Initialize variables to keep track of the closest elements\n    closest_diff = float('inf')  # Set to infinity to ensure it is updated on the first iteration\n    closest_pair = None\n    \n    # Iterate through the list of numbers\n    for i in range(len(numbers)-1):\n        diff = numbers[i+1] - numbers[i]  # Calculate the difference between adjacent elements\n        \n        if diff < closest_diff:  # If this is the closest pair seen so far, update closest_diff and closest_pair\n            closest_diff = diff\n            closest_pair = (numbers[i], numbers[i+1])\n    \n    return closest_pair"
+}

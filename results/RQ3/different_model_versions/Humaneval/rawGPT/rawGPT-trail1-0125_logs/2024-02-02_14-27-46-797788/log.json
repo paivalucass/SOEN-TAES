@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-46-797788",
+    "task": "\n\ndef strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    3\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:46",
+        "task-id": "2024-02-02 14:27:46",
+        "workflow": "2024-02-02 14:27:46",
+        "Prompt": "2024-02-02 14:27:47",
+        "FinalCode": "2024-02-02 14:27:47"
+    },
+    "task-id": "HumanEval/23",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef strlen(string: str) -> int:\\n    \\\"\\\"\\\" Return length of given string\\n    >>> strlen('')\\n    0\\n    >>> strlen('abc')\\n    3\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    3\n    \"\"\"\n    return len(string)"
+}

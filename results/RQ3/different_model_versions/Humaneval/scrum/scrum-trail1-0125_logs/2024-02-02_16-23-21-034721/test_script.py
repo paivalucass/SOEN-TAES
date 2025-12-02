@@ -1,0 +1,29 @@
+def even_odd_palindrome(n):
+    def is_palindrome(num):
+        return str(num) == str(num)[::-1]
+
+    def is_even(num):
+        return num % 2 == 0
+
+    even_count = 0
+    odd_count = 0
+
+    for i in range(1, n + 1):
+        if is_palindrome(i):
+            if is_even(i):
+                even_count += 1
+            else:
+                odd_count += 1
+
+    return even_count, odd_count
+import unittest
+
+class Test(unittest.TestCase):
+    def test_example1(self):
+        self.assertEqual(even_odd_palindrome(3), (1, 2))
+
+    def test_example2(self):
+        self.assertEqual(even_odd_palindrome(12), (4, 6))
+
+if __name__ == '__main__':
+    unittest.main()

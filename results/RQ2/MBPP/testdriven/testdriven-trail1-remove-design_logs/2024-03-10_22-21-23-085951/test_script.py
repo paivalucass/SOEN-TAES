@@ -1,0 +1,15 @@
+def count_vowels(test_str):
+    count = 0
+    vowels = "aeiouAEIOU"
+    for i in range(len(test_str)-1):
+        if test_str[i].lower() in vowels and test_str[i+1].lower() in vowels:
+            count += 1
+    return count
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(count_vowels('bestinstareels'), 7)
+
+if __name__ == '__main__':
+    unittest.main()

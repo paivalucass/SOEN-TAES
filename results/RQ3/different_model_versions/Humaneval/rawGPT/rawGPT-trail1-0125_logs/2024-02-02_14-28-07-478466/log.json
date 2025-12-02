@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-07-478466",
+    "task": "\ndef exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return \"YES\".\n    Otherwise, return \"NO\".\n    For example:\n    exchange([1, 2, 3, 4], [1, 2, 3, 4]) => \"YES\"\n    exchange([1, 2, 3, 4], [1, 5, 3, 4]) => \"NO\"\n    It is assumed that the input lists will be non-empty.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:07",
+        "task-id": "2024-02-02 14:28:07",
+        "workflow": "2024-02-02 14:28:07",
+        "Prompt": "2024-02-02 14:28:08",
+        "FinalCode": "2024-02-02 14:28:08"
+    },
+    "task-id": "HumanEval/110",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef exchange(lst1, lst2):\\n    \\\"\\\"\\\"In this problem, you will implement a function that takes two lists of numbers,\\n    and determines whether it is possible to perform an exchange of elements\\n    between them to make lst1 a list of only even numbers.\\n    There is no limit on the number of exchanged elements between lst1 and lst2.\\n    If it is possible to exchange elements between the lst1 and lst2 to make\\n    all the elements of lst1 to be even, return \\\"YES\\\".\\n    Otherwise, return \\\"NO\\\".\\n    For example:\\n    exchange([1, 2, 3, 4], [1, 2, 3, 4]) => \\\"YES\\\"\\n    exchange([1, 2, 3, 4], [1, 5, 3, 4]) => \\\"NO\\\"\\n    It is assumed that the input lists will be non-empty.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def exchange(lst1, lst2):\n    even_count = sum(1 for num in lst1 if num % 2 == 0)\n    \n    if even_count == len(lst1):\n        return \"YES\"\n    else:\n        return \"NO\"\n\n# Testing the function with the given examples\nprint(exchange([1, 2, 3, 4], [1, 2, 3, 4]))  # Output should be \"YES\"\nprint(exchange([1, 2, 3, 4], [1, 5, 3, 4]))  # Output should be \"NO\""
+}

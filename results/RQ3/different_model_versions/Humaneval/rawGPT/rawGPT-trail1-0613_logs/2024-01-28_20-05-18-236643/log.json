@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-18-236643",
+    "task": "\ndef compare(game,guess):\n    \"\"\"I think we all remember that feeling when the result of some long-awaited\n    event is finally known. The feelings and thoughts you have at that moment are\n    definitely worth noting down and comparing.\n    Your task is to determine if a person correctly guessed the results of a number of matches.\n    You are given two arrays of scores and guesses of equal length, where each index shows a match. \n    Return an array of the same length denoting how far off each guess was. If they have guessed correctly,\n    the value is 0, and if not, the value is the absolute difference between the guess and the score.\n    \n    \n    example:\n\n    compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) -> [0,0,0,0,3,3]\n    compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) -> [4,4,1,0,0,6]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:18",
+        "task-id": "2024-01-28 20:05:18",
+        "workflow": "2024-01-28 20:05:18",
+        "Prompt": "2024-01-28 20:05:22",
+        "FinalCode": "2024-01-28 20:05:22"
+    },
+    "task-id": "HumanEval/152",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef compare(game,guess):\\n    \\\"\\\"\\\"I think we all remember that feeling when the result of some long-awaited\\n    event is finally known. The feelings and thoughts you have at that moment are\\n    definitely worth noting down and comparing.\\n    Your task is to determine if a person correctly guessed the results of a number of matches.\\n    You are given two arrays of scores and guesses of equal length, where each index shows a match. \\n    Return an array of the same length denoting how far off each guess was. If they have guessed correctly,\\n    the value is 0, and if not, the value is the absolute difference between the guess and the score.\\n    \\n    \\n    example:\\n\\n    compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) -> [0,0,0,0,3,3]\\n    compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) -> [4,4,1,0,0,6]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `compare` takes two arrays as input: `game` and `guess`. These arrays represent the scores and guesses for a series of matches. \n\nThe function first initializes an empty list called `result` to store the differences between guesses and scores. \n\nThen, it iterates over the indices of the `game` array using a for loop. For each index `i`, it compares the element at that index in the `game` array with the element at the same index in the `guess` array.\n\nIf the guess is correct (i.e., the elements are equal), the difference is 0. Otherwise, the difference is the absolute value of the difference between the guess and the score.\n\nThe function appends the difference to the `result` list.\n\nFinally, the function returns the `result` list.\n\nHere is an example usage of the `compare` function:\n\n```\ncompare([1,2,3,4,5,1],[1,2,3,4,2,-2])\n```\n\nThe expected output is `[0,0,0,0,3,3]`."
+}

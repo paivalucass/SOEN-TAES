@@ -1,0 +1,14 @@
+def average_tuple(nums):
+    averages = []
+    for t in nums:
+        avg = sum(t) / len(t)
+        averages.append(avg)
+    return averages
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(average_tuple(((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))), [30.5, 34.25, 27.0, 2‌3.25])
+
+if __name__ == '__main__':
+    unittest.main()

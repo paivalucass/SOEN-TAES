@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-43-083228",
+    "task": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:43",
+        "task-id": "2024-02-02 14:27:43",
+        "workflow": "2024-02-02 14:27:43",
+        "Prompt": "2024-02-02 14:27:44",
+        "FinalCode": "2024-02-02 14:27:44"
+    },
+    "task-id": "HumanEval/9",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Tuple\\n\\n\\ndef rolling_max(numbers: List[int]) -> List[int]:\\n    \\\"\\\"\\\" From a given list of integers, generate a list of rolling maximum element found until given moment\\n    in the sequence.\\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\\n    [1, 2, 3, 3, 3, 4, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\"\n    From a given list of integers, generate a list of rolling maximum element found until a given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n    if not numbers:\n        return []\n\n    max_num = numbers[0]\n    result = [max_num]\n\n    for num in numbers[1:]:\n        max_num = max(max_num, num)\n        result.append(max_num)\n\n    return result"
+}

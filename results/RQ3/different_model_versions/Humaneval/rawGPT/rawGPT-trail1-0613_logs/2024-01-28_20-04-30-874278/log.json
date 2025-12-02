@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-30-874278",
+    "task": "\ndef sort_array(array):\n    \"\"\"\n    Given an array of non-negative integers, return a copy of the given array after sorting,\n    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,\n    or sort it in descending order if the sum( first index value, last index value) is even.\n\n    Note:\n    * don't change the given array.\n\n    Examples:\n    * sort_array([]) => []\n    * sort_array([5]) => [5]\n    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]\n    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:30",
+        "task-id": "2024-01-28 20:04:30",
+        "workflow": "2024-01-28 20:04:30",
+        "Prompt": "2024-01-28 20:04:35",
+        "FinalCode": "2024-01-28 20:04:35"
+    },
+    "task-id": "HumanEval/88",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef sort_array(array):\\n    \\\"\\\"\\\"\\n    Given an array of non-negative integers, return a copy of the given array after sorting,\\n    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,\\n    or sort it in descending order if the sum( first index value, last index value) is even.\\n\\n    Note:\\n    * don't change the given array.\\n\\n    Examples:\\n    * sort_array([]) => []\\n    * sort_array([5]) => [5]\\n    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]\\n    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `sort_array` takes an array as input and returns a sorted copy of that array based on a specific condition.\n\nThe condition is that if the sum of the first index value and the last index value of the array is odd, then the array is sorted in ascending order. Otherwise, if the sum is even, the array is sorted in descending order.\n\nThe function does not modify the original array, it only returns a sorted copy of it.\n\nHere are a few examples of how the function works:\n\n- `sort_array([])` returns an empty array because there are no elements to sort.\n- `sort_array([5])` returns the same array `[5]` because there is only one element.\n- `sort_array([2, 4, 3, 0, 1, 5])` returns the sorted array `[0, 1, 2, 3, 4, 5]` because the sum of the first and last index values is odd.\n- `sort_array([2, 4, 3, 0, 1, 5, 6])` returns the sorted array `[6, 5, 4, 3, 2, 1, 0]` because the sum of the first and last index values is even."
+}

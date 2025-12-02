@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-40-704246",
+    "task": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:40",
+        "task-id": "2024-01-28 20:03:40",
+        "workflow": "2024-01-28 20:03:40",
+        "Prompt": "2024-01-28 20:03:45",
+        "FinalCode": "2024-01-28 20:03:45"
+    },
+    "task-id": "HumanEval/14",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef all_prefixes(string: str) -> List[str]:\\n    \\\"\\\"\\\" Return list of all prefixes from shortest to longest of the input string\\n    >>> all_prefixes('abc')\\n    ['a', 'ab', 'abc']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `all_prefixes` takes a string as input and returns a list of all prefixes of the input string from shortest to longest.\n\nThe function signature indicates that the function takes a string as input and returns a list of strings (`List[str]`).\n\nHere is the code for the function:\n\n```python\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n    prefixes = []\n    for i in range(len(string)):\n        prefixes.append(string[:i+1])\n    return prefixes\n```\n\nThe function uses a for loop to iterate over the indices of the input string. For each index `i`, it appends the prefix of the string up to index `i` to the `prefixes` list.\n\nFinally, the function returns the `prefixes` list.\n\nThe function can be called as follows:\n\n```python\nprint(all_prefixes('abc'))\n```\n\nOutput:\n`['a', 'ab', 'abc']`\n\nThis confirms that the function is working correctly."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-29-081549",
+    "task": "\ndef solve(N):\n    \"\"\"Given a positive integer N, return the total sum of its digits in binary.\n    \n    Example\n        For N = 1000, the sum of digits will be 1 the output should be \"1\".\n        For N = 150, the sum of digits will be 6 the output should be \"110\".\n        For N = 147, the sum of digits will be 12 the output should be \"1100\".\n    \n    Variables:\n        @N integer\n             Constraints: 0 \u2264 N \u2264 10000.\n    Output:\n         a string of binary number\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:29",
+        "task-id": "2024-01-28 20:04:29",
+        "workflow": "2024-01-28 20:04:29",
+        "Prompt": "2024-01-28 20:04:30",
+        "FinalCode": "2024-01-28 20:04:30"
+    },
+    "task-id": "HumanEval/84",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef solve(N):\\n    \\\"\\\"\\\"Given a positive integer N, return the total sum of its digits in binary.\\n    \\n    Example\\n        For N = 1000, the sum of digits will be 1 the output should be \\\"1\\\".\\n        For N = 150, the sum of digits will be 6 the output should be \\\"110\\\".\\n        For N = 147, the sum of digits will be 12 the output should be \\\"1100\\\".\\n    \\n    Variables:\\n        @N integer\\n             Constraints: 0 \\u2264 N \\u2264 10000.\\n    Output:\\n         a string of binary number\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code defines a function `solve` that takes an integer `N` as input and returns the total sum of its digits in binary. \n\nThe function starts with a docstring that provides an example and explains the input and output variables and their constraints.\n\nThe function implementation is missing. It should calculate the sum of the digits of `N` in binary representation. However, it is incomplete and needs to be added in order to solve the problem."
+}

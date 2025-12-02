@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-04-426954",
+    "task": "\n\ndef sum_squares(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 14\n    For lst = [1,4,9] the output should be 98\n    For lst = [1,3,5,7] the output should be 84\n    For lst = [1.4,4.2,0] the output should be 29\n    For lst = [-2.4,1,1] the output should be 6\n    \n\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:04",
+        "task-id": "2024-01-28 20:05:04",
+        "workflow": "2024-01-28 20:05:04",
+        "Prompt": "2024-01-28 20:05:11",
+        "FinalCode": "2024-01-28 20:05:11"
+    },
+    "task-id": "HumanEval/133",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sum_squares(lst):\\n    \\\"\\\"\\\"You are given a list of numbers.\\n    You need to return the sum of squared numbers in the given list,\\n    round each element in the list to the upper int(Ceiling) first.\\n    Examples:\\n    For lst = [1,2,3] the output should be 14\\n    For lst = [1,4,9] the output should be 98\\n    For lst = [1,3,5,7] the output should be 84\\n    For lst = [1.4,4.2,0] the output should be 29\\n    For lst = [-2.4,1,1] the output should be 6\\n    \\n\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code is a function named \"sum_squares\" that takes a list of numbers as input and calculates the sum of squared numbers in the list. Before calculating the sum, each element in the list is rounded up to the nearest integer (ceiling).\n\nThe function has the following examples provided:\n\n1. For lst = [1,2,3], the expected output is 14. This means that the squared values of each element in the list [1, 2, 3] are [1, 4, 9], and their sum is 14.\n\n2. For lst = [1,4,9], the expected output is 98. This means that the squared values of each element in the list [1, 4, 9] are [1, 16, 81], and their sum is 98.\n\n3. For lst = [1,3,5,7], the expected output is 84. This means that the squared values of each element in the list [1, 3, 5, 7] are [1, 9, 25, 49], and their sum is 84.\n\n4. For lst = [1.4,4.2,0], the expected output is 29. This means that the rounded values of each element in the list [1.4, 4.2, 0] are [2, 5, 0], and their squared sum is 29.\n\n5. For lst = [-2.4,1,1], the expected output is 6. This means that the rounded values of each element in the list [-2.4, 1, 1] are [-2, 1, 1], and their squared sum is 6.\n\nThe function is missing its implementation, and you need to write the code for it."
+}

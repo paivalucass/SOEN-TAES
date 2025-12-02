@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-30-634352",
+    "task": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:30",
+        "task-id": "2024-01-28 20:00:30",
+        "workflow": "2024-01-28 20:00:30",
+        "Prompt": "2024-01-28 20:00:32",
+        "FinalCode": "2024-01-28 20:00:32"
+    },
+    "task-id": "HumanEval/21",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\\n    \\\"\\\"\\\" Given list of numbers (of at least two elements), apply a linear transform to that list,\\n    such that the smallest number will become 0 and the largest will become 1\\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\\n    [0.0, 0.25, 0.5, 0.75, 1.0]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This function takes a list of floating-point numbers and applies a linear transformation to rescale them to a range of 0 to 1. The smallest number in the list is mapped to 0, and the largest number is mapped to 1. The function returns the rescaled list of numbers. \n\nFor example, if the input is [1.0, 2.0, 3.0, 4.0, 5.0], the output will be [0.0, 0.25, 0.5, 0.75, 1.0]. \n\nThe function definition includes type hints to specify that the input is a list of floats and the output is also a list of floats."
+}

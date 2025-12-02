@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-47-579080",
+    "task": "\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle. \n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater \n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 6.00\n    triangle_area(1, 2, 10) == -1\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:47",
+        "task-id": "2024-01-28 20:00:47",
+        "workflow": "2024-01-28 20:00:47",
+        "Prompt": "2024-01-28 20:00:49",
+        "FinalCode": "2024-01-28 20:00:49"
+    },
+    "task-id": "HumanEval/71",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef triangle_area(a, b, c):\\n    '''\\n    Given the lengths of the three sides of a triangle. Return the area of\\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle. \\n    Otherwise return -1\\n    Three sides make a valid triangle when the sum of any two sides is greater \\n    than the third side.\\n    Example:\\n    triangle_area(3, 4, 5) == 6.00\\n    triangle_area(1, 2, 10) == -1\\n    '''\\n\"",
+    "FinalCode": "This is a function named `triangle_area` that takes in three arguments `a`, `b`, and `c` which represent the lengths of the three sides of a triangle. The function checks if these three sides form a valid triangle by ensuring that the sum of any two sides is greater than the third side. \n\nIf the three sides form a valid triangle, the function calculates the area of the triangle and returns it rounded to 2 decimal places. If the three sides do not form a valid triangle, the function returns -1.\n\nThe function contains a docstring that explains what the function does and provides examples of how to use it.\n\nExample usage:\n\n```\n>>> triangle_area(3, 4, 5)\n6.0\n>>> triangle_area(1, 2, 10)\n-1\n```"
+}

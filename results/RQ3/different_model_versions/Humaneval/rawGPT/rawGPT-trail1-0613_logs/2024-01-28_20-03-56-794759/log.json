@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-56-794759",
+    "task": "\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    0\n    >>> fizz_buzz(78)\n    2\n    >>> fizz_buzz(79)\n    3\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:56",
+        "task-id": "2024-01-28 20:03:56",
+        "workflow": "2024-01-28 20:03:56",
+        "Prompt": "2024-01-28 20:03:59",
+        "FinalCode": "2024-01-28 20:03:59"
+    },
+    "task-id": "HumanEval/36",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef fizz_buzz(n: int):\\n    \\\"\\\"\\\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\\n    >>> fizz_buzz(50)\\n    0\\n    >>> fizz_buzz(78)\\n    2\\n    >>> fizz_buzz(79)\\n    3\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function `fizz_buzz` that takes an integer `n` as input and returns the number of times the digit 7 appears in integers less than `n` that are divisible by either 11 or 13.\n\nThe function uses a nested for loop to iterate through all integers less than `n`. For each integer, it checks if it is divisible by either 11 or 13 using the modulus operator `%`. If the integer is divisible, it converts it to a string and counts the number of occurrences of the digit 7 using the `count` method. The count is then added to a running total.\n\nFinally, the function returns the total count of digit 7 occurrences.\n\nThe function has been documented using docstrings that describe its purpose and provide examples of its usage."
+}

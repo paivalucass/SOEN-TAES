@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-42-307020",
+    "task": "\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:42",
+        "task-id": "2024-01-28 20:00:42",
+        "workflow": "2024-01-28 20:00:42",
+        "Prompt": "2024-01-28 20:00:43",
+        "FinalCode": "2024-01-28 20:00:43"
+    },
+    "task-id": "HumanEval/55",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef fib(n: int):\\n    \\\"\\\"\\\"Return n-th Fibonacci number.\\n    >>> fib(10)\\n    55\\n    >>> fib(1)\\n    1\\n    >>> fib(8)\\n    21\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a docstring for a Python function called `fib`. The function takes a single integer argument `n` and returns the n-th Fibonacci number.\n\nThe docstring uses triple quotes to indicate that it spans multiple lines. It provides a brief description of the function's purpose and usage, as well as some examples of expected output for different input values.\n\nThe examples use Python's built-in `doctest` module, which allows for automated testing of code examples included in docstrings. This can help ensure that the function behaves as expected and help catch errors early in development."
+}

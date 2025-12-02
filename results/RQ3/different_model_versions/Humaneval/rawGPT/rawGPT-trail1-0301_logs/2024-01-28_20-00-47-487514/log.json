@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-47-487514",
+    "task": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:47",
+        "task-id": "2024-01-28 20:00:47",
+        "workflow": "2024-01-28 20:00:47",
+        "Prompt": "2024-01-28 20:00:50",
+        "FinalCode": "2024-01-28 20:00:50"
+    },
+    "task-id": "HumanEval/70",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef strange_sort_list(lst):\\n    '''\\n    Given list of integers, return list in strange order.\\n    Strange sorting, is when you start with the minimum value,\\n    then maximum of the remaining integers, then minimum and so on.\\n\\n    Examples:\\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\\n    strange_sort_list([]) == []\\n    '''\\n\"",
+    "FinalCode": "def strange_sort_list(lst):\n    \"\"\"\n    Given a list of integers, return a list in a strange order.\n    Strange sorting is when you start with the minimum value,\n    then the maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    \"\"\"\n\n    # sort the list in ascending order\n    lst.sort()\n\n    # create two empty lists to hold the minimum and maximum values\n    min_values = []\n    max_values = []\n\n    # loop through the sorted list and add the values to the appropriate list\n    for i in range(len(lst)):\n        if i % 2 == 0:\n            min_values.append(lst[i])\n        else:\n            max_values.append(lst[i])\n\n    # reverse the order of the maximum values list\n    max_values.reverse()\n\n    # combine the minimum and maximum values lists and return the result\n    return min_values + max_values"
+}

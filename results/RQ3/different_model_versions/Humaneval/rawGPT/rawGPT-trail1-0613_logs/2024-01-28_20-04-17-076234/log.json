@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-17-076234",
+    "task": "\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the upper characters only'\n    ASCII codes.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 131\n        digitSum(\"abcCd\") => 67\n        digitSum(\"helloE\") => 69\n        digitSum(\"woArBld\") => 131\n        digitSum(\"aAaaaXa\") => 153\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:17",
+        "task-id": "2024-01-28 20:04:17",
+        "workflow": "2024-01-28 20:04:17",
+        "Prompt": "2024-01-28 20:04:21",
+        "FinalCode": "2024-01-28 20:04:21"
+    },
+    "task-id": "HumanEval/66",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef digitSum(s):\\n    \\\"\\\"\\\"Task\\n    Write a function that takes a string as input and returns the sum of the upper characters only'\\n    ASCII codes.\\n\\n    Examples:\\n        digitSum(\\\"\\\") => 0\\n        digitSum(\\\"abAB\\\") => 131\\n        digitSum(\\\"abcCd\\\") => 67\\n        digitSum(\\\"helloE\\\") => 69\\n        digitSum(\\\"woArBld\\\") => 131\\n        digitSum(\\\"aAaaaXa\\\") => 153\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function digitSum takes a string as input and returns the sum of the ASCII codes of the uppercase characters in the string.\n\nTo calculate the sum, we can iterate through each character in the string and check if it is an uppercase letter. If it is, we add its ASCII code to a running total. Finally, we return the total sum.\n\nHere's the implementation of the digitSum function:\n\n```python\ndef digitSum(s):\n    total = 0\n    for char in s:\n        if char.isupper():\n            total += ord(char)\n    return total\n```\n\nLet's test the function with the given examples:\n\n```python\nprint(digitSum(\"\"))  # Output: 0\nprint(digitSum(\"abAB\"))  # Output: 131\nprint(digitSum(\"abcCd\"))  # Output: 67\nprint(digitSum(\"helloE\"))  # Output: 69\nprint(digitSum(\"woArBld\"))  # Output: 131\nprint(digitSum(\"aAaaaXa\"))  # Output: 153\n```\n\nThe outputs match the expected results provided in the examples."
+}

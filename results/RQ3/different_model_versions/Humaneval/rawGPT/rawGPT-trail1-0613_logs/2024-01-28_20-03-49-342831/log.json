@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-49-342831",
+    "task": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:49",
+        "task-id": "2024-01-28 20:03:49",
+        "workflow": "2024-01-28 20:03:49",
+        "Prompt": "2024-01-28 20:03:52",
+        "FinalCode": "2024-01-28 20:03:52"
+    },
+    "task-id": "HumanEval/26",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef remove_duplicates(numbers: List[int]) -> List[int]:\\n    \\\"\\\"\\\" From a list of integers, remove all elements that occur more than once.\\n    Keep order of elements left the same as in the input.\\n    >>> remove_duplicates([1, 2, 3, 2, 4])\\n    [1, 3, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code is an implementation of a function called `remove_duplicates()` that takes a list of integers as input and removes all elements that occur more than once. It keeps the order of the elements the same as in the input.\n\nThe function is defined with the following signature:\n```python\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n```\nThis indicates that the function takes a list of integers as an argument (`numbers`) and returns a list of integers as the result.\n\nThe function uses a docstring to provide a description and an example of how to use it. According to the provided example, calling `remove_duplicates([1, 2, 3, 2, 4])` should return `[1, 3, 4]`.\n\nThe implementation of the function is not provided in the given code snippet. It is expected to be written after the docstring and before any other code in the file.\n\nOverall, the code aims to remove duplicate elements from a list of integers while preserving the order of the elements."
+}

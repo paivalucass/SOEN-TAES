@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-07-601276",
+    "task": "\ndef reverse_delete(s,c):\n    \"\"\"Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is palindrome.\n    A string is called palindrome if it reads the same backward as forward.\n    You should return a tuple containing the result string and True/False for the check.\n    Example\n    For s = \"abcde\", c = \"ae\", the result should be ('bcd',False)\n    For s = \"abcdef\", c = \"b\"  the result should be ('acdef',False)\n    For s = \"abcdedcba\", c = \"ab\", the result should be ('cdedc',True)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:07",
+        "task-id": "2024-02-02 14:28:07",
+        "workflow": "2024-02-02 14:28:07",
+        "Prompt": "2024-02-02 14:28:08",
+        "FinalCode": "2024-02-02 14:28:08"
+    },
+    "task-id": "HumanEval/112",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef reverse_delete(s,c):\\n    \\\"\\\"\\\"Task\\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\\n    then check if the result string is palindrome.\\n    A string is called palindrome if it reads the same backward as forward.\\n    You should return a tuple containing the result string and True/False for the check.\\n    Example\\n    For s = \\\"abcde\\\", c = \\\"ae\\\", the result should be ('bcd',False)\\n    For s = \\\"abcdef\\\", c = \\\"b\\\"  the result should be ('acdef',False)\\n    For s = \\\"abcdedcba\\\", c = \\\"ab\\\", the result should be ('cdedc',True)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def reverse_delete(s,c):\n    result = \"\"\n    for char in s:\n        if char not in c:\n            result += char\n    return result, result == result[::-1]\n\n# Test cases\nprint(reverse_delete(\"abcde\", \"ae\")) # ('bcd', False)\nprint(reverse_delete(\"abcdef\", \"b\")) # ('acdef', False)\nprint(reverse_delete(\"abcdedcba\", \"ab\")) # ('cdedc', True)"
+}

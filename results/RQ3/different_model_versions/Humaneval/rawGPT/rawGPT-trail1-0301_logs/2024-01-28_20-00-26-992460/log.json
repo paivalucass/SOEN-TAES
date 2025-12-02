@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-26-992460",
+    "task": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:26",
+        "task-id": "2024-01-28 20:00:26",
+        "workflow": "2024-01-28 20:00:26",
+        "Prompt": "2024-01-28 20:00:29",
+        "FinalCode": "2024-01-28 20:00:29"
+    },
+    "task-id": "HumanEval/11",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef string_xor(a: str, b: str) -> str:\\n    \\\"\\\"\\\" Input are two strings a and b consisting only of 1s and 0s.\\n    Perform binary XOR on these inputs and return result also as a string.\\n    >>> string_xor('010', '110')\\n    '100'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a function definition for a Python function called string_xor. It takes two string parameters, a and b, which are expected to only contain 1s and 0s. The function performs a binary XOR operation on these inputs and returns the result as a string.\n\nThe function has a docstring that explains its purpose and usage, including an example of how to call it and what output to expect. The example shows that if we call string_xor with the arguments '010' and '110', the function should return the string '100'. \n\nThe typing module is imported at the beginning of the code to allow type hints to be used in the function definition. Specifically, the function returns a string, so the -> str syntax is used to indicate this. Additionally, the List type is imported, but it is not used in this particular function."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-16-673888",
+    "task": "\ndef sorted_list_sum(lst):\n    \"\"\"Write a function that accepts a list of strings as a parameter,\n    deletes the strings that have odd lengths from it,\n    and returns the resulted list with a sorted order,\n    The list is always a list of strings and never an array of numbers,\n    and it may contain duplicates.\n    The order of the list should be ascending by length of each word, and you\n    should return the list sorted by that rule.\n    If two words have the same length, sort the list alphabetically.\n    The function should return a list of strings in sorted order.\n    You may assume that all words will have the same length.\n    For example:\n    assert list_sort([\"aa\", \"a\", \"aaa\"]) => [\"aa\"]\n    assert list_sort([\"ab\", \"a\", \"aaa\", \"cd\"]) => [\"ab\", \"cd\"]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:16",
+        "task-id": "2024-02-02 14:28:16",
+        "workflow": "2024-02-02 14:28:16",
+        "Prompt": "2024-02-02 14:28:17",
+        "FinalCode": "2024-02-02 14:28:17"
+    },
+    "task-id": "HumanEval/149",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef sorted_list_sum(lst):\\n    \\\"\\\"\\\"Write a function that accepts a list of strings as a parameter,\\n    deletes the strings that have odd lengths from it,\\n    and returns the resulted list with a sorted order,\\n    The list is always a list of strings and never an array of numbers,\\n    and it may contain duplicates.\\n    The order of the list should be ascending by length of each word, and you\\n    should return the list sorted by that rule.\\n    If two words have the same length, sort the list alphabetically.\\n    The function should return a list of strings in sorted order.\\n    You may assume that all words will have the same length.\\n    For example:\\n    assert list_sort([\\\"aa\\\", \\\"a\\\", \\\"aaa\\\"]) => [\\\"aa\\\"]\\n    assert list_sort([\\\"ab\\\", \\\"a\\\", \\\"aaa\\\", \\\"cd\\\"]) => [\\\"ab\\\", \\\"cd\\\"]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def sorted_list_sum(lst):\n    # Filter out strings with odd lengths\n    filtered_list = [word for word in lst if len(word) % 2 == 0]\n    \n    # Sort the filtered list by length and alphabetically\n    sorted_list = sorted(filtered_list, key=lambda x: (len(x), x))\n    \n    return sorted_list\n\n# Test cases\nprint(sorted_list_sum([\"aa\", \"a\", \"aaa\"]))  # Output: [\"aa\"]\nprint(sorted_list_sum([\"ab\", \"a\", \"aaa\", \"cd\"]))  # Output: [\"ab\", \"cd\"]"
+}

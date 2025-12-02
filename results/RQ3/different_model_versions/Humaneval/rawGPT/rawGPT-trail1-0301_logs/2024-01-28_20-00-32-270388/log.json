@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-32-270388",
+    "task": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:32",
+        "task-id": "2024-01-28 20:00:32",
+        "workflow": "2024-01-28 20:00:32",
+        "Prompt": "2024-01-28 20:00:34",
+        "FinalCode": "2024-01-28 20:00:34"
+    },
+    "task-id": "HumanEval/25",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef factorize(n: int) -> List[int]:\\n    \\\"\\\"\\\" Return list of prime factors of given integer in the order from smallest to largest.\\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\\n    Input number should be equal to the product of all factors\\n    >>> factorize(8)\\n    [2, 2, 2]\\n    >>> factorize(25)\\n    [5, 5]\\n    >>> factorize(70)\\n    [2, 5, 7]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def factorize(n: int) -> List[int]:\n    factors = []\n    # divide by 2 until we can't anymore\n    while n % 2 == 0:\n        factors.append(2)\n        n //= 2\n    # now we go through odd numbers up to the square root of n\n    i = 3\n    while i <= n**0.5:\n        # if i is a factor, add it to the list and divide n by i\n        if n % i == 0:\n            factors.append(i)\n            n //= i\n        else:\n            # if i is not a factor, skip to the next odd number\n            i += 2\n    # if n is still greater than 2, it must be prime and should be added to the list as well\n    if n > 2:\n        factors.append(n)\n    return factors"
+}

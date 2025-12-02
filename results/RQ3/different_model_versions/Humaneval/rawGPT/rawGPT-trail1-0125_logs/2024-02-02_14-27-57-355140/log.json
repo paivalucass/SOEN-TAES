@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-57-355140",
+    "task": "\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \n    zero, and has a frequency greater than or equal to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    '''\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:57",
+        "task-id": "2024-02-02 14:27:57",
+        "workflow": "2024-02-02 14:27:57",
+        "Prompt": "2024-02-02 14:27:59",
+        "FinalCode": "2024-02-02 14:27:59"
+    },
+    "task-id": "HumanEval/69",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef search(lst):\\n    '''\\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \\n    zero, and has a frequency greater than or equal to the value of the integer itself. \\n    The frequency of an integer is the number of times it appears in the list.\\n    If no such a value exist, return -1.\\n    Examples:\\n        search([4, 1, 2, 2, 3, 1]) == 2\\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\\n        search([5, 5, 4, 4, 4]) == -1\\n    '''\\n\"",
+    "FinalCode": "def search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \n    zero, and has a frequency greater than or equal to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    '''\n    frequency_dict = {}\n    for num in lst:\n        if num in frequency_dict:\n            frequency_dict[num] += 1\n        else:\n            frequency_dict[num] = 1\n    \n    for key in sorted(frequency_dict.keys(), reverse=True):\n        if key > 0 and frequency_dict[key] >= key:\n            return key\n    \n    return -1"
+}

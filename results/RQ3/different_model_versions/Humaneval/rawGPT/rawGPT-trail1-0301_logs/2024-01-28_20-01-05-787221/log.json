@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-05-787221",
+    "task": "\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"u\"\n    get_closest_vowel(\"FULL\") ==> \"U\"\n    get_closest_vowel(\"quick\") ==> \"\"\n    get_closest_vowel(\"ab\") ==> \"\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:05",
+        "task-id": "2024-01-28 20:01:05",
+        "workflow": "2024-01-28 20:01:05",
+        "Prompt": "2024-01-28 20:01:07",
+        "FinalCode": "2024-01-28 20:01:07"
+    },
+    "task-id": "HumanEval/118",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef get_closest_vowel(word):\\n    \\\"\\\"\\\"You are given a word. Your task is to find the closest vowel that stands between \\n    two consonants from the right side of the word (case sensitive).\\n    \\n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\\n    find any vowel met the above condition. \\n\\n    You may assume that the given string contains English letter only.\\n\\n    Example:\\n    get_closest_vowel(\\\"yogurt\\\") ==> \\\"u\\\"\\n    get_closest_vowel(\\\"FULL\\\") ==> \\\"U\\\"\\n    get_closest_vowel(\\\"quick\\\") ==> \\\"\\\"\\n    get_closest_vowel(\\\"ab\\\") ==> \\\"\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def get_closest_vowel(word):\n    vowels = set('aeiouAEIOU')\n    consonants = set('bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ')\n    found_vowel = False\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels:\n            found_vowel = True\n        elif word[i] in consonants and found_vowel:\n            return word[i]\n    return \"\""
+}

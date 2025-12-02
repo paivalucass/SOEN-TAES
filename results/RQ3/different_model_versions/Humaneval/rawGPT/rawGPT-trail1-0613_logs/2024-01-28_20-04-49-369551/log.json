@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-49-369551",
+    "task": "\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in ascending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:49",
+        "task-id": "2024-01-28 20:04:49",
+        "workflow": "2024-01-28 20:04:49",
+        "Prompt": "2024-01-28 20:04:55",
+        "FinalCode": "2024-01-28 20:04:55"
+    },
+    "task-id": "HumanEval/116",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef sort_array(arr):\\n    \\\"\\\"\\\"\\n    In this Kata, you have to sort an array of non-negative integers according to\\n    number of ones in their binary representation in ascending order.\\n    For similar number of ones, sort based on decimal value.\\n\\n    It must be implemented like this:\\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `sort_array` takes an array of non-negative integers and sorts them based on the number of ones in their binary representation in ascending order. If two numbers have the same number of ones, they are then sorted based on their decimal value.\n\nHere are some examples of how the function should work:\n\n- `sort_array([1, 5, 2, 3, 4])` will return `[1, 2, 3, 4, 5]` since the binary representation of these numbers is `[1, 101, 10, 11, 100]`. They are sorted based on the number of ones, resulting in `[1, 2, 3, 4, 5]`.\n\n- `sort_array([-2, -3, -4, -5, -6])` will return `[-6, -5, -4, -3, -2]` since the binary representation of these numbers is `[-110, -11, -100, -101, -110]`. They are sorted based on the number of ones, resulting in `[-6, -5, -4, -3, -2]`.\n\n- `sort_array([1, 0, 2, 3, 4])` will return `[0, 1, 2, 3, 4]` since the binary representation of these numbers is `[1, 0, 10, 11, 100]`. They are sorted based on the number of ones, resulting in `[0, 1, 2, 3, 4]`."
+}

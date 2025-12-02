@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-40-929606",
+    "task": "\n\ndef remove_vowels(text):\n    \"\"\"\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels('')\n    ''\n    >>> remove_vowels(\"abcdef\\nghijklm\")\n    'bcdf\\nghjklm'\n    >>> remove_vowels('abcdef')\n    'bcdf'\n    >>> remove_vowels('aaaaa')\n    ''\n    >>> remove_vowels('aaBAA')\n    'B'\n    >>> remove_vowels('zbcd')\n    'zbcd'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:40",
+        "task-id": "2024-01-28 20:00:40",
+        "workflow": "2024-01-28 20:00:40",
+        "Prompt": "2024-01-28 20:00:42",
+        "FinalCode": "2024-01-28 20:00:42"
+    },
+    "task-id": "HumanEval/51",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef remove_vowels(text):\\n    \\\"\\\"\\\"\\n    remove_vowels is a function that takes string and returns string without vowels.\\n    >>> remove_vowels('')\\n    ''\\n    >>> remove_vowels(\\\"abcdef\\\\nghijklm\\\")\\n    'bcdf\\\\nghjklm'\\n    >>> remove_vowels('abcdef')\\n    'bcdf'\\n    >>> remove_vowels('aaaaa')\\n    ''\\n    >>> remove_vowels('aaBAA')\\n    'B'\\n    >>> remove_vowels('zbcd')\\n    'zbcd'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def remove_vowels(text):\n    \"\"\"\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels('')\n    ''\n    >>> remove_vowels(\"abcdef\\nghijklm\")\n    'bcdf\\nghjklm'\n    >>> remove_vowels('abcdef')\n    'bcdf'\n    >>> remove_vowels('aaaaa')\n    ''\n    >>> remove_vowels('aaBAA')\n    'B'\n    >>> remove_vowels('zbcd')\n    'zbcd'\n    \"\"\"\n    vowels = 'aeiouAEIOU'\n    return ''.join([i for i in text if i not in vowels])"
+}

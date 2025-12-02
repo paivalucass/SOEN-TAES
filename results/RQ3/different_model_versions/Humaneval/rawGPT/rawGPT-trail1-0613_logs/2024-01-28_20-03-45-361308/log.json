@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-45-361308",
+    "task": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:45",
+        "task-id": "2024-01-28 20:03:45",
+        "workflow": "2024-01-28 20:03:45",
+        "Prompt": "2024-01-28 20:03:48",
+        "FinalCode": "2024-01-28 20:03:48"
+    },
+    "task-id": "HumanEval/20",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Tuple\\n\\n\\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\\n    \\\"\\\"\\\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\\n    other and return them in order (smaller number, larger number).\\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\\n    (2.0, 2.2)\\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\\n    (2.0, 2.0)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code provided defines a function called \"find_closest_elements\". The function takes in a list of floats called \"numbers\" and returns a tuple of two floats. \n\nThe function's purpose is to find and return the two numbers in the list that are closest to each other. The numbers are returned in ascending order, with the smaller number first and the larger number second.\n\nThe function is accompanied by two doctests, which are used to demonstrate the expected behavior of the function. The first doctest checks if the function correctly returns the closest two numbers in a list that contains both integers and floats. The second doctest checks if the function correctly returns the closest two numbers in a list that contains repeated numbers."
+}

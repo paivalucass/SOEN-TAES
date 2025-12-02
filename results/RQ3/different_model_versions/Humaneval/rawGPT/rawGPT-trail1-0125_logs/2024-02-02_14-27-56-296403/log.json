@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-56-296403",
+    "task": "\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the upper characters only'\n    ASCII codes.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 131\n        digitSum(\"abcCd\") => 67\n        digitSum(\"helloE\") => 69\n        digitSum(\"woArBld\") => 131\n        digitSum(\"aAaaaXa\") => 153\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:56",
+        "task-id": "2024-02-02 14:27:56",
+        "workflow": "2024-02-02 14:27:56",
+        "Prompt": "2024-02-02 14:27:57",
+        "FinalCode": "2024-02-02 14:27:57"
+    },
+    "task-id": "HumanEval/66",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef digitSum(s):\\n    \\\"\\\"\\\"Task\\n    Write a function that takes a string as input and returns the sum of the upper characters only'\\n    ASCII codes.\\n\\n    Examples:\\n        digitSum(\\\"\\\") => 0\\n        digitSum(\\\"abAB\\\") => 131\\n        digitSum(\\\"abcCd\\\") => 67\\n        digitSum(\\\"helloE\\\") => 69\\n        digitSum(\\\"woArBld\\\") => 131\\n        digitSum(\\\"aAaaaXa\\\") => 153\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def digitSum(s):\n    sum_upper = 0\n    for char in s:\n        if char.isupper():\n            sum_upper += ord(char)\n    return sum_upper\n\n# Test cases\nprint(digitSum(\"\")) # 0\nprint(digitSum(\"abAB\")) # 131\nprint(digitSum(\"abcCd\")) # 67\nprint(digitSum(\"helloE\")) # 69\nprint(digitSum(\"woArBld\")) # 131\nprint(digitSum(\"aAaaaXa\")) # 153"
+}

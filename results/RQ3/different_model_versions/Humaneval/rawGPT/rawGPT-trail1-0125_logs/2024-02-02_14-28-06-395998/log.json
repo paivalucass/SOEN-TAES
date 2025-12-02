@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-06-395998",
+    "task": "\ndef count_nums(arr):\n    \"\"\"\n    Write a function count_nums which takes an array of integers and returns\n    the number of elements which has a sum of digits > 0.\n    If a number is negative, then its first signed digit will be negative:\n    e.g. -123 has signed digits -1, 2, and 3.\n    >>> count_nums([]) == 0\n    >>> count_nums([-1, 11, -11]) == 1\n    >>> count_nums([1, 1, 2]) == 3\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:06",
+        "task-id": "2024-02-02 14:28:06",
+        "workflow": "2024-02-02 14:28:06",
+        "Prompt": "2024-02-02 14:28:08",
+        "FinalCode": "2024-02-02 14:28:08"
+    },
+    "task-id": "HumanEval/108",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef count_nums(arr):\\n    \\\"\\\"\\\"\\n    Write a function count_nums which takes an array of integers and returns\\n    the number of elements which has a sum of digits > 0.\\n    If a number is negative, then its first signed digit will be negative:\\n    e.g. -123 has signed digits -1, 2, and 3.\\n    >>> count_nums([]) == 0\\n    >>> count_nums([-1, 11, -11]) == 1\\n    >>> count_nums([1, 1, 2]) == 3\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def count_nums(arr):\n    \"\"\"\n    Write a function count_nums which takes an array of integers and returns\n    the number of elements which has a sum of digits > 0.\n    If a number is negative, then its first signed digit will be negative:\n    e.g. -123 has signed digits -1, 2, and 3.\n    >>> count_nums([]) == 0\n    >>> count_nums([-1, 11, -11]) == 1\n    >>> count_nums([1, 1, 2]) == 3\n    \"\"\"\n    count = 0\n    for num in arr:\n        sum_of_digits = sum(int(digit) for digit in str(abs(num)))\n        if sum_of_digits > 0:\n            count += 1\n    return count"
+}

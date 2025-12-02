@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-55-936370",
+    "task": "\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) \u279e True\n    \n    any_int(3, 2, 2) \u279e False\n\n    any_int(3, -2, 1) \u279e True\n    \n    any_int(3.6, -2.2, 2) \u279e False\n  \n\n    \n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:55",
+        "task-id": "2024-01-28 20:00:55",
+        "workflow": "2024-01-28 20:00:55",
+        "Prompt": "2024-01-28 20:00:57",
+        "FinalCode": "2024-01-28 20:00:57"
+    },
+    "task-id": "HumanEval/92",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef any_int(x, y, z):\\n    '''\\n    Create a function that takes 3 numbers.\\n    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.\\n    Returns false in any other cases.\\n    \\n    Examples\\n    any_int(5, 2, 7) \\u279e True\\n    \\n    any_int(3, 2, 2) \\u279e False\\n\\n    any_int(3, -2, 1) \\u279e True\\n    \\n    any_int(3.6, -2.2, 2) \\u279e False\\n  \\n\\n    \\n    '''\\n\"",
+    "FinalCode": "The above code defines a function named \"any_int\" that takes three arguments x, y, and z. The function checks if any of the numbers is equal to the sum of the other two and if all the numbers are integers. If the condition is true, the function returns True, otherwise, it returns False. The function includes a docstring that explains what the function does and provides some examples of input and output."
+}

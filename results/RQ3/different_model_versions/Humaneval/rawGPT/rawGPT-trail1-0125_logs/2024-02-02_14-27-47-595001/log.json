@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-47-595001",
+    "task": "from typing import List\n\n\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:47",
+        "task-id": "2024-02-02 14:27:47",
+        "workflow": "2024-02-02 14:27:47",
+        "Prompt": "2024-02-02 14:27:48",
+        "FinalCode": "2024-02-02 14:27:48"
+    },
+    "task-id": "HumanEval/29",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\\n    \\\"\\\"\\\" Filter an input list of strings only for ones that start with a given prefix.\\n    >>> filter_by_prefix([], 'a')\\n    []\\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\\n    ['abc', 'array']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\"\n    Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n    return [s for s in strings if s.startswith(prefix)]"
+}

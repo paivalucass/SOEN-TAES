@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-35-618962",
+    "task": "\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    0\n    >>> fizz_buzz(78)\n    2\n    >>> fizz_buzz(79)\n    3\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:35",
+        "task-id": "2024-01-28 20:00:35",
+        "workflow": "2024-01-28 20:00:35",
+        "Prompt": "2024-01-28 20:00:36",
+        "FinalCode": "2024-01-28 20:00:36"
+    },
+    "task-id": "HumanEval/36",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef fizz_buzz(n: int):\\n    \\\"\\\"\\\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\\n    >>> fizz_buzz(50)\\n    0\\n    >>> fizz_buzz(78)\\n    2\\n    >>> fizz_buzz(79)\\n    3\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function definition of fizz_buzz() takes an integer argument 'n' and returns the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n\nThe function has a docstring that provides information about what the function does and examples of how it can be used. The doctest module is used to provide examples of expected output for specific inputs.\n\nThe function is not yet implemented and would need to be written to take care of the requirements mentioned in the docstring."
+}

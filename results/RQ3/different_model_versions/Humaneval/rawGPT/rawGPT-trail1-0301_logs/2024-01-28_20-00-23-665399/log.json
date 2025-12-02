@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-23-665399",
+    "task": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:23",
+        "task-id": "2024-01-28 20:00:23",
+        "workflow": "2024-01-28 20:00:23",
+        "Prompt": "2024-01-28 20:00:26",
+        "FinalCode": "2024-01-28 20:00:26"
+    },
+    "task-id": "HumanEval/4",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef mean_absolute_deviation(numbers: List[float]) -> float:\\n    \\\"\\\"\\\" For a given list of input numbers, calculate Mean Absolute Deviation\\n    around the mean of this dataset.\\n    Mean Absolute Deviation is the average absolute difference between each\\n    element and a centerpoint (mean in this case):\\n    MAD = average | x - x_mean |\\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\\n    1.0\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a Python function definition for calculating the mean absolute deviation of a given list of numbers. The function takes in a list of floating-point numbers as input and returns a floating-point number as output. The function is annotated with type hints, indicating that the input list should be of type List[float] and the output should be of type float.\n\nThe function first calculates the mean of the input numbers using the built-in function sum() and len(). Then, for each number in the input list, it calculates the absolute difference between the number and the mean, and adds this value to a running sum. Finally, the function divides this sum by the length of the input list to obtain the average absolute difference, which is returned as the output.\n\nThe function includes a docstring that explains what the function does and provides an example usage, showing how to call the function with a list of numbers and what output to expect."
+}

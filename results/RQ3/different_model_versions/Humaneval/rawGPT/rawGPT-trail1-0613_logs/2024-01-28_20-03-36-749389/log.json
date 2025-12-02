@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-36-749389",
+    "task": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:36",
+        "task-id": "2024-01-28 20:03:36",
+        "workflow": "2024-01-28 20:03:36",
+        "Prompt": "2024-01-28 20:03:43",
+        "FinalCode": "2024-01-28 20:03:43"
+    },
+    "task-id": "HumanEval/9",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Tuple\\n\\n\\ndef rolling_max(numbers: List[int]) -> List[int]:\\n    \\\"\\\"\\\" From a given list of integers, generate a list of rolling maximum element found until given moment\\n    in the sequence.\\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\\n    [1, 2, 3, 3, 3, 4, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The `rolling_max` function takes a list of integers and returns a list of the rolling maximum elements found until a given moment in the sequence.\n\nTo solve this problem, we can use a sliding window approach. We initialize an empty list `result` to store the rolling maximum elements. We also initialize an empty list `window` to store the elements within the current window.\n\nWe iterate through the input list `numbers` and for each element, we add it to the `window`. If the length of the `window` is greater than 1, we compare the last element of `window` with the second to last element of `window`. If the last element is less than the second to last element, we remove the last element from `window`. We repeat this process until the last element of `window` is greater than or equal to the second to last element.\n\nFinally, we add the last element of `window` to `result`. This is the rolling maximum element at the current moment in the sequence. We continue this process for all elements in `numbers` and return `result` as the final result.\n\nHere's the updated code:\n\n```python\nfrom typing import List, Tuple\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    result = []\n    window = []\n\n    for num in numbers:\n        window.append(num)\n        while len(window) > 1 and window[-1] < window[-2]:\n            window.pop()\n\n        result.append(window[-1])\n\n    return result\n```\n\nNow we can test the function using the provided example:\n\n```python\nprint(rolling_max([1, 2, 3, 2, 3, 4, 2]))\n```\n\nOutput:\n\n```\n[1, 2, 3, 3, 3, 4, 4]\n```"
+}

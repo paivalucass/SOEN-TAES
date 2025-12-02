@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-49-331924",
+    "task": "\ndef smallest_change(arr):\n    \"\"\"\n    Given an array arr of integers, find the minimum number of elements that\n    need to be changed to make the array palindromic. A palindromic array is an array that\n    is read the same backwards and forwards. In one change, you can change one element to any other element.\n\n    For example:\n    smallest_change([1,2,3,5,4,7,9,6]) == 4\n    smallest_change([1, 2, 3, 4, 3, 2, 2]) == 1\n    smallest_change([1, 2, 3, 2, 1]) == 0\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:49",
+        "task-id": "2024-01-28 20:00:49",
+        "workflow": "2024-01-28 20:00:49",
+        "Prompt": "2024-01-28 20:00:52",
+        "FinalCode": "2024-01-28 20:00:52"
+    },
+    "task-id": "HumanEval/73",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef smallest_change(arr):\\n    \\\"\\\"\\\"\\n    Given an array arr of integers, find the minimum number of elements that\\n    need to be changed to make the array palindromic. A palindromic array is an array that\\n    is read the same backwards and forwards. In one change, you can change one element to any other element.\\n\\n    For example:\\n    smallest_change([1,2,3,5,4,7,9,6]) == 4\\n    smallest_change([1, 2, 3, 4, 3, 2, 2]) == 1\\n    smallest_change([1, 2, 3, 2, 1]) == 0\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def smallest_change(arr):\n    \"\"\"\n    Given an array arr of integers, find the minimum number of elements that\n    need to be changed to make the array palindromic. A palindromic array is an array that\n    is read the same backwards and forwards. In one change, you can change one element to any other element.\n\n    For example:\n    smallest_change([1,2,3,5,4,7,9,6]) == 4\n    smallest_change([1, 2, 3, 4, 3, 2, 2]) == 1\n    smallest_change([1, 2, 3, 2, 1]) == 0\n    \"\"\"\n    #initialize count to 0\n    count = 0\n    #initialize start and end pointers\n    start, end = 0, len(arr)-1\n    #loop through the array until the start pointer passes the end pointer\n    while start < end:\n        #if the elements at the start and end pointers are not equal, increment the count\n        if arr[start] != arr[end]:\n            count += 1\n        #increment the start pointer and decrement the end pointer\n        start += 1\n        end -= 1\n    #return the count\n    return count"
+}

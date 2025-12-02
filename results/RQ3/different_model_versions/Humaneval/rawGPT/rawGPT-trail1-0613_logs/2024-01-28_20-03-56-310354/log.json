@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-56-310354",
+    "task": "\n\ndef max_element(l: list):\n    \"\"\"Return maximum element in the list.\n    >>> max_element([1, 2, 3])\n    3\n    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    123\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:56",
+        "task-id": "2024-01-28 20:03:56",
+        "workflow": "2024-01-28 20:03:56",
+        "Prompt": "2024-01-28 20:03:59",
+        "FinalCode": "2024-01-28 20:03:59"
+    },
+    "task-id": "HumanEval/35",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef max_element(l: list):\\n    \\\"\\\"\\\"Return maximum element in the list.\\n    >>> max_element([1, 2, 3])\\n    3\\n    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\\n    123\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code snippet provided defines a function named `max_element` that takes in a list as a parameter and returns the maximum element in the list.\n\nThe function uses the built-in `max` function to find the maximum element in the list. The `max` function takes an iterable (in this case, the list) and returns the largest element. \n\nThe function is documented using docstrings, which are enclosed in triple double quotes. The docstring provides a brief description of the function and includes examples of how to use it. \n\nThe first example calls the `max_element` function with the list `[1, 2, 3]` and expects the return value to be `3`. The second example calls the function with a longer list and expects the return value to be `123`."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-05-429815",
+    "task": "\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers, and 'b' is the smallest\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (None, None)\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:05",
+        "task-id": "2024-01-28 20:05:05",
+        "workflow": "2024-01-28 20:05:05",
+        "Prompt": "2024-01-28 20:05:10",
+        "FinalCode": "2024-01-28 20:05:10"
+    },
+    "task-id": "HumanEval/136",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef largest_smallest_integers(lst):\\n    '''\\n    Create a function that returns a tuple (a, b), where 'a' is\\n    the largest of negative integers, and 'b' is the smallest\\n    of positive integers in a list.\\n    If there is no negative or positive integers, return them as None.\\n\\n    Examples:\\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)\\n    largest_smallest_integers([]) == (None, None)\\n    largest_smallest_integers([0]) == (None, None)\\n    '''\\n\"",
+    "FinalCode": "The function `largest_smallest_integers` takes a list `lst` as input and returns a tuple `(a, b)`.\n\nHere's how the function works:\n1. It initializes two variables `largest` and `smallest` as None.\n2. It iterates through each element `num` in the list `lst`.\n3. If `num` is negative and `largest` is None or `num` is greater than `largest`, it updates `largest` to `num`.\n4. If `num` is positive and `smallest` is None or `num` is smaller than `smallest`, it updates `smallest` to `num`.\n5. After iterating through all the elements in `lst`, it returns the tuple `(largest, smallest)`.\n\nIf there are no negative integers, `largest` remains None. Similarly, if there are no positive integers, `smallest` remains None.\n\nHere are a few examples to illustrate the behavior of the function:\n- `largest_smallest_integers([2, 4, 1, 3, 5, 7])` returns `(None, 1)` because there are no negative integers and 1 is the smallest positive integer.\n- `largest_smallest_integers([])` returns `(None, None)` because the list is empty and there are no negative or positive integers.\n- `largest_smallest_integers([0])` returns `(None, None)` because 0 is neither a negative nor a positive integer."
+}

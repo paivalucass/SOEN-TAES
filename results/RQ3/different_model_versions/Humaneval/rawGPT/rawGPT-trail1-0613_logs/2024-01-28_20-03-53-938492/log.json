@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-53-938492",
+    "task": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:53",
+        "task-id": "2024-01-28 20:03:53",
+        "workflow": "2024-01-28 20:03:53",
+        "Prompt": "2024-01-28 20:04:00",
+        "FinalCode": "2024-01-28 20:04:00"
+    },
+    "task-id": "HumanEval/33",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sort_third(l: list):\\n    \\\"\\\"\\\"This function takes a list l and returns a list l' such that\\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\\n    to the values of the corresponding indicies of l, but sorted.\\n    >>> sort_third([1, 2, 3])\\n    [1, 2, 3]\\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\\n    [2, 6, 3, 4, 8, 9, 5]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `sort_third` takes a list `l` as input and returns a new list `l'`. The new list `l'` is identical to the original list `l` in the indices that are not divisible by three, but the values at the indices that are divisible by three are equal to the values of the corresponding indices of `l`, but sorted.\n\nHere are a couple of examples of how the function works:\n\nExample 1:\n```python\nsort_third([1, 2, 3])\n```\nOutput:\n```\n[1, 2, 3]\n```\nExplanation: In this case, the input list `[1, 2, 3]` has no indices that are divisible by three, so the output list is the same as the input list.\n\nExample 2:\n```python\nsort_third([5, 6, 3, 4, 8, 9, 2])\n```\nOutput:\n```\n[2, 6, 3, 4, 8, 9, 5]\n```\nExplanation: In this case, the input list `[5, 6, 3, 4, 8, 9, 2]` has indices 0 and 6 that are divisible by three. The values at these indices are 5 and 2 respectively. The output list has the values at these indices sorted, so the final list becomes `[2, 6, 3, 4, 8, 9, 5]`.\n\nNote that the function `sort_third` is defined using type hints, which specify the types of the input and output variables. The input variable `l` is expected to be a list, and the function returns a list as output."
+}

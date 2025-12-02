@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-03-796194",
+    "task": "\n\ndef encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every character by 5 in the alphabet.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])\n\n\ndef decode_shift(s: str):\n    \"\"\"\n    takes as input string encoded with encode_shift function. Returns decoded string.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:03",
+        "task-id": "2024-01-28 20:04:03",
+        "workflow": "2024-01-28 20:04:03",
+        "Prompt": "2024-01-28 20:04:08",
+        "FinalCode": "2024-01-28 20:04:08"
+    },
+    "task-id": "HumanEval/50",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef encode_shift(s: str):\\n    \\\"\\\"\\\"\\n    returns encoded string by shifting every character by 5 in the alphabet.\\n    \\\"\\\"\\\"\\n    return \\\"\\\".join([chr(((ord(ch) + 5 - ord(\\\"a\\\")) % 26) + ord(\\\"a\\\")) for ch in s])\\n\\n\\ndef decode_shift(s: str):\\n    \\\"\\\"\\\"\\n    takes as input string encoded with encode_shift function. Returns decoded string.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code provided defines two functions: `encode_shift` and `decode_shift`.\n\nThe `encode_shift` function takes a string `s` as input and returns an encoded string by shifting every character by 5 in the alphabet. It uses a list comprehension to iterate through each character `ch` in `s`, and for each character, it calculates the new ASCII value by adding 5 to the current ASCII value. The modulo operator `% 26` is used to handle wrapping around the alphabet. Finally, it uses the `chr` function to convert the new ASCII value back to a character. The list of encoded characters is then joined together into a single string using the `join` method.\n\nThe `decode_shift` function takes a string `s` as input, which is assumed to be encoded using the `encode_shift` function. It returns the decoded string by reversing the encoding process. It subtracts 5 from the ASCII value of each character, applies the modulo operator `% 26`, and adds the ASCII value of 'a' to get the original ASCII value. The original ASCII values are then converted back to characters using the `chr` function, and the list of decoded characters is joined into a single string.\n\nOverall, these functions provide a basic implementation of a Caesar cipher with a fixed shift of 5."
+}

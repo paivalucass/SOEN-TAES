@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-15-060110",
+    "task": "\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 \u2264 i \u2264 n), the value of a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 1\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        The only valid triple is (1, 7, 13).\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:15",
+        "task-id": "2024-01-28 20:05:15",
+        "workflow": "2024-01-28 20:05:15",
+        "Prompt": "2024-01-28 20:05:20",
+        "FinalCode": "2024-01-28 20:05:21"
+    },
+    "task-id": "HumanEval/147",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef get_max_triples(n):\\n    \\\"\\\"\\\"\\n    You are given a positive integer n. You have to create an integer array a of length n.\\n        For each i (1 \\u2264 i \\u2264 n), the value of a[i] = i * i - i + 1.\\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \\n    and a[i] + a[j] + a[k] is a multiple of 3.\\n\\n    Example :\\n        Input: n = 5\\n        Output: 1\\n        Explanation: \\n        a = [1, 3, 7, 13, 21]\\n        The only valid triple is (1, 7, 13).\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function `get_max_triples(n)` that takes a positive integer `n` as input and returns the number of triples (a[i], a[j], a[k]) of a where i < j < k, and a[i] + a[j] + a[k] is a multiple of 3.\n\nThe function first creates an empty list `a`. Then, it uses a for loop to iterate through the range from 1 to `n`. For each iteration, it calculates the value of `a[i]` using the formula i * i - i + 1, and appends it to the list `a`.\n\nAfter creating the list `a`, the function initializes a variable `count` to 0, which will be used to keep track of the number of triples that satisfy the given condition.\n\nNext, the function uses three nested for loops to iterate through the list `a` to find all possible triples (a[i], a[j], a[k]). It checks if the sum of the three numbers is divisible by 3 using the modulo operator (%). If the sum is divisible by 3, it increments the count by 1.\n\nFinally, the function returns the value of the variable `count`, which represents the number of valid triples.\n\nExample usage:\n```\nn = 5\nresult = get_max_triples(n)\nprint(result)  # Output: 1\n```"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-23-671435",
+    "task": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:23",
+        "task-id": "2024-01-28 20:00:23",
+        "workflow": "2024-01-28 20:00:23",
+        "Prompt": "2024-01-28 20:00:25",
+        "FinalCode": "2024-01-28 20:00:25"
+    },
+    "task-id": "HumanEval/5",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\\n    \\\"\\\"\\\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\\n    >>> intersperse([], 4)\\n    []\\n    >>> intersperse([1, 2, 3], 4)\\n    [1, 4, 2, 4, 3]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `intersperse` takes in two parameters: `numbers`, which is a list of integers, and `delimiter`, which is also an integer. The function returns a new list where the `delimiter` is inserted between every two consecutive elements of the input list `numbers`. \n\nThe function definition includes a type hint for the input parameter `numbers`, which indicates that it is a List of integers. The return type of the function is also annotated as a List of integers. \n\nThe docstring of the function provides examples of expected behavior for the function, including an empty input list and a non-empty input list. \n\nNote that this code snippet only includes the function definition and its docstring, and does not include any code to call or test the function."
+}

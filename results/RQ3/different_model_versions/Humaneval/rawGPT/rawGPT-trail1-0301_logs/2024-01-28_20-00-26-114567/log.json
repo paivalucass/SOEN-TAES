@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-26-114567",
+    "task": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:26",
+        "task-id": "2024-01-28 20:00:26",
+        "workflow": "2024-01-28 20:00:26",
+        "Prompt": "2024-01-28 20:00:28",
+        "FinalCode": "2024-01-28 20:00:28"
+    },
+    "task-id": "HumanEval/8",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Tuple\\n\\n\\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\\n    \\\"\\\"\\\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\\n    Empty sum should be equal to 0 and empty product should be equal to 1.\\n    >>> sum_product([])\\n    (0, 1)\\n    >>> sum_product([1, 2, 3, 4])\\n    (10, 24)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The above code defines a function `sum_product` that takes a list of integers and returns a tuple consisting of the sum and the product of all the integers in the list.\n\nThe function uses the `typing` module to specify the input and output types. The input is a list of integers and the output is a tuple containing two integers.\n\nThe function uses a for loop to iterate over the list of integers and calculate the sum and product. If the list is empty, the sum is 0 and the product is 1.\n\nThe function returns the sum and product as a tuple using the `Tuple` type annotation from the `typing` module. The function also includes a docstring that explains what the function does and provides examples of how to use it."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-31-985556",
+    "task": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    0\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:31",
+        "task-id": "2024-01-28 20:04:31",
+        "workflow": "2024-01-28 20:04:31",
+        "Prompt": "2024-01-28 20:04:37",
+        "FinalCode": "2024-01-28 20:04:37"
+    },
+    "task-id": "HumanEval/91",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_bored(S):\\n    \\\"\\\"\\\"\\n    You'll be given a string of words, and your task is to count the number\\n    of boredoms. A boredom is a sentence that starts with the word \\\"I\\\".\\n    Sentences are delimited by '.', '?' or '!'.\\n   \\n    For example:\\n    >>> is_bored(\\\"Hello world\\\")\\n    0\\n    >>> is_bored(\\\"The sky is blue. The sun is shining. I love this weather\\\")\\n    1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code defines a function named \"is_bored\" which takes a string \"S\" as input. The function's purpose is to count the number of boredom sentences in the given string.\n\nA boredom sentence is a sentence that starts with the word \"I\". Sentences in the string are delimited by '.', '?' or '!'.\n\nThe function starts with a docstring explaining its purpose and how it works.\n\nThe first line of the function definition is \"def is_bored(S):\".\n\nThe function body is indented and consists of the following code:\n\n1. The variable \"count\" is initialized to 0. This variable will be used to keep track of the number of boredom sentences.\n\n2. The function uses the \"split\" method on the input string \"S\" to split it into a list of words. Each word is separated by a space.\n\n3. The function iterates over each word in the list using a for loop.\n\n4. Inside the loop, it checks if the current word is equal to \"I\". If it is, it checks if the previous character (found using indexing) is one of the delimiters ('.', '?' or '!'). If it is, it increments the \"count\" variable by 1.\n\n5. After the loop ends, the function returns the value of the \"count\" variable.\n\nThe code snippet also provides two example invocations of the function along with their expected outputs. The first example passes the string \"Hello world\" to the function and expects the output to be 0. The second example passes a longer string and expects the output to be 1."
+}

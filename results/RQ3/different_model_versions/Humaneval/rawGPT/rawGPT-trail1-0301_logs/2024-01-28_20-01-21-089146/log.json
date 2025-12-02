@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-21-089146",
+    "task": "\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (1, 2)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:21",
+        "task-id": "2024-01-28 20:01:21",
+        "workflow": "2024-01-28 20:01:21",
+        "Prompt": "2024-01-28 20:01:22",
+        "FinalCode": "2024-01-28 20:01:22"
+    },
+    "task-id": "HumanEval/155",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef even_odd_count(num):\\n    \\\"\\\"\\\"Given an integer. return a tuple that has the number of even and odd digits respectively.\\n\\n     Example:\\n        even_odd_count(-12) ==> (1, 1)\\n        even_odd_count(123) ==> (1, 2)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "As an AI language model, I can see that the code you have written is a function definition in Python. The function is named `even_odd_count` and takes one argument `num`.\n\nThe function is documented using docstrings where the purpose of the function is explained, and examples are given to show how it should be used.\n\nThe function is designed to count the number of even and odd digits in the input number. The returned value is a tuple that has the count of even digits as the first element and the count of odd digits as the second element.\n\nTwo examples are given to show how the function works with different inputs."
+}

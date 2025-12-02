@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-11-207582",
+    "task": "\n\ndef common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:11",
+        "task-id": "2024-01-28 20:04:11",
+        "workflow": "2024-01-28 20:04:11",
+        "Prompt": "2024-01-28 20:04:17",
+        "FinalCode": "2024-01-28 20:04:17"
+    },
+    "task-id": "HumanEval/58",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef common(l1: list, l2: list):\\n    \\\"\\\"\\\"Return sorted unique common elements for two lists.\\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\\n    [1, 5, 653]\\n    >>> common([5, 3, 2, 8], [3, 2])\\n    [2, 3]\\n\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `common` takes two lists as input and returns a new list containing the sorted unique common elements between the two input lists.\n\nHere are the details of the function:\n\ndef common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n\n- The function takes two parameters, `l1` and `l2`, which are both lists.\n- The function starts with a docstring which describes the purpose and behavior of the function.\n- The function uses the set data structure to find the unique common elements between the two input lists.\n- It first converts the two input lists into sets using the `set()` function.\n- It then uses the `intersection()` method of sets to find the common elements between the two sets.\n- The result of the `intersection()` method is again converted into a list using the `list()` function.\n- Finally, the resulting list is sorted using the `sorted()` function and returned.\n\nThe function is designed to be used with the `doctest` module to run the provided examples as part of the documentation."
+}

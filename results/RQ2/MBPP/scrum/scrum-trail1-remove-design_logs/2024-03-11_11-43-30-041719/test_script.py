@@ -1,0 +1,11 @@
+def extract_freq(test_list):
+    unique_set = set(test_list)
+    return len(unique_set)
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(extract_freq([(3, 4), (1, 2), (4, 3), (5, 6)]), 3)
+
+if __name__ == '__main__':
+    unittest.main()

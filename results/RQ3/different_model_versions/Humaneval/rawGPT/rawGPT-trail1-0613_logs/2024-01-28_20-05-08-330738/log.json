@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-08-330738",
+    "task": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:08",
+        "task-id": "2024-01-28 20:05:08",
+        "workflow": "2024-01-28 20:05:08",
+        "Prompt": "2024-01-28 20:05:10",
+        "FinalCode": "2024-01-28 20:05:10"
+    },
+    "task-id": "HumanEval/139",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef special_factorial(n):\\n    \\\"\\\"\\\"The Brazilian factorial is defined as:\\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\\n    where n > 0\\n\\n    For example:\\n    >>> special_factorial(4)\\n    288\\n\\n    The function will receive an integer as input and should return the special\\n    factorial of this integer.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The special_factorial function takes an integer, n, as input and returns the special factorial of that integer.\n\nThe special factorial is calculated by multiplying the factorial of each number from n to 1. \n\nFor example, if n is 4, the special factorial is calculated as:\n4! * 3! * 2! * 1! = 24 * 6 * 2 * 1 = 288\n\nTo implement this function, you can use a loop to iterate from n to 1 and calculate the factorial of each number. Then, multiply all the factorials together to get the special factorial."
+}

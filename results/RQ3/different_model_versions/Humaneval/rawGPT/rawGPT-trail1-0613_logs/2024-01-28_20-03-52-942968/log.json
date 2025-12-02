@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-52-942968",
+    "task": "\n\ndef get_positive(l: list):\n    \"\"\"Return only positive numbers in the list.\n    >>> get_positive([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:52",
+        "task-id": "2024-01-28 20:03:52",
+        "workflow": "2024-01-28 20:03:52",
+        "Prompt": "2024-01-28 20:03:56",
+        "FinalCode": "2024-01-28 20:03:56"
+    },
+    "task-id": "HumanEval/30",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef get_positive(l: list):\\n    \\\"\\\"\\\"Return only positive numbers in the list.\\n    >>> get_positive([-1, 2, -4, 5, 6])\\n    [2, 5, 6]\\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\\n    [5, 3, 2, 3, 9, 123, 1]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `get_positive` takes in a list `l` as input and returns a new list containing only the positive numbers from the input list.\n\nHere are some examples of how the function works:\n\n- `get_positive([-1, 2, -4, 5, 6])` returns `[2, 5, 6]`. This is because the positive numbers in the input list are 2, 5, and 6.\n\n- `get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])` returns `[5, 3, 2, 3, 9, 123, 1]`. This is because the positive numbers in the input list are 5, 3, 2, 3, 9, 123, and 1."
+}

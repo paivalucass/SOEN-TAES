@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-51-186904",
+    "task": "\ndef match_parens(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    match_parens(['()(', ')']) == 'Yes'\n    match_parens([')', ')']) == 'No'\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:51",
+        "task-id": "2024-01-28 20:04:51",
+        "workflow": "2024-01-28 20:04:51",
+        "Prompt": "2024-01-28 20:04:56",
+        "FinalCode": "2024-01-28 20:04:56"
+    },
+    "task-id": "HumanEval/119",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef match_parens(lst):\\n    '''\\n    You are given a list of two strings, both strings consist of open\\n    parentheses '(' or close parentheses ')' only.\\n    Your job is to check if it is possible to concatenate the two strings in\\n    some order, that the resulting string will be good.\\n    A string S is considered to be good if and only if all parentheses in S\\n    are balanced. For example: the string '(())()' is good, while the string\\n    '())' is not.\\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\\n\\n    Examples:\\n    match_parens(['()(', ')']) == 'Yes'\\n    match_parens([')', ')']) == 'No'\\n    '''\\n\"",
+    "FinalCode": "To solve this problem, we can use a stack data structure. We iterate through the characters in the given list of strings. For every open parenthesis '(', we push it into the stack. For every close parenthesis ')', we check if the stack is empty. If it is empty, it means there is no open parenthesis to match with the current close parenthesis, so we return 'No'. Otherwise, we pop an open parenthesis from the stack.\n\nAt the end, if the stack is empty, it means all the open parentheses have been matched with close parentheses, and thus the resulting string will be good. So we return 'Yes'. If the stack is not empty, it means there are unmatched open parentheses, and the resulting string will not be good. So we return 'No'.\n\nHere is the implementation of the solution in Python:\n\ndef match_parens(lst):\n    stack = []\n    \n    for s in lst:\n        if s == '(':\n            stack.append(s)\n        elif s == ')':\n            if len(stack) == 0:\n                return 'No'\n            stack.pop()\n    \n    if len(stack) == 0:\n        return 'Yes'\n    else:\n        return 'No'\n\n# Testing the function\nprint(match_parens(['()(', ')']))  # Output: 'Yes'\nprint(match_parens([')', ')']))    # Output: 'No'"
+}

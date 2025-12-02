@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-42-924197",
+    "task": "\n\ndef common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:42",
+        "task-id": "2024-01-28 20:00:42",
+        "workflow": "2024-01-28 20:00:42",
+        "Prompt": "2024-01-28 20:00:45",
+        "FinalCode": "2024-01-28 20:00:45"
+    },
+    "task-id": "HumanEval/58",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef common(l1: list, l2: list):\\n    \\\"\\\"\\\"Return sorted unique common elements for two lists.\\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\\n    [1, 5, 653]\\n    >>> common([5, 3, 2, 8], [3, 2])\\n    [2, 3]\\n\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a function called \"common\" that takes two lists as arguments and returns a sorted list of unique common elements between them.\n\nThe function first defines its arguments as \"l1\" and \"l2\", which are both lists.\n\nIt then includes a docstring to provide information on how the function works and its expected output. The docstring includes two examples of how to use the function and what to expect as output.\n\nInside the function, it uses the set() function to convert each list into a set, which automatically removes duplicates. It then takes the intersection of the two sets using the \"&\" operator, which returns a new set containing only the elements that are common to both sets.\n\nFinally, it converts the resulting set back into a list using the list() function and sorts it using the sorted() function. The sorted list is then returned as the output of the function."
+}

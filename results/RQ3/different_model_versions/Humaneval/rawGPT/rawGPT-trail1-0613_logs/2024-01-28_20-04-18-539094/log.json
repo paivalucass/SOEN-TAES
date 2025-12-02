@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-18-539094",
+    "task": "\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \n    zero, and has a frequency greater than or equal to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:18",
+        "task-id": "2024-01-28 20:04:18",
+        "workflow": "2024-01-28 20:04:18",
+        "Prompt": "2024-01-28 20:04:21",
+        "FinalCode": "2024-01-28 20:04:21"
+    },
+    "task-id": "HumanEval/69",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef search(lst):\\n    '''\\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \\n    zero, and has a frequency greater than or equal to the value of the integer itself. \\n    The frequency of an integer is the number of times it appears in the list.\\n    If no such a value exist, return -1.\\n    Examples:\\n        search([4, 1, 2, 2, 3, 1]) == 2\\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\\n        search([5, 5, 4, 4, 4]) == -1\\n    '''\\n\"",
+    "FinalCode": "The code defines a function named `search` that takes in a list `lst` as a parameter and returns the greatest integer that has a frequency greater than or equal to the value of the integer itself.\n\nThe function works by iterating over each unique element in the list and checking if the count of that element is greater than or equal to the element itself. If it is, the function keeps track of the greatest element seen so far. After iterating through all the elements, the function returns the greatest element found. If no such element is found, the function returns -1.\n\nThe function includes some example test cases that demonstrate how it should behave."
+}

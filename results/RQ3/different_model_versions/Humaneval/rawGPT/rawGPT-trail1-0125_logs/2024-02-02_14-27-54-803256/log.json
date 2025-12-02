@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-54-803256",
+    "task": "\n\ndef sum_to_n(n: int):\n    \"\"\"sum_to_n is a function that sums numbers from 1 to n.\n    >>> sum_to_n(30)\n    465\n    >>> sum_to_n(100)\n    5050\n    >>> sum_to_n(5)\n    15\n    >>> sum_to_n(10)\n    55\n    >>> sum_to_n(1)\n    1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:54",
+        "task-id": "2024-02-02 14:27:54",
+        "workflow": "2024-02-02 14:27:54",
+        "Prompt": "2024-02-02 14:27:57",
+        "FinalCode": "2024-02-02 14:27:57"
+    },
+    "task-id": "HumanEval/60",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sum_to_n(n: int):\\n    \\\"\\\"\\\"sum_to_n is a function that sums numbers from 1 to n.\\n    >>> sum_to_n(30)\\n    465\\n    >>> sum_to_n(100)\\n    5050\\n    >>> sum_to_n(5)\\n    15\\n    >>> sum_to_n(10)\\n    55\\n    >>> sum_to_n(1)\\n    1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def sum_to_n(n: int):\n    \"\"\"sum_to_n is a function that sums numbers from 1 to n.\n    >>> sum_to_n(30)\n    465\n    >>> sum_to_n(100)\n    5050\n    >>> sum_to_n(5)\n    15\n    >>> sum_to_n(10)\n    55\n    >>> sum_to_n(1)\n    1\n    \"\"\"\n    return n * (n + 1) // 2"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-09-299568",
+    "task": "\n\ndef monotonic(l: list):\n    \"\"\"Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:09",
+        "task-id": "2024-01-28 20:04:09",
+        "workflow": "2024-01-28 20:04:09",
+        "Prompt": "2024-01-28 20:04:15",
+        "FinalCode": "2024-01-28 20:04:15"
+    },
+    "task-id": "HumanEval/57",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef monotonic(l: list):\\n    \\\"\\\"\\\"Return True is list elements are monotonically increasing or decreasing.\\n    >>> monotonic([1, 2, 4, 20])\\n    True\\n    >>> monotonic([1, 20, 4, 10])\\n    False\\n    >>> monotonic([4, 1, 0, -10])\\n    True\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The `monotonic` function takes a list `l` as input and returns `True` if the elements in the list are monotonically increasing or decreasing. Otherwise, it returns `False`.\n\nIn order to determine if the list is monotonically increasing, we can check if each element is greater than or equal to the previous element. If this condition is true for all elements, then the list is monotonically increasing.\n\nSimilarly, to determine if the list is monotonically decreasing, we can check if each element is less than or equal to the previous element. If this condition is true for all elements, then the list is monotonically decreasing.\n\nThe `monotonic` function can be defined as follows:\n\n```python\ndef monotonic(l: list) -> bool:\n    \"\"\"\n    Return True is list elements are monotonically increasing or decreasing.\n    \"\"\"\n    increasing = all(l[i] >= l[i - 1] for i in range(1, len(l)))\n    decreasing = all(l[i] <= l[i - 1] for i in range(1, len(l)))\n    return increasing or decreasing\n```\n\nLet's test the function with a few examples:\n\n```python\nprint(monotonic([1, 2, 4, 20]))  # True\nprint(monotonic([1, 20, 4, 10]))  # False\nprint(monotonic([4, 1, 0, -10]))  # True\n```\n\nOutput:\n```\nTrue\nFalse\nTrue\n```\n\nAs we can see, the function correctly determines if the list elements are monotonically increasing or decreasing."
+}

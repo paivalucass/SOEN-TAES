@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-51-486594",
+    "task": "\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and every 3 consecutive letters are distinct\n    For example:\n    is_happy(a) => False\n    is_happy(aa) => False\n    is_happy(abcd) => True\n    is_happy(aabb) => False\n    is_happy(adb) => True\n    is_happy(xyy) => False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:51",
+        "task-id": "2024-01-28 20:00:51",
+        "workflow": "2024-01-28 20:00:51",
+        "Prompt": "2024-01-28 20:00:53",
+        "FinalCode": "2024-01-28 20:00:53"
+    },
+    "task-id": "HumanEval/80",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_happy(s):\\n    \\\"\\\"\\\"You are given a string s.\\n    Your task is to check if the string is happy or not.\\n    A string is happy if its length is at least 3 and every 3 consecutive letters are distinct\\n    For example:\\n    is_happy(a) => False\\n    is_happy(aa) => False\\n    is_happy(abcd) => True\\n    is_happy(aabb) => False\\n    is_happy(adb) => True\\n    is_happy(xyy) => False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def is_happy(s):\n    \"\"\"\n    You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and every 3 consecutive letters are distinct\n    For example:\n    is_happy(a) => False\n    is_happy(aa) => False\n    is_happy(abcd) => True\n    is_happy(aabb) => False\n    is_happy(adb) => True\n    is_happy(xyy) => False\n    \"\"\"\n    if len(s) < 3:\n        return False\n    for i in range(len(s)-2):\n        if s[i] == s[i+1] or s[i+1] == s[i+2] or s[i] == s[i+2]:\n            return False\n    return True"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-33-068976",
+    "task": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:33",
+        "task-id": "2024-01-28 20:03:33",
+        "workflow": "2024-01-28 20:03:33",
+        "Prompt": "2024-01-28 20:03:36",
+        "FinalCode": "2024-01-28 20:03:36"
+    },
+    "task-id": "HumanEval/0",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\\n    \\\"\\\"\\\" Check if in given list of numbers, are any two numbers closer to each other than\\n    given threshold.\\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\\n    False\\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\\n    True\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `has_close_elements` takes in two parameters: `numbers`, which is a list of floats, and `threshold`, which is a float. It returns a boolean value indicating whether or not there are any two numbers in the list that are closer to each other than the given threshold.\n\nThe function starts by importing the `List` type from the `typing` module. This is used to indicate that the `numbers` parameter should be a list of floats.\n\nThe function definition begins with a docstring that explains the purpose of the function and provides examples of how to use it.\n\nInside the function, the first step is to iterate over the `numbers` list using a for loop. For each number in the list, the function checks if there is another number in the list that is closer to it than the given threshold. This is done by subtracting the current number from all the other numbers in the list and checking if the absolute difference is less than the threshold.\n\nIf such a pair of close numbers is found, the function immediately returns `True`. If the loop finishes without finding any close numbers, the function returns `False`."
+}

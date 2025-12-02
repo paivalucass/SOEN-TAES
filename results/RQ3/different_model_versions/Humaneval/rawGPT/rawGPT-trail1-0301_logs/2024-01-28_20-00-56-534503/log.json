@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-56-534503",
+    "task": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:56",
+        "task-id": "2024-01-28 20:00:56",
+        "workflow": "2024-01-28 20:00:56",
+        "Prompt": "2024-01-28 20:00:59",
+        "FinalCode": "2024-01-28 20:00:59"
+    },
+    "task-id": "HumanEval/95",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef check_dict_case(dict):\\n    \\\"\\\"\\\"\\n    Given a dictionary, return True if all keys are strings in lower \\n    case or all keys are strings in upper case, else return False.\\n    The function should return False is the given dictionary is empty.\\n    Examples:\\n    check_dict_case({\\\"a\\\":\\\"apple\\\", \\\"b\\\":\\\"banana\\\"}) should return True.\\n    check_dict_case({\\\"a\\\":\\\"apple\\\", \\\"A\\\":\\\"banana\\\", \\\"B\\\":\\\"banana\\\"}) should return False.\\n    check_dict_case({\\\"a\\\":\\\"apple\\\", 8:\\\"banana\\\", \\\"a\\\":\\\"apple\\\"}) should return False.\\n    check_dict_case({\\\"Name\\\":\\\"John\\\", \\\"Age\\\":\\\"36\\\", \\\"City\\\":\\\"Houston\\\"}) should return False.\\n    check_dict_case({\\\"STATE\\\":\\\"NC\\\", \\\"ZIP\\\":\\\"12345\\\" }) should return True.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n    if len(dict) == 0:\n        return False\n    keys = list(dict.keys())\n    first_key = keys[0]\n    if first_key.islower():\n        for key in keys:\n            if not key.islower():\n                return False\n        return True\n    elif first_key.isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n        return True\n    else:\n        return False"
+}

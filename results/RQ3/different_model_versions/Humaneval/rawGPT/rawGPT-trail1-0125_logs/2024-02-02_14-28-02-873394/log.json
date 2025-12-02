@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-02-873394",
+    "task": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    0\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:02",
+        "task-id": "2024-02-02 14:28:02",
+        "workflow": "2024-02-02 14:28:02",
+        "Prompt": "2024-02-02 14:28:04",
+        "FinalCode": "2024-02-02 14:28:04"
+    },
+    "task-id": "HumanEval/91",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_bored(S):\\n    \\\"\\\"\\\"\\n    You'll be given a string of words, and your task is to count the number\\n    of boredoms. A boredom is a sentence that starts with the word \\\"I\\\".\\n    Sentences are delimited by '.', '?' or '!'.\\n   \\n    For example:\\n    >>> is_bored(\\\"Hello world\\\")\\n    0\\n    >>> is_bored(\\\"The sky is blue. The sun is shining. I love this weather\\\")\\n    1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    0\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    1\n    \"\"\"\n    boredoms = 0\n    sentences = S.split('.')\n    for sentence in sentences:\n        words = sentence.split()\n        if words and words[0] == 'I':\n            boredoms += 1\n    return boredoms"
+}

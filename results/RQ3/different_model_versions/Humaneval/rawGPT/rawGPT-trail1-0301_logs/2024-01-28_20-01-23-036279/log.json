@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-23-036279",
+    "task": "\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, reverse the string.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"4321\"\n    solve(\"ab\") = \"AB\"\n    solve(\"#a@C\") = \"#A@c\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:23",
+        "task-id": "2024-01-28 20:01:23",
+        "workflow": "2024-01-28 20:01:23",
+        "Prompt": "2024-01-28 20:01:25",
+        "FinalCode": "2024-01-28 20:01:25"
+    },
+    "task-id": "HumanEval/161",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef solve(s):\\n    \\\"\\\"\\\"You are given a string s.\\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \\n    otherwise keep it as it is.\\n    If the string contains no letters, reverse the string.\\n    The function should return the resulted string.\\n    Examples\\n    solve(\\\"1234\\\") = \\\"4321\\\"\\n    solve(\\\"ab\\\") = \\\"AB\\\"\\n    solve(\\\"#a@C\\\") = \\\"#A@c\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def solve(s):\n    # create an empty string to store the result\n    result = \"\"\n    \n    # iterate through each character in the string\n    for char in s:\n        # check if the character is a letter\n        if char.isalpha():\n            # if it is, check if it is uppercase or lowercase\n            if char.isupper():\n                # if it is uppercase, convert it to lowercase and add it to the result\n                result += char.lower()\n            else:\n                # if it is lowercase, convert it to uppercase and add it to the result\n                result += char.upper()\n        else:\n            # if the character is not a letter, add it to the result\n            result += char\n    \n    # check if the result contains any letters\n    if not any(char.isalpha() for char in result):\n        # if it doesn't, reverse the string and set it as the result\n        result = result[::-1]\n    \n    # return the final result\n    return result"
+}

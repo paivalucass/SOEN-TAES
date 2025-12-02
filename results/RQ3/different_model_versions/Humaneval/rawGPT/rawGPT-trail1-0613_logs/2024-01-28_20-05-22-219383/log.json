@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-22-219383",
+    "task": "\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'clii'\n    >>> int_to_mini_roman(426) == 'cdxxvi'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:22",
+        "task-id": "2024-01-28 20:05:22",
+        "workflow": "2024-01-28 20:05:22",
+        "Prompt": "2024-01-28 20:05:23",
+        "FinalCode": "2024-01-28 20:05:23"
+    },
+    "task-id": "HumanEval/156",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef int_to_mini_roman(number):\\n    \\\"\\\"\\\"\\n    Given a positive integer, obtain its roman numeral equivalent as a string,\\n    and return it in lowercase.\\n    Restrictions: 1 <= num <= 1000\\n\\n    Examples:\\n    >>> int_to_mini_roman(19) == 'xix'\\n    >>> int_to_mini_roman(152) == 'clii'\\n    >>> int_to_mini_roman(426) == 'cdxxvi'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code is defining a function named `int_to_mini_roman` that takes in a positive integer `number` as input. The function aims to obtain the Roman numeral equivalent of the input number as a string and return it in lowercase. \n\nThe function has the following restrictions:\n- The input number must be between 1 and 1000 (inclusive).\n\nThe function provides a few examples of expected behavior as doctest cases. The expected output for each example is mentioned as a comment beside the respective example."
+}

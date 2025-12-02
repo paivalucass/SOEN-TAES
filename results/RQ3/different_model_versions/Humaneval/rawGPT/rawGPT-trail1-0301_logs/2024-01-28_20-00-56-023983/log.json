@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-56-023983",
+    "task": "\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 7\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:56",
+        "task-id": "2024-01-28 20:00:56",
+        "workflow": "2024-01-28 20:00:56",
+        "Prompt": "2024-01-28 20:00:59",
+        "FinalCode": "2024-01-28 20:00:59"
+    },
+    "task-id": "HumanEval/94",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef skjkasdkd(lst):\\n    \\\"\\\"\\\"You are given a list of integers.\\n    You need to find the largest prime value and return the sum of its digits.\\n\\n    Examples:\\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 10\\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 25\\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 13\\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 11\\n    For lst = [0,81,12,3,1,21] the output should be 3\\n    For lst = [0,8,1,2,1,7] the output should be 7\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given function takes a list of integers as input and returns the sum of the digits of the largest prime number in the list. \n\nTo solve the problem, the function first initializes a variable \"max_prime\" to None. It then iterates through the list and checks if each number is prime. If a prime number is found, it is compared with the current value of \"max_prime\" and if it is greater, it is assigned to \"max_prime\". \n\nOnce the iteration is complete, the function checks if \"max_prime\" is None. If it is, it means that no prime number was found in the list and the function returns 0. Otherwise, the function converts \"max_prime\" to a string and calculates the sum of its digits using a loop.\n\nHere is the implementation of the function:\n\ndef largest_prime_sum(lst):\n    max_prime = None\n    for num in lst:\n        if num > 1:\n            for i in range(2, num):\n                if (num % i) == 0:\n                    break\n            else:\n                if max_prime is None or num > max_prime:\n                    max_prime = num\n                    \n    if max_prime is None:\n        return 0\n    \n    prime_str = str(max_prime)\n    digit_sum = 0\n    for digit in prime_str:\n        digit_sum += int(digit)\n    \n    return digit_sum"
+}

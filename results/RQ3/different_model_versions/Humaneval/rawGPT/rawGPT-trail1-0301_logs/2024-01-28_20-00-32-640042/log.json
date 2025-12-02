@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-32-640042",
+    "task": "\n\ndef flip_case(string: str) -> str:\n    \"\"\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hELLO'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:32",
+        "task-id": "2024-01-28 20:00:32",
+        "workflow": "2024-01-28 20:00:32",
+        "Prompt": "2024-01-28 20:00:33",
+        "FinalCode": "2024-01-28 20:00:33"
+    },
+    "task-id": "HumanEval/27",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef flip_case(string: str) -> str:\\n    \\\"\\\"\\\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\\n    >>> flip_case('Hello')\\n    'hELLO'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "As an AI language model, I can see that the function \"flip_case\" is defined here, which takes a single argument, a string, and returns a string with the case of each character flipped. The docstring includes an example usage and expected output, which suggests that the function has been tested and works correctly."
+}

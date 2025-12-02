@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-18-659454",
+    "task": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:18",
+        "task-id": "2024-01-28 20:04:18",
+        "workflow": "2024-01-28 20:04:18",
+        "Prompt": "2024-01-28 20:04:26",
+        "FinalCode": "2024-01-28 20:04:26"
+    },
+    "task-id": "HumanEval/70",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef strange_sort_list(lst):\\n    '''\\n    Given list of integers, return list in strange order.\\n    Strange sorting, is when you start with the minimum value,\\n    then maximum of the remaining integers, then minimum and so on.\\n\\n    Examples:\\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\\n    strange_sort_list([]) == []\\n    '''\\n\"",
+    "FinalCode": "The function `strange_sort_list(lst)` takes a list of integers as input and returns the list sorted in a strange order. \n\nThe strange sorting order is defined as follows:\n1. Start with the minimum value from the input list.\n2. Append the maximum value from the remaining integers to the sorted list.\n3. Repeat steps 1 and 2 until all the integers from the input list have been appended to the sorted list.\n\nHere are some examples of how the function works:\n\n- `strange_sort_list([1, 2, 3, 4])` returns `[1, 4, 2, 3]`. \n  - The minimum value is 1, so it is appended to the sorted list.\n  - The remaining maximum value is 4, so it is appended to the sorted list.\n  - The remaining minimum value is 2, so it is appended to the sorted list.\n  - The remaining maximum value is 3, so it is appended to the sorted list.\n  - The sorted list is `[1, 4, 2, 3]`.\n\n- `strange_sort_list([5, 5, 5, 5])` returns `[5, 5, 5, 5]`.\n  - The minimum value is 5, so it is appended to the sorted list.\n  - The remaining maximum value is 5, so it is appended to the sorted list.\n  - The remaining minimum value is 5, so it is appended to the sorted list.\n  - The remaining maximum value is 5, so it is appended to the sorted list.\n  - The sorted list is `[5, 5, 5, 5]`.\n\n- `strange_sort_list([])` returns `[]`.\n  - The input list is empty, so the sorted list is also empty.\n\nNote: The function does not modify the original input list."
+}

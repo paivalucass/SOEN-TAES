@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-41-439398",
+    "task": "\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:41",
+        "task-id": "2024-02-02 14:27:41",
+        "workflow": "2024-02-02 14:27:41",
+        "Prompt": "2024-02-02 14:27:42",
+        "FinalCode": "2024-02-02 14:27:42"
+    },
+    "task-id": "HumanEval/2",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef truncate_number(number: float) -> float:\\n    \\\"\\\"\\\" Given a positive floating point number, it can be decomposed into\\n    and integer part (largest integer smaller than given number) and decimals\\n    (leftover part always smaller than 1).\\n\\n    Return the decimal part of the number.\\n    >>> truncate_number(3.5)\\n    0.5\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n    return number - int(number)"
+}

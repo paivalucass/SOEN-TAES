@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-23-672106",
+    "task": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:23",
+        "task-id": "2024-01-28 20:00:23",
+        "workflow": "2024-01-28 20:00:23",
+        "Prompt": "2024-01-28 20:00:26",
+        "FinalCode": "2024-01-28 20:00:26"
+    },
+    "task-id": "HumanEval/0",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\\n    \\\"\\\"\\\" Check if in given list of numbers, are any two numbers closer to each other than\\n    given threshold.\\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\\n    False\\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\\n    True\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a Python function that takes in two arguments: a list of floats called \"numbers\" and a float called \"threshold\". The function returns a boolean value indicating whether there are any two numbers in the list that are closer to each other than the threshold value.\n\nThe function definition starts with the \"typing\" module to provide type hints for the function's arguments and return type. The \"List[float]\" type hint specifies that the \"numbers\" parameter is a list of floats, while the \"float\" type hint for the \"threshold\" parameter indicates that it is a single float value.\n\nThe function body contains a docstring that explains what the function does, along with two example test cases using the \">>> \" syntax commonly seen in Python docstrings.\n\nInside the function, the \"zip\" function is used to create pairs of adjacent numbers in the list, and the \"abs\" function is used to calculate the absolute difference between each pair. These differences are compared to the threshold value using a list comprehension, and the function returns \"True\" if any difference is less than or equal to the threshold, and \"False\" otherwise."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-48-500193",
+    "task": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:48",
+        "task-id": "2024-02-02 14:27:48",
+        "workflow": "2024-02-02 14:27:48",
+        "Prompt": "2024-02-02 14:27:50",
+        "FinalCode": "2024-02-02 14:27:50"
+    },
+    "task-id": "HumanEval/33",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sort_third(l: list):\\n    \\\"\\\"\\\"This function takes a list l and returns a list l' such that\\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\\n    to the values of the corresponding indicies of l, but sorted.\\n    >>> sort_third([1, 2, 3])\\n    [1, 2, 3]\\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\\n    [2, 6, 3, 4, 8, 9, 5]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def sort_third(l: list):\n    \"\"\"\n    This function takes a list l and returns a list l' such that\n    l' is identical to l in the indices that are not divisible by three, while its values at the indices that are divisible by three are equal\n    to the values of the corresponding indices of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n    sorted_indices = sorted([i for i in range(len(l)) if i % 3 == 0])\n    sorted_values = [l[i] for i in sorted_indices]\n    \n    l_prime = list(l)\n    for i, val in zip(sorted_indices, sorted(sorted_values)):\n        l_prime[i] = val\n    \n    return l_prime"
+}

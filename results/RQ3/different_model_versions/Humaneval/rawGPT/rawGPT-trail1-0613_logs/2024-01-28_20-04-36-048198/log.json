@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-36-048198",
+    "task": "\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412) should return 16.\n    multiply(19, 28) should return 72.\n    multiply(2020, 1851) should return 0.\n    multiply(14,-15) should return 20.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:36",
+        "task-id": "2024-01-28 20:04:36",
+        "workflow": "2024-01-28 20:04:36",
+        "Prompt": "2024-01-28 20:04:39",
+        "FinalCode": "2024-01-28 20:04:39"
+    },
+    "task-id": "HumanEval/97",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef multiply(a, b):\\n    \\\"\\\"\\\"Complete the function that takes two integers and returns \\n    the product of their unit digits.\\n    Assume the input is always valid.\\n    Examples:\\n    multiply(148, 412) should return 16.\\n    multiply(19, 28) should return 72.\\n    multiply(2020, 1851) should return 0.\\n    multiply(14,-15) should return 20.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function called `multiply` that takes two integers, `a` and `b`, as input and returns the product of their unit digits.\n\nTo solve this task, we can convert both `a` and `b` to strings, extract the last character of each string (which represents the unit digit), convert them back to integers, and then return their product.\n\nHere is the modified code with the implementation of the `multiply` function:\n\n```\ndef multiply(a, b):\n    return int(str(a)[-1]) * int(str(b)[-1])\n```\n\nNow, let's test the function with the provided examples:\n\n```\nprint(multiply(148, 412))   # Output: 16\nprint(multiply(19, 28))     # Output: 72\nprint(multiply(2020, 1851)) # Output: 0\nprint(multiply(14, -15))    # Output: 20\n```\n\nThe function should return the expected outputs for all the examples."
+}

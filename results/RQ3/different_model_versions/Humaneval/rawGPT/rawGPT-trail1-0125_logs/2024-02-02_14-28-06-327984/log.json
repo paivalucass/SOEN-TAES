@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-06-327984",
+    "task": "\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    or the sum of numbers from 1 to i otherwise.\n    i starts from 1.\n    the factorial of i is the multiplication of the numbers from 1 to i (1 * 2 * ... * i).\n    Example:\n    f(5) == [1, 2, 6, 24, 15]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:06",
+        "task-id": "2024-02-02 14:28:06",
+        "workflow": "2024-02-02 14:28:06",
+        "Prompt": "2024-02-02 14:28:07",
+        "FinalCode": "2024-02-02 14:28:07"
+    },
+    "task-id": "HumanEval/106",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef f(n):\\n    \\\"\\\"\\\" Implement the function f that takes n as a parameter,\\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\\n    or the sum of numbers from 1 to i otherwise.\\n    i starts from 1.\\n    the factorial of i is the multiplication of the numbers from 1 to i (1 * 2 * ... * i).\\n    Example:\\n    f(5) == [1, 2, 6, 24, 15]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum_val = sum(range(1, i+1))\n            result.append(sum_val)\n    return result\n\n# Test the function\nprint(f(5))  # Output: [1, 2, 6, 24, 15]"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-48-103741",
+    "task": "\n\ndef is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    False\n    >>> is_prime(101)\n    True\n    >>> is_prime(11)\n    True\n    >>> is_prime(13441)\n    True\n    >>> is_prime(61)\n    True\n    >>> is_prime(4)\n    False\n    >>> is_prime(1)\n    False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:48",
+        "task-id": "2024-02-02 14:27:48",
+        "workflow": "2024-02-02 14:27:48",
+        "Prompt": "2024-02-02 14:27:49",
+        "FinalCode": "2024-02-02 14:27:49"
+    },
+    "task-id": "HumanEval/31",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef is_prime(n):\\n    \\\"\\\"\\\"Return true if a given number is prime, and false otherwise.\\n    >>> is_prime(6)\\n    False\\n    >>> is_prime(101)\\n    True\\n    >>> is_prime(11)\\n    True\\n    >>> is_prime(13441)\\n    True\\n    >>> is_prime(61)\\n    True\\n    >>> is_prime(4)\\n    False\\n    >>> is_prime(1)\\n    False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    False\n    >>> is_prime(101)\n    True\n    >>> is_prime(11)\n    True\n    >>> is_prime(13441)\n    True\n    >>> is_prime(61)\n    True\n    >>> is_prime(4)\n    False\n    >>> is_prime(1)\n    False\n    \"\"\"\n\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+}

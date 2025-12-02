@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-40-620095",
+    "task": "\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:40",
+        "task-id": "2024-01-28 20:03:40",
+        "workflow": "2024-01-28 20:03:40",
+        "Prompt": "2024-01-28 20:03:45",
+        "FinalCode": "2024-01-28 20:03:45"
+    },
+    "task-id": "HumanEval/13",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef greatest_common_divisor(a: int, b: int) -> int:\\n    \\\"\\\"\\\" Return a greatest common divisor of two integers a and b\\n    >>> greatest_common_divisor(3, 5)\\n    1\\n    >>> greatest_common_divisor(25, 15)\\n    5\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `greatest_common_divisor` takes two integers `a` and `b` as input and returns their greatest common divisor.\n\nHere's how the code works:\n\n1. The function definition starts with `def greatest_common_divisor(a: int, b: int) -> int:`. This line specifies the function name `greatest_common_divisor` and its input parameters `a` and `b`. It also specifies that the function returns an integer.\n\n2. The next line contains a docstring that explains what the function does. It states that the function returns the greatest common divisor of `a` and `b`.\n\n3. The function body starts with a blank line.\n\n4. Inside the function body, there are two examples of function calls with expected outputs using the `>>>` syntax. These examples serve as doctests, which are used to test the function's behavior and provide examples of how to use it.\n\n5. The function body ends with three double quotes on a separate line.\n\nOverall, this code defines a function `greatest_common_divisor` that calculates the greatest common divisor of two integers."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-55-676928",
+    "task": "\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    \"21\"\n    >>> circular_shift(12, 2)\n    \"12\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:55",
+        "task-id": "2024-02-02 14:27:55",
+        "workflow": "2024-02-02 14:27:55",
+        "Prompt": "2024-02-02 14:27:57",
+        "FinalCode": "2024-02-02 14:27:57"
+    },
+    "task-id": "HumanEval/65",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef circular_shift(x, shift):\\n    \\\"\\\"\\\"Circular shift the digits of the integer x, shift the digits right by shift\\n    and return the result as a string.\\n    If shift > number of digits, return digits reversed.\\n    >>> circular_shift(12, 1)\\n    \\\"21\\\"\\n    >>> circular_shift(12, 2)\\n    \\\"12\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def circular_shift(x, shift):\n    \"\"\"\n    Circular shift the digits of the integer x, shift the digits right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    \"21\"\n    >>> circular_shift(12, 2)\n    \"12\"\n    \"\"\"\n    x_str = str(x)\n    n = len(x_str)\n    shift = shift % n\n    if shift == 0:\n        return x_str\n    else:\n        return x_str[-shift:] + x_str[:-shift]"
+}

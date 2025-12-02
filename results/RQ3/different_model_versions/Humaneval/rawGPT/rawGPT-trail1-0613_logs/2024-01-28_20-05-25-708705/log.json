@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-05-25-708705",
+    "task": "\ndef generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [2, 4, 6, 8]\n    generate_integers(8, 2) => [2, 4, 6, 8]\n    generate_integers(10, 14) => []\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:05:25",
+        "task-id": "2024-01-28 20:05:25",
+        "workflow": "2024-01-28 20:05:25",
+        "Prompt": "2024-01-28 20:05:27",
+        "FinalCode": "2024-01-28 20:05:27"
+    },
+    "task-id": "HumanEval/163",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef generate_integers(a, b):\\n    \\\"\\\"\\\"\\n    Given two positive integers a and b, return the even digits between a\\n    and b, in ascending order.\\n\\n    For example:\\n    generate_integers(2, 8) => [2, 4, 6, 8]\\n    generate_integers(8, 2) => [2, 4, 6, 8]\\n    generate_integers(10, 14) => []\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function called `generate_integers` that takes in two positive integers `a` and `b`. The function is supposed to return a list of even digits between `a` and `b`, including both `a` and `b`, in ascending order.\n\nIt provides a brief explanation of the function's purpose and gives a few examples of how the function should behave.\n\nThe function has not been implemented yet, so it currently does nothing. It only contains the function signature and the docstring with the specifications."
+}

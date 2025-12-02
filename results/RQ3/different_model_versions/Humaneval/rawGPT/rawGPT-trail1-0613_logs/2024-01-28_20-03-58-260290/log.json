@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-58-260290",
+    "task": "\n\ndef sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_even([5, 6, 3, 4])\n    [3, 6, 5, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:58",
+        "task-id": "2024-01-28 20:03:58",
+        "workflow": "2024-01-28 20:03:58",
+        "Prompt": "2024-01-28 20:04:02",
+        "FinalCode": "2024-01-28 20:04:02"
+    },
+    "task-id": "HumanEval/37",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sort_even(l: list):\\n    \\\"\\\"\\\"This function takes a list l and returns a list l' such that\\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\\n    to the values of the even indicies of l, but sorted.\\n    >>> sort_even([1, 2, 3])\\n    [1, 2, 3]\\n    >>> sort_even([5, 6, 3, 4])\\n    [3, 6, 5, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function named `sort_even` which takes a list `l` as input. The function returns a new list `l'` which is identical to `l` at the odd indices, but at the even indices, the values are equal to the values of the even indices of `l`, but sorted.\n\nThe function is defined with a docstring which provides a description of what the function does. It also includes two examples as doctests to illustrate the expected behavior of the function.\n\nThe first example shows that if the input list is `[1, 2, 3]`, the output list should be `[1, 2, 3]`. This means that since there are no even indices in the input list, the output list should be identical to the input list.\n\nThe second example shows that if the input list is `[5, 6, 3, 4]`, the output list should be `[3, 6, 5, 4]`. This means that at the even indices of the output list, the values should be sorted versions of the even indices of the input list, while at the odd indices, the values should be the same as the input list.\n\nSince the code only defines the function and includes doctests, it does not actually execute the function or provide any additional functionality."
+}

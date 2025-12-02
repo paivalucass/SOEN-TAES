@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-55-941129",
+    "task": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears 2 places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TGST'\n    >>> encode('This is a message')\n    'tHKS KS C MGSSCGG'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:55",
+        "task-id": "2024-01-28 20:00:55",
+        "workflow": "2024-01-28 20:00:55",
+        "Prompt": "2024-01-28 20:00:57",
+        "FinalCode": "2024-01-28 20:00:57"
+    },
+    "task-id": "HumanEval/93",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef encode(message):\\n    \\\"\\\"\\\"\\n    Write a function that takes a message, and encodes in such a \\n    way that it swaps case of all letters, replaces all vowels in \\n    the message with the letter that appears 2 places ahead of that \\n    vowel in the english alphabet. \\n    Assume only letters. \\n    \\n    Examples:\\n    >>> encode('test')\\n    'TGST'\\n    >>> encode('This is a message')\\n    'tHKS KS C MGSSCGG'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def encode(message):\n    vowels = set('aeiouAEIOU')\n    encoded = \"\"\n    for letter in message:\n        if letter.isalpha():\n            if letter in vowels:\n                encoded += chr(ord(letter)+2)\n            else:\n                if letter.isupper():\n                    encoded += letter.lower()\n                else:\n                    encoded += letter.upper()\n        else:\n            encoded += letter\n    return encoded"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-41-309529",
+    "task": "\n\ndef add(x: int, y: int):\n    \"\"\"Add two numbers x and y\n    >>> add(2, 3)\n    5\n    >>> add(5, 7)\n    12\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:41",
+        "task-id": "2024-01-28 20:00:41",
+        "workflow": "2024-01-28 20:00:41",
+        "Prompt": "2024-01-28 20:00:42",
+        "FinalCode": "2024-01-28 20:00:42"
+    },
+    "task-id": "HumanEval/53",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef add(x: int, y: int):\\n    \\\"\\\"\\\"Add two numbers x and y\\n    >>> add(2, 3)\\n    5\\n    >>> add(5, 7)\\n    12\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This is a Python function definition for a function called \"add\". The function takes two integer arguments, x and y. The docstring for the function describes what the function does and includes examples of how to use it. The examples use the Python built-in doctest module to test the function's output for different inputs."
+}

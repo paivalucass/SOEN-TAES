@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-53-401832",
+    "task": "\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:53",
+        "task-id": "2024-02-02 14:27:53",
+        "workflow": "2024-02-02 14:27:53",
+        "Prompt": "2024-02-02 14:27:53",
+        "FinalCode": "2024-02-02 14:27:53"
+    },
+    "task-id": "HumanEval/55",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef fib(n: int):\\n    \\\"\\\"\\\"Return n-th Fibonacci number.\\n    >>> fib(10)\\n    55\\n    >>> fib(1)\\n    1\\n    >>> fib(8)\\n    21\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    55\n    >>> fib(1)\n    1\n    >>> fib(8)\n    21\n    \"\"\""
+}

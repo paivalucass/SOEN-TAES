@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-42-193121",
+    "task": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any even digit.\n\n    Note: Returned list should be sorted in increasing order.\n    \n    For example:\n    >>> unique_digits([15, 33, 1422, 1])\n    [1, 15, 33]\n    >>> unique_digits([152, 323, 1422, 10])\n    []\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:42",
+        "task-id": "2024-01-28 20:04:42",
+        "workflow": "2024-01-28 20:04:42",
+        "Prompt": "2024-01-28 20:04:47",
+        "FinalCode": "2024-01-28 20:04:47"
+    },
+    "task-id": "HumanEval/104",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef unique_digits(x):\\n    \\\"\\\"\\\"Given a list of positive integers x. return a sorted list of all \\n    elements that hasn't any even digit.\\n\\n    Note: Returned list should be sorted in increasing order.\\n    \\n    For example:\\n    >>> unique_digits([15, 33, 1422, 1])\\n    [1, 15, 33]\\n    >>> unique_digits([152, 323, 1422, 10])\\n    []\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `unique_digits(x)` takes a list of positive integers `x` as input and returns a sorted list of all elements that do not contain any even digits.\n\nTo solve this problem, we can iterate over each element in the list `x` and check if it contains any even digits. If it doesn't, we add it to a new list called `result`. Finally, we return the sorted `result` list.\n\nHere is the implementation of the `unique_digits(x)` function:\n\n```python\ndef unique_digits(x):\n    result = []\n    for num in x:\n        has_even_digit = False\n        for digit in str(num):\n            if int(digit) % 2 == 0:\n                has_even_digit = True\n                break\n        if not has_even_digit:\n            result.append(num)\n    return sorted(result)\n```\n\nLet's test the function with the given examples:\n\n```python\nprint(unique_digits([15, 33, 1422, 1]))\n# Output: [1, 15, 33]\n\nprint(unique_digits([152, 323, 1422, 10]))\n# Output: []\n```\n\nThe first example has three elements that don't contain any even digits, so they are returned in sorted order. The second example has two elements that contain even digits, so the result is an empty list."
+}

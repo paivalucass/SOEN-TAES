@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-16-666726",
+    "task": "\ndef simplify(x, n):\n    \"\"\"Your task is to implement a function that will simplify the expression\n    x * n. The function returns True if x * n evaluates to a whole number and False\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\n\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\n\n    simplify(\"1/5\", \"5/1\") = True\n    simplify(\"1/6\", \"2/1\") = False\n    simplify(\"7/10\", \"10/2\") = False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:16",
+        "task-id": "2024-01-28 20:01:16",
+        "workflow": "2024-01-28 20:01:16",
+        "Prompt": "2024-01-28 20:01:18",
+        "FinalCode": "2024-01-28 20:01:18"
+    },
+    "task-id": "HumanEval/144",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef simplify(x, n):\\n    \\\"\\\"\\\"Your task is to implement a function that will simplify the expression\\n    x * n. The function returns True if x * n evaluates to a whole number and False\\n    otherwise. Both x and n, are string representation of a fraction, and have the following format,\\n    <numerator>/<denominator> where both numerator and denominator are positive whole numbers.\\n\\n    You can assume that x, and n are valid fractions, and do not have zero as denominator.\\n\\n    simplify(\\\"1/5\\\", \\\"5/1\\\") = True\\n    simplify(\\\"1/6\\\", \\\"2/1\\\") = False\\n    simplify(\\\"7/10\\\", \\\"10/2\\\") = False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def simplify(x, n):\n    # Convert x and n to fractions\n    x_fraction = fraction(x)\n    n_fraction = fraction(n)\n\n    # Multiply x and n fractions\n    product = x_fraction * n_fraction\n\n    # Check if product is a whole number\n    if product.denominator == 1:\n        return True\n    else:\n        return False\n\ndef fraction(frac_str):\n    # Convert fraction string to Fraction object\n    numerator, denominator = frac_str.split('/')\n    return Fraction(int(numerator), int(denominator))"
+}

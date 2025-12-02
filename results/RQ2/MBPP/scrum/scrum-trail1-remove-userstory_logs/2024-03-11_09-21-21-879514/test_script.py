@@ -1,0 +1,20 @@
+def replace_spaces(string):
+    if not string:
+        return ""
+    
+    result = []
+    for char in string:
+        if char == ' ':
+            result.append('%20')
+        else:
+            result.append(char)
+    
+    return ''.join(result)
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(replace_spaces("My Name is Dawood"), 'My%20Name%20is%20Dawood')
+
+if __name__ == '__main__':
+    unittest.main()

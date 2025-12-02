@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-02-871636",
+    "task": "\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:02",
+        "task-id": "2024-01-28 20:04:02",
+        "workflow": "2024-01-28 20:04:02",
+        "Prompt": "2024-01-28 20:04:04",
+        "FinalCode": "2024-01-28 20:04:04"
+    },
+    "task-id": "HumanEval/45",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef triangle_area(a, h):\\n    \\\"\\\"\\\"Given length of a side and high return area for a triangle.\\n    >>> triangle_area(5, 3)\\n    7.5\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function triangle_area calculates the area of a triangle given the length of one of its sides (a) and its corresponding height (h)."
+}

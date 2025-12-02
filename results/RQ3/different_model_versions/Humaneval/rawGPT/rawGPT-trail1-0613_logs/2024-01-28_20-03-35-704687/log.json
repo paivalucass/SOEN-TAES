@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-35-704687",
+    "task": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:35",
+        "task-id": "2024-01-28 20:03:35",
+        "workflow": "2024-01-28 20:03:35",
+        "Prompt": "2024-01-28 20:03:40",
+        "FinalCode": "2024-01-28 20:03:40"
+    },
+    "task-id": "HumanEval/7",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\\n    \\\"\\\"\\\" Filter an input list of strings only for ones that contain given substring\\n    >>> filter_by_substring([], 'a')\\n    []\\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\\n    ['abc', 'bacd', 'array']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The function `filter_by_substring` takes in two parameters: `strings`, which is a list of strings, and `substring`, which is a string. It returns a new list that contains only the strings from the input list that contain the given substring.\n\nThe function can be implemented using a list comprehension. Here's the code:\n\n```python\nfrom typing import List\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    return [s for s in strings if substring in s]\n```\n\nIn the function, we iterate over each string `s` in the input list `strings`. We use the `in` operator to check if the substring is present in `s`. If it is, we include `s` in the new list.\n\nHere are some examples of how the function can be used:\n\n```python\n>>> filter_by_substring([], 'a')\n[]\n\n>>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n['abc', 'bacd', 'array']\n```\n\nIn the first example, the input list is empty, so the function returns an empty list. In the second example, the input list contains strings that contain the substring 'a', so those strings are returned in the new list."
+}

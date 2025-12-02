@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-05-590823",
+    "task": "\ndef select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"little\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"Mary\", \"lamb\"]\n    select_words(\"simple white space\", 2) ==> []\n    select_words(\"Hello world\", 4) ==> [\"world\"]\n    select_words(\"Uncle sam\", 3) ==> [\"Uncle\"]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:05",
+        "task-id": "2024-01-28 20:01:05",
+        "workflow": "2024-01-28 20:01:05",
+        "Prompt": "2024-01-28 20:01:08",
+        "FinalCode": "2024-01-28 20:01:08"
+    },
+    "task-id": "HumanEval/117",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef select_words(s, n):\\n    \\\"\\\"\\\"Given a string s and a natural number n, you have been tasked to implement \\n    a function that returns a list of all words from string s that contain exactly \\n    n consonants, in order these words appear in the string s.\\n    If the string s is empty then the function should return an empty list.\\n    Note: you may assume the input string contains only letters and spaces.\\n    Examples:\\n    select_words(\\\"Mary had a little lamb\\\", 4) ==> [\\\"little\\\"]\\n    select_words(\\\"Mary had a little lamb\\\", 3) ==> [\\\"Mary\\\", \\\"lamb\\\"]\\n    select_words(\\\"simple white space\\\", 2) ==> []\\n    select_words(\\\"Hello world\\\", 4) ==> [\\\"world\\\"]\\n    select_words(\\\"Uncle sam\\\", 3) ==> [\\\"Uncle\\\"]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def select_words(s, n):\n    \"\"\"\n    Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    \n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"little\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"Mary\", \"lamb\"]\n    select_words(\"simple white space\", 2) ==> []\n    select_words(\"Hello world\", 4) ==> [\"world\"]\n    select_words(\"Uncle sam\", 3) ==> [\"Uncle\"]\n    \"\"\"\n    if not s:\n        return []\n    \n    words = s.split()\n    result = []\n    \n    for word in words:\n        consonants = 0\n        for letter in word:\n            if letter.lower() not in ['a', 'e', 'i', 'o', 'u'] and letter.isalpha():\n                consonants += 1\n        if consonants == n:\n            result.append(word)\n    \n    return result"
+}

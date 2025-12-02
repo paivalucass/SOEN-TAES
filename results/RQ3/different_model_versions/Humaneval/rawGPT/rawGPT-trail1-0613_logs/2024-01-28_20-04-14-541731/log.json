@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-14-541731",
+    "task": "\n\ndef derivative(xs: list):\n    \"\"\" xs represent coefficients of a polynomial.\n    xs[0] + xs[1] * x + xs[2] * x^2 + ....\n     Return derivative of this polynomial in the same form.\n    >>> derivative([3, 1, 2, 4, 5])\n    [1, 4, 12, 20]\n    >>> derivative([1, 2, 3])\n    [2, 6]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:14",
+        "task-id": "2024-01-28 20:04:14",
+        "workflow": "2024-01-28 20:04:14",
+        "Prompt": "2024-01-28 20:04:17",
+        "FinalCode": "2024-01-28 20:04:17"
+    },
+    "task-id": "HumanEval/62",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef derivative(xs: list):\\n    \\\"\\\"\\\" xs represent coefficients of a polynomial.\\n    xs[0] + xs[1] * x + xs[2] * x^2 + ....\\n     Return derivative of this polynomial in the same form.\\n    >>> derivative([3, 1, 2, 4, 5])\\n    [1, 4, 12, 20]\\n    >>> derivative([1, 2, 3])\\n    [2, 6]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function called `derivative` which takes a list `xs` as input. This list represents the coefficients of a polynomial in ascending order of degree.\n\nThe function calculates the derivative of the polynomial and returns it in the same form. The derivative of a polynomial is obtained by multiplying each coefficient by its corresponding degree and reducing the degree by 1.\n\nThe function uses a loop to iterate over the coefficients in the list `xs`. It multiplies each coefficient by its corresponding degree and appends the result to a new list called `result`. Finally, the function returns the `result` list.\n\nThe code also includes some doctests to demonstrate the usage and expected output of the function."
+}

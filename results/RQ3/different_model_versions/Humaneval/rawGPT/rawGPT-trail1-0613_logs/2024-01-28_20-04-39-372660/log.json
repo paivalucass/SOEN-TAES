@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-39-372660",
+    "task": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 15 and closest_integer(\"-14.5\") should return -15.\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:39",
+        "task-id": "2024-01-28 20:04:39",
+        "workflow": "2024-01-28 20:04:39",
+        "Prompt": "2024-01-28 20:04:42",
+        "FinalCode": "2024-01-28 20:04:42"
+    },
+    "task-id": "HumanEval/99",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef closest_integer(value):\\n    '''\\n    Create a function that takes a value (string) representing a number\\n    and returns the closest integer to it. If the number is equidistant\\n    from two integers, round it away from zero.\\n\\n    Examples\\n    >>> closest_integer(\\\"10\\\")\\n    10\\n    >>> closest_integer(\\\"15.3\\\")\\n    15\\n\\n    Note:\\n    Rounding away from zero means that if the given number is equidistant\\n    from two integers, the one you should return is the one that is the\\n    farthest from zero. For example closest_integer(\\\"14.5\\\") should\\n    return 15 and closest_integer(\\\"-14.5\\\") should return -15.\\n    '''\\n\"",
+    "FinalCode": "The code defines a function `closest_integer` that takes a string `value` representing a number and returns the closest integer to it.\n\nTo find the closest integer, the code checks if the number is equidistant from two integers. If it is, it rounds the number away from zero, meaning it returns the integer that is farthest from zero.\n\nExamples:\n- `closest_integer(\"10\")` returns `10` since 10 is already an integer.\n- `closest_integer(\"15.3\")` returns `15` since 15 is the closest integer to 15.3.\n\nNote:\n- Rounding away from zero means that if the given number is equidistant from two integers, the one you should return is the one that is farthest from zero.\n- For example, `closest_integer(\"14.5\")` should return `15` and `closest_integer(\"-14.5\")` should return `-15`."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-44-701303",
+    "task": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:44",
+        "task-id": "2024-01-28 20:03:44",
+        "workflow": "2024-01-28 20:03:44",
+        "Prompt": "2024-01-28 20:03:49",
+        "FinalCode": "2024-01-28 20:03:49"
+    },
+    "task-id": "HumanEval/17",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef parse_music(music_string: str) -> List[int]:\\n    \\\"\\\"\\\" Input to this function is a string representing musical notes in a special ASCII format.\\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\\n    not last.\\n\\n    Here is a legend:\\n    'o' - whole note, lasts four beats\\n    'o|' - half note, lasts two beats\\n    '.|' - quater note, lasts one beat\\n\\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function named `parse_music` that takes a string `music_string` as input and returns a list of integers. The function is supposed to parse the input string and return a list of integers corresponding to how many beats each note lasts.\n\nThe function starts by importing the `List` type from the `typing` module. This is used to provide type hints for the function's signature.\n\nThe function header specifies that the `parse_music` function takes a parameter `music_string` of type `str` and returns a value of type `List[int]`. This means that the input to the function should be a string and the output should be a list of integers.\n\nThe function documentation provides a description of the input format and the expected output format. It explains how to interpret the input string and convert it into a list of integers representing the duration of each note.\n\nThe function body is currently empty and does not contain any implementation. It only includes the documentation and type hints for the function.\n\nTo complete the implementation of the `parse_music` function, you would need to write code that parses the input string according to the given legend and returns the corresponding list of integers."
+}

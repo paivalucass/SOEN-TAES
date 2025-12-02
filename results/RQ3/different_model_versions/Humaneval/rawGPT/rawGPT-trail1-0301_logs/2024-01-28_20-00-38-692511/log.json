@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-38-692511",
+    "task": "\n\ndef change_base(x: int, base: int):\n    \"\"\"Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:38",
+        "task-id": "2024-01-28 20:00:38",
+        "workflow": "2024-01-28 20:00:38",
+        "Prompt": "2024-01-28 20:00:40",
+        "FinalCode": "2024-01-28 20:00:40"
+    },
+    "task-id": "HumanEval/44",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef change_base(x: int, base: int):\\n    \\\"\\\"\\\"Change numerical base of input number x to base.\\n    return string representation after the conversion.\\n    base numbers are less than 10.\\n    >>> change_base(8, 3)\\n    '22'\\n    >>> change_base(8, 2)\\n    '1000'\\n    >>> change_base(7, 2)\\n    '111'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def change_base(x: int, base: int):\n    \"\"\"Change numerical base of input number x to base.\n    return string representation after the conversion.\n    base numbers are less than 10.\n    >>> change_base(8, 3)\n    '22'\n    >>> change_base(8, 2)\n    '1000'\n    >>> change_base(7, 2)\n    '111'\n    \"\"\"\n    if x == 0:\n        return '0'\n\n    result = ''\n    while x > 0:\n        remainder = x % base\n        result = str(remainder) + result\n        x //= base\n\n    return result"
+}

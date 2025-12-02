@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-28-579094",
+    "task": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:28",
+        "task-id": "2024-01-28 20:00:28",
+        "workflow": "2024-01-28 20:00:28",
+        "Prompt": "2024-01-28 20:00:31",
+        "FinalCode": "2024-01-28 20:00:31"
+    },
+    "task-id": "HumanEval/14",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef all_prefixes(string: str) -> List[str]:\\n    \\\"\\\"\\\" Return list of all prefixes from shortest to longest of the input string\\n    >>> all_prefixes('abc')\\n    ['a', 'ab', 'abc']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "As an AI language model, I can see that this is a Python code that defines a function named `all_prefixes`. The function takes a single input parameter, a string, and returns a list of all prefixes of the input string from the shortest to the longest.\n\nThe function uses the `typing` module to import the `List` class, which is used to specify the return type of the function. The `List` class is a generic container that represents a list of values.\n\nThe function is defined using the `def` keyword followed by the function name, input parameter, and return type annotation. The function body is indented and contains the code that implements the function.\n\nThe code uses a list comprehension to generate the list of prefixes. The list comprehension starts with an empty list and iterates over the range of the length of the input string. For each iteration, it appends the substring of the input string from the beginning up to the current index to the list.\n\nThe function is accompanied by a docstring, which documents what the function does and provides an example usage with expected output."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-02-676616",
+    "task": "\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}\n    histogram('a b b a') == {'a': 2, 'b': 2}\n    histogram('a b c a b') == {'a': 2, 'b': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:02",
+        "task-id": "2024-01-28 20:01:02",
+        "workflow": "2024-01-28 20:01:02",
+        "Prompt": "2024-01-28 20:01:05",
+        "FinalCode": "2024-01-28 20:01:05"
+    },
+    "task-id": "HumanEval/111",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef histogram(test):\\n    \\\"\\\"\\\"Given a string representing a space separated lowercase letters, return a dictionary\\n    of the letter with the most repetition and containing the corresponding count.\\n    If several letters have the same occurrence, return all of them.\\n    \\n    Example:\\n    histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}\\n    histogram('a b b a') == {'a': 2, 'b': 2}\\n    histogram('a b c a b') == {'a': 2, 'b': 2}\\n    histogram('b b b b a') == {'b': 4}\\n    histogram('') == {}\\n\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def histogram(test):\n    \"\"\"\n    Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}\n    histogram('a b b a') == {'a': 2, 'b': 2}\n    histogram('a b c a b') == {'a': 2, 'b': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"\n    if test == '':\n        return {}\n    \n    letter_counts = {}\n    for letter in test.split():\n        if letter in letter_counts:\n            letter_counts[letter] += 1\n        else:\n            letter_counts[letter] = 1\n    \n    max_count = max(letter_counts.values())\n    max_letters = [letter for letter, count in letter_counts.items() if count == max_count]\n    \n    return {letter: count for letter, count in letter_counts.items() if letter in max_letters}"
+}

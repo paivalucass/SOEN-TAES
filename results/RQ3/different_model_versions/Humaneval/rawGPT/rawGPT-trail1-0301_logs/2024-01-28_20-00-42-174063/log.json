@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-42-174063",
+    "task": "\n\ndef same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabc')\n    True\n    >>> same_chars('dddddddabc', 'abcd')\n    True\n    >>> same_chars('eabcd', 'dddddddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabce')\n    False\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:42",
+        "task-id": "2024-01-28 20:00:42",
+        "workflow": "2024-01-28 20:00:42",
+        "Prompt": "2024-01-28 20:00:45",
+        "FinalCode": "2024-01-28 20:00:45"
+    },
+    "task-id": "HumanEval/54",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef same_chars(s0: str, s1: str):\\n    \\\"\\\"\\\"\\n    Check if two words have the same characters.\\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\\n    True\\n    >>> same_chars('abcd', 'dddddddabc')\\n    True\\n    >>> same_chars('dddddddabc', 'abcd')\\n    True\\n    >>> same_chars('eabcd', 'dddddddabc')\\n    False\\n    >>> same_chars('abcd', 'dddddddabce')\\n    False\\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\\n    False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    \"\"\"\n    s0_dict = {}\n    s1_dict = {}\n    for char in s0:\n        s0_dict[char] = s0_dict.get(char, 0) + 1\n    for char in s1:\n        s1_dict[char] = s1_dict.get(char, 0) + 1\n    return s0_dict == s1_dict\n\n\nprint(same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc'))\nprint(same_chars('abcd', 'dddddddabc'))\nprint(same_chars('dddddddabc', 'abcd'))\nprint(same_chars('eabcd', 'dddddddabc'))\nprint(same_chars('abcd', 'dddddddabce'))\nprint(same_chars('eabcdzzzz', 'dddzzzzzzzddddabc'))"
+}

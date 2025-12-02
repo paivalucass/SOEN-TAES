@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-52-976784",
+    "task": "\n\ndef is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    False\n    >>> is_prime(101)\n    True\n    >>> is_prime(11)\n    True\n    >>> is_prime(13441)\n    True\n    >>> is_prime(61)\n    True\n    >>> is_prime(4)\n    False\n    >>> is_prime(1)\n    False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:52",
+        "task-id": "2024-01-28 20:03:52",
+        "workflow": "2024-01-28 20:03:52",
+        "Prompt": "2024-01-28 20:03:56",
+        "FinalCode": "2024-01-28 20:03:56"
+    },
+    "task-id": "HumanEval/31",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef is_prime(n):\\n    \\\"\\\"\\\"Return true if a given number is prime, and false otherwise.\\n    >>> is_prime(6)\\n    False\\n    >>> is_prime(101)\\n    True\\n    >>> is_prime(11)\\n    True\\n    >>> is_prime(13441)\\n    True\\n    >>> is_prime(61)\\n    True\\n    >>> is_prime(4)\\n    False\\n    >>> is_prime(1)\\n    False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The code provided is a function named `is_prime` that checks if a given number `n` is prime or not. It returns `True` if `n` is prime and `False` otherwise.\n\nHere are the examples of using this function:\n\n- `is_prime(6)` returns `False` because 6 is not a prime number.\n- `is_prime(101)` returns `True` because 101 is a prime number.\n- `is_prime(11)` returns `True` because 11 is a prime number.\n- `is_prime(13441)` returns `True` because 13441 is a prime number.\n- `is_prime(61)` returns `True` because 61 is a prime number.\n- `is_prime(4)` returns `False` because 4 is not a prime number.\n- `is_prime(1)` returns `False` because 1 is not a prime number."
+}

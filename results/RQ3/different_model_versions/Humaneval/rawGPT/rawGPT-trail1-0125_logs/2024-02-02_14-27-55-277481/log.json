@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-55-277481",
+    "task": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    \"\"\"Write a function vowels_count which takes a string representing\n    a word as input and returns the number of vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> vowels_count(\"abcde\")\n    2\n    >>> vowels_count(\"ACEDY\")\n    3\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:55",
+        "task-id": "2024-02-02 14:27:55",
+        "workflow": "2024-02-02 14:27:55",
+        "Prompt": "2024-02-02 14:27:58",
+        "FinalCode": "2024-02-02 14:27:58"
+    },
+    "task-id": "HumanEval/64",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\nFIX = \\\"\\\"\\\"\\nAdd more test cases.\\n\\\"\\\"\\\"\\n\\ndef vowels_count(s):\\n    \\\"\\\"\\\"Write a function vowels_count which takes a string representing\\n    a word as input and returns the number of vowels in the string.\\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\\n    vowel, but only when it is at the end of the given word.\\n\\n    Example:\\n    >>> vowels_count(\\\"abcde\\\")\\n    2\\n    >>> vowels_count(\\\"ACEDY\\\")\\n    3\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "FIX = \\\"\\\"\\\"\\nAdd more test cases.\\n\\\"\\\"\\\"\\n\\ndef vowels_count(s):\\n    \\\"\\\"\\\"Write a function vowels_count which takes a string representing\\n    a word as input and returns the number of vowels in the string.\\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\\n    vowel, but only when it is at the end of the given word.\\n\\n    Example:\\n    >>> vowels_count(\\\"abcde\\\")\\n    2\\n    >>> vowels_count(\\\"ACEDY\\\")\\n    3\\n    >>> vowels_count(\\\"hello\\\")\\n    2\\n    >>> vowels_count(\\\"python\\\")\\n    1\\n    >>> vowels_count(\\\"algorithm\\\")\\n    4\\n    \\\"\\\"\\\"\\n\""
+}

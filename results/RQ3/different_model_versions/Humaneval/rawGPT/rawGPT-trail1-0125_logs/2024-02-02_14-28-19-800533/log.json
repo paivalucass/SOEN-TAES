@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-19-800533",
+    "task": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. Use the two given lists to build the algebric \n    expression and return the evaluation of this expression.\n\n    The basic algebra operations:\n    Addition ( + ) \n    Subtraction ( - ) \n    Multiplication ( * ) \n    Floor division ( // ) \n    Exponentiation ( ** ) \n\n    Example:\n    operator['+', '*', '-']\n    array = [2, 3, 4, 5]\n    result = 2 + 3 * 4 - 5\n    => result = 9\n\n    Note:\n        The length of operator list is equal to the length of operand list minus one.\n        Operand is a list of of non-negative integers.\n        Operator list has at least one operator, and operand list has at least two operands.\n\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:19",
+        "task-id": "2024-02-02 14:28:19",
+        "workflow": "2024-02-02 14:28:19",
+        "Prompt": "2024-02-02 14:28:21",
+        "FinalCode": "2024-02-02 14:28:21"
+    },
+    "task-id": "HumanEval/160",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef do_algebra(operator, operand):\\n    \\\"\\\"\\\"\\n    Given two lists operator, and operand. The first list has basic algebra operations, and \\n    the second list is a list of integers. Use the two given lists to build the algebric \\n    expression and return the evaluation of this expression.\\n\\n    The basic algebra operations:\\n    Addition ( + ) \\n    Subtraction ( - ) \\n    Multiplication ( * ) \\n    Floor division ( // ) \\n    Exponentiation ( ** ) \\n\\n    Example:\\n    operator['+', '*', '-']\\n    array = [2, 3, 4, 5]\\n    result = 2 + 3 * 4 - 5\\n    => result = 9\\n\\n    Note:\\n        The length of operator list is equal to the length of operand list minus one.\\n        Operand is a list of of non-negative integers.\\n        Operator list has at least one operator, and operand list has at least two operands.\\n\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. Use the two given lists to build the algebric \n    expression and return the evaluation of this expression.\n\n    The basic algebra operations:\n    Addition ( + ) \n    Subtraction ( - ) \n    Multiplication ( * ) \n    Floor division ( // ) \n    Exponentiation ( ** ) \n\n    Example:\n    operator['+', '*', '-']\n    array = [2, 3, 4, 5]\n    result = 2 + 3 * 4 - 5\n    => result = 9\n\n    Note:\n        The length of operator list is equal to the length of operand list minus one.\n        Operand is a list of of non-negative integers.\n        Operator list has at least one operator, and operand list has at least two operands.\n\n    \"\"\"\n"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-48-648200",
+    "task": "\n\ndef max_element(l: list):\n    \"\"\"Return maximum element in the list.\n    >>> max_element([1, 2, 3])\n    3\n    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    123\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:48",
+        "task-id": "2024-02-02 14:27:48",
+        "workflow": "2024-02-02 14:27:48",
+        "Prompt": "2024-02-02 14:27:49",
+        "FinalCode": "2024-02-02 14:27:49"
+    },
+    "task-id": "HumanEval/35",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef max_element(l: list):\\n    \\\"\\\"\\\"Return maximum element in the list.\\n    >>> max_element([1, 2, 3])\\n    3\\n    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\\n    123\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def max_element(l: list):\n    \"\"\"Return maximum element in the list.\n    >>> max_element([1, 2, 3])\n    3\n    >>> max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    123\n    \"\"\""
+}

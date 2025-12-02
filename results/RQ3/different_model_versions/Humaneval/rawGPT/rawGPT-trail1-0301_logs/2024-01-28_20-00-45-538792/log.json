@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-45-538792",
+    "task": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    \"\"\"Write a function vowels_count which takes a string representing\n    a word as input and returns the number of vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> vowels_count(\"abcde\")\n    2\n    >>> vowels_count(\"ACEDY\")\n    3\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:45",
+        "task-id": "2024-01-28 20:00:45",
+        "workflow": "2024-01-28 20:00:45",
+        "Prompt": "2024-01-28 20:00:48",
+        "FinalCode": "2024-01-28 20:00:48"
+    },
+    "task-id": "HumanEval/64",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\nFIX = \\\"\\\"\\\"\\nAdd more test cases.\\n\\\"\\\"\\\"\\n\\ndef vowels_count(s):\\n    \\\"\\\"\\\"Write a function vowels_count which takes a string representing\\n    a word as input and returns the number of vowels in the string.\\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\\n    vowel, but only when it is at the end of the given word.\\n\\n    Example:\\n    >>> vowels_count(\\\"abcde\\\")\\n    2\\n    >>> vowels_count(\\\"ACEDY\\\")\\n    3\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "# Here is the original code:\n\ndef vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    if s[-1] == 'y':\n        vowels.append('y')\n    for letter in s.lower():\n        if letter in vowels:\n            count += 1\n    return count\n\n# Here is the updated code with additional test cases:\n\nFIX = \\\"\\\"\\\"\\nAdd more test cases.\\n\\\"\\\"\\\"\ndef vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    if s[-1] == 'y':\n        vowels.append('y')\n    for letter in s.lower():\n        if letter in vowels:\n            count += 1\n    return count\n\n# More test cases\nassert vowels_count(\"abcde\") == 2\nassert vowels_count(\"ACEDY\") == 3\nassert vowels_count(\"hello\") == 2\nassert vowels_count(\"testing\") == 2\nassert vowels_count(\"aeiouy\") == 6\nassert vowels_count(\"t\") == 0\nassert vowels_count(\"\") == 0\n\nprint(\"All test cases pass\")"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-03-42-385794",
+    "task": "\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\n    >>> string_sequence(0)\n    '0'\n    >>> string_sequence(5)\n    '0 1 2 3 4 5'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:03:42",
+        "task-id": "2024-01-28 20:03:42",
+        "workflow": "2024-01-28 20:03:42",
+        "Prompt": "2024-01-28 20:03:45",
+        "FinalCode": "2024-01-28 20:03:45"
+    },
+    "task-id": "HumanEval/15",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef string_sequence(n: int) -> str:\\n    \\\"\\\"\\\" Return a string containing space-delimited numbers starting from 0 upto n inclusive.\\n    >>> string_sequence(0)\\n    '0'\\n    >>> string_sequence(5)\\n    '0 1 2 3 4 5'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The given code defines a function called `string_sequence` that takes an integer `n` as input and returns a string containing space-delimited numbers starting from 0 up to `n` inclusive.\n\nThe function has a docstring explaining its purpose and expected behavior. It also includes some doctests as examples of how the function should be used and what output to expect.\n\nThe first doctest asserts that when `n` is 0, the function should return the string '0'. The second doctest asserts that when `n` is 5, the function should return the string '0 1 2 3 4 5'.\n\nThe implementation of the function is missing."
+}

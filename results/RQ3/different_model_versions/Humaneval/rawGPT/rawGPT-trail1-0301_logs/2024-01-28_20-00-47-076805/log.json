@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-00-47-076805",
+    "task": "\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \n    zero, and has a frequency greater than or equal to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    '''\n",
+    "datetime": {
+        "task": "2024-01-28 20:00:47",
+        "task-id": "2024-01-28 20:00:47",
+        "workflow": "2024-01-28 20:00:47",
+        "Prompt": "2024-01-28 20:00:49",
+        "FinalCode": "2024-01-28 20:00:49"
+    },
+    "task-id": "HumanEval/69",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef search(lst):\\n    '''\\n    You are given a non-empty list of positive integers. Return the greatest integer that is greater than \\n    zero, and has a frequency greater than or equal to the value of the integer itself. \\n    The frequency of an integer is the number of times it appears in the list.\\n    If no such a value exist, return -1.\\n    Examples:\\n        search([4, 1, 2, 2, 3, 1]) == 2\\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\\n        search([5, 5, 4, 4, 4]) == -1\\n    '''\\n\"",
+    "FinalCode": "The function takes a list of positive integers as input and returns the greatest integer that is greater than zero, and has a frequency greater than or equal to the value of the integer itself. If no such value exists, it returns -1.\n\nTo find the answer, the function first creates a dictionary with the frequency of each integer present in the list. Then it iterates through the dictionary and checks if the frequency of any integer is greater than or equal to the value of the integer. If such a value exists, it updates the answer variable to the maximum integer that satisfies the condition. If no such value exists, it returns -1.\n\nThe function has a time complexity of O(n), where n is the length of the input list, as it iterates through the list only once to create the dictionary and then iterates through the dictionary once. The space complexity of the function is also O(n), as it stores the frequency of each integer in a dictionary."
+}

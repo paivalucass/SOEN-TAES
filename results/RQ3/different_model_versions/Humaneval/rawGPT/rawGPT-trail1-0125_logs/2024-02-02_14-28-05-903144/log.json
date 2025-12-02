@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-05-903144",
+    "task": "\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b11\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1111\"\n    rounded_avg(20, 33) => \"0b11010\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:05",
+        "task-id": "2024-02-02 14:28:05",
+        "workflow": "2024-02-02 14:28:05",
+        "Prompt": "2024-02-02 14:28:06",
+        "FinalCode": "2024-02-02 14:28:06"
+    },
+    "task-id": "HumanEval/103",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef rounded_avg(n, m):\\n    \\\"\\\"\\\"You are given two positive integers n and m, and your task is to compute the\\n    average of the integers from n through m (including n and m). \\n    Round the answer to the nearest integer and convert that to binary.\\n    If n is greater than m, return -1.\\n    Example:\\n    rounded_avg(1, 5) => \\\"0b11\\\"\\n    rounded_avg(7, 5) => -1\\n    rounded_avg(10, 20) => \\\"0b1111\\\"\\n    rounded_avg(20, 33) => \\\"0b11010\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def rounded_avg(n, m):\n    if n > m:\n        return -1\n    \n    avg = round((n + m) / 2)\n    \n    return bin(avg)"
+}

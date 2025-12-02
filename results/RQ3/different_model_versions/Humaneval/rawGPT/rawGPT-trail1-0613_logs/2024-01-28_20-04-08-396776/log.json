@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-04-08-396776",
+    "task": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    False\n    >>> correct_bracketing(\"<>\")\n    True\n    >>> correct_bracketing(\"<<><>>\")\n    True\n    >>> correct_bracketing(\"><<>\")\n    False\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:04:08",
+        "task-id": "2024-01-28 20:04:08",
+        "workflow": "2024-01-28 20:04:08",
+        "Prompt": "2024-01-28 20:04:14",
+        "FinalCode": "2024-01-28 20:04:14"
+    },
+    "task-id": "HumanEval/56",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef correct_bracketing(brackets: str):\\n    \\\"\\\"\\\" brackets is a string of \\\"<\\\" and \\\">\\\".\\n    return True if every opening bracket has a corresponding closing bracket.\\n\\n    >>> correct_bracketing(\\\"<\\\")\\n    False\\n    >>> correct_bracketing(\\\"<>\\\")\\n    True\\n    >>> correct_bracketing(\\\"<<><>>\\\")\\n    True\\n    >>> correct_bracketing(\\\"><<>\\\")\\n    False\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This code defines a function called `correct_bracketing` that takes a string of brackets as input and checks if the brackets are correctly balanced. The function returns `True` if every opening bracket has a corresponding closing bracket, and `False` otherwise.\n\nThe function first checks if the length of the input string is odd. If it is, it means there is an uneven number of brackets and therefore the bracketing is incorrect, so the function returns `False`.\n\nNext, the function iterates through each character in the input string. If a character is an opening bracket (\"<\"), it adds it to a stack. If a character is a closing bracket (\">\"), it checks if the stack is empty. If it is, it means there is no opening bracket corresponding to the closing bracket, so the function returns `False`. If the stack is not empty, it pops the last opening bracket from the stack, indicating that it has been matched with a closing bracket.\n\nAfter iterating through all the characters in the string, the function checks if the stack is empty. If it is, it means all opening brackets have been matched with closing brackets, so the function returns `True`. If the stack is not empty, it means there are unmatched opening brackets, so the function returns `False`.\n\nHere are some examples of how the function is used:\n\n```\n>>> correct_bracketing(\"<\")\nFalse\n>>> correct_bracketing(\"<>\")\nTrue\n>>> correct_bracketing(\"<<><>>\")\nTrue\n>>> correct_bracketing(\"><<>\")\nFalse\n```"
+}

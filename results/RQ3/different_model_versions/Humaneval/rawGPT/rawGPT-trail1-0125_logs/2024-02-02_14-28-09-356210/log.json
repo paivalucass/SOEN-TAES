@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-28-09-356210",
+    "task": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([3, 3, 3, 3, 3]) ==> 9\n    solution([30, 13, 24, 321]) ==>0\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:28:09",
+        "task-id": "2024-02-02 14:28:09",
+        "workflow": "2024-02-02 14:28:09",
+        "Prompt": "2024-02-02 14:28:09",
+        "FinalCode": "2024-02-02 14:28:09"
+    },
+    "task-id": "HumanEval/121",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef solution(lst):\\n    \\\"\\\"\\\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\\n    \\n\\n    Examples\\n    solution([5, 8, 7, 1]) ==> 12\\n    solution([3, 3, 3, 3, 3]) ==> 9\\n    solution([30, 13, 24, 321]) ==>0\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if lst[i] % 2 != 0 and i % 2 == 0)"
+}

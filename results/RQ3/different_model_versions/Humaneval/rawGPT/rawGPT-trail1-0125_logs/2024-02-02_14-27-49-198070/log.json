@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-49-198070",
+    "task": "\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    0\n    >>> fizz_buzz(78)\n    2\n    >>> fizz_buzz(79)\n    3\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:49",
+        "task-id": "2024-02-02 14:27:49",
+        "workflow": "2024-02-02 14:27:49",
+        "Prompt": "2024-02-02 14:27:50",
+        "FinalCode": "2024-02-02 14:27:50"
+    },
+    "task-id": "HumanEval/36",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef fizz_buzz(n: int):\\n    \\\"\\\"\\\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\\n    >>> fizz_buzz(50)\\n    0\\n    >>> fizz_buzz(78)\\n    2\\n    >>> fizz_buzz(79)\\n    3\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    0\n    >>> fizz_buzz(78)\n    2\n    >>> fizz_buzz(79)\n    3\n    \"\"\""
+}

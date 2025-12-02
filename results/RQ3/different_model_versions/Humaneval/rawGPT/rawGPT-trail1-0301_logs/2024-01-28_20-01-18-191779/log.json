@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-18-191779",
+    "task": "\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 \u2264 i \u2264 n), the value of a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 1\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        The only valid triple is (1, 7, 13).\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:18",
+        "task-id": "2024-01-28 20:01:18",
+        "workflow": "2024-01-28 20:01:18",
+        "Prompt": "2024-01-28 20:01:20",
+        "FinalCode": "2024-01-28 20:01:20"
+    },
+    "task-id": "HumanEval/147",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef get_max_triples(n):\\n    \\\"\\\"\\\"\\n    You are given a positive integer n. You have to create an integer array a of length n.\\n        For each i (1 \\u2264 i \\u2264 n), the value of a[i] = i * i - i + 1.\\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \\n    and a[i] + a[j] + a[k] is a multiple of 3.\\n\\n    Example :\\n        Input: n = 5\\n        Output: 1\\n        Explanation: \\n        a = [1, 3, 7, 13, 21]\\n        The only valid triple is (1, 7, 13).\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "The above code defines a function called \"get_max_triples\" that takes a positive integer \"n\" as input and returns the number of triples of integers in an array \"a\" of length \"n\" such that the sum of any three integers in the triple is a multiple of 3. \n\nThe function creates the array \"a\" by using a loop to assign values to each element of the array. The value of each element is calculated using the formula i * i - i + 1, where i is the index of the element starting from 1. \n\nAfter creating the array, the function uses nested loops to iterate over all possible triples of elements in the array. For each triple, it checks if the sum of the three elements is a multiple of 3. If it is, the function increments a counter variable. \n\nFinally, the function returns the value of the counter variable, which represents the number of valid triples."
+}

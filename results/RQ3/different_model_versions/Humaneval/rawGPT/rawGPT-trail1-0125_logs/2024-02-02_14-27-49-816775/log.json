@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-02_14-27-49-816775",
+    "task": "\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-02 14:27:49",
+        "task-id": "2024-02-02 14:27:49",
+        "workflow": "2024-02-02 14:27:49",
+        "Prompt": "2024-02-02 14:27:52",
+        "FinalCode": "2024-02-02 14:27:52"
+    },
+    "task-id": "HumanEval/39",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef prime_fib(n: int):\\n    \\\"\\\"\\\"\\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\\n    >>> prime_fib(1)\\n    2\\n    >>> prime_fib(2)\\n    3\\n    >>> prime_fib(3)\\n    5\\n    >>> prime_fib(4)\\n    13\\n    >>> prime_fib(5)\\n    89\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89\n    \"\"\"\n    fib_nums = [1, 1]\n    primes = [2]\n    while len(primes) < n:\n        next_fib = fib_nums[-1] + fib_nums[-2]\n        fib_nums.append(next_fib)\n        is_prime = True\n        for i in range(2, int(next_fib**0.5) + 1):\n            if next_fib % i == 0:\n                is_prime = False\n                break\n        if is_prime:\n            primes.append(next_fib)\n    return primes[n-1]"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-28_20-01-17-008288",
+    "task": "\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> order_by_points([]) == []\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-28 20:01:17",
+        "task-id": "2024-01-28 20:01:17",
+        "workflow": "2024-01-28 20:01:17",
+        "Prompt": "2024-01-28 20:01:20",
+        "FinalCode": "2024-01-28 20:01:20"
+    },
+    "task-id": "HumanEval/145",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef order_by_points(nums):\\n    \\\"\\\"\\\"\\n    Write a function which sorts the given list of integers\\n    in ascending order according to the sum of their digits.\\n    Note: if there are several items with similar sum of their digits,\\n    order them based on their index in original list.\\n\\n    For example:\\n    >>> order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\\n    >>> order_by_points([]) == []\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def order_by_points(nums):\n    \"\"\"\n    This function takes a list of integers as input and returns the same list sorted in ascending order\n    based on the sum of their digits.\n\n    Args:\n    nums: list of integers to be sorted\n\n    Returns:\n    sorted list of integers based on the sum of their digits\n    \"\"\"\n    # Create a dictionary to hold the sum of digits for each number\n    sums = {}\n\n    # Calculate the sum of digits for each number and store them in the dictionary\n    for num in nums:\n        if num < 0:\n            digits_sum = sum([int(digit) for digit in str(abs(num))]) * -1\n        else:\n            digits_sum = sum([int(digit) for digit in str(num)])\n        sums[num] = digits_sum\n\n    # Sort the dictionary based on the sum of digits and index in original list\n    sorted_sums = sorted(sums.items(), key=lambda x: (x[1], nums.index(x[0])))\n\n    # Create a list of sorted integers based on the sorted dictionary\n    sorted_nums = [x[0] for x in sorted_sums]\n\n    return sorted_nums"
+}
