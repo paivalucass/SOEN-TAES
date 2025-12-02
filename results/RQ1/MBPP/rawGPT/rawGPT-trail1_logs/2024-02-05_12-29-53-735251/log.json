@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-53-735251",
+    "task": "def perimeter_pentagon(a):\n'''Write a function to find the perimeter of a regular pentagon from the length of its sides.\nassert perimeter_pentagon(5) == 25'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:53",
+        "task-id": "2024-02-05 12:29:53",
+        "workflow": "2024-02-05 12:29:53",
+        "Prompt": "2024-02-05 12:29:56",
+        "FinalCode": "2024-02-05 12:29:56"
+    },
+    "task-id": 171,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def perimeter_pentagon(a):\\n'''Write a function to find the perimeter of a regular pentagon from the length of its sides.\\nassert perimeter_pentagon(5) == 25'''\\n\"",
+    "FinalCode": "def perimeter_pentagon(a):\n    return 5 * a\n\n'''\nWrite a function to find the perimeter of a regular pentagon from the length of its sides.\nassert perimeter_pentagon(5) == 25\n'''"
+}

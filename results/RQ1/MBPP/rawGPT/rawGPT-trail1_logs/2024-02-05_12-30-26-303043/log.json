@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-26-303043",
+    "task": "def flatten_list(list1):\n'''Write a function to flatten a given nested list structure.\nassert flatten_list([0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]])==[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:26",
+        "task-id": "2024-02-05 12:30:26",
+        "workflow": "2024-02-05 12:30:26",
+        "Prompt": "2024-02-05 12:30:28",
+        "FinalCode": "2024-02-05 12:30:28"
+    },
+    "task-id": 297,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def flatten_list(list1):\\n'''Write a function to flatten a given nested list structure.\\nassert flatten_list([0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]])==[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]'''\\n\"",
+    "FinalCode": "def flatten_list(list1):\n    flat_list = []\n    for item in list1:\n        if type(item) == list:\n            flat_list.extend(flatten_list(item))\n        else:\n            flat_list.append(item)\n    return flat_list\n\nassert flatten_list([0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]]) == [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]"
+}

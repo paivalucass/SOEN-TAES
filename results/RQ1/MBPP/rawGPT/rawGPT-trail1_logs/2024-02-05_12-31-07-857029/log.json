@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-07-857029",
+    "task": "def surfacearea_cube(l):\n'''Write a function to find the surface area of a cube of a given size.\nassert surfacearea_cube(5)==150'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:07",
+        "task-id": "2024-02-05 12:31:07",
+        "workflow": "2024-02-05 12:31:07",
+        "Prompt": "2024-02-05 12:31:08",
+        "FinalCode": "2024-02-05 12:31:08"
+    },
+    "task-id": 441,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def surfacearea_cube(l):\\n'''Write a function to find the surface area of a cube of a given size.\\nassert surfacearea_cube(5)==150'''\\n\"",
+    "FinalCode": "def surfacearea_cube(l):\n    return 6 * (l ** 2)\n\n# Test the function with an assertion\nassert surfacearea_cube(5) == 150"
+}

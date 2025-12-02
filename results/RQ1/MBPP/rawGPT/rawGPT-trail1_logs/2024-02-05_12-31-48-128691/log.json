@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-48-128691",
+    "task": "def big_diff(nums):\n'''Write a python function to find the difference between largest and smallest value in a given list.\nassert big_diff([1,2,3,4]) == 3'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:48",
+        "task-id": "2024-02-05 12:31:48",
+        "workflow": "2024-02-05 12:31:48",
+        "Prompt": "2024-02-05 12:31:51",
+        "FinalCode": "2024-02-05 12:31:51"
+    },
+    "task-id": 588,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def big_diff(nums):\\n'''Write a python function to find the difference between largest and smallest value in a given list.\\nassert big_diff([1,2,3,4]) == 3'''\\n\"",
+    "FinalCode": "def big_diff(nums):\n    '''Write a python function to find the difference between largest and smallest value in a given list.'''\n    return max(nums) - min(nums)\n\nassert big_diff([1,2,3,4]) == 3"
+}

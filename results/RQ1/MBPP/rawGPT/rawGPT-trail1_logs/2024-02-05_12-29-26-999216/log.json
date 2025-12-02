@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-26-999216",
+    "task": "def divisor(n):\n'''Write a python function to find the number of divisors of a given integer.\nassert divisor(15) == 4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:27",
+        "task-id": "2024-02-05 12:29:27",
+        "workflow": "2024-02-05 12:29:27",
+        "Prompt": "2024-02-05 12:29:28",
+        "FinalCode": "2024-02-05 12:29:28"
+    },
+    "task-id": 96,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def divisor(n):\\n'''Write a python function to find the number of divisors of a given integer.\\nassert divisor(15) == 4'''\\n\"",
+    "FinalCode": "def divisor(n):\n    count = 0\n    for i in range(1, n+1):\n        if n % i == 0:\n            count += 1\n    return count\n\n# Test the function\nassert divisor(15) == 4"
+}

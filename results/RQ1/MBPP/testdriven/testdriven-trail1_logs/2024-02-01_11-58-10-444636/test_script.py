@@ -1,0 +1,14 @@
+def merge_dictionaries_three(dict1, dict2, dict3):
+    '''Write a function to merge three dictionaries into a single dictionary'''
+    merged_dict = {}
+    for d in [dict1, dict2, dict3]:
+        merged_dict.update(d)
+    return merged_dict
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(merge_dictionaries_three({ "R": "Red", "B": "Black", "P": "Pink" }, { "G": "Green", "W": "White" },{ "O": "Orange", "W": "White", "B": "Black" }), {'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'})
+
+if __name__ == '__main__':
+    unittest.main()

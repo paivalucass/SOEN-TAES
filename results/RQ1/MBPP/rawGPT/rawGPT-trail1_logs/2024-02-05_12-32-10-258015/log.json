@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-10-258015",
+    "task": "def find_First_Missing(array,start=0,end=None):\n'''Write a python function to find the smallest missing number from a sorted list of natural numbers.\nassert find_First_Missing([0,1,2,3]) == 4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:10",
+        "task-id": "2024-02-05 12:32:10",
+        "workflow": "2024-02-05 12:32:10",
+        "Prompt": "2024-02-05 12:32:13",
+        "FinalCode": "2024-02-05 12:32:13"
+    },
+    "task-id": 627,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_First_Missing(array,start=0,end=None):\\n'''Write a python function to find the smallest missing number from a sorted list of natural numbers.\\nassert find_First_Missing([0,1,2,3]) == 4'''\\n\"",
+    "FinalCode": "def find_First_Missing(array, start=0, end=None):\n    '''Write a python function to find the smallest missing number from a sorted list of natural numbers.\n    assert find_First_Missing([0,1,2,3]) == 4'''\n    \n    if end is None:\n        end = len(array)\n        \n    for i in range(start, end):\n        if array[i] != i:\n            return i\n    return end"
+}

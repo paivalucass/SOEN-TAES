@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-07-213522",
+    "task": "def move_num(test_str):\n'''Write a function to move all the numbers to the end of the given string.\nassert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:07",
+        "task-id": "2024-02-05 12:32:07",
+        "workflow": "2024-02-05 12:32:07",
+        "Prompt": "2024-02-05 12:32:10",
+        "FinalCode": "2024-02-05 12:32:10"
+    },
+    "task-id": 619,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def move_num(test_str):\\n'''Write a function to move all the numbers to the end of the given string.\\nassert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000''''\\n\"",
+    "FinalCode": "def move_num(test_str):\n    '''Write a function to move all the numbers to the end of the given string.'''\n    letters = \"\"\n    numbers = \"\"\n    for char in test_str:\n        if char.isalpha():\n            letters += char\n        elif char.isdigit():\n            numbers += char\n    return letters + numbers\n\nassert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'"
+}

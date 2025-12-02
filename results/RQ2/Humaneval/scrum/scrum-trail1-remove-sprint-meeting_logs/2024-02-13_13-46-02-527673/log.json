@@ -1,0 +1,16 @@
+{
+    "start_time": "2024-02-13_13-46-02-527673",
+    "task": "\n\ndef get_positive(l: list):\n    \"\"\"Return only positive numbers in the list.\n    >>> get_positive([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-13 13:46:02",
+        "task-id": "2024-02-13 13:46:02",
+        "workflow": "2024-02-13 13:46:02",
+        "UserStoryDraft0": "2024-02-13 13:48:00",
+        "AnalyzeMeetings": "2024-02-13 13:48:01"
+    },
+    "task-id": "HumanEval/30",
+    "workflow": "agile/agile_version_0.0.5_remove_stage.json",
+    "UserStoryDraft0": "{\n  \"UserStory\": {\n    \"As a product owner, I want to create a function that takes a list of numbers as input and returns a new list containing only the positive numbers from the input list, so that users can easily filter out positive numbers from a given list.\"\n \t\t\n \t\t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n ",
+    "UserStoryDraft0_prompt": "{\"Role\": \"You need to act as a professional product owner. Your task is to write a UserStory\", \"Instruction\": \"According to the Context, please analyze the requirement and write your response. Response in JSON format. Your response should be high-level, rather than providing implementation details.\", \"Example\": \"\", \"Context\": [], \"Question\": \"Follow the Instruction. The requirement is as follows:\\n\\n\\ndef get_positive(l: list):\\n    \\\"\\\"\\\"Return only positive numbers in the list.\\n    >>> get_positive([-1, 2, -4, 5, 6])\\n    [2, 5, 6]\\n    >>> get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\\n    [5, 3, 2, 3, 9, 123, 1]\\n    \\\"\\\"\\\"\\n\"}",
+    "AnalyzeMeetings": "{\n  \"Architect\": \"As an architect, I would suggest using a functional programming approach to create the function. This can be achieved by using filter() method to iterate through the input list and return a new list containing only the positive numbers.\",\n  \"Tester\": \"As a tester, I would suggest writing test cases to cover various scenarios such as an empty list, a list with all negative numbers, a list with all positive numbers, and a mix of positive and negative numbers to ensure the function handles all cases correctly.\"\n}"
+}

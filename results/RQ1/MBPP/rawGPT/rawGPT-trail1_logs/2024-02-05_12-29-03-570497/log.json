@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-03-570497",
+    "task": "def similar_elements(test_tup1, test_tup2):\n'''Write a function to find the shared elements from the given two lists.\nassert set(similar_elements((3, 4, 5, 6),(5, 7, 4, 10))) == set((4, 5))'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:03",
+        "task-id": "2024-02-05 12:29:03",
+        "workflow": "2024-02-05 12:29:03",
+        "Prompt": "2024-02-05 12:29:06",
+        "FinalCode": "2024-02-05 12:29:06"
+    },
+    "task-id": 2,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def similar_elements(test_tup1, test_tup2):\\n'''Write a function to find the shared elements from the given two lists.\\nassert set(similar_elements((3, 4, 5, 6),(5, 7, 4, 10))) == set((4, 5))'''\\n\"",
+    "FinalCode": "def similar_elements(test_tup1, test_tup2):\n    '''Write a function to find the shared elements from the given two lists.'''\n    return set(test_tup1).intersection(set(test_tup2))"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-49-319894",
+    "task": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:49",
+        "task-id": "2024-01-08 12:33:49",
+        "workflow": "2024-01-08 12:33:49",
+        "Prompt": "2024-01-08 12:33:52",
+        "FinalCode": "2024-01-08 12:33:52"
+    },
+    "task-id": "HumanEval/1",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef separate_paren_groups(paren_string: str) -> List[str]:\\n    \\\"\\\"\\\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\\n    separate those group into separate strings and return the list of those.\\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\\n    Ignore any spaces in the input string.\\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\\n    ['()', '(())', '(()())']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def separate_paren_groups(paren_string: str) -> List[str]:\n    result = []\n    stack = []\n    current_group = \"\"\n    \n    for char in paren_string:\n        if char == \"(\":\n            stack.append(char)\n            current_group += char\n        elif char == \")\":\n            stack.pop()\n            current_group += char\n            if not stack:\n                result.append(current_group)\n                current_group = \"\"\n    \n    return result\n\n# Test cases\nprint(separate_paren_groups('( ) (( )) (( )( ))'))  # Output: ['()', '(())', '(()())']"
+}

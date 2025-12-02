@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-56-757609",
+    "task": "def count_vowels(test_str):\n'''Write a function to count those characters which have vowels as their neighbors in the given string.\nassert count_vowels('bestinstareels') == 7'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:56",
+        "task-id": "2024-02-05 12:32:56",
+        "workflow": "2024-02-05 12:32:56",
+        "Prompt": "2024-02-05 12:32:59",
+        "FinalCode": "2024-02-05 12:32:59"
+    },
+    "task-id": 776,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_vowels(test_str):\\n'''Write a function to count those characters which have vowels as their neighbors in the given string.\\nassert count_vowels('bestinstareels') == 7'''\\n\"",
+    "FinalCode": "def count_vowels(test_str):\n    '''Write a function to count those characters which have vowels as their neighbors in the given string.'''\n    count = 0\n    vowels = \"aeiou\"\n    for i in range(1, len(test_str) - 1):\n        if test_str[i] in vowels and (test_str[i-1] in vowels or test_str[i+1] in vowels):\n            count += 1\n    return count\n\nassert count_vowels('bestinstareels') == 7"
+}

@@ -1,0 +1,36 @@
+def is_sorted(lst):
+    '''
+    Given a list of numbers, return whether or not they are sorted
+    in ascending order. If the list has more than 1 duplicate of the same
+    number, return False. Assume no negative numbers and only integers.
+
+    Examples
+    is_sorted([5]) 
+    is_sorted([1, 2, 3, 4, 5]) 
+    is_sorted([1, 3, 2, 4, 5]) 
+    is_sorted([1, 2, 3, 4, 5, 6]) 
+    is_sorted([1, 2, 3, 4, 5, 6, 7]) 
+    is_sorted([1, 3, 2, 4, 5, 6, 7]) 
+    is_sorted([1, 2, 2, 3, 3, 4]) 
+    is_sorted([1, 2, 2, 2, 3, 4]) 
+    '''
+    sorted_list = sorted(lst)
+    if sorted_list == lst and all(lst.count(x) <= 1 for x in lst):
+        return True
+    else:
+        return False
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(is_sorted([5]), True)
+        self.assertEqual(is_sorted([1, 2, 3, 4, 5]), True)
+        self.assertEqual(is_sorted([1, 3, 2, 4, 5]), False)
+        self.assertEqual(is_sorted([1, 2, 3, 4, 5, 6]), True)
+        self.assertEqual(is_sorted([1, 2, 3, 4, 5, 6, 7]), True)
+        self.assertEqual(is_sorted([1, 3, 2, 4, 5, 6, 7]), False)
+        self.assertEqual(is_sorted([1, 2, 2, 3, 3, 4]), True)
+        self.assertEqual(is_sorted([1, 2, 2, 2, 3, 4]), False)
+
+if __name__ == '__main':
+    unittest.main()

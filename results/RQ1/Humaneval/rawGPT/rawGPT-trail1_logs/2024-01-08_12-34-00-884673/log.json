@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-00-884673",
+    "task": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:00",
+        "task-id": "2024-01-08 12:34:00",
+        "workflow": "2024-01-08 12:34:00",
+        "Prompt": "2024-01-08 12:34:03",
+        "FinalCode": "2024-01-08 12:34:03"
+    },
+    "task-id": "HumanEval/25",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef factorize(n: int) -> List[int]:\\n    \\\"\\\"\\\" Return list of prime factors of given integer in the order from smallest to largest.\\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\\n    Input number should be equal to the product of all factors\\n    >>> factorize(8)\\n    [2, 2, 2]\\n    >>> factorize(25)\\n    [5, 5]\\n    >>> factorize(70)\\n    [2, 5, 7]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n    factors = []\n    divisor = 2\n    while n > 1:\n        while n % divisor == 0:\n            factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    return factors"
+}

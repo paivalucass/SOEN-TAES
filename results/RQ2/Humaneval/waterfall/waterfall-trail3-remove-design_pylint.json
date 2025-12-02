@@ -1,0 +1,2496 @@
+{
+    "HumanEval/0": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.27",
+        "completion": "from typing import List\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    numbers.sort()\n    i = 0\n    j = 1\n    while j < len(numbers):\n        if abs(numbers[i] - numbers[j]) < threshold:\n            return True\n        i += 1\n        j += 1\n    return False"
+    },
+    "HumanEval/1": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:17:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "8.12",
+        "completion": "from typing import List\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    result = []\n    open_count = 0\n    group = \"\"\n    for char in paren_string.replace(\" \", \"\"):\n        if char == \"(\":\n            open_count += 1\n            group += char\n        elif char == \")\":\n            open_count -= 1\n            group += char\n            if open_count == 0:\n                result.append(group)\n                group = \"\"\n    return result"
+    },
+    "HumanEval/2": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def truncate_number(number: float) -> float:\n    if number < 0:\n        raise ValueError(\"Input number should be non-negative\")\n    if not isinstance(number, (int, float)):\n        raise TypeError(\"Input number should be numeric\")\n\n    return number - int(number)"
+    },
+    "HumanEval/3": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.25",
+        "completion": "from typing import List\n\ndef below_zero(operations: List[int]) -> bool:\n    balance = 0\n    for operation in operations:\n        balance += operation\n        if balance < 0:\n            return True\n    return False"
+    },
+    "HumanEval/4": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:21:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\"\n    For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n\n    if len(numbers) < 2:\n        raise ValueError(\"At least two numbers are required to calculate mean absolute deviation\")\n\n    mean = sum(numbers) / len(numbers)\n    total_deviation = sum(abs(num - mean) for num in numbers)\n\n    return total_deviation / len(numbers)"
+    },
+    "HumanEval/5": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:14:0: W0104: Statement seems to have no effect (pointless-statement)"
+        ],
+        "Convention": [
+            "test.py:15:0: C0301: Line too long (209/100) (line-too-long)",
+            "test.py:48:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:4:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "4.00",
+        "completion": "from typing import List\n\ndef intersperse(numbers: List[int], delimiter: int) -> List[int]:\n    if len(numbers) < 2:\n        return numbers\n    else:\n        new_list = []\n        for num in numbers[:-1]:\n            new_list.extend([num, delimiter])\n        new_list.append(numbers[-1])\n        return new_list\n\n# Test Cases:\n{\n  \"requirement_analysis\": \"To create a function called 'intersperse' which takes a list of numbers and a delimiter as input and inserts the delimiter between every two consecutive elements of the input list.\",\n  \"test_cases\": [\n    {\n      \"Test Title\": \"Empty Input List\",\n      \"Input Data\": \"numbers=[], delimiter=4\",\n      \"Expected Output\": \"[]\"\n    },\n    {\n      \"Test Title\": \"Non-empty Input List\",\n      \"Input Data\": \"numbers=[1,2,3], delimiter=4\",\n      \"Expected Output\": \"[1,4,2,4,3]\"\n    },\n    {\n      \"Test Title\": \"Single Element Input List\",\n      \"Input Data\": \"numbers=[5], delimiter=4\",\n      \"Expected Output\": \"[5]\"\n    },\n    {\n      \"Test Title\": \"Input List with Negative Numbers\",\n      \"Input Data\": \"numbers=[-1, -2, -3], delimiter=4\",\n      \"Expected Output\": \"[-1,4,-2,4,-3]\"\n    },\n    {\n      \"Test Title\": \"Input List with Null Values\",\n      \"Input Data\": \"numbers=[null, 2, null], delimiter=4\",\n      \"Expected Output\": \"[null, 4, 2, 4, null]\"\n    },\n    {\n      \"Test Title\": \"Large Number of Elements\",\n      \"Input Data\": \"numbers=[1,2,3,4,5,6,7,8,9,10], delimiter=4\",\n      \"Expected Output\": \"[1,4,2,4,3,4,4,4,5,4,6,4,7,4,8,4,9,4,10]\"\n    }\n  ]\n}"
+    },
+    "HumanEval/6": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:11:24: C0321: More than one statement on a single line (multiple-statements)",
+            "test.py:12:26: C0321: More than one statement on a single line (multiple-statements)",
+            "test.py:16:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.84",
+        "completion": "from typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    levels = calculate_paren_levels(paren_string)\n    return [find_max_level(levels, i) for i in range(0, len(levels), 2)]\n\ndef calculate_paren_levels(paren_string: str) -> List[int]:\n    levels = []\n    count = 0\n    for char in paren_string:\n        if char == '(': count += 1\n        elif char == ')': count -= 1\n        levels.append(count)\n    return levels\n\ndef find_max_level(levels: List[int], start_index: int) -> int:\n    end_index = len(levels) if 0 not in levels[start_index:] else levels.index(0, start_index)\n    if start_index == 0 and 0 not in levels[start_index:]:\n        return levels[start_index]\n    return max(levels[start_index:end_index])\n"
+    },
+    "HumanEval/7": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.00",
+        "completion": "from typing import List\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    if not strings or not substring:\n        return []\n\n    return [s for s in strings if substring in s]"
+    },
+    "HumanEval/8": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.00",
+        "completion": "from typing import List, Tuple\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return (0, 1)\n\n    sum_result = 0\n    product_result = 1\n    for num in numbers:\n        sum_result += num\n        product_result *= num\n    return (sum_result, product_result)"
+    },
+    "HumanEval/9": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:1:0: W0611: Unused Deque imported from typing (unused-import)"
+        ],
+        "Convention": [
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:7:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.15",
+        "completion": "from typing import List, Deque\nfrom collections import deque\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    max_list = []\n    window = deque()\n    for i in range(len(numbers)):\n        while window and numbers[i] >= numbers[window[-1]]:\n            window.pop()\n        window.append(i)\n        if window[0] == i - len(window):\n            window.popleft()\n        max_list.append(numbers[window[0]])\n    return max_list"
+    },
+    "HumanEval/10": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:19:0: W0104: Statement seems to have no effect (pointless-statement)"
+        ],
+        "Convention": [
+            "test.py:9:0: C0301: Line too long (106/100) (line-too-long)",
+            "test.py:67:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.00",
+        "completion": "def is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    \"\"\"\n    if not string:\n        return ''\n    for i in range(len(string)):\n        if is_palindrome(string[i:]):\n            return string + string[:i][::-1]\n    return ''\n\n# Test Cases:\n{\n  \"test_cases\": [\n    {\n      \"Test Title\": \"Test is_palindrome with empty string\",\n      \"Input Data\": \"string=''\",\n      \"Expected Output\": \"True\"\n    },\n    {\n      \"Test Title\": \"Test is_palindrome with non-empty palindrome string\",\n      \"Input Data\": \"string='civic'\",\n      \"Expected Output\": \"True\"\n    },\n    {\n      \"Test Title\": \"Test is_palindrome with non-empty non-palindrome string\",\n      \"Input Data\": \"string='hello'\",\n      \"Expected Output\": \"False\"\n    },\n    {\n      \"Test Title\": \"Test is_palindrome with string containing special characters\",\n      \"Input Data\": \"string='@#@'\",\n      \"Expected Output\": \"True\"\n    },\n    {\n      \"Test Title\": \"Test is_palindrome with string containing numbers\",\n      \"Input Data\": \"string='12321'\",\n      \"Expected Output\": \"True\"\n    },\n    {\n      \"Test Title\": \"Test make_palindrome with empty string\",\n      \"Input Data\": \"string=''\",\n      \"Expected Output\": \"''\"\n    },\n    {\n      \"Test Title\": \"Test make_palindrome with non-empty string\",\n      \"Input Data\": \"string='cat'\",\n      \"Expected Output\": \"'catac'\"\n    },\n    {\n      \"Test Title\": \"Test make_palindrome with non-empty string and existing palindrome suffix\",\n      \"Input Data\": \"string='cata'\",\n      \"Expected Output\": \"'catac'\"\n    },\n    {\n      \"Test Title\": \"Test make_palindrome with very long string\",\n      \"Input Data\": \"string='a'*10000\",\n      \"Expected Output\": \"'a'*10000 + 'a'*9999\"\n    }\n  ]\n}"
+    },
+    "HumanEval/11": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:1:0: W0611: Unused List imported from typing (unused-import)"
+        ],
+        "Convention": [
+            "test.py:15:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "from typing import List\n\ndef string_xor(a: str, b: str) -> str:\n    if len(a) != len(b):\n        return \"Error\"\n\n    result = \"\"\n    for char1, char2 in zip(a, b):\n        if char1 == '0' and char2 == '0':\n            result += '0'\n        elif char1 == '1' and char2 == '1':\n            result += '0'\n        else:\n            result += '1'\n    return result"
+    },
+    "HumanEval/12": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "from typing import List, Optional\n\ndef longest(strings: List[str]) -> Optional[str]:\n    if not strings:\n        return None\n    max_length = max(len(s) for s in strings)\n    longest_strings = [s for s in strings if len(s) == max_length]\n    return longest_strings[0] if longest_strings else None"
+    },
+    "HumanEval/13": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:21:0: W0104: Statement seems to have no effect (pointless-statement)",
+            "test.py:1:0: W0611: Unused List imported from typing (unused-import)",
+            "test.py:1:0: W0611: Unused Dict imported from typing (unused-import)",
+            "test.py:1:0: W0611: Unused Any imported from typing (unused-import)"
+        ],
+        "Convention": [
+            "test.py:5:0: C0301: Line too long (102/100) (line-too-long)",
+            "test.py:6:0: C0301: Line too long (124/100) (line-too-long)",
+            "test.py:49:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.73",
+        "completion": "from typing import List, Dict, Any\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\"\n    This function calculates the greatest common divisor of two numbers using the Euclidean algorithm.\n    It iteratively finds the remainder of a divided by b and updates the values of a and b accordingly until b becomes zero.\n    The final value of a is returned as the greatest common divisor.\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return a\n\n# Test cases\nassert greatest_common_divisor(10, 25) == 5\nassert greatest_common_divisor(14, 28) == 14\nassert greatest_common_divisor(18, 27) == 9\nassert greatest_common_divisor(0, 5) == 5\nassert greatest_common_divisor(1, 1) == 1\n\n# Test Cases:\n{\n  \"test_cases\": [\n    {\n      \"Test Title\": \"Input validation - integers\",\n      \"Input Data\": \"parameter1=[1,2,3],parameter2='123'\",\n      \"Expected Output\": \"Error\"\n    },\n    {\n      \"Test Title\": \"Input validation - non-integers\",\n      \"Input Data\": \"parameter1='abc', parameter2=[1,2,3]\",\n      \"Expected Output\": \"Error\"\n    },\n    {\n      \"Test Title\": \"Algorithm - basic case\",\n      \"Input Data\": \"parameter1=25, parameter2=15\",\n      \"Expected Output\": \"5\"\n    },\n    {\n      \"Test Title\": \"Algorithm - large integers\",\n      \"Input Data\": \"parameter1=1000000, parameter2=500000\",\n      \"Expected Output\": \"500000\"\n    },\n    {\n      \"Test Title\": \"Documentation example\",\n      \"Input Data\": \"parameter1=48, parameter2=18\",\n      \"Expected Output\": \"6\"\n    }\n  ]\n}"
+    },
+    "HumanEval/14": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.33",
+        "completion": "from typing import List\n\ndef all_prefixes(string: str) -> List[str]:\n    return [string[:i+1] for i in range(len(string))]\n"
+    },
+    "HumanEval/15": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:4:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "2.00",
+        "completion": "from typing import Union\n\ndef string_sequence(n: Union[int, str]) -> str:\n    if isinstance(n, int) and n >= 0:\n        return ' '.join([str(i) for i in range(int(n)+1)])\n    else:\n        return \"Error: Invalid input. Please provide a non-negative integer.\""
+    },
+    "HumanEval/16": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.00",
+        "completion": "def count_distinct_characters(string: str) -> int:\n    if string is None or string == \"\":\n        return 0\n    distinct_chars = set(string.lower())\n    return len(distinct_chars)"
+    },
+    "HumanEval/17": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:11:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.00",
+        "completion": "from typing import List\n\ndef parse_music(music_string: str) -> List[int]:\n    notes = {'o': 4, 'o|': 2, '.|': 1}\n    result = []\n    for note in music_string.split():\n        try:\n            result.append(notes[note])\n        except KeyError:\n            pass\n    return result"
+    },
+    "HumanEval/18": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.25",
+        "completion": "def how_many_times(string: str, substring: str) -> int:\n    count = 0\n    if substring == \"\":\n        return len(string)\n    for i in range(len(string) - len(substring) + 1):\n        if string[i:i + len(substring)] == substring:\n            count += 1\n    return count"
+    },
+    "HumanEval/19": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:1:0: W0611: Unused List imported from typing (unused-import)"
+        ],
+        "Convention": [
+            "test.py:4:0: C0301: Line too long (131/100) (line-too-long)",
+            "test.py:8:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:13:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.22",
+        "completion": "from typing import List\n\ndef sort_numbers(numbers: str) -> str:\n    number_mapping = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}\n\n    numbers_list = numbers.split()\n    invalid_numbers = [num for num in numbers_list if num not in number_mapping]\n    \n    if invalid_numbers:\n        return 'Invalid Number Name'\n\n    numbers_list.sort(key=lambda x: number_mapping[x])\n    \n    return ' '.join(numbers_list)"
+    },
+    "HumanEval/20": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:13:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.45",
+        "completion": "from typing import List, Tuple\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    sorted_numbers = sorted(numbers)\n    min_diff = float('inf')\n    result = (0.0, 0.0)\n    \n    for i in range(len(sorted_numbers) - 1):\n        diff = abs(sorted_numbers[i] - sorted_numbers[i+1])\n        if diff < min_diff:\n            min_diff = diff\n            result = (sorted_numbers[i], sorted_numbers[i+1])\n    \n    return result"
+    },
+    "HumanEval/21": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:12:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:17:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.92",
+        "completion": "from typing import List\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    if not numbers:\n        raise ValueError(\"Input list is empty\")\n    for num in numbers:\n        if not isinstance(num, (int, float)):\n            raise ValueError(\"Input list contains non-numeric values\")\n\n    min_num = min(numbers)\n    max_num = max(numbers)\n    \n    if min_num == max_num:\n        raise ValueError(\"Division by zero error\")\n\n    scaled_numbers = [(x - min_num) / (max_num - min_num) for x in numbers]\n    return scaled_numbers"
+    },
+    "HumanEval/22": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "from typing import List, Any\n\ndef filter_integers(values: List[Any]) -> List[int]:\n    if not isinstance(values, list):\n        raise ValueError(\"Input must be a list\")\n    if not values:\n        return []\n    return [val for val in values if isinstance(val, int)]"
+    },
+    "HumanEval/23": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.50",
+        "completion": "def strlen(string: str) -> int:\n    if string is None:\n        raise ValueError(\"Input string cannot be null\")\n    return len(string)"
+    },
+    "HumanEval/24": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.78",
+        "completion": "def largest_divisor(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    \"\"\"\n    if not isinstance(n, int) or n <= 0:\n        raise ValueError(\"Input must be a positive integer\")\n\n    if n == 1:\n        raise ValueError(\"Input cannot be 1\")\n\n    for i in range(n-1, 0, -1):\n        if n % i == 0:\n            return i\n\n    return 0"
+    },
+    "HumanEval/25": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.50",
+        "completion": "from typing import List\n\ndef factorize(n: int) -> List[int]:\n    if n <= 0:\n        raise ValueError(\"Input integer must be positive\")\n    \n    prime_factors = []\n    divisor = 2\n    while n > 1:\n        while n % divisor == 0:\n            prime_factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    return prime_factors\n"
+    },
+    "HumanEval/26": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:19:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ValueError('Input must be a list of integers') from exc' (raise-missing-from)"
+        ],
+        "Convention": [
+            "test.py:20:0: C0305: Trailing newlines (trailing-newlines)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.50",
+        "completion": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n    try:\n        unique_numbers = []\n        seen = set()\n        for num in numbers:\n            if num not in seen:\n                unique_numbers.append(num)\n                seen.add(num)\n        return unique_numbers\n    except:\n        raise ValueError(\"Input must be a list of integers\")\n\n"
+    },
+    "HumanEval/27": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:12:0: W0104: Statement seems to have no effect (pointless-statement)"
+        ],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:9:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:13:0: C0301: Line too long (116/100) (line-too-long)",
+            "test.py:51:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.22",
+        "completion": "def flip_case(string: str) -> str:\n    if not isinstance(string, str):\n        raise ValueError(\"Input must be a string\")\n    \n    try:\n        flipped_string = string.swapcase()\n    except Exception as e:\n        raise e\n    \n    return flipped_string\n# Test Cases:\n{\n  \"requirement analysis\": \"The function should handle both lowercase and uppercase characters in the input string.\",\n  \"test_cases\": [\n    {\n      \"Test Title\": \"Flip case of lowercase characters\",\n      \"Input Data\": \"parameter1='Hello'\",\n      \"Expected Output\": \"'hELLO'\"\n    },\n    {\n      \"Test Title\": \"Flip case of uppercase characters\",\n      \"Input Data\": \"parameter1='WORLD'\",\n      \"Expected Output\": \"'world'\"\n    },\n    {\n      \"Test Title\": \"No alphabetical characters in input\",\n      \"Input Data\": \"parameter1='123'\",\n      \"Expected Output\": \"'123'\"\n    },\n    {\n      \"Test Title\": \"No alphabetical characters in input\",\n      \"Input Data\": \"parameter1='!@#'\",\n      \"Expected Output\": \"'!@#'\"\n    },\n    {\n      \"Test Title\": \"Empty input string\",\n      \"Input Data\": \"parameter1=''\",\n      \"Expected Output\": \"''\"\n    },\n    {\n      \"Test Title\": \"Single character input\",\n      \"Input Data\": \"parameter1='a'\",\n      \"Expected Output\": \"'A'\"\n    },\n    {\n      \"Test Title\": \"Long input string\",\n      \"Input Data\": \"parameter1='abcdefghijklmnopqrstuvwxyz'\",\n      \"Expected Output\": \"'ABCDEFGHIJKLMNOPQRSTUVWXYZ'\"\n    }\n  ]\n}"
+    },
+    "HumanEval/28": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.00",
+        "completion": "from typing import List\n\ndef concatenate(strings: List[str]) -> str:\n    if not all(isinstance(s, str) for s in strings):\n        raise ValueError(\"Input must be a list of strings\")\n    return ''.join(strings)"
+    },
+    "HumanEval/29": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:16:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "from typing import List\n\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n\n    if not isinstance(strings, list) or not all(isinstance(s, str) for s in strings):\n        raise ValueError(\"The 'strings' parameter must be a non-empty list of strings\")\n    if not isinstance(prefix, str):\n        raise ValueError(\"The 'prefix' parameter must be a non-empty string\")\n\n    return [s for s in strings if s.startswith(prefix)]"
+    },
+    "HumanEval/30": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:9:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:10:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "1.43",
+        "completion": "def get_positive(l: list):\n    if not isinstance(l, list):\n        raise ValueError(\"Input must be a list\")\n    \n    if len(l) == 0:\n        return []\n    \n    positive_nums = [num for num in l if num > 0]\n    \n    return positive_nums"
+    },
+    "HumanEval/31": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:13:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.69",
+        "completion": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    i = 3\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 2\n    return True"
+    },
+    "HumanEval/32": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:32:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [
+            "test.py:8:11: R1728: Consider using a generator instead 'sum(coeff * math.pow(x, i) for (i, coeff) in enumerate(xs))' (consider-using-generator)",
+            "test.py:26:8: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "import math\n\ndef poly(xs: list, x: float) -> float:\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x**2 + .... xs[n] * x**n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\ndef find_zero(xs: list) -> float:\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -0.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x**2 + x**3\n    1.0\n    \"\"\"\n    low = -1000\n    high = 1000\n    while low <= high:\n        mid = (low + high) / 2\n        if poly(xs, mid) == 0:\n            return mid\n        elif poly(xs, mid) < 0:\n            low = mid + 0.01\n        else:\n            high = mid - 0.01\n    return mid"
+    },
+    "HumanEval/33": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.25",
+        "completion": "def sort_third(l: list):\n    l_copy = l[:]\n    third_indices = [i for i in range(len(l)) if i % 3 == 0]\n    third_values = [l[i] for i in third_indices]\n    third_values.sort()\n    for i, value in zip(third_indices, third_values):\n        l_copy[i] = value\n    return l_copy"
+    },
+    "HumanEval/34": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:10:0: C0301: Line too long (131/100) (line-too-long)",
+            "test.py:17:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:5:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def unique(l: list):\n    if not isinstance(l, list) or len(l) == 0:\n        return []\n    \n    if all(isinstance(item, int) for item in l):\n        unique_set = set(l)\n        unique_list = list(unique_set)\n        return sorted(unique_list) # Sorting for consistency\n    else:\n        return \"Error: Invalid input mix of integers and strings\" # Error message for mix of integers and strings in the input list\n\n# Testing the function with various input lists\nprint(unique([1, 2, 3, 3, 4, 5]))  # [1, 2, 3, 4, 5]\nprint(unique([1, 1, 2, 2, 3, 3]))  # [1, 2, 3]\nprint(unique([]))  # []\nprint(unique(\"test\"))  # []\n# Additional edge cases and data type testing can be added as needed."
+    },
+    "HumanEval/35": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "1.67",
+        "completion": "def max_element(l: list) -> int:\n    if not l:\n        raise ValueError(\"Error: Empty list\")\n    \n    if not all(isinstance(x, (int, float)) for x in l):\n        raise ValueError(\"Error: Non-numeric elements\")\n    \n    return max(l)"
+    },
+    "HumanEval/36": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def fizz_buzz(n: int) -> int:\n    count = 0\n    for i in range(0, n):\n        if (i % 11 == 0 or i % 13 == 0) and '7' in str(i):\n            count += 1\n    return count"
+    },
+    "HumanEval/37": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "from typing import List\n\ndef sort_even(l: List[int]) -> List[int]:\n    even_indices = [l[i] for i in range(0, len(l), 2)]\n    sorted_even_indices = sorted(even_indices)\n    result = [sorted_even_indices[i//2] if i % 2 == 0 else l[i] for i in range(len(l))]\n    return result"
+    },
+    "HumanEval/38": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def encode_cyclic(s: str) -> str:\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)\n\ndef decode_cyclic(s: str) -> str:\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    groups = [(group[-1] + group[:-1]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)"
+    },
+    "HumanEval/39": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:12:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:20:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:17:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.47",
+        "completion": "def is_prime(num):\n    if num < 2:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef prime_fib(n: int) -> int:\n    if n <= 0:\n        return \"Invalid input\"\n    \n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    prime_fib_nums = [num for num in fib_sequence if is_prime(num)]\n    if not prime_fib_nums:\n        return 2\n    else:\n        return prime_fib_nums[-1]"
+    },
+    "HumanEval/40": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:8:12: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.92",
+        "completion": "def triples_sum_to_zero(l: list):\n    l.sort()\n    for i in range(len(l) - 2):\n        left = i + 1\n        right = len(l) - 1\n        while left < right:\n            current_sum = l[i] + l[left] + l[right]\n            if current_sum == 0:\n                return True\n            elif current_sum < 0:\n                left += 1\n            else:\n                right -= 1\n    return False"
+    },
+    "HumanEval/41": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:2:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def car_race_collision(n: int):\n    return n * (n - 1) / 2"
+    },
+    "HumanEval/42": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def incr_list(l: list):\n    if not isinstance(l, list):\n        raise TypeError(\"Input must be a list\")\n    \n    return [x + 1 for x in l]"
+    },
+    "HumanEval/43": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "def pairs_sum_to_zero(l):\n    seen = set()\n    for num in l:\n        if -num in seen:\n            return True\n        seen.add(num)\n    return False"
+    },
+    "HumanEval/44": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:10:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:11:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.44",
+        "completion": "def change_base(x: int, base: int):\n    if x < 0 or base < 2:\n        return \"Invalid input\"\n    \n    result = \"\"\n    while x > 0:\n        remainder = x % base\n        result = str(remainder) + result\n        x = x // base\n        \n    return result"
+    },
+    "HumanEval/45": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.29",
+        "completion": "def triangle_area(a, h):\n    if a <= 0 or h <= 0:\n        return \"InvalidInput\"\n    \n    if h == 0:\n        return \"InvalidInput\"\n\n    area = 0.5 * a * h\n    return area"
+    },
+    "HumanEval/46": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:12:12: W0612: Unused variable 'i' (unused-variable)"
+        ],
+        "Convention": [
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:2:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.15",
+        "completion": "def fib4(n: int) -> int:\n    if n < 0:\n        return -1  # Invalid input\n    elif n == 0:\n        return 0\n    elif n == 1:\n        return 0\n    elif n == 2:\n        return 2\n    else:\n        first, second, third, fourth = 0, 0, 2, 0\n        for i in range(4, n + 1):\n            first, second, third, fourth = second, third, fourth, first + second + third + fourth\n        return fourth"
+    },
+    "HumanEval/47": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:7:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.25",
+        "completion": "def median(l: list) -> float:\n    if not l:\n        return None\n\n    sorted_list = sorted(l)\n    list_length = len(sorted_list)\n    if list_length % 2 == 0:\n        return (sorted_list[list_length // 2 - 1] + sorted_list[list_length // 2]) / 2.0\n    else:\n        return float(sorted_list[list_length // 2])\n"
+    },
+    "HumanEval/48": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:19:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:22:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:24:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.29",
+        "completion": "def is_palindrome(text: str):\n    \"\"\"\n    Checks if given string is a palindrome\n    >>> is_palindrome('')\n    True\n    >>> is_palindrome('aba')\n    True\n    >>> is_palindrome('aaaaa')\n    True\n    >>> is_palindrome('zbcd')\n    False\n    \"\"\"\n\n    if text is None:\n        return False\n\n    # Remove all non-alphanumeric characters and convert to lowercase\n    processed_text = ''.join(e for e in text if e.isalnum()).lower()\n    \n    if len(processed_text) <= 1:\n        return True\n    \n    # Check if the processed text is equal to its reverse\n    return processed_text == processed_text[::-1]"
+    },
+    "HumanEval/49": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:2:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def modp(n: int, p: int) -> int:\n    return pow(2, n, p)"
+    },
+    "HumanEval/50": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:2:0: C0301: Line too long (166/100) (line-too-long)",
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:5:0: C0301: Line too long (166/100) (line-too-long)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def encode_shift(s: str) -> str:\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) if ch.islower() else chr(((ord(ch.lower()) + 5 - ord(\"a\")) % 26) + ord(\"a\")).upper() for ch in s])\n\ndef decode_shift(s: str) -> str:\n    return \"\".join([chr(((ord(ch) - 5 - ord(\"a\")) % 26) + ord(\"a\")) if ch.islower() else chr(((ord(ch.lower()) - 5 - ord(\"a\")) % 26) + ord(\"a\")).upper() for ch in s])"
+    },
+    "HumanEval/51": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.00",
+        "completion": "def remove_vowels(text: str) -> str:\n    vowels = \"aeiouAEIOU\"\n    if not isinstance(text, str):\n        raise ValueError(\"Input must be a string\")\n    return ''.join([char for char in text if char not in vowels])"
+    },
+    "HumanEval/52": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def below_threshold(l: list, t: int):\n    if not l or not isinstance(t, int):\n        raise ValueError(\"Input list cannot be empty and threshold 't' must be an integer\")\n        \n    return all(num < t for num in l)"
+    },
+    "HumanEval/53": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:22:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.65",
+        "completion": "def add(x: int, y: int) -> int:\n    if not isinstance(x, int) or not isinstance(y, int):\n        raise TypeError(\"Inputs must be integers\")\n    \n    return x + y\n\n# Test cases\nassert add(2, 3) == 5\nassert add(5, 7) == 12\nassert add(-2, 3) == 1\nassert add(0, 0) == 0\nassert add(1000000, 1000000) == 2000000\n\ntry:\n    add(\"2\", 3)\nexcept TypeError:\n    print(\"Error handling for non-integer inputs works as expected\")\n\ntry:\n    add(2, \"3\")\nexcept TypeError:\n    print(\"Error handling for non-integer inputs works as expected\")"
+    },
+    "HumanEval/54": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:15:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.69",
+        "completion": "def same_chars(s0: str, s1: str) -> bool:\n    if len(s0) != len(s1):\n        return False\n    char_count = {}\n    for char in s0:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n    for char in s1:\n        if char in char_count:\n            char_count[char] -= 1\n        else:\n            return False\n    return all(value == 0 for value in char_count.values())"
+    },
+    "HumanEval/55": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:22:0: W0104: Statement seems to have no effect (pointless-statement)"
+        ],
+        "Convention": [
+            "test.py:56:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:11:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.47",
+        "completion": "def memoize(func):\n    memo = {}\n    def helper(x):\n        if x not in memo:\n            memo[x] = func(x)\n        return memo[x]\n    return helper\n\n@memoize\ndef fib(n: int):\n    if n <= 0:\n        return \"Input should be a positive integer\"\n    elif n == 1:\n        return 1\n    else:\n        a, b = 0, 1\n        for _ in range(2, n+1):\n            a, b = b, a + b\n        return b\n\n# Test Cases:\n{\n  \"requirement analysis\": \"Fibonacci Number Calculator\",\n  \"test_cases\": [\n    {\n      \"Test Title\": \"Input 1\",\n      \"Input Data\": \"n=1\",\n      \"Expected Output\": 1\n    },\n    {\n      \"Test Title\": \"Input 10\",\n      \"Input Data\": \"n=10\",\n      \"Expected Output\": 55\n    },\n    {\n      \"Test Title\": \"Input 8\",\n      \"Input Data\": \"n=8\",\n      \"Expected Output\": 21\n    },\n    {\n      \"Test Title\": \"Negative Input\",\n      \"Input Data\": \"n=-1\",\n      \"Expected Output\": \"Input should be a positive integer\"\n    },\n    {\n      \"Test Title\": \"Large Input\",\n      \"Input Data\": \"n=1000000\",\n      \"Expected Output\": \"Input should be a positive integer\"\n    },\n    {\n      \"Test Title\": \"Invalid Input\",\n      \"Input Data\": \"n=abc\",\n      \"Expected Output\": \"Input should be a positive integer\"\n    }\n  ]\n}"
+    },
+    "HumanEval/56": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:1:23: W0621: Redefining name 'brackets' from outer scope (line 16) (redefined-outer-name)"
+        ],
+        "Convention": [
+            "test.py:17:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "def correct_bracketing(brackets: str) -> bool:\n    stack = []\n    for bracket in brackets:\n        if bracket == \"<\":\n            stack.append(bracket)\n        elif bracket == \">\":\n            if not stack:\n                return False\n            stack.pop()\n        else:\n            return False\n    return not stack\n\n# Test cases\ntest_cases = [\"<<>>\", \"<>\", \"><\", \"\", \"abc\"]\nfor brackets in test_cases:\n    print(f\"{brackets}: {correct_bracketing(brackets)}\")"
+    },
+    "HumanEval/57": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:6:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:8:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def monotonic(lst: list) -> bool:\n    if len(lst) <= 1:\n        return True\n    \n    increasing = all(lst[i] <= lst[i + 1] for i in range(len(lst) - 1))\n    \n    decreasing = all(lst[i] >= lst[i + 1] for i in range(len(lst) - 1))\n    \n    return increasing or decreasing"
+    },
+    "HumanEval/58": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:7:0: W0104: Statement seems to have no effect (pointless-statement)"
+        ],
+        "Convention": [
+            "test.py:24:0: C0301: Line too long (108/100) (line-too-long)",
+            "test.py:53:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def common(l1: list, l2: list):\n    return sorted(list(set(l1) & set(l2)))\n\n\n\n# Test Cases:\n{\n  \"TestCases\": {\n    \"Validation\": [\n      {\n        \"Test Title\": \"Validate Input Lists Type\",\n        \"Input Data\": \"l1=[1, 2, 3], l2=[4, 5, 6]\",\n        \"Expected Output\": \"Valid\"\n      }\n    ],\n    \"CommonElementsDetection\": [\n      {\n        \"Test Title\": \"Detect Common Elements\",\n        \"Input Data\": \"l1=[1, 4, 3, 34, 653, 2, 5], l2=[5, 7, 1, 5, 9, 653, 121]\",\n        \"Expected Output\": \"[1, 5, 653]\"\n      },\n      {\n        \"Test Title\": \"Detect Large Common Elements\",\n        \"Input Data\": \"l1=[1, 4, 3, 34, 653, 2, 5, ...1000 more elements...], l2=[5, 7, 1, 5, 9, 653, 121]\",\n        \"Expected Output\": \"[1, 5, 653]\"\n      }\n    ],\n    \"EdgeCasesAndBoundaryConditions\": [\n      {\n        \"Test Title\": \"Empty Input Lists\",\n        \"Input Data\": \"l1=[], l2=[]\",\n        \"Expected Output\": \"[]\"\n      },\n      {\n        \"Test Title\": \"Single Element Input Lists\",\n        \"Input Data\": \"l1=[1], l2=[1]\",\n        \"Expected Output\": \"[1]\"\n      }\n    ],\n    \"SampleInputAndExpectedOutput\": [\n      {\n        \"Test Title\": \"Sample Input and Expected Output\",\n        \"Input Data\": \"l1=[5, 3, 2, 8], l2=[3, 2]\",\n        \"Expected Output\": \"[2, 3]\"\n      },\n      {\n        \"Test Title\": \"Duplicate Elements in Input Lists\",\n        \"Input Data\": \"l1=[5, 3, 2, 2, 8], l2=[3, 2]\",\n        \"Expected Output\": \"[2, 3]\"\n      }\n    ]\n  }\n}"
+    },
+    "HumanEval/59": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "def largest_prime_factor(n: int):\n    prime_factor = 2\n    while prime_factor * prime_factor <= n:\n        if n % prime_factor == 0:\n            n //= prime_factor\n        else:\n            prime_factor += 1\n    return n"
+    },
+    "HumanEval/60": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:2:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def sum_to_n(n: int) -> int:\n    return n * (n + 1) // 2"
+    },
+    "HumanEval/61": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:10:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.00",
+        "completion": "def correct_bracketing(brackets: str) -> bool:\n    bracket_stack = []\n    for bracket in brackets:\n        if bracket == '(':\n            bracket_stack.append(bracket)\n        elif bracket == ')':\n            if not bracket_stack:\n                return False\n            bracket_stack.pop()\n    return not bracket_stack"
+    },
+    "HumanEval/62": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "def derivative(coefficients: list) -> list:\n    if not isinstance(coefficients, list):\n        raise ValueError(\"Input must be a list\")\n\n    if len(coefficients) <= 1:\n        raise ValueError(\"Input list must have at least 2 elements\")\n\n    return [coefficients[i] * i for i in range(1, len(coefficients))]\n"
+    },
+    "HumanEval/63": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:2:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "8.12",
+        "completion": "def fibfib(n: int) -> int:\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 0\n    elif n == 2:\n        return 1\n    else:\n        a, b, c = 0, 0, 1\n        for _ in range(3, n+1):\n            a, b, c = b, c, a + b + c\n        return c\n\n# Test the function with edge cases\nprint(fibfib(-1))  # Expected: 0\nprint(fibfib(0))   # Expected: 0\nprint(fibfib(1))   # Expected: 0\nprint(fibfib(2))   # Expected: 1\nprint(fibfib(10))  # Expected: 55\n"
+    },
+    "HumanEval/64": {
+        "Fatal": [],
+        "Error": [
+            "test.py:16:6: E0001: Parsing failed: 'invalid syntax (<unknown>, line 16)' (syntax-error)"
+        ],
+        "Warning": [],
+        "Convention": [],
+        "Refactor": [],
+        "Information": [],
+        "Rate": 0.0,
+        "completion": "FIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    vowels = 'aeiouy'\n    count = 0\n    for char in s.lower():\n        if char in vowels:\n            count += 1\n    if s[-1].lower() == 'y' and count > 1:\n        count -= 1\n    return count\n\n# test report:\nTest Report\n\nTest Script Output:\n======================================================================\nFAIL: test (__main__.Test)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/watch/PycharmProjects/XXXX-1-LLM/workspace/2024-02-18_16-24-12-130626/test_script.py\", line 20, in test\n    self.assertEqual(vowels_count('ACEDY'), 3)\nAssertionError: 2 != 3\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n\nTest Report:\nThe test script has failed with the following output:\n- The test named 'test' in the main module has failed.\n- The assertion for vowels_count('ACEDY') has resulted in an AssertionError: 2 != 3.\n\nConclusion:\nCode Test Failed."
+    },
+    "HumanEval/65": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:6:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:11:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:7:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "1.25",
+        "completion": "def circular_shift(x, shift):\n    x_str = str(x)\n    num_digits = len(x_str)\n    \n    shift = shift % num_digits\n    \n    if shift == 0:\n        return x_str\n    else:\n        shifted_str = x_str[-shift:] + x_str[:-shift]\n        \n        return shifted_str[::-1] if shift > num_digits else shifted_str"
+    },
+    "HumanEval/66": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:6:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:1:0: C0103: Function name \"digitSum\" doesn't conform to snake_case naming style (invalid-name)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def digitSum(s):\n    if not isinstance(s, str):\n        raise ValueError(\"Input must be a string\")\n    \n    sum_of_uppercase_chars = sum(ord(char) for char in s if char.isupper())\n    \n    return sum_of_uppercase_chars"
+    },
+    "HumanEval/67": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:7:8: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Input format is incorrect') from exc' (raise-missing-from)"
+        ],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:2:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.56",
+        "completion": "import re\ndef fruit_distribution(s, n):\n    try:\n        apples, oranges = map(int, re.findall(r'\\d+', s))\n        return n - apples - oranges\n    except ValueError:\n        raise ValueError(\"Input format is incorrect\")\n    except Exception as e:\n        raise e"
+    },
+    "HumanEval/68": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:18:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:12:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.00",
+        "completion": "def find_even_values(arr):\n    return [x for x in arr if x % 2 == 0]\n\ndef find_min_value(arr):\n    if not arr:\n        return None\n    return min(arr)\n\ndef find_min_value_index(arr, value):\n    return arr.index(value)\n\ndef pluck(arr):\n    even_values = find_even_values(arr)\n    min_even_value = find_min_value(even_values)\n    if min_even_value is None:\n        return []\n    min_even_index = find_min_value_index(arr, min_even_value)\n    return [min_even_value, min_even_index]"
+    },
+    "HumanEval/69": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:11:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def search(lst):\n    count_dict = {}\n    max_val = -1\n    for num in lst:\n        if num > 0:\n            count_dict[num] = count_dict.get(num, 0) + 1\n    \n    for num, count in count_dict.items():\n        if count >= num:\n            max_val = max(max_val, num)\n    \n    return max_val"
+    },
+    "HumanEval/70": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:10:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.25",
+        "completion": "def strange_sort_list(lst):\n    sorted_lst = sorted(lst[:])\n    result = []\n\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop())\n\n    return result"
+    },
+    "HumanEval/71": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:10:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:5:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "3.75",
+        "completion": "def triangle_area(a, b, c):\n    def is_valid_triangle_side(x, y, z):\n        return x + y > z and x + z > y and y + z > x\n    \n    if is_valid_triangle_side(a, b, c):\n        s = (a + b + c) / 2\n        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n        return round(area, 2)\n    else:\n        return -1"
+    },
+    "HumanEval/72": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.50",
+        "completion": "def will_it_fly(q,w):\n    def is_palindromic(lst):\n        return lst == lst[::-1]\n\n    return is_palindromic(q) and sum(q) <= w"
+    },
+    "HumanEval/73": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "def smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes"
+    },
+    "HumanEval/74": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:10:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:5:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def total_match(lst1, lst2):\n    total_chars_list1 = sum(len(s) for s in lst1)\n    total_chars_list2 = sum(len(s) for s in lst2)\n\n    if total_chars_list1 < total_chars_list2:\n        return lst1\n    elif total_chars_list2 < total_chars_list1:\n        return lst2\n    else:\n        return lst1"
+    },
+    "HumanEval/75": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:21:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.78",
+        "completion": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef is_multiply_prime(a):\n    count = 0\n    limit = int(a**0.5) + 1\n    for i in range(2, limit):\n        if is_prime(i) and a % i == 0:\n            count += 1\n    return count == 3\n\n# Test the function\nprint(is_multiply_prime(30))  # Output: True\nprint(is_multiply_prime(6))   # Output: True\nprint(is_multiply_prime(20))  # Output: False\nprint(is_multiply_prime(97))  # Output: False"
+    },
+    "HumanEval/76": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:11:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.27",
+        "completion": "def is_simple_power(x, n):\n    if x == 1:\n        return True\n    if n == 1:\n        return False\n    if x % n != 0:\n        return False\n    result = 1\n    while result < x:\n        result *= n\n    return result == x"
+    },
+    "HumanEval/77": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.33",
+        "completion": "def iscube(a):\n    if not isinstance(a, (int, float)):\n        raise ValueError(\"Input must be a number\")\n        \n    a = abs(a)\n    x = round(a**(1/3))\n    return a == x**3"
+    },
+    "HumanEval/78": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.50",
+        "completion": "def hex_key(num):\n    primes = {'2', '3', '5', '7', 'B', 'D'}\n    count = sum(1 for digit in num if digit.upper() in primes)\n    return count"
+    },
+    "HumanEval/79": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.44",
+        "completion": "def decimal_to_binary(decimal, prefix='db'):\n    if not isinstance(decimal, int):\n        raise ValueError(\"Input must be a valid decimal number\")\n    \n    if decimal < 0:\n        raise ValueError(\"Input must be a positive decimal number\")\n    \n    binary = bin(decimal)[2:]\n    if not all(bit in ['0', '1'] for bit in binary):\n        raise ValueError(\"Invalid binary representation\")\n\n    return f\"{prefix}{binary}{prefix}\""
+    },
+    "HumanEval/80": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "def is_happy(s):\n    if len(s) < 3:\n        return False\n    for i in range(len(s) - 2):\n        if s[i] == s[i+1] or s[i+1] == s[i+2] or s[i] == s[i+2]:\n            return False\n    return True\n"
+    },
+    "HumanEval/81": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:22:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "def numerical_letter_grade(grades):\n    letter_grades = []\n    grade_ranges = {\n        4.0: 'A+',\n        3.7: 'A',\n        3.3: 'A-',\n        3.0: 'B+',\n        2.7: 'B',\n        2.3: 'B-',\n        2.0: 'C+',\n        1.7: 'C',\n        1.3: 'C-',\n        1.0: 'D+',\n        0.7: 'D',\n        0.0: 'D-',\n    }\n    for gpa in grades:\n        for gpa_range, letter_grade in sorted(grade_ranges.items(), reverse=True):\n            if gpa >= gpa_range:\n                letter_grades.append(letter_grade)\n                break\n    return letter_grades"
+    },
+    "HumanEval/82": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.00",
+        "completion": "def prime_length(string):\n    if not isinstance(string, str):\n        raise TypeError(\"Input must be a string\")\n\n    length = len(string)\n\n    if length < 2:\n        return False\n\n    for i in range(2, int(length ** 0.5) + 1):\n        if length % i == 0:\n            return False\n\n    return True"
+    },
+    "HumanEval/83": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:3:40: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.25",
+        "completion": "def starts_one_ends(n):\n    count = 0\n    if not isinstance(n, int) or n <= 0: \n        return \"InvalidInputError\"\n    for i in range(10**(n-1), 10**n):\n        if str(i)[0] == '1' or str(i)[-1] == '1':\n            count += 1\n    return str(count)\n"
+    },
+    "HumanEval/84": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:3:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:1:10: C0103: Argument name \"N\" doesn't conform to snake_case naming style (invalid-name)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def solve(N):\n    binary_sum = bin(sum(int(x) for x in str(N)))[2:]\n    return binary_sum.count('1')"
+    },
+    "HumanEval/85": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:3:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.33",
+        "completion": "def add(lst):\n    total = 0\n    for i in range(len(lst)):\n        if i % 2 != 0 and lst[i] % 2 == 0:\n            total += lst[i]\n    return total"
+    },
+    "HumanEval/86": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "def anti_shuffle(s):\n    words = s.split(' ')\n    sorted_words = []\n    for word in words:\n        sorted_word = ''.join(sorted(word, key=lambda x: (ord(x), x)))\n        sorted_words.append(sorted_word)\n    return ' '.join(sorted_words)\n"
+    },
+    "HumanEval/87": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:3:0: C0301: Line too long (127/100) (line-too-long)",
+            "test.py:4:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def get_row(lst, x):\n    result = [(i, j) for i in range(len(lst)) for j in range(len(lst[i])) if lst[i][j] == x]\n    result.sort(key=lambda x: (x[0], -x[1]))  # Sort by first element in ascending order and second element in descending order\n    return result"
+    },
+    "HumanEval/88": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:2:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)",
+            "test.py:5:8: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "1.67",
+        "completion": "def sort_array(array):\n    if len(array) == 0 or len(array) == 1:\n        return array[:]\n    else:\n        if (array[0] + array[-1]) % 2 == 0:\n            return sorted(array, reverse=True)\n        else:\n            return sorted(array)"
+    },
+    "HumanEval/89": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:3:8: W0612: Unused variable 'base' (unused-variable)"
+        ],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.50",
+        "completion": "def encrypt(s):\n    def calculate_offset(char):\n        base = ord('a') if char.islower() else ord('A')\n        return 2 * (ord('z' if char.islower() else 'Z') - ord(char))\n\n    encrypted = \"\"\n    for char in s:\n        if char.isalpha():\n            offset = calculate_offset(char)\n            base = ord('a') if char.islower() else ord('A')\n            encrypted += chr((ord(char) - base + offset) % 26 + base)\n        else:\n            encrypted += char\n    return encrypted\n"
+    },
+    "HumanEval/90": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:2:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)",
+            "test.py:6:8: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "2.86",
+        "completion": "def next_smallest(lst):\n    if len(lst) < 2:\n        return None\n    else:\n        unique_values = sorted(set(lst))\n        if len(unique_values) < 2:\n            return None\n        else:\n            return unique_values[1]"
+    },
+    "HumanEval/91": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:1:13: C0103: Argument name \"S\" doesn't conform to snake_case naming style (invalid-name)",
+            "test.py:2:4: C0415: Import outside toplevel (re) (import-outside-toplevel)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.44",
+        "completion": "def is_bored(S):\n    import re\n    sentences = re.split('[.!?]', S)\n    count = 0\n    for sentence in sentences:\n        words = sentence.split()\n        if len(words) > 0 and words[0].lower() == \"i\":\n            count += 1\n    return count"
+    },
+    "HumanEval/92": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.00",
+        "completion": "def any_int(x, y, z):\n    if isinstance(x, int) and isinstance(y, int) and isinstance(z, int):\n        if x == y + z or y == x + z or z == x + y:\n            return True\n    return False"
+    },
+    "HumanEval/93": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0301: Line too long (144/100) (line-too-long)",
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:3:4: C0103: Variable name \"VOWELS\" doesn't conform to snake_case naming style (invalid-name)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def encode(message):\n    encoded_message = \"\"\n    VOWELS = \"aeiouAEIOU\"\n    for char in message:\n        if char.isalpha():\n            if char.lower() in VOWELS:\n                encoded_message += chr((ord(char) + 2 - ord('a' if char.islower() else 'A')) % 26 + ord('a' if char.islower() else 'A')).upper()\n            else:\n                encoded_message += char.swapcase()\n        else:\n            encoded_message += char\n    return encoded_message"
+    },
+    "HumanEval/94": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "8.67",
+        "completion": "def find_largest_prime_and_sum_of_digits(lst):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    def sum_of_digits(n):\n        return sum(int(digit) for digit in str(n))\n\n    largest_prime = 0\n    for num in lst:\n        if is_prime(num) and num > largest_prime:\n            largest_prime = num\n\n    return sum_of_digits(largest_prime) if largest_prime != 0 else 0\n"
+    },
+    "HumanEval/95": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "def check_dict_case(dictionary):\n    if len(dictionary) == 0:\n        return False\n    keys = [key for key in dictionary.keys() if isinstance(key, str)]\n    if len(keys) == 0:\n        return False\n    return all(key.isupper() for key in keys) or all(key.islower() for key in keys)"
+    },
+    "HumanEval/96": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:22:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "8.00",
+        "completion": "def count_up_to(n):\n    \"\"\"\n    Implement a function that takes a non-negative integer and returns an array of the first n\n    integers that are prime numbers and less than n.\n    For example:\n    count_up_to(5) => [2,3]\n    count_up_to(11) => [2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [2,3,5,7,11,13,17,19]\n    count_up_to(1) => []\n    count_up_to(18) => [2,3,5,7,11,13,17]\n    \"\"\"\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    primes = [num for num in range(2, n) if is_prime(num)]\n    return primes[:n]"
+    },
+    "HumanEval/97": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:10:0: W0104: Statement seems to have no effect (pointless-statement)"
+        ],
+        "Convention": [
+            "test.py:59:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.29",
+        "completion": "def multiply(a, b):\n    result = abs(a % 10) * abs(b % 10)\n    return result\n\n# Test cases for positive and negative numbers, as well as zero\nprint(multiply(5, 3))  # Expected output: 15\nprint(multiply(-5, 3))  # Expected output: 15\nprint(multiply(0, 3))  # Expected output: 0\n# Test Cases:\n{\n  \"requirement analysis\": \"Unit Digit Product Calculation Function\",\n  \"test_cases\": [\n    {\n      \"Test Title\": \"Valid input with positive integers\",\n      \"Input Data\": \"parameter1=148, parameter2=412\",\n      \"Expected Output\": \"6\"\n    },\n    {\n      \"Test Title\": \"Valid input with positive and negative integers\",\n      \"Input Data\": \"parameter1=19, parameter2=-28\",\n      \"Expected Output\": \"72\"\n    },\n    {\n      \"Test Title\": \"Valid input with zero\",\n      \"Input Data\": \"parameter1=2020, parameter2=1851\",\n      \"Expected Output\": \"0\"\n    },\n    {\n      \"Test Title\": \"Valid input with negative integers\",\n      \"Input Data\": \"parameter1=-14, parameter2=-15\",\n      \"Expected Output\": \"0\"\n    },\n    {\n      \"Test Title\": \"Edge case with large numbers\",\n      \"Input Data\": \"parameter1=999999, parameter2=888888\",\n      \"Expected Output\": \"72\"\n    },\n    {\n      \"Test Title\": \"Edge case with invalid input\",\n      \"Input Data\": \"parameter1='abc', parameter2=123\",\n      \"Expected Output\": \"Invalid input\"\n    },\n    {\n      \"Test Title\": \"Edge case with boundary values\",\n      \"Input Data\": \"parameter1=0, parameter2=0\",\n      \"Expected Output\": \"0\"\n    },\n    {\n      \"Test Title\": \"Corner case with zero as input\",\n      \"Input Data\": \"parameter1=0, parameter2=999\",\n      \"Expected Output\": \"0\"\n    },\n    {\n      \"Test Title\": \"Error handling case with non-numeric input\",\n      \"Input Data\": \"parameter1='abc', parameter2='def'\",\n      \"Expected Output\": \"Invalid input\"\n    }\n  ]\n}"
+    },
+    "HumanEval/98": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:13:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:4:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.36",
+        "completion": "def count_upper(s):\n    vowels = 'AEIOU'\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i] in vowels:\n            count += 1\n    return count\n\n# Testing the code with different input strings\nprint(count_upper('aBCdEf'))  # Output: 1\nprint(count_upper('abcdefg'))  # Output: 0\nprint(count_upper('dBBE'))  # Output: 0\nprint(count_upper('123'))  # Output: 0"
+    },
+    "HumanEval/99": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:11:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:4:8: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.00",
+        "completion": "def closest_integer(value):\n    try:\n        value = float(value)\n        if value < 0:\n            return int(value - 0.5)\n        else:\n            return int(value + 0.5)\n    except ValueError:\n        return \"Error: Invalid input\"\n    except TypeError:\n        return \"Error: Input value is null\""
+    },
+    "HumanEval/100": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "def make_a_pile(n):\n    pile = [n]\n    for i in range(1, n):\n        if n % 2 == 0:\n            pile.append(n + 2*i)\n        else:\n            pile.append(n + 2*i + 1)\n    return pile\n"
+    },
+    "HumanEval/101": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "import re\n\ndef words_string(s):\n    if re.search(r'[^A-Za-z\\s,]', s):\n        return \"Error: Special characters not allowed\"\n    words = re.findall(r'\\b\\w+\\b', s)\n    return words"
+    },
+    "HumanEval/102": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.50",
+        "completion": "def choose_num(x, y):\n    max_even_number = -1  # Initialize the max_even_number to -1\n    for i in range(y, x-1, -1):  # Iterate through the range from y to x inclusive in reverse order\n        if i % 2 == 0:  # Check if the number is even\n            return i  # Return the first even number found\n    return max_even_number  # Return -1 if no even number is found\n\n# Test cases\nprint(choose_num(12, 15))  # Output should be 14\nprint(choose_num(13, 12))  # Output should be -1\n"
+    },
+    "HumanEval/103": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "def rounded_avg(n, m):\n    if n >= m:\n        return -1\n\n    average = (n + m) / 2\n    rounded_average = round(average)\n    binary_average = bin(rounded_average)\n\n    return binary_average"
+    },
+    "HumanEval/104": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def unique_digits(x):\n    unique_digits_set = set()\n    for num in x:\n        if all(int(digit) % 2 != 0 for digit in str(num)):\n            unique_digits_set.add(num)\n    return sorted(list(unique_digits_set))"
+    },
+    "HumanEval/105": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:2:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:20:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "1.43",
+        "completion": "def by_length(arr):\n    \n    filtered_arr = [x for x in arr if 1 <= x <= 9]\n    \n    sorted_arr = sorted(filtered_arr)\n    sorted_arr.reverse()\n    \n    digits_map = {\n        1: \"One\",\n        2: \"Two\",\n        3: \"Three\",\n        4: \"Four\",\n        5: \"Five\",\n        6: \"Six\",\n        7: \"Seven\",\n        8: \"Eight\",\n        9: \"Nine\"\n    }\n    result_arr = [digits_map[x] for x in sorted_arr]\n    return result_arr"
+    },
+    "HumanEval/106": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:17:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.43",
+        "completion": "def calculate_factorial(num):\n    factorial = 1\n    for i in range(1, num+1):\n        factorial *= i\n    return factorial\n\ndef calculate_sum(num):\n    return sum(range(1, num+1))\n\ndef f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            result.append(calculate_factorial(i))\n        else:\n            result.append(calculate_sum(i))\n    return result"
+    },
+    "HumanEval/107": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:15:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.27",
+        "completion": "def even_odd_palindrome(n):\n    if not isinstance(n, int) or n <= 0:\n        return \"Please enter a positive integer\"\n\n    even_count = 0\n    odd_count = 0\n\n    for num in range(1, n+1):\n        if str(num) == str(num)[::-1]:\n            if num % 2 == 0:\n                even_count += 1\n            else:\n                odd_count += 1\n\n    return (even_count, odd_count)"
+    },
+    "HumanEval/108": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.71",
+        "completion": "def count_nums(arr):\n    count = 0\n    for num in arr:\n        digits = [int(d) for d in str(abs(num))]\n        if sum(digits) > 0:\n            count += 1\n    return count"
+    },
+    "HumanEval/109": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:7:12: W0612: Unused variable 'i' (unused-variable)",
+            "test.py:15:0: W0104: Statement seems to have no effect (pointless-statement)"
+        ],
+        "Convention": [
+            "test.py:38:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:2:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)",
+            "test.py:8:12: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "3.64",
+        "completion": "def move_one_ball(arr):\n    if not arr:\n        return True\n    else:\n        sorted_arr = sorted(arr)\n        n = len(arr)\n        for i in range(n):\n            if arr == sorted_arr:\n                return True\n            else:\n                arr = [arr[-1]] + arr[:-1]\n        return False\n\n# Test Cases:\n{\n  \"test_cases\": [\n    {\n      \"Test Title\": \"Empty Array Test\",\n      \"Input Data\": \"[]\",\n      \"Expected Output\": \"True\"\n    },\n    {\n      \"Test Title\": \"Non-decreasing Order Test\",\n      \"Input Data\": \"[1, 2, 3, 4, 5]\",\n      \"Expected Output\": \"True\"\n    },\n    {\n      \"Test Title\": \"Right Shift Operations Test\",\n      \"Input Data\": \"[3, 4, 5, 1, 2]\",\n      \"Expected Output\": \"True\"\n    },\n    {\n      \"Test Title\": \"Not Possible Test\",\n      \"Input Data\": \"[3, 5, 4, 1, 2]\",\n      \"Expected Output\": \"False\"\n    }\n  ]\n}"
+    },
+    "HumanEval/110": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:5:0: C0301: Line too long (129/100) (line-too-long)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def exchange(lst1, lst2):\n    even_number_count_lst1 = sum(1 for num in lst1 if num % 2 == 0)\n    even_number_count_lst2 = sum(1 for num in lst2 if num % 2 == 0)\n\n    return \"YES\" if even_number_count_lst1 == len(lst1) or even_number_count_lst1 + even_number_count_lst2 == len(lst1) else \"NO\""
+    },
+    "HumanEval/111": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:19:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.69",
+        "completion": "def histogram(test: str) -> dict:\n    if not isinstance(test, str):\n        raise ValueError(\"Input must be a string\")\n\n    test_list = test.split()\n\n    result = {}\n    for letter in test_list:\n        if letter in result:\n            result[letter] += 1\n        else:\n            result[letter] = 1\n\n    if len(result) == 0:\n        return {}\n\n    max_occurrence = max(result.values())\n\n    return {letter: count for letter, count in result.items() if count == max_occurrence}"
+    },
+    "HumanEval/112": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:3:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def reverse_delete(s, c):\n    s = ''.join([char for char in s if char not in c])\n    return (s, s == s[::-1])"
+    },
+    "HumanEval/113": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:5:0: C0301: Line too long (106/100) (line-too-long)",
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.33",
+        "completion": "def odd_count(lst):\n    result = []\n    for input_string in lst:\n        count = sum(1 for character in input_string if int(character) % 2 != 0)\n        result.append(f\"the number of odd elements {count}n the str{count}ng {count} of the {count}nput.\")\n    return result"
+    },
+    "HumanEval/114": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:1:0: C0103: Function name \"minSubArraySum\" doesn't conform to snake_case naming style (invalid-name)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.29",
+        "completion": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    for num in nums:\n        current_sum = min(num, current_sum + num)\n        min_sum = min(min_sum, current_sum)\n    return min_sum"
+    },
+    "HumanEval/115": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:5:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:4:18: R1728: Consider using a generator instead 'sum(sum(row) for row in grid)' (consider-using-generator)"
+        ],
+        "Information": [],
+        "Rate": "3.75",
+        "completion": "import math\n\ndef max_fill(grid, capacity):\n    total_water = sum([sum(row) for row in grid])\n    \n    num_buckets = math.ceil(total_water / capacity)\n    return num_buckets\n\n# Test cases\nprint(max_fill([[0,0,1,0], [0,1,0,0], [1,1,1,1]], 1))  # Output: 6\nprint(max_fill([[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]], 2))  # Output: 5\nprint(max_fill([[0,0,0], [0,0,0]], 5))  # Output: 0"
+    },
+    "HumanEval/116": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:2:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def sort_array(arr):\n    return sorted(arr, key=lambda x: (bin(x).count('1'), x))"
+    },
+    "HumanEval/117": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:2:4: W0611: Unused import re (unused-import)"
+        ],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:2:4: C0415: Import outside toplevel (re) (import-outside-toplevel)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.86",
+        "completion": "def select_words(s, n):\n    import re\n    if not isinstance(s, str) or not isinstance(n, int) or n < 0:\n        return \"Invalid input\"\n\n    words = s.split()\n    result = [word for word in words if sum(1 for char in word if char.lower() not in 'aeiou') == n]\n\n    return result"
+    },
+    "HumanEval/118": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "def get_closest_vowel(word):\n    vowels = set(\"aeiouAEIOU\")\n    word = word[::-1]\n    if len(word) < 3:\n        return \"\"\n    for i in range(1, len(word) - 1):\n        if word[i] in vowels and word[i - 1] not in vowels and word[i + 1] not in vowels:\n            return word[i]\n    return \"\""
+    },
+    "HumanEval/119": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:23: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "def match_parens(lst):\n    stack = []\n    for char in lst[0] + lst[1]:\n        if char == '(': \n            stack.append(char)\n        else:\n            if not stack:\n                return 'No'\n            stack.pop()\n    return 'Yes' if not stack else 'No'\n"
+    },
+    "HumanEval/120": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:10:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:13:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "def maximum(arr, k):\n    if arr is None:\n        return \"Invalid input array\"\n    if not isinstance(arr, list):\n        return \"Invalid input array\"\n    if not all(isinstance(x, int) for x in arr):\n        return \"Invalid input array\"\n    if k < 0:\n        return \"Invalid k value\"\n    \n    arr_copy = arr.copy()\n    arr_copy.sort()\n    return arr_copy[-k:]"
+    },
+    "HumanEval/121": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:2:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+    },
+    "HumanEval/122": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:3:4: W0612: Unused variable 'two_digit_count' (unused-variable)"
+        ],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.29",
+        "completion": "def add_elements(arr, k):\n    total_sum = 0\n    two_digit_count = 0\n    for num in arr[:k]:\n        if 0 < num < 100:\n            total_sum += num\n    return total_sum"
+    },
+    "HumanEval/123": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:16:0: C0301: Line too long (128/100) (line-too-long)",
+            "test.py:25:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.25",
+        "completion": "def get_odd_collatz(n):\n    \"\"\"\n    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined\n    as follows: start with any positive integer n. Then each term is obtained from the \n    previous term as follows: if the previous term is even, the next term is one half of \n    the previous term. If the previous term is odd, the next term is 3 times the previous\n    term plus 1. The conjecture is that no matter what value of n, the sequence will always reach 1.\n\n    Note: \n        1. Collatz(1) is [1].\n        2. returned list sorted in increasing order.\n\n    For example:\n    get_odd_collatz(5) returns [1, 5] # The collatz sequence for 5 is [5, 16, 8, 4, 2, 1], so the odd numbers are only 1, and 5.\n    \"\"\"\n    collatz_sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_sequence.append(n)\n    return sorted([num for num in collatz_sequence if num % 2 != 0])"
+    },
+    "HumanEval/124": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:2:4: C0415: Import outside toplevel (datetime.datetime) (import-outside-toplevel)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.29",
+        "completion": "def valid_date(date):\n    from datetime import datetime\n\n    try:\n        datetime.strptime(date, '%m-%d-%Y')\n        return True\n    except ValueError:\n        return False"
+    },
+    "HumanEval/125": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:11:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:2:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.00",
+        "completion": "def split_words(txt):\n    if ' ' in txt:\n        return txt.split()\n    elif ',' in txt:\n        return txt.replace(',', ' ').split()\n    else:\n        count = 0\n        for char in txt:\n            if char.islower() and ord(char) % 2 != 0:\n                count += 1\n        return count"
+    },
+    "HumanEval/126": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:22:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.14",
+        "completion": "def is_sorted(lst):\n    '''\n    Given a list of numbers, return whether or not they are sorted\n    in ascending order. If list has more than 1 duplicate of the same\n    number, return False. Assume no negative numbers and only integers.\n\n    Examples\n    is_sorted([5]) \n    is_sorted([1, 2, 3, 4, 5]) \n    is_sorted([1, 3, 2, 4, 5]) \n    is_sorted([1, 2, 3, 4, 5, 6]) \n    is_sorted([1, 2, 3, 4, 5, 6, 7]) \n    is_sorted([1, 3, 2, 4, 5, 6, 7]) \n    is_sorted([1, 2, 2, 3, 3, 4]) \n    is_sorted([1, 2, 2, 2, 3, 4]) \n    '''\n    if len(set(lst)) != len(lst):\n        return False\n    for i in range(len(lst) - 1):\n        if lst[i] >= lst[i+1]:\n            return False\n    return True"
+    },
+    "HumanEval/127": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:22:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:19:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "7.50",
+        "completion": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef intersection(interval1, interval2):\n    if interval1[1] < interval1[0] or interval2[1] < interval2[0]:\n        return \"NO\"\n    start = max(interval1[0], interval2[0])\n    end = min(interval1[1], interval2[1])\n    if start > end:\n        return \"NO\"\n    length = end - start + 1\n    if length <= 1:\n        return \"NO\"\n    if is_prime(length):\n        return \"YES\"\n    else:\n        return \"NO\""
+    },
+    "HumanEval/128": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:15:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:2:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.92",
+        "completion": "def prod_signs(arr):\n    if len(arr) == 0:\n        return None\n    else:\n        product = 1\n        sum_magnitudes = 0\n        for num in arr:\n            if num > 0:\n                sum_magnitudes += num\n            elif num < 0:\n                product *= -1\n                sum_magnitudes += abs(num)\n            else:\n                product *= 0\n        return product * sum_magnitudes"
+    },
+    "HumanEval/129": {
+        "Fatal": [],
+        "Error": [
+            "test.py:23:57: E0001: Parsing failed: 'closing parenthesis ')' does not match opening parenthesis '[' (<unknown>, line 23)' (syntax-error)"
+        ],
+        "Warning": [],
+        "Convention": [],
+        "Refactor": [],
+        "Information": [],
+        "Rate": 0.0,
+        "completion": "def minPath(grid, k):\n    n = len(grid)\n    m = len(grid[0])\n    start = (0, 0)\n    for i in range(n):\n        for j in range(m):\n            if grid[i][j] == 1:\n                start = (i, j)\n    \n    directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]\n    path_set = set()\n    min_path = []\n    \n    def dfs(i, j, length, current_path):\n        if length == k:\n            path_set.add(tuple(current_path))\n            return\n        for dx, dy in directions:\n            x, y = i + dx, j + dy\n            if 0 <= x < n and 0 <= y < m and grid[x][y] not in current_path:\n                dfs(x, y, length + 1, current_path + [grid[x][y]])\n    \n    dfs(start[0], start[1], 1, [grid[start[0]][start[1]])\n    \n    min_path = sorted(list(path_set))[0]\n    return min_path\n"
+    },
+    "HumanEval/130": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "8.33",
+        "completion": "def tri(n):\n    sequence = [0] * (n + 1)\n    sequence[0] = 1\n    if n > 0:\n        sequence[1] = 3\n    if n > 1:\n        sequence[2] = 2\n    for i in range(3, n + 1):\n        if i % 2 == 0:\n            sequence[i] = 1 + i // 2\n        else:\n            sequence[i] = sequence[i - 1] + sequence[i - 2] + sequence[i - 3]\n    return sequence\n"
+    },
+    "HumanEval/131": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:19:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "8.33",
+        "completion": "def digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n    if not isinstance(n, int) or n <= 0:\n        return \"Input must be a positive integer\"\n    product = 1\n    while n > 0:\n        digit = n % 10\n        if digit % 2 != 0:\n            product *= digit\n        n //= 10\n    if product == 1:  # All digits are even\n        return 0\n    return product"
+    },
+    "HumanEval/132": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:3:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:11:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def is_nested(string):\n    count = 0\n    \n    for char in string:\n        if char == '[':\n            count += 1\n        elif char == ']':\n            if count <= 0:\n                return False\n            count -= 1\n    \n    return count == 0"
+    },
+    "HumanEval/133": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:10:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:11:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:11:11: R1728: Consider using a generator instead 'sum(math.ceil(num)**2 for num in lst)' (consider-using-generator)"
+        ],
+        "Information": [],
+        "Rate": "1.43",
+        "completion": "import math\n\n\ndef sum_squares(lst):\n    if not lst:\n        raise ValueError(\"Input list is empty\")\n    \n    if not all(isinstance(num, (int, float)) for num in lst):\n        raise ValueError(\"Input list contains non-numeric values\")\n    \n    return sum([math.ceil(num)**2 for num in lst])"
+    },
+    "HumanEval/134": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def check_if_last_char_is_a_letter(txt):\n    txt = txt.strip()\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt) == 1 or not txt[-2].isalpha() and txt[-2] != ' '):\n        return True\n    return False"
+    },
+    "HumanEval/135": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def can_arrange(arr):\n    largest_index = -1\n    for i in range(1, len(arr)):\n        if arr[i] <= arr[i-1]:\n            largest_index = i\n    return largest_index"
+    },
+    "HumanEval/136": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:14:0: C0301: Line too long (108/100) (line-too-long)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:11:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "5.45",
+        "completion": "def largest_smallest_integers(lst):\n    max_neg = float('-inf')\n    min_pos = float('inf')\n\n    for i in lst:\n        if i < 0:\n            max_neg = max(max_neg, i)\n        elif i > 0:\n            min_pos = min(min_pos, i)\n\n    if max_neg == float('-inf') and min_pos == float('inf'):\n        return (None, None)\n    else:\n        return (max_neg if max_neg != float('-inf') else None, min_pos if min_pos != float('inf') else None)"
+    },
+    "HumanEval/137": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:17:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:8:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "7.33",
+        "completion": "def compare_one(a, b):\n    def get_number(s):\n        try:\n            return float(s)\n        except ValueError:\n            return float(s.replace(\",\", \".\"))\n\n    if isinstance(a, (int, float)) and isinstance(b, (int, float)):\n        return max(a, b) if a != b else None\n    elif isinstance(a, (int, float)) and isinstance(b, str):\n        return max(a, get_number(b)) if a != get_number(b) else b\n    elif isinstance(a, str) and isinstance(b, (int, float)):\n        return max(get_number(a), b) if get_number(a) != b else a\n    elif isinstance(a, str) and isinstance(b, str):\n        return max(get_number(a), get_number(b)) if get_number(a) != get_number(b) else b\n    else:\n        return None"
+    },
+    "HumanEval/138": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def is_equal_to_sum_even(n):\n    count = 0\n    for i in range(2, n//2 + 1, 2):\n        if n - i >= 2 and (n - i) % 2 == 0:\n            count += 1\n    return count == 4"
+    },
+    "HumanEval/139": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:21:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [
+            "test.py:13:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "def special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n    if n < 0:\n        return \"Factorial calculation not defined for negative numbers\"\n    elif n == 0:\n        return 1\n    else:\n        result = 1\n        for i in range(1, n+1):\n            result *= special_factorial(i-1) * i\n        return result"
+    },
+    "HumanEval/140": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.00",
+        "completion": "import re\n\ndef fix_spaces(text):\n    text = text.replace(\" \", \"_\")\n    text = re.sub(r' {2,}', '-', text)\n    return text\n"
+    },
+    "HumanEval/141": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:2:4: W0611: Unused import re (unused-import)"
+        ],
+        "Convention": [
+            "test.py:3:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:11:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:14:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:18:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:22:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:24:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:2:4: C0415: Import outside toplevel (re) (import-outside-toplevel)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.83",
+        "completion": "def file_name_check(file_name):\n    import re\n    \n    # Check if the file name contains more than 3 digits\n    if len([c for c in file_name if c.isdigit()]) > 3:\n        return 'No'\n    \n    # Check if there is only one dot in the file name\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    # Split the file name into name and extension\n    name, extension = file_name.split('.')\n    \n    # Check if the name starts with an alphabet\n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    # Check if the extension is in the list of allowed extensions\n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    # If all checks pass, return 'Yes'\n    return 'Yes'"
+    },
+    "HumanEval/142": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:10:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:3:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.56",
+        "completion": "def sum_squares(lst):\n    total = 0\n    for i in range(len(lst)):\n        if i % 3 == 0:\n            total += lst[i] ** 2\n        elif i % 4 == 0 and i % 3 != 0:\n            total += lst[i] ** 3\n        else:\n            total += lst[i]\n    return total"
+    },
+    "HumanEval/143": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:14:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:3:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:11:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.67",
+        "completion": "import math\n\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef words_in_sentence(sentence):\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)"
+    },
+    "HumanEval/144": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "4.00",
+        "completion": "def simplify(x, n):\n    x_num, x_denom = map(int, x.split('/'))\n    n_num, n_denom = map(int, n.split('/'))\n\n    result = x_num * n_num / (x_denom * n_denom)\n\n    return result.is_integer()"
+    },
+    "HumanEval/145": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.00",
+        "completion": "def digit_sum(num):\n    return sum(int(digit) for digit in str(abs(num)))\n\ndef order_by_points(nums):\n    nums.sort(key=lambda x: (digit_sum(x), nums.index(x)))\n    return nums"
+    },
+    "HumanEval/146": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:9:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:1:0: C0103: Function name \"specialFilter\" doesn't conform to snake_case naming style (invalid-name)",
+            "test.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.75",
+        "completion": "def specialFilter(nums):\n    special_count = 0\n    for num in nums:\n        if num > 10 and is_odd(int(str(num)[0])) and is_odd(int(str(num)[-1])):\n            special_count += 1\n    return special_count\n\ndef is_odd(number):\n    return number % 2 != 0"
+    },
+    "HumanEval/147": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.78",
+        "completion": "def get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n    return count\n"
+    },
+    "HumanEval/148": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:3:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "8.00",
+        "completion": "def bf(planet1, planet2):\n    planets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\n    if planet1 not in planets or planet2 not in planets or planet1 == planet2:\n        return ()\n    else:\n        start_index = planets.index(planet1)\n        end_index = planets.index(planet2)\n        min_index = min(start_index, end_index)\n        max_index = max(start_index, end_index)\n        result = []\n        if start_index < end_index:\n            for i in range(min_index+1, max_index):\n                result.append(planets[i])\n        else:\n            for i in range(max_index-1, min_index, -1):\n                result.append(planets[i])\n        return tuple(result)\n"
+    },
+    "HumanEval/149": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "5.00",
+        "completion": "def sorted_list_sum(lst):\n    even_length_words = [word for word in lst if len(word) % 2 == 0]\n    sorted_even_length_words = sorted(even_length_words)\n    return sorted_even_length_words\n\n# Testing the function\nprint(sorted_list_sum([\"apple\", \"banana\", \"orange\", \"strawberry\", \"kiwi\"]))\nprint(sorted_list_sum([\"a\", \"at\", \"on\", \"in\"]))"
+    },
+    "HumanEval/150": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:26:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [
+            "test.py:17:8: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "7.83",
+        "completion": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\ndef x_or_y(n, x, y):\n    if isinstance(n, int):\n        if n < 0:\n            return y\n        elif n == 0:\n            return y\n        elif is_prime(n):\n            return x\n        else:\n            return y\n    else:\n        return \"Invalid Input Error\""
+    },
+    "HumanEval/151": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.00",
+        "completion": "def double_the_difference(lst):\n    if not isinstance(lst, list):\n        return \"Input is not a list\"\n    \n    result = sum(x**2 for x in lst if x > 0 and x % 2 != 0) if lst else 0\n    return result"
+    },
+    "HumanEval/152": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:10:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:8:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)"
+        ],
+        "Refactor": [
+            "test.py:3:4: R1705: Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\" (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "4.44",
+        "completion": "def compare(game, guess):\n    result = []\n    if game is None or guess is None:\n        return None\n    elif len(game) != len(guess):\n        return \"Error\"\n    else:\n        for i in range(len(game)):\n            result.append(abs(game[i] - guess[i]))\n        return result"
+    },
+    "HumanEval/153": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:8:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:1:0: C0103: Function name \"Strongest_Extension\" doesn't conform to snake_case naming style (invalid-name)",
+            "test.py:4:8: C0103: Variable name \"CAP\" doesn't conform to snake_case naming style (invalid-name)",
+            "test.py:5:8: C0103: Variable name \"SM\" doesn't conform to snake_case naming style (invalid-name)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.00",
+        "completion": "def Strongest_Extension(class_name, extensions):\n    strengths = {}\n    for ext in extensions:\n        CAP = sum(1 for c in ext if c.isupper())\n        SM = sum(1 for c in ext if c.islower())\n        strength = CAP - SM\n        strengths[ext] = strength\n    \n    max_strength = max(strengths.values())\n    strongest_ext = [ext for ext, strength in strengths.items() if strength == max_strength][0]\n\n    return f\"{class_name}.{strongest_ext}\""
+    },
+    "HumanEval/154": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:2:8: W0612: Unused variable 'i' (unused-variable)"
+        ],
+        "Convention": [
+            "test.py:6:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.33",
+        "completion": "def cycpattern_check(input_string, pattern):\n    for i in range(len(pattern)):\n        if pattern in input_string:\n            return True\n        pattern = pattern[1:] + pattern[0]\n    return False"
+    },
+    "HumanEval/155": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:12:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.27",
+        "completion": "def even_odd_count(num):\n    even_count = 0\n    odd_count = 0\n    if not isinstance(num, int):\n        raise ValueError(\"Input must be an integer\")\n    num_str = str(abs(num))\n    for digit in num_str:\n        if int(digit) % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    return (even_count, odd_count)"
+    },
+    "HumanEval/156": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:6:0: C0301: Line too long (131/100) (line-too-long)",
+            "test.py:13:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "6.00",
+        "completion": "def int_to_mini_roman(number):\n    if not isinstance(number, int) or number < 1 or number > 1000:\n        raise ValueError(\"Input number must be an integer within the range of 1 to 1000\")\n\n    roman_numerals = {\n        1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x', 40: 'xl', 50: 'l', 90: 'xc', 100: 'c', 400: 'cd', 500: 'd', 900: 'cm', 1000: 'm'\n    }\n    result = ''\n    for value in sorted(roman_numerals.keys(), reverse=True):\n        while number >= value:\n            result += roman_numerals[value]\n            number -= value\n    return result.lower()"
+    },
+    "HumanEval/157": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:13:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:16:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:17:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "3.33",
+        "completion": "def right_angle_triangle(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a right-angled triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    right_angle_triangle(3, 4, 5) == True\n    right_angle_triangle(1, 2, 3) == False\n    '''\n    sides = [a, b, c]\n    sides.sort()\n    \n    if sides[0] + sides[1] <= sides[2]:\n        return False\n    \n    return sides[0]**2 + sides[1]**2 == sides[2]**2"
+    },
+    "HumanEval/158": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:10:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:22:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.89",
+        "completion": "def find_max(words):\n    def calculate_unique_chars(word):\n        unique_chars = 0\n        char_dict = {}\n        for char in word:\n            if char not in char_dict:\n                char_dict[char] = 1\n                unique_chars += 1\n        return unique_chars\n    \n    max_unique_chars = 0\n    max_word = \"\"\n\n    for word in words:\n        unique_chars = calculate_unique_chars(word)\n        if unique_chars > max_unique_chars:\n            max_unique_chars = unique_chars\n            max_word = word\n        elif unique_chars == max_unique_chars and word < max_word:\n            max_word = word\n\n    return max_word"
+    },
+    "HumanEval/159": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:5:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def eat(number, need, remaining):\n    total_eaten = number + min(need, remaining)\n    remaining_after_meals = max(0, remaining - need)\n    \n    return [total_eaten, remaining_after_meals]"
+    },
+    "HumanEval/160": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [
+            "test.py:25:4: W0702: No exception type(s) specified (bare-except)",
+            "test.py:21:17: W0123: Use of eval (eval-used)"
+        ],
+        "Convention": [
+            "test.py:3:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:6:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:9:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:12:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:17:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:19:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:39:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:14:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)"
+        ],
+        "Refactor": [
+            "test.py:1:0: R0911: Too many return statements (7/6) (too-many-return-statements)"
+        ],
+        "Information": [],
+        "Rate": "5.52",
+        "completion": "def do_algebra(operator, operand):\n    valid_operators = ['+', '-', '*', '//', '**']\n    \n    if len(operator) != len(operand) - 1:\n        return \"Error: Number of operators should be one less than the number of operands\"\n    \n    if len(operator) == 0:\n        return \"Error: Operator list is empty\"\n    \n    if len(operand) < 2:\n        return \"Error: Operand list must have at least two operands\"\n    \n    expression = str(operand[0])\n    for i in range(len(operator)):\n        if operator[i] not in valid_operators:\n            return \"Invalid input: Operator should be one of '+', '-', '*', '//', '**'\"\n        \n        expression += operator[i] + str(operand[i+1])\n    \n    try:\n        result = eval(expression)\n        return result\n    except ZeroDivisionError:\n        return \"Division by zero is not allowed\"\n    except:\n        return \"Invalid expression\"\n\n# Test cases\nprint(do_algebra(['+'], [1, 2]))  # Output: 3\nprint(do_algebra(['-', '*'], [5, 3, 2]))  # Output: -1\n\n# Additional Test Cases:\nprint(do_algebra(['+'], [999999, 1]))  # Output: 1000000\nprint(do_algebra(['-'], [5, -3]))  # Output: 8\nprint(do_algebra(['*'], [2, 0]))  # Output: 0\nprint(do_algebra(['//'], [100, 3]))  # Output: 33\nprint(do_algebra(['**'], [2, 10]))  # Output: 1024\nprint(do_algebra([], [2, 3]))  # Output: Error: Operator list is empty\nprint(do_algebra(['+'], [2]))  # Output: Error: Operand list must have at least two operands"
+    },
+    "HumanEval/161": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:15:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "7.69",
+        "completion": "def solve(s):\n    result = ''\n    has_letter = False\n    for char in s:\n        if char.isalpha():\n            has_letter = True\n            if char.islower():\n                result += char.upper()\n            else:\n                result += char.lower()\n        else:\n            result += char\n    if not has_letter:\n        return result[::-1]\n    return result"
+    },
+    "HumanEval/162": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:3:0: C0303: Trailing whitespace (trailing-whitespace)",
+            "test.py:7:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)",
+            "test.py:2:4: C0415: Import outside toplevel (hashlib) (import-outside-toplevel)"
+        ],
+        "Refactor": [
+            "test.py:4:4: R1705: Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)"
+        ],
+        "Information": [],
+        "Rate": "0.00",
+        "completion": "def string_to_md5(text):\n    import hashlib\n    \n    if text == '':\n        return None\n    else:\n        return hashlib.md5(text.encode()).hexdigest()"
+    },
+    "HumanEval/163": {
+        "Fatal": [],
+        "Error": [],
+        "Warning": [],
+        "Convention": [
+            "test.py:4:0: C0304: Final newline missing (missing-final-newline)",
+            "test.py:1:0: C0114: Missing module docstring (missing-module-docstring)",
+            "test.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)"
+        ],
+        "Refactor": [],
+        "Information": [],
+        "Rate": "2.50",
+        "completion": "def generate_integers(a, b):\n    start = min(a, b)\n    end = max(a, b)\n    return [i for i in range(start, end+1) if i % 2 == 0]"
+    }
+}

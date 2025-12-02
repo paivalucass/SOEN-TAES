@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-42-197610",
+    "task": "def max_occurrences(nums):\n'''Write a function to find the item with maximum frequency in a given list.\nassert max_occurrences([2,3,8,4,7,9,8,2,6,5,1,6,1,2,3,2,4,6,9,1,2])==2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:42",
+        "task-id": "2024-02-05 12:29:42",
+        "workflow": "2024-02-05 12:29:42",
+        "Prompt": "2024-02-05 12:29:43",
+        "FinalCode": "2024-02-05 12:29:43"
+    },
+    "task-id": 130,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_occurrences(nums):\\n'''Write a function to find the item with maximum frequency in a given list.\\nassert max_occurrences([2,3,8,4,7,9,8,2,6,5,1,6,1,2,3,2,4,6,9,1,2])==2'''\\n\"",
+    "FinalCode": "def max_occurrences(nums):\n    max_count = 0\n    max_item = None\n    for num in nums:\n        count = nums.count(num)\n        if count > max_count:\n            max_count = count\n            max_item = num\n    return max_item\n\nassert max_occurrences([2,3,8,4,7,9,8,2,6,5,1,6,1,2,3,2,4,6,9,1,2])==2"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-11-055542",
+    "task": "\n\ndef fib4(n: int):\n    \"\"\"The Fib4 number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:\n    fib4(0) -> 0\n    fib4(1) -> 0\n    fib4(2) -> 2\n    fib4(3) -> 0\n    fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4).\n    Please write a function to efficiently compute the n-th element of the fib4 number sequence.  Do not use recursion.\n    >>> fib4(5)\n    4\n    >>> fib4(6)\n    8\n    >>> fib4(7)\n    14\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:11",
+        "task-id": "2024-01-08 12:34:11",
+        "workflow": "2024-01-08 12:34:11",
+        "Prompt": "2024-01-08 12:34:14",
+        "FinalCode": "2024-01-08 12:34:14"
+    },
+    "task-id": "HumanEval/46",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef fib4(n: int):\\n    \\\"\\\"\\\"The Fib4 number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:\\n    fib4(0) -> 0\\n    fib4(1) -> 0\\n    fib4(2) -> 2\\n    fib4(3) -> 0\\n    fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4).\\n    Please write a function to efficiently compute the n-th element of the fib4 number sequence.  Do not use recursion.\\n    >>> fib4(5)\\n    4\\n    >>> fib4(6)\\n    8\\n    >>> fib4(7)\\n    14\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def fib4(n: int):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 0\n    elif n == 2:\n        return 2\n    elif n == 3:\n        return 0\n    else:\n        fib_list = [0, 0, 2, 0]\n        for i in range(4, n+1):\n            fib_list.append(fib_list[i-1] + fib_list[i-2] + fib_list[i-3] + fib_list[i-4])\n        return fib_list[n]\n\n# Testing the function\nprint(fib4(5))  # Output: 4\nprint(fib4(6))  # Output: 8\nprint(fib4(7))  # Output: 14"
+}

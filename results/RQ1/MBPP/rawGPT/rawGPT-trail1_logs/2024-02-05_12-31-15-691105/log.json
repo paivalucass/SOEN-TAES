@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-15-691105",
+    "task": "def cal_sum(n): \n'''Write a function to calculate the sum of perrin numbers.\nassert cal_sum(9) == 49'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:15",
+        "task-id": "2024-02-05 12:31:15",
+        "workflow": "2024-02-05 12:31:15",
+        "Prompt": "2024-02-05 12:31:18",
+        "FinalCode": "2024-02-05 12:31:18"
+    },
+    "task-id": 448,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def cal_sum(n): \\n'''Write a function to calculate the sum of perrin numbers.\\nassert cal_sum(9) == 49'''\\n\"",
+    "FinalCode": "def cal_sum(n):\n    sum = 0\n    a, b, c = 3, 0, 2\n    for i in range(n):\n        sum += a\n        next_num = a + b\n        a, b, c = next_num, c, next_num\n    return sum\n\n# Test the function\nassert cal_sum(9) == 49"
+}

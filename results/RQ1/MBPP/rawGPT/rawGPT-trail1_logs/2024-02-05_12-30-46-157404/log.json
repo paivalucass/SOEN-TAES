@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-46-157404",
+    "task": "def min_val(listval):\n'''Write a function to find the minimum value in a given heterogeneous list.\nassert min_val(['Python', 3, 2, 4, 5, 'version'])==2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:46",
+        "task-id": "2024-02-05 12:30:46",
+        "workflow": "2024-02-05 12:30:46",
+        "Prompt": "2024-02-05 12:30:51",
+        "FinalCode": "2024-02-05 12:30:51"
+    },
+    "task-id": 410,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def min_val(listval):\\n'''Write a function to find the minimum value in a given heterogeneous list.\\nassert min_val(['Python', 3, 2, 4, 5, 'version'])==2'''\\n\"",
+    "FinalCode": "def min_val(listval):\n    '''Write a function to find the minimum value in a given heterogeneous list'''\n    num_list = [x for x in listval if isinstance(x, int)]\n    if len(num_list) > 0:\n        return min(num_list)\n    else:\n        return None\n\nassert min_val(['Python', 3, 2, 4, 5, 'version'])==2"
+}

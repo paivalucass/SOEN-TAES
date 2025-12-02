@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-25-986493",
+    "task": "def index_minimum(test_list):\n'''Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.\nassert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:25",
+        "task-id": "2024-02-05 12:29:25",
+        "workflow": "2024-02-05 12:29:25",
+        "Prompt": "2024-02-05 12:29:31",
+        "FinalCode": "2024-02-05 12:29:31"
+    },
+    "task-id": 94,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def index_minimum(test_list):\\n'''Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.\\nassert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha''''\\n\"",
+    "FinalCode": "# Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.\ndef index_minimum(test_list):\n    # Sort the list of tuples based on the second value of each tuple\n    test_list.sort(key=lambda x: x[1])\n    # Return the first value of the tuple with the smallest second value\n    return test_list[0][0]\n\n# Test the function with an example\nassert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha'"
+}

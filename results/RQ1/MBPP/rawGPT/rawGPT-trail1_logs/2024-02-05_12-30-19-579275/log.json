@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-19-579275",
+    "task": "def validate(n): \n'''Write a python function takes in an integer and check whether the frequency of each digit in the integer is less than or equal to the digit itself.\nassert validate(1234) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:19",
+        "task-id": "2024-02-05 12:30:19",
+        "workflow": "2024-02-05 12:30:19",
+        "Prompt": "2024-02-05 12:30:24",
+        "FinalCode": "2024-02-05 12:30:24"
+    },
+    "task-id": 283,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def validate(n): \\n'''Write a python function takes in an integer and check whether the frequency of each digit in the integer is less than or equal to the digit itself.\\nassert validate(1234) == True'''\\n\"",
+    "FinalCode": "Here is a possible implementation of the validate function in Python:\n\n```python\ndef validate(n):\n    num_str = str(n)\n    for digit in num_str:\n        if num_str.count(digit) > int(digit):\n            return False\n    return True\n\nassert validate(1234) == True\n```\n\nThis function first converts the input integer `n` into a string so that we can iterate through each digit. Then, for each digit, it checks if the frequency of that digit in the number is greater than the digit itself. If it finds any such case, it returns False. Otherwise, it returns True."
+}

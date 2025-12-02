@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-36-622694",
+    "task": "def divisible_by_digits(startnum, endnum):\n'''Write a function to find numbers within a given range from startnum ti endnum where every number is divisible by every digit it contains. https://www.w3resource.com/python-exercises/lambda/python-lambda-exercise-24.php\nassert divisible_by_digits(1,22)==[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:36",
+        "task-id": "2024-02-05 12:32:36",
+        "workflow": "2024-02-05 12:32:36",
+        "Prompt": "2024-02-05 12:32:41",
+        "FinalCode": "2024-02-05 12:32:41"
+    },
+    "task-id": 745,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def divisible_by_digits(startnum, endnum):\\n'''Write a function to find numbers within a given range from startnum ti endnum where every number is divisible by every digit it contains. https://www.w3resource.com/python-exercises/lambda/python-lambda-exercise-24.php\\nassert divisible_by_digits(1,22)==[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]'''\\n\"",
+    "FinalCode": "\nHere is a possible implementation of the divisible_by_digits function:\n\n```python\ndef divisible_by_digits(startnum, endnum):\n    result = []\n    for num in range(startnum, endnum+1):\n        digits = [int(digit) for digit in str(num) if digit != '0']\n        if all(num % digit == 0 for digit in digits):\n            result.append(num)\n    return result\n\nassert divisible_by_digits(1,22)==[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]\n```\n\nThis function takes a range of numbers from startnum to endnum and checks if each number is divisible by every digit it contains (excluding 0). If a number meets this condition, it is added to the result list. Finally, the function returns the result list containing all the numbers that satisfy the condition."
+}

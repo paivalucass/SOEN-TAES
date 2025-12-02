@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-43-196983",
+    "task": "\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 14\n    choose_num(13, 12) = -1\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:43",
+        "task-id": "2024-01-08 12:34:43",
+        "workflow": "2024-01-08 12:34:43",
+        "Prompt": "2024-01-08 12:34:44",
+        "FinalCode": "2024-01-08 12:34:44"
+    },
+    "task-id": "HumanEval/102",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef choose_num(x, y):\\n    \\\"\\\"\\\"This function takes two positive numbers x and y and returns the\\n    biggest even integer number that is in the range [x, y] inclusive. If \\n    there's no such number, then the function should return -1.\\n\\n    For example:\\n    choose_num(12, 15) = 14\\n    choose_num(13, 12) = -1\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def choose_num(x, y):\n    for i in range(y, x-1, -1):\n        if i % 2 == 0:\n            return i\n    return -1"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-35-05-863514",
+    "task": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:35:05",
+        "task-id": "2024-01-08 12:35:05",
+        "workflow": "2024-01-08 12:35:05",
+        "Prompt": "2024-01-08 12:35:09",
+        "FinalCode": "2024-01-08 12:35:09"
+    },
+    "task-id": "HumanEval/139",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef special_factorial(n):\\n    \\\"\\\"\\\"The Brazilian factorial is defined as:\\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\\n    where n > 0\\n\\n    For example:\\n    >>> special_factorial(4)\\n    288\\n\\n    The function will receive an integer as input and should return the special\\n    factorial of this integer.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n    result = 1\n    for i in range(1, n+1):\n        result *= factorial(i)\n    return result"
+}

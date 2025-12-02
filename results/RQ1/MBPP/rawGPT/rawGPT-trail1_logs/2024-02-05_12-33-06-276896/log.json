@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-06-276896",
+    "task": "def even_position(nums):\n'''Write a python function to check whether every even index contains even numbers of a given list.\nassert even_position([3,2,1]) == False'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:06",
+        "task-id": "2024-02-05 12:33:06",
+        "workflow": "2024-02-05 12:33:06",
+        "Prompt": "2024-02-05 12:33:07",
+        "FinalCode": "2024-02-05 12:33:07"
+    },
+    "task-id": 790,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def even_position(nums):\\n'''Write a python function to check whether every even index contains even numbers of a given list.\\nassert even_position([3,2,1]) == False'''\\n\"",
+    "FinalCode": "def even_position(nums):\n    for i in range(len(nums)):\n        if i % 2 == 0 and nums[i] % 2 != 0:\n            return False\n    return True\n\nassert even_position([3,2,1]) == False"
+}

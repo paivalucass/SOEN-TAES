@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-08-957452",
+    "task": "def largest_neg(list1): \n'''Write a python function to find the largest negative number from the given list.\nassert largest_neg([1,2,3,-4,-6]) == -6'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:08",
+        "task-id": "2024-02-05 12:31:08",
+        "workflow": "2024-02-05 12:31:08",
+        "Prompt": "2024-02-05 12:31:12",
+        "FinalCode": "2024-02-05 12:31:12"
+    },
+    "task-id": 443,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def largest_neg(list1): \\n'''Write a python function to find the largest negative number from the given list.\\nassert largest_neg([1,2,3,-4,-6]) == -6'''\\n\"",
+    "FinalCode": "def largest_neg(list1):\n    negatives = [num for num in list1 if num < 0]\n    if len(negatives) > 0:\n        return max(negatives)\n    else:\n        return None\n\nassert largest_neg([1,2,3,-4,-6]) == -6"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-46-955256",
+    "task": "def unique_Element(arr):\n'''Write a python function to check whether a list of numbers contains only one distinct element or not.\nassert unique_Element([1,1,1]) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:46",
+        "task-id": "2024-02-05 12:32:46",
+        "workflow": "2024-02-05 12:32:46",
+        "Prompt": "2024-02-05 12:32:48",
+        "FinalCode": "2024-02-05 12:32:48"
+    },
+    "task-id": 760,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def unique_Element(arr):\\n'''Write a python function to check whether a list of numbers contains only one distinct element or not.\\nassert unique_Element([1,1,1]) == True'''\\n\"",
+    "FinalCode": "def unique_Element(arr):\n    '''Write a python function to check whether a list of numbers contains only one distinct element or not.'''\n    return len(set(arr)) == 1\n\nassert unique_Element([1,1,1]) == True"
+}

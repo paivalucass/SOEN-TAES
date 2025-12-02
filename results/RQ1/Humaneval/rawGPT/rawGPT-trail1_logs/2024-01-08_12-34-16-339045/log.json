@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-16-339045",
+    "task": "\n\ndef monotonic(l: list):\n    \"\"\"Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:16",
+        "task-id": "2024-01-08 12:34:16",
+        "workflow": "2024-01-08 12:34:16",
+        "Prompt": "2024-01-08 12:34:20",
+        "FinalCode": "2024-01-08 12:34:20"
+    },
+    "task-id": "HumanEval/57",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef monotonic(l: list):\\n    \\\"\\\"\\\"Return True is list elements are monotonically increasing or decreasing.\\n    >>> monotonic([1, 2, 4, 20])\\n    True\\n    >>> monotonic([1, 20, 4, 10])\\n    False\\n    >>> monotonic([4, 1, 0, -10])\\n    True\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def monotonic(l: list):\n    \"\"\"Return True is list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    True\n    >>> monotonic([1, 20, 4, 10])\n    False\n    >>> monotonic([4, 1, 0, -10])\n    True\n    \"\"\"\n    increasing = all(l[i] <= l[i + 1] for i in range(len(l) - 1))\n    decreasing = all(l[i] >= l[i + 1] for i in range(len(l) - 1))\n    return increasing or decreasing"
+}

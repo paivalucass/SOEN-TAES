@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-05-503462",
+    "task": "def right_insertion(a, x):\n'''Write a function to locate the right insertion point for a specified value in sorted order.\nassert right_insertion([1,2,4,5],6)==4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:05",
+        "task-id": "2024-02-05 12:33:05",
+        "workflow": "2024-02-05 12:33:05",
+        "Prompt": "2024-02-05 12:33:10",
+        "FinalCode": "2024-02-05 12:33:10"
+    },
+    "task-id": 786,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def right_insertion(a, x):\\n'''Write a function to locate the right insertion point for a specified value in sorted order.\\nassert right_insertion([1,2,4,5],6)==4'''\\n\"",
+    "FinalCode": "def right_insertion(a, x):\n    '''Write a function to locate the right insertion point for a specified value in sorted order.'''\n    if x > a[-1]:\n        return len(a)\n    for i in range(len(a)):\n        if a[i] >= x:\n            return i\n    return 0\n\nassert right_insertion([1,2,4,5],6)==4"
+}

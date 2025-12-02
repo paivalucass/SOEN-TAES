@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-59-915387",
+    "task": "def find_literals(text, pattern):\n'''Write a function to search a string for a regex pattern. The function should return the matching subtring, a start index and an end index.\nassert find_literals('The quick brown fox jumps over the lazy dog.', 'fox') == ('fox', 16, 19)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:59",
+        "task-id": "2024-02-05 12:31:59",
+        "workflow": "2024-02-05 12:31:59",
+        "Prompt": "2024-02-05 12:32:03",
+        "FinalCode": "2024-02-05 12:32:03"
+    },
+    "task-id": 607,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_literals(text, pattern):\\n'''Write a function to search a string for a regex pattern. The function should return the matching subtring, a start index and an end index.\\nassert find_literals('The quick brown fox jumps over the lazy dog.', 'fox') == ('fox', 16, 19)'''\\n\"",
+    "FinalCode": "def find_literals(text, pattern):\n    '''Write a function to search a string for a regex pattern. The function should return the matching subtring, a start index and an end index.'''\n    match = re.search(pattern, text)\n    if match:\n        return match.group(0), match.start(), match.end()\n    else:\n        return None\n\nassert find_literals('The quick brown fox jumps over the lazy dog.', 'fox') == ('fox', 16, 19)"
+}

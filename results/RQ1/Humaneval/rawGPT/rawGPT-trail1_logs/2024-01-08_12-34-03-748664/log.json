@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-03-748664",
+    "task": "\n\ndef unique(l: list):\n    \"\"\"Return sorted unique elements in a list\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [0, 2, 3, 5, 9, 123]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:03",
+        "task-id": "2024-01-08 12:34:03",
+        "workflow": "2024-01-08 12:34:03",
+        "Prompt": "2024-01-08 12:34:06",
+        "FinalCode": "2024-01-08 12:34:06"
+    },
+    "task-id": "HumanEval/34",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef unique(l: list):\\n    \\\"\\\"\\\"Return sorted unique elements in a list\\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\\n    [0, 2, 3, 5, 9, 123]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def unique(l: list):\n    \"\"\"Return sorted unique elements in a list\n    >>> unique([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [0, 2, 3, 5, 9, 123]\n    \"\"\"\n\n    return sorted(list(set(l)))"
+}

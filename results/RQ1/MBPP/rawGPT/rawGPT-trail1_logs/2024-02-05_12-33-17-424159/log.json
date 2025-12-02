@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-17-424159",
+    "task": "def max_run_uppercase(test_str):\n'''Write a function to find maximum run of uppercase characters in the given string.\nassert max_run_uppercase('GeMKSForGERksISBESt') == 5'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:17",
+        "task-id": "2024-02-05 12:33:17",
+        "workflow": "2024-02-05 12:33:17",
+        "Prompt": "2024-02-05 12:33:20",
+        "FinalCode": "2024-02-05 12:33:20"
+    },
+    "task-id": 806,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_run_uppercase(test_str):\\n'''Write a function to find maximum run of uppercase characters in the given string.\\nassert max_run_uppercase('GeMKSForGERksISBESt') == 5'''\\n\"",
+    "FinalCode": "def max_run_uppercase(test_str):\n    max_count = 0\n    count = 0\n    for char in test_str:\n        if char.isupper():\n            count += 1\n            if count > max_count:\n                max_count = count\n        else:\n            count = 0\n    return max_count\n\n# Test the function\nassert max_run_uppercase('GeMKSForGERksISBESt') == 5"
+}

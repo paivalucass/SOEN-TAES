@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-59-053806",
+    "task": "def change_date_format(dt):\n'''Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.\nassert change_date_format(\"2026-01-02\") == '02-01-2026''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:59",
+        "task-id": "2024-02-05 12:30:59",
+        "workflow": "2024-02-05 12:30:59",
+        "Prompt": "2024-02-05 12:31:03",
+        "FinalCode": "2024-02-05 12:31:03"
+    },
+    "task-id": 427,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def change_date_format(dt):\\n'''Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.\\nassert change_date_format(\\\"2026-01-02\\\") == '02-01-2026''''\\n\"",
+    "FinalCode": "def change_date_format(dt):\n    '''Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.'''\n    new_date = dt.split(\"-\")\n    return new_date[2] + \"-\" + new_date[1] + \"-\" + new_date[0] \n\nassert change_date_format(\"2026-01-02\") == '02-01-2026'"
+}

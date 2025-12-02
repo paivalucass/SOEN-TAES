@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-05-696588",
+    "task": "def count_bidirectional(test_list):\n'''Write a function to count bidirectional tuple pairs.\nassert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 1), (6, 5), (2, 1)] ) == 3'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:05",
+        "task-id": "2024-02-05 12:31:05",
+        "workflow": "2024-02-05 12:31:05",
+        "Prompt": "2024-02-05 12:31:08",
+        "FinalCode": "2024-02-05 12:31:08"
+    },
+    "task-id": 438,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_bidirectional(test_list):\\n'''Write a function to count bidirectional tuple pairs.\\nassert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 1), (6, 5), (2, 1)] ) == 3'''\\n\"",
+    "FinalCode": "def count_bidirectional(test_list):\n    '''Write a function to count bidirectional tuple pairs.'''\n    count = 0\n    for pair in test_list:\n        if (pair[1], pair[0]) in test_list:\n            count += 1\n    return count\n\nassert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 1), (6, 5), (2, 1)]) == 3"
+}

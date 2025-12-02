@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-36-517062",
+    "task": "def max_product_tuple(list1):\n'''Write a function to find the maximum absolute product between numbers in pairs of tuples within a given list.\nassert max_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==36'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:36",
+        "task-id": "2024-02-05 12:29:36",
+        "workflow": "2024-02-05 12:29:36",
+        "Prompt": "2024-02-05 12:29:42",
+        "FinalCode": "2024-02-05 12:29:42"
+    },
+    "task-id": 120,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_product_tuple(list1):\\n'''Write a function to find the maximum absolute product between numbers in pairs of tuples within a given list.\\nassert max_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==36'''\\n\"",
+    "FinalCode": "def max_product_tuple(list1):\n    max_product = 0\n    \n    for t in list1:\n        product = abs(t[0] * t[1])\n        if product > max_product:\n            max_product = product\n            \n    return max_product\n\nassert max_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] ) == 36"
+}

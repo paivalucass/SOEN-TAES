@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-05-272867",
+    "task": "def intersection_array(array_nums1,array_nums2):\n'''Write a function to find the intersection of two arrays.\nassert intersection_array([1, 2, 3, 5, 7, 8, 9, 10],[1, 2, 4, 8, 9])==[1, 2, 8, 9]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:05",
+        "task-id": "2024-02-05 12:30:05",
+        "workflow": "2024-02-05 12:30:05",
+        "Prompt": "2024-02-05 12:30:06",
+        "FinalCode": "2024-02-05 12:30:06"
+    },
+    "task-id": 249,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def intersection_array(array_nums1,array_nums2):\\n'''Write a function to find the intersection of two arrays.\\nassert intersection_array([1, 2, 3, 5, 7, 8, 9, 10],[1, 2, 4, 8, 9])==[1, 2, 8, 9]'''\\n\"",
+    "FinalCode": "def intersection_array(array_nums1, array_nums2):\n    return list(set(array_nums1) & set(array_nums2))"
+}

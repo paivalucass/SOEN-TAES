@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-08-487407",
+    "task": "def get_median(arr1, arr2, n):\n'''Write a function to find the median of two sorted lists of same size.\nassert get_median([1, 12, 15, 26, 38], [2, 13, 17, 30, 45], 5) == 16.0'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:08",
+        "task-id": "2024-02-05 12:32:08",
+        "workflow": "2024-02-05 12:32:08",
+        "Prompt": "2024-02-05 12:32:12",
+        "FinalCode": "2024-02-05 12:32:12"
+    },
+    "task-id": 622,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def get_median(arr1, arr2, n):\\n'''Write a function to find the median of two sorted lists of same size.\\nassert get_median([1, 12, 15, 26, 38], [2, 13, 17, 30, 45], 5) == 16.0'''\\n\"",
+    "FinalCode": "def get_median(arr1, arr2, n):\n    combined_arr = arr1 + arr2\n    combined_arr.sort()\n    mid = n\n    if n % 2 == 0:\n        median = (combined_arr[mid - 1] + combined_arr[mid]) / 2\n    else:\n        median = combined_arr[mid]\n    return median\n\n# Test case\nassert get_median([1, 12, 15, 26, 38], [2, 13, 17, 30, 45], 5) == 16.0"
+}

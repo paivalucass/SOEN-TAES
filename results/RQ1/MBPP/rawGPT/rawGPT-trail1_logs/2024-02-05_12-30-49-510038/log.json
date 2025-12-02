@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-49-510038",
+    "task": "def extract_nth_element(list1, n):\n'''Write a function to extract the nth element from a given list of tuples.\nassert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)] ,0)==['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:49",
+        "task-id": "2024-02-05 12:30:49",
+        "workflow": "2024-02-05 12:30:49",
+        "Prompt": "2024-02-05 12:30:51",
+        "FinalCode": "2024-02-05 12:30:51"
+    },
+    "task-id": 413,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def extract_nth_element(list1, n):\\n'''Write a function to extract the nth element from a given list of tuples.\\nassert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)] ,0)==['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']'''\\n\"",
+    "FinalCode": "\ndef extract_nth_element(list1, n):\n    '''Write a function to extract the nth element from a given list of tuples.'''\n    return [item[n] for item in list1]\n\nassert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)] ,0)==['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']"
+}

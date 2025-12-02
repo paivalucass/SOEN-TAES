@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-21-104254",
+    "task": "def surfacearea_sphere(r):\n'''Write a function to find the surface area of a sphere.\nassert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:21",
+        "task-id": "2024-02-05 12:29:21",
+        "workflow": "2024-02-05 12:29:21",
+        "Prompt": "2024-02-05 12:29:24",
+        "FinalCode": "2024-02-05 12:29:24"
+    },
+    "task-id": 85,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def surfacearea_sphere(r):\\n'''Write a function to find the surface area of a sphere.\\nassert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)'''\\n\"",
+    "FinalCode": "import math\n\ndef surfacearea_sphere(r):\n    return 4 * math.pi * r**2\n\nassert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)"
+}

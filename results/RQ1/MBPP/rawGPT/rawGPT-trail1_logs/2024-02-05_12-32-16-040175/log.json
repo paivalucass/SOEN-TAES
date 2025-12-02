@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-16-040175",
+    "task": "def wind_chill(v,t):\n'''Write a function to calculate the wind chill index rounded to the next integer given the wind velocity in km/h and a temperature in celsius.\nassert wind_chill(120,35)==40'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:16",
+        "task-id": "2024-02-05 12:32:16",
+        "workflow": "2024-02-05 12:32:16",
+        "Prompt": "2024-02-05 12:32:19",
+        "FinalCode": "2024-02-05 12:32:19"
+    },
+    "task-id": 638,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def wind_chill(v,t):\\n'''Write a function to calculate the wind chill index rounded to the next integer given the wind velocity in km/h and a temperature in celsius.\\nassert wind_chill(120,35)==40'''\\n\"",
+    "FinalCode": "def wind_chill(v, t):\n    '''Calculate the wind chill index rounded to the next integer given the wind velocity in km/h and a temperature in celsius.'''\n    wci = 13.12 + 0.6215*t - 11.37*(v**0.16) + 0.3965*t*(v**0.16)\n    return round(wci)"
+}

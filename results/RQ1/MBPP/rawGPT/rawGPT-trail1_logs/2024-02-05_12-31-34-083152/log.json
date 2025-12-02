@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-34-083152",
+    "task": "def remove_lowercase(str1):\n'''Write a function to remove lowercase substrings from a given string.\nassert remove_lowercase(\"PYTHon\")==('PYTH')'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:34",
+        "task-id": "2024-02-05 12:31:34",
+        "workflow": "2024-02-05 12:31:34",
+        "Prompt": "2024-02-05 12:31:36",
+        "FinalCode": "2024-02-05 12:31:36"
+    },
+    "task-id": 478,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def remove_lowercase(str1):\\n'''Write a function to remove lowercase substrings from a given string.\\nassert remove_lowercase(\\\"PYTHon\\\")==('PYTH')'''\\n\"",
+    "FinalCode": "def remove_lowercase(str1):\n    '''Write a function to remove lowercase substrings from a given string.'''\n    result = ''.join([char for char in str1 if char.isupper()])\n    return result\n\nassert remove_lowercase(\"PYTHon\") == 'PYTH'"
+}

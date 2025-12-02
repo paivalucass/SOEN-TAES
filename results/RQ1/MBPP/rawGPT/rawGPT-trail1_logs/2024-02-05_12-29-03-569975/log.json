@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-03-569975",
+    "task": "def find_char_long(text):\n'''Write a function to find all words which are at least 4 characters long in a string.\nassert set(find_char_long('Please move back to stream')) == set(['Please', 'move', 'back', 'stream'])'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:03",
+        "task-id": "2024-02-05 12:29:03",
+        "workflow": "2024-02-05 12:29:03",
+        "Prompt": "2024-02-05 12:29:06",
+        "FinalCode": "2024-02-05 12:29:06"
+    },
+    "task-id": 7,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_char_long(text):\\n'''Write a function to find all words which are at least 4 characters long in a string.\\nassert set(find_char_long('Please move back to stream')) == set(['Please', 'move', 'back', 'stream'])'''\\n\"",
+    "FinalCode": "def find_char_long(text):\n    '''Write a function to find all words which are at least 4 characters long in a string.'''\n    words = text.split()\n    result = [word for word in words if len(word) >= 4]\n    return result\n\nassert set(find_char_long('Please move back to stream')) == set(['Please', 'move', 'back', 'stream'])"
+}

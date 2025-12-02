@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-07-503341",
+    "task": "def convert(numbers):    \n'''Write a python function to convert complex numbers to polar coordinates.\nassert convert(1) == (1.0, 0.0)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:07",
+        "task-id": "2024-02-05 12:30:07",
+        "workflow": "2024-02-05 12:30:07",
+        "Prompt": "2024-02-05 12:30:12",
+        "FinalCode": "2024-02-05 12:30:12"
+    },
+    "task-id": 252,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def convert(numbers):    \\n'''Write a python function to convert complex numbers to polar coordinates.\\nassert convert(1) == (1.0, 0.0)'''\\n\"",
+    "FinalCode": "def convert(numbers):    \n    '''Write a python function to convert complex numbers to polar coordinates.'''\n    if isinstance(numbers, complex):\n        r = abs(numbers)\n        phi = cmath.phase(numbers)\n        return (r, phi)\n    else:\n        return \"Input is not a complex number\"\n\nassert convert(1) == (1.0, 0.0)"
+}

@@ -1,0 +1,20 @@
+def derivative(xs: list):
+    if len(xs) <= 1:
+        return [0]
+    
+    result = []
+    for i in range(1, len(xs)):
+        result.append(i * xs[i])
+    
+    return result
+import unittest
+
+class Test(unittest.TestCase):
+    def test_derivative_1(self):
+        self.assertEqual(derivative([3, 1, 2, 4, 5]), [1, 4, 12, 20])
+
+    def test_derivative_2(self):
+        self.assertEqual(derivative([1, 2, 3]), [2, 6])
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-16-497260",
+    "task": "\n\ndef common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:16",
+        "task-id": "2024-01-08 12:34:16",
+        "workflow": "2024-01-08 12:34:16",
+        "Prompt": "2024-01-08 12:34:20",
+        "FinalCode": "2024-01-08 12:34:20"
+    },
+    "task-id": "HumanEval/58",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef common(l1: list, l2: list):\\n    \\\"\\\"\\\"Return sorted unique common elements for two lists.\\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\\n    [1, 5, 653]\\n    >>> common([5, 3, 2, 8], [3, 2])\\n    [2, 3]\\n\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def common(l1: list, l2: list):\n    \"\"\"Return sorted unique common elements for two lists.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [2, 3]\n    \"\"\"\n    common_elements = list(set(l1) & set(l2))\n    common_elements.sort()\n    return common_elements"
+}

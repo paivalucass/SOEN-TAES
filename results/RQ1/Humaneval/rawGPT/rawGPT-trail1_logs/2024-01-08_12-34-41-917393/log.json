@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-41-917393",
+    "task": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 15 and closest_integer(\"-14.5\") should return -15.\n    '''\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:41",
+        "task-id": "2024-01-08 12:34:41",
+        "workflow": "2024-01-08 12:34:41",
+        "Prompt": "2024-01-08 12:34:45",
+        "FinalCode": "2024-01-08 12:34:45"
+    },
+    "task-id": "HumanEval/99",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef closest_integer(value):\\n    '''\\n    Create a function that takes a value (string) representing a number\\n    and returns the closest integer to it. If the number is equidistant\\n    from two integers, round it away from zero.\\n\\n    Examples\\n    >>> closest_integer(\\\"10\\\")\\n    10\\n    >>> closest_integer(\\\"15.3\\\")\\n    15\\n\\n    Note:\\n    Rounding away from zero means that if the given number is equidistant\\n    from two integers, the one you should return is the one that is the\\n    farthest from zero. For example closest_integer(\\\"14.5\\\") should\\n    return 15 and closest_integer(\\\"-14.5\\\") should return -15.\\n    '''\\n\"",
+    "FinalCode": "def closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 15 and closest_integer(\"-14.5\") should return -15.\n    '''\n    value = float(value)\n    if value >= 0:\n        return int(value + 0.5)\n    else:\n        return int(value - 0.5)"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-57-197374",
+    "task": "def first_repeated_char(str1):\n'''Write a python function to find the first repeated character in a given string.\nassert first_repeated_char(\"abcabc\") == \"a\"'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:57",
+        "task-id": "2024-02-05 12:31:57",
+        "workflow": "2024-02-05 12:31:57",
+        "Prompt": "2024-02-05 12:32:01",
+        "FinalCode": "2024-02-05 12:32:01"
+    },
+    "task-id": 602,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def first_repeated_char(str1):\\n'''Write a python function to find the first repeated character in a given string.\\nassert first_repeated_char(\\\"abcabc\\\") == \\\"a\\\"'''\\n\"",
+    "FinalCode": "def first_repeated_char(str1):\n    '''Write a python function to find the first repeated character in a given string.'''\n    char_set = set()\n    for char in str1:\n        if char in char_set:\n            return char\n        else:\n            char_set.add(char)\n    return None\n\nassert first_repeated_char(\"abcabc\") == \"a\""
+}

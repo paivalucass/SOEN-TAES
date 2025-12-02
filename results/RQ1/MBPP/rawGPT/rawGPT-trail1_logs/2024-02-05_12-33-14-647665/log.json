@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-14-647665",
+    "task": "def count_rotation(arr):   \n'''Write a python function to count the number of rotations required to generate a sorted array. https://www.geeksforgeeks.org/count-of-rotations-required-to-generate-a-sorted-array/\nassert count_rotation([3,2,1]) == 1'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:14",
+        "task-id": "2024-02-05 12:33:14",
+        "workflow": "2024-02-05 12:33:14",
+        "Prompt": "2024-02-05 12:33:19",
+        "FinalCode": "2024-02-05 12:33:19"
+    },
+    "task-id": 802,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_rotation(arr):   \\n'''Write a python function to count the number of rotations required to generate a sorted array. https://www.geeksforgeeks.org/count-of-rotations-required-to-generate-a-sorted-array/\\nassert count_rotation([3,2,1]) == 1'''\\n\"",
+    "FinalCode": "def count_rotation(arr):\n    '''Write a python function to count the number of rotations required to generate a sorted array. https://www.geeksforgeeks.org/count-of-rotations-required-to-generate-a-sorted-array/'''\n    n = len(arr)\n    min_val = arr.index(min(arr))\n    return min_val\n\nassert count_rotation([3,2,1]) == 1"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-55-905040",
+    "task": "def find_kth(arr1, arr2, k):\n'''Write a function to find kth element from the given two sorted arrays.\nassert find_kth([2, 3, 6, 7, 9], [1, 4, 8, 10], 5) == 6'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:55",
+        "task-id": "2024-02-05 12:31:55",
+        "workflow": "2024-02-05 12:31:55",
+        "Prompt": "2024-02-05 12:31:56",
+        "FinalCode": "2024-02-05 12:31:56"
+    },
+    "task-id": 597,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_kth(arr1, arr2, k):\\n'''Write a function to find kth element from the given two sorted arrays.\\nassert find_kth([2, 3, 6, 7, 9], [1, 4, 8, 10], 5) == 6'''\\n\"",
+    "FinalCode": "def find_kth(arr1, arr2, k):\n    merged = sorted(arr1 + arr2)\n    return merged[k-1]"
+}

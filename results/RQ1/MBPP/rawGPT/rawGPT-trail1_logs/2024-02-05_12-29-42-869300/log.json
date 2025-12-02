@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-42-869300",
+    "task": "def sum_negativenum(nums):\n'''Write a function to calculate the sum of the negative numbers of a given list of numbers.\nassert sum_negativenum([2, 4, -6, -9, 11, -12, 14, -5, 17])==-32'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:42",
+        "task-id": "2024-02-05 12:29:42",
+        "workflow": "2024-02-05 12:29:42",
+        "Prompt": "2024-02-05 12:29:44",
+        "FinalCode": "2024-02-05 12:29:44"
+    },
+    "task-id": 133,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sum_negativenum(nums):\\n'''Write a function to calculate the sum of the negative numbers of a given list of numbers.\\nassert sum_negativenum([2, 4, -6, -9, 11, -12, 14, -5, 17])==-32'''\\n\"",
+    "FinalCode": "def sum_negativenum(nums):\n    '''Write a function to calculate the sum of the negative numbers of a given list of numbers.'''\n    total = 0\n    for num in nums:\n        if num < 0:\n            total += num\n    return total\n\nassert sum_negativenum([2, 4, -6, -9, 11, -12, 14, -5, 17]) == -32"
+}

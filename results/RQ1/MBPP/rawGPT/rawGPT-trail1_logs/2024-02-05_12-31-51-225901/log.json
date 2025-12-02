@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-51-225901",
+    "task": "def binomial_Coeff(n,k): \n'''Write a python function to find the sum of the product of consecutive binomial co-efficients.\nassert sum_Of_product(3) == 15'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:51",
+        "task-id": "2024-02-05 12:31:51",
+        "workflow": "2024-02-05 12:31:51",
+        "Prompt": "2024-02-05 12:31:55",
+        "FinalCode": "2024-02-05 12:31:55"
+    },
+    "task-id": 592,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def binomial_Coeff(n,k): \\n'''Write a python function to find the sum of the product of consecutive binomial co-efficients.\\nassert sum_Of_product(3) == 15'''\\n\"",
+    "FinalCode": "def binomial_Coeff(n, k):\n    if k == 0 or k == n:\n        return 1\n    else:\n        return binomial_Coeff(n-1, k-1) + binomial_Coeff(n-1, k)"
+}

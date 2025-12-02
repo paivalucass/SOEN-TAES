@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-08-958128",
+    "task": "def trim_tuple(test_list, K):\n'''Write a function to trim each tuple by k in the given tuple list.\nassert trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1),(9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 2) == '[(2,), (9,), (2,), (2,)]''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:08",
+        "task-id": "2024-02-05 12:31:08",
+        "workflow": "2024-02-05 12:31:08",
+        "Prompt": "2024-02-05 12:31:16",
+        "FinalCode": "2024-02-05 12:31:16"
+    },
+    "task-id": 444,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def trim_tuple(test_list, K):\\n'''Write a function to trim each tuple by k in the given tuple list.\\nassert trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1),(9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 2) == '[(2,), (9,), (2,), (2,)]''''\\n\"",
+    "FinalCode": "def trim_tuple(test_list, K):\n    '''Write a function to trim each tuple by k in the given tuple list.'''\n    result = []\n    for tup in test_list:\n        trimmed_tup = tup[K:]\n        result.append(trimmed_tup)\n    return result\n\n# Test case\nassert trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1),(9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 2) == [(2, 1, 4), (9, 2, 1), (2, 3, 5), (2, 1, 7)]"
+}

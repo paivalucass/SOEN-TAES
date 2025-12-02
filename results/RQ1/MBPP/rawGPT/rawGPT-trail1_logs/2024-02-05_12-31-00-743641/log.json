@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-00-743641",
+    "task": "def parabola_directrix(a, b, c): \n'''Write a function to find the directrix of a parabola.\nassert parabola_directrix(5,3,2)==-198'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:00",
+        "task-id": "2024-02-05 12:31:00",
+        "workflow": "2024-02-05 12:31:00",
+        "Prompt": "2024-02-05 12:31:03",
+        "FinalCode": "2024-02-05 12:31:03"
+    },
+    "task-id": 430,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def parabola_directrix(a, b, c): \\n'''Write a function to find the directrix of a parabola.\\nassert parabola_directrix(5,3,2)==-198'''\\n\"",
+    "FinalCode": "def parabola_directrix(a, b, c):\n    '''Write a function to find the directrix of a parabola.'''\n    return (b**2 - 4*a*c)/(4*a)\n\nassert parabola_directrix(5,3,2)==-198"
+}

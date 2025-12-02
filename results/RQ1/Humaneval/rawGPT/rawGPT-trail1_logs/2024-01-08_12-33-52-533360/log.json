@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-52-533360",
+    "task": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:52",
+        "task-id": "2024-01-08 12:33:52",
+        "workflow": "2024-01-08 12:33:52",
+        "Prompt": "2024-01-08 12:33:55",
+        "FinalCode": "2024-01-08 12:33:55"
+    },
+    "task-id": "HumanEval/7",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\\n    \\\"\\\"\\\" Filter an input list of strings only for ones that contain given substring\\n    >>> filter_by_substring([], 'a')\\n    []\\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\\n    ['abc', 'bacd', 'array']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n    return [s for s in strings if substring in s]"
+}

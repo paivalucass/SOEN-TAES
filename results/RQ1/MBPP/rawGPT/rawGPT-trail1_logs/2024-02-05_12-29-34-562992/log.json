@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-34-562992",
+    "task": "def tuple_to_int(nums):\n'''Write a function to convert a given tuple of positive integers into a single integer.\nassert tuple_to_int((1,2,3))==123'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:34",
+        "task-id": "2024-02-05 12:29:34",
+        "workflow": "2024-02-05 12:29:34",
+        "Prompt": "2024-02-05 12:29:38",
+        "FinalCode": "2024-02-05 12:29:38"
+    },
+    "task-id": 116,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def tuple_to_int(nums):\\n'''Write a function to convert a given tuple of positive integers into a single integer.\\nassert tuple_to_int((1,2,3))==123'''\\n\"",
+    "FinalCode": "def tuple_to_int(nums):\n    '''Write a function to convert a given tuple of positive integers into a single integer.'''\n    return int(''.join(map(str, nums)))\n\nassert tuple_to_int((1,2,3)) == 123"
+}

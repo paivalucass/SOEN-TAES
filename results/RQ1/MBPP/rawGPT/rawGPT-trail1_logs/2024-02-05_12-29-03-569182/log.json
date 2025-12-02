@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-03-569182",
+    "task": "def heap_queue_largest(nums,n):\n'''Write a function to find the n largest integers from a given list of numbers, returned in descending order.\nassert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],3)==[85, 75, 65]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:03",
+        "task-id": "2024-02-05 12:29:03",
+        "workflow": "2024-02-05 12:29:03",
+        "Prompt": "2024-02-05 12:29:06",
+        "FinalCode": "2024-02-05 12:29:06"
+    },
+    "task-id": 4,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def heap_queue_largest(nums,n):\\n'''Write a function to find the n largest integers from a given list of numbers, returned in descending order.\\nassert heap_queue_largest( [25, 35, 22, 85, 14, 65, 75, 22, 58],3)==[85, 75, 65]'''\\n\"",
+    "FinalCode": "def heap_queue_largest(nums, n):\n    '''Write a function to find the n largest integers from a given list of numbers, returned in descending order.'''\n    import heapq\n    return heapq.nlargest(n, nums)"
+}

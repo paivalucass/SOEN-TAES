@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-39-658521",
+    "task": "def split(word): \n'''Write a python function to split a string into characters.\nassert split('python') == ['p','y','t','h','o','n']'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:39",
+        "task-id": "2024-02-05 12:31:39",
+        "workflow": "2024-02-05 12:31:39",
+        "Prompt": "2024-02-05 12:31:41",
+        "FinalCode": "2024-02-05 12:31:41"
+    },
+    "task-id": 565,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def split(word): \\n'''Write a python function to split a string into characters.\\nassert split('python') == ['p','y','t','h','o','n']'''\\n\"",
+    "FinalCode": "def split(word):\n    '''Write a python function to split a string into characters.\n    assert split('python') == ['p','y','t','h','o','n']'''\n    return list(word)"
+}

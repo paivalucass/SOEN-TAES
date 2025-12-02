@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-15-753808",
+    "task": "def even_Power_Sum(n): \n'''Write a python function that takes in an integer n and finds the sum of the first n even natural numbers that are raised to the fifth power.\nassert even_Power_Sum(2) == 1056'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:15",
+        "task-id": "2024-02-05 12:30:15",
+        "workflow": "2024-02-05 12:30:15",
+        "Prompt": "2024-02-05 12:30:18",
+        "FinalCode": "2024-02-05 12:30:18"
+    },
+    "task-id": 271,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def even_Power_Sum(n): \\n'''Write a python function that takes in an integer n and finds the sum of the first n even natural numbers that are raised to the fifth power.\\nassert even_Power_Sum(2) == 1056'''\\n\"",
+    "FinalCode": "\nHere is a possible implementation of the even_Power_Sum function in Python:\n\n```python\ndef even_Power_Sum(n):\n    total_sum = 0\n    for i in range(1, n*2+1, 2):\n        total_sum += i**5\n    return total_sum\n\nassert even_Power_Sum(2) == 1056\n```\n\nThis function takes in an integer n and finds the sum of the first n even natural numbers that are raised to the fifth power. In the provided example, calling even_Power_Sum(2) should return 1056, as asserted."
+}

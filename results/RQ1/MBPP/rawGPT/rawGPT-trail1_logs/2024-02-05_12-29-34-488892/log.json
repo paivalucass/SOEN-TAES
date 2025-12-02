@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-34-488892",
+    "task": "def empty_dit(list1):\n'''Write a function to check whether all dictionaries in a list are empty or not.\nassert empty_dit([{},{},{}])==True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:34",
+        "task-id": "2024-02-05 12:29:34",
+        "workflow": "2024-02-05 12:29:34",
+        "Prompt": "2024-02-05 12:29:37",
+        "FinalCode": "2024-02-05 12:29:37"
+    },
+    "task-id": 115,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def empty_dit(list1):\\n'''Write a function to check whether all dictionaries in a list are empty or not.\\nassert empty_dit([{},{},{}])==True'''\\n\"",
+    "FinalCode": "def empty_dit(list1):\n    '''Write a function to check whether all dictionaries in a list are empty or not.'''\n    for d in list1:\n        if bool(d):\n            return False\n    return True\n\n# Test the function\nassert empty_dit([{}, {}, {}]) == True"
+}

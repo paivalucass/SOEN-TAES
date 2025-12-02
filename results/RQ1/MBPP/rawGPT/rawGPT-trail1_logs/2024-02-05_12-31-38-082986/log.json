@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-38-082986",
+    "task": "def Find_Max_Length(lst):  \n'''Write a python function to find the length of the longest sublists.\nassert Find_Max_Length([[1],[1,4],[5,6,7,8]]) == 4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:38",
+        "task-id": "2024-02-05 12:31:38",
+        "workflow": "2024-02-05 12:31:38",
+        "Prompt": "2024-02-05 12:31:43",
+        "FinalCode": "2024-02-05 12:31:43"
+    },
+    "task-id": 562,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def Find_Max_Length(lst):  \\n'''Write a python function to find the length of the longest sublists.\\nassert Find_Max_Length([[1],[1,4],[5,6,7,8]]) == 4'''\\n\"",
+    "FinalCode": "def Find_Max_Length(lst):\n    max_len = 0\n    for sublist in lst:\n        if len(sublist) > max_len:\n            max_len = len(sublist)\n    return max_len\n\n# Test the function\nassert Find_Max_Length([[1],[1,4],[5,6,7,8]]) == 4"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-59-139459",
+    "task": "def lateralsuface_cylinder(r,h):\n'''Write a function to find the lateral surface area of a cylinder.\nassert math.isclose(lateralsuface_cylinder(10,5), 314.15000000000003, rel_tol=0.001)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:59",
+        "task-id": "2024-02-05 12:29:59",
+        "workflow": "2024-02-05 12:29:59",
+        "Prompt": "2024-02-05 12:30:02",
+        "FinalCode": "2024-02-05 12:30:02"
+    },
+    "task-id": 233,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def lateralsuface_cylinder(r,h):\\n'''Write a function to find the lateral surface area of a cylinder.\\nassert math.isclose(lateralsuface_cylinder(10,5), 314.15000000000003, rel_tol=0.001)'''\\n\"",
+    "FinalCode": "import math\n\ndef lateralsurface_cylinder(r, h):\n    return 2 * math.pi * r * h\n\nassert math.isclose(lateralsurface_cylinder(10, 5), 314.15000000000003, rel_tol=0.001)"
+}

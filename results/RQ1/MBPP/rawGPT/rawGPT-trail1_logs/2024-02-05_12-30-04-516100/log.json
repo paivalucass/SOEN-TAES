@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-04-516100",
+    "task": "def harmonic_sum(n):\n'''Write a function that takes in an integer n and calculates the harmonic sum of n-1.\nassert math.isclose(harmonic_sum(7), 2.5928571428571425, rel_tol=0.001)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:04",
+        "task-id": "2024-02-05 12:30:04",
+        "workflow": "2024-02-05 12:30:04",
+        "Prompt": "2024-02-05 12:30:06",
+        "FinalCode": "2024-02-05 12:30:06"
+    },
+    "task-id": 248,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def harmonic_sum(n):\\n'''Write a function that takes in an integer n and calculates the harmonic sum of n-1.\\nassert math.isclose(harmonic_sum(7), 2.5928571428571425, rel_tol=0.001)'''\\n\"",
+    "FinalCode": "def harmonic_sum(n):\n    '''Write a function that takes in an integer n and calculates the harmonic sum of n-1.'''\n    result = 0\n    for i in range(1, n):\n        result += 1/i\n    return result\n\n# Example usage\nprint(harmonic_sum(7)) # Outputs: 2.5928571428571425"
+}

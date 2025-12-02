@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-08-229457",
+    "task": "\n\ndef car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:08",
+        "task-id": "2024-01-08 12:34:08",
+        "workflow": "2024-01-08 12:34:08",
+        "Prompt": "2024-01-08 12:34:11",
+        "FinalCode": "2024-01-08 12:34:11"
+    },
+    "task-id": "HumanEval/41",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef car_race_collision(n: int):\\n    \\\"\\\"\\\"\\n    Imagine a road that's a perfectly straight infinitely long line.\\n    n cars are driving left to right;  simultaneously, a different set of n cars\\n    are driving right to left.   The two sets of cars start out being very far from\\n    each other.  All cars move in the same speed.  Two cars are said to collide\\n    when a car that's moving left to right hits a car that's moving right to left.\\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\\n    in their trajectory as if they did not collide.\\n\\n    This function outputs the number of such collisions.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n    return n * (n - 1) / 2  # Number of collisions is equal to n choose 2 (nC2) or n*(n-1)/2."
+}

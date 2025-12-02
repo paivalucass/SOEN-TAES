@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-53-466731",
+    "task": "def sum_range_list(list1, m, n):                                                                                                                                                                                                \n'''Write a function to find the sum of numbers in a list within a range specified by two indices.\nassert sum_range_list([2,1,5,6,8,3,4,9,10,11,8,12], 8, 10) == 29'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:53",
+        "task-id": "2024-02-05 12:29:53",
+        "workflow": "2024-02-05 12:29:53",
+        "Prompt": "2024-02-05 12:29:54",
+        "FinalCode": "2024-02-05 12:29:54"
+    },
+    "task-id": 170,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sum_range_list(list1, m, n):                                                                                                                                                                                                \\n'''Write a function to find the sum of numbers in a list within a range specified by two indices.\\nassert sum_range_list([2,1,5,6,8,3,4,9,10,11,8,12], 8, 10) == 29'''\\n\"",
+    "FinalCode": "def sum_range_list(list1, m, n):\n    return sum(list1[m:n+1])"
+}

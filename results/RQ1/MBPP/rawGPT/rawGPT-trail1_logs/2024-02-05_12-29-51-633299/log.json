@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-51-633299",
+    "task": "def find_even_pair(A): \n'''Write a function that counts the number of pairs of integers in a list that xor to an even number.\nassert find_even_pair([5, 4, 7, 2, 1]) == 4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:51",
+        "task-id": "2024-02-05 12:29:51",
+        "workflow": "2024-02-05 12:29:51",
+        "Prompt": "2024-02-05 12:29:53",
+        "FinalCode": "2024-02-05 12:29:53"
+    },
+    "task-id": 166,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_even_pair(A): \\n'''Write a function that counts the number of pairs of integers in a list that xor to an even number.\\nassert find_even_pair([5, 4, 7, 2, 1]) == 4'''\\n\"",
+    "FinalCode": "def find_even_pair(A):\n    count = 0\n    for i in range(len(A)):\n        for j in range(i+1, len(A)):\n            if (A[i] ^ A[j]) % 2 == 0:\n                count += 1\n    return count\n\nassert find_even_pair([5, 4, 7, 2, 1]) == 4"
+}

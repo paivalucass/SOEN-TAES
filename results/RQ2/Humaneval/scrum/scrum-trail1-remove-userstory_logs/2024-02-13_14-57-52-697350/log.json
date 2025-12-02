@@ -1,0 +1,11 @@
+{
+    "start_time": "2024-02-13_14-57-52-697350",
+    "task": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-13 14:57:52",
+        "task-id": "2024-02-13 14:57:52",
+        "workflow": "2024-02-13 14:57:52"
+    },
+    "task-id": "HumanEval/1",
+    "workflow": "agile/agile_version_0.0.5_remove_stage.json"
+}

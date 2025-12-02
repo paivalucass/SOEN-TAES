@@ -1,0 +1,25 @@
+def pack_consecutive_duplicates(list1):
+    if len(list1) == 0:
+        return []
+    elif len(list1) == 1:
+        return [list1]
+
+    result = []
+    sub_list = [list1[0]]
+    for i in range(1, len(list1)):
+        if list1[i] == list1[i-1]:
+            sub_list.append(list1[i])
+        else:
+            result.append(sub_list)
+            sub_list = [list1[i]]
+    result.append(sub_list)
+
+    return result
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(pack_consecutive_duplicates([0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4]), [[0, 0], [1], [2], [3], [4, 4], [5], [6, 6, 6], [7], [8], [9], [4, 4]])
+
+if __name__ == '__main__':
+    unittest.main()

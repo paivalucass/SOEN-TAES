@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-06-149669",
+    "task": "def min_Jumps(steps, d): \n'''Write a function to check for the number of jumps required of given length to reach a point of form (d, 0) from origin in a 2d plane.\nassert min_Jumps((3,4),11)==3.5'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:06",
+        "task-id": "2024-02-05 12:32:06",
+        "workflow": "2024-02-05 12:32:06",
+        "Prompt": "2024-02-05 12:32:08",
+        "FinalCode": "2024-02-05 12:32:08"
+    },
+    "task-id": 617,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def min_Jumps(steps, d): \\n'''Write a function to check for the number of jumps required of given length to reach a point of form (d, 0) from origin in a 2d plane.\\nassert min_Jumps((3,4),11)==3.5'''\\n\"",
+    "FinalCode": "def min_Jumps(steps, d):\n    '''Write a function to check for the number of jumps required of given length to reach a point of form (d, 0) from origin in a 2d plane.'''\n    x = steps[0]\n    y = steps[1]\n    distance = (x**2 + y**2)**0.5\n    if distance < d:\n        return -1\n    else:\n        jumps = d / distance\n        return jumps\n\nassert min_Jumps((3,4),11)==3.5"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-46-969284",
+    "task": "def check_monthnumber_number(monthnum3):\n'''Write a function to check whether the given month number contains 30 days or not. Months are given as number from 1 to 12.\nassert check_monthnumber_number(6)==True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:46",
+        "task-id": "2024-02-05 12:32:46",
+        "workflow": "2024-02-05 12:32:46",
+        "Prompt": "2024-02-05 12:32:52",
+        "FinalCode": "2024-02-05 12:32:52"
+    },
+    "task-id": 762,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def check_monthnumber_number(monthnum3):\\n'''Write a function to check whether the given month number contains 30 days or not. Months are given as number from 1 to 12.\\nassert check_monthnumber_number(6)==True'''\\n\"",
+    "FinalCode": "def check_monthnumber_number(monthnum3):\n    '''Write a function to check whether the given month number contains 30 days or not. Months are given as number from 1 to 12.'''\n    thirty_days_months = [4, 6, 9, 11]\n    if monthnum3 in thirty_days_months:\n        return True\n    else:\n        return False\n\nassert check_monthnumber_number(6)==True"
+}

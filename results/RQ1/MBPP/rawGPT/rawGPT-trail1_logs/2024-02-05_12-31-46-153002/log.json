@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-46-153002",
+    "task": "def catalan_number(num):\n'''Write a function which returns nth catalan number.\nassert catalan_number(10)==16796'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:46",
+        "task-id": "2024-02-05 12:31:46",
+        "workflow": "2024-02-05 12:31:46",
+        "Prompt": "2024-02-05 12:31:51",
+        "FinalCode": "2024-02-05 12:31:51"
+    },
+    "task-id": 583,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def catalan_number(num):\\n'''Write a function which returns nth catalan number.\\nassert catalan_number(10)==16796'''\\n\"",
+    "FinalCode": "def catalan_number(num):\n    if num <= 1:\n        return 1\n    else:\n        catalan = [0] * (num + 1)\n        catalan[0] = 1\n        catalan[1] = 1\n        for i in range(2, num + 1):\n            for j in range(i):\n                catalan[i] += catalan[j] * catalan[i - j - 1]\n        return catalan[num]\n\n# Test the function\nassert catalan_number(10) == 16796"
+}

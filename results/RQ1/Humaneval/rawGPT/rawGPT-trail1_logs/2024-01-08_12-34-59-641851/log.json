@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-59-641851",
+    "task": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:59",
+        "task-id": "2024-01-08 12:34:59",
+        "workflow": "2024-01-08 12:34:59",
+        "Prompt": "2024-01-08 12:35:02",
+        "FinalCode": "2024-01-08 12:35:02"
+    },
+    "task-id": "HumanEval/131",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef digits(n):\\n    \\\"\\\"\\\"Given a positive integer n, return the product of the odd digits.\\n    Return 0 if all digits are even.\\n    For example:\\n    digits(1)  == 1\\n    digits(4)  == 0\\n    digits(235) == 15\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n    product = 1\n    while n > 0:\n        digit = n % 10\n        if digit % 2 != 0:\n            product *= digit\n        n = n // 10\n    if product == 1:\n        return 0\n    return product"
+}

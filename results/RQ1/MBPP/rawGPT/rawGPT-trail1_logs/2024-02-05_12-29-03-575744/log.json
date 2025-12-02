@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-03-575744",
+    "task": "def is_not_prime(n):\n'''Write a python function to identify non-prime numbers.\nassert is_not_prime(2) == False'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:03",
+        "task-id": "2024-02-05 12:29:03",
+        "workflow": "2024-02-05 12:29:03",
+        "Prompt": "2024-02-05 12:29:05",
+        "FinalCode": "2024-02-05 12:29:05"
+    },
+    "task-id": 3,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def is_not_prime(n):\\n'''Write a python function to identify non-prime numbers.\\nassert is_not_prime(2) == False'''\\n\"",
+    "FinalCode": "def is_not_prime(n):\n    '''Write a python function to identify non-prime numbers.'''\n    if n <= 1:\n        return True\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return True\n    return False\n\nassert is_not_prime(2) == False"
+}

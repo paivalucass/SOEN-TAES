@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-55-906102",
+    "task": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:55",
+        "task-id": "2024-01-08 12:33:55",
+        "workflow": "2024-01-08 12:33:55",
+        "Prompt": "2024-01-08 12:33:58",
+        "FinalCode": "2024-01-08 12:33:58"
+    },
+    "task-id": "HumanEval/14",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef all_prefixes(string: str) -> List[str]:\\n    \\\"\\\"\\\" Return list of all prefixes from shortest to longest of the input string\\n    >>> all_prefixes('abc')\\n    ['a', 'ab', 'abc']\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n    prefixes = []\n    for i in range(len(string)):\n        prefixes.append(string[:i+1])\n    return prefixes"
+}

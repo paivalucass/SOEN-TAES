@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-08-123120",
+    "task": "def is_woodall(x): \n'''Write a function to check if the given number is woodball or not.\nassert is_woodall(383) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:08",
+        "task-id": "2024-02-05 12:29:08",
+        "workflow": "2024-02-05 12:29:08",
+        "Prompt": "2024-02-05 12:29:12",
+        "FinalCode": "2024-02-05 12:29:12"
+    },
+    "task-id": 20,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def is_woodall(x): \\n'''Write a function to check if the given number is woodball or not.\\nassert is_woodall(383) == True'''\\n\"",
+    "FinalCode": "def is_woodall(x):\n    '''\n    Write a function to check if the given number is woodall or not.\n    assert is_woodall(383) == True\n    '''\n    result = x / (2 ** x - 1)\n    if result.is_integer() and result > 0:\n        return True\n    else:\n        return False"
+}

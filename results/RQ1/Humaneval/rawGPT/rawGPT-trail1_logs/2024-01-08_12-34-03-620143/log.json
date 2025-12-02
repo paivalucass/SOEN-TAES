@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-03-620143",
+    "task": "import math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -0.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    1.0\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:03",
+        "task-id": "2024-01-08 12:34:03",
+        "workflow": "2024-01-08 12:34:03",
+        "Prompt": "2024-01-08 12:34:08",
+        "FinalCode": "2024-01-08 12:34:08"
+    },
+    "task-id": "HumanEval/32",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"import math\\n\\n\\ndef poly(xs: list, x: float):\\n    \\\"\\\"\\\"\\n    Evaluates polynomial with coefficients xs at point x.\\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\\n    \\\"\\\"\\\"\\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\\n\\n\\ndef find_zero(xs: list):\\n    \\\"\\\"\\\" xs are coefficients of a polynomial.\\n    find_zero find x such that poly(x) = 0.\\n    find_zero returns only only zero point, even if there are many.\\n    Moreover, find_zero only takes list xs having even number of coefficients\\n    and largest non zero coefficient as it guarantees\\n    a solution.\\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\\n    -0.5\\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\\n    1.0\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This code snippet defines two functions: `poly` and `find_zero`.\n\nThe `poly` function takes a list of coefficients `xs` and a value `x` and evaluates the corresponding polynomial at the given point. It uses a list comprehension to calculate the sum of `coeff * x^i` for each coefficient `coeff` and its corresponding index `i` in `xs`.\n\nThe `find_zero` function takes a list of coefficients `xs` and attempts to find a value of `x` such that the polynomial evaluated at `x` equals zero. It returns only one zero point, even if there are multiple, and it only works with lists of coefficients that have an even number of elements, with the largest non-zero coefficient at the end of the list.\n\nThe function includes examples in its docstring to demonstrate its usage.\n\nNote: There is a small typo in the `poly` function where `xs[1]` is repeated instead of using `xs[i]` for higher powers of x. It should be corrected as follows:\n\n```python\nreturn sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n```"
+}

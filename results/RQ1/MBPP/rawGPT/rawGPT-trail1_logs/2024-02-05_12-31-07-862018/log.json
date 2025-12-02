@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-07-862018",
+    "task": "def find_adverb_position(text):\n'''Write a function to find the first adverb and their positions in a given sentence.\nassert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:07",
+        "task-id": "2024-02-05 12:31:07",
+        "workflow": "2024-02-05 12:31:07",
+        "Prompt": "2024-02-05 12:31:15",
+        "FinalCode": "2024-02-05 12:31:15"
+    },
+    "task-id": 440,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_adverb_position(text):\\n'''Write a function to find the first adverb and their positions in a given sentence.\\nassert find_adverb_position(\\\"clearly!! we can see the sky\\\")==(0, 7, 'clearly')'''\\n\"",
+    "FinalCode": "def find_adverb_position(text):\n    adverbs = ['clearly', 'quickly', 'slowly', 'loudly', 'happily', 'sadly', 'angrily', 'carefully', 'easily', 'nicely'] # list of common adverbs\n    \n    words = text.split() # split the sentence into words\n    \n    for i, word in enumerate(words):\n        if word.strip('.,!?') in adverbs: # check if the word is an adverb\n            return (i, text.index(word), word) # return the position and the adverb itself\n\n    return None # return None if no adverb is found\n\n# Test the function\nassert find_adverb_position(\"clearly!! we can see the sky\") == (0, 0, 'clearly')"
+}

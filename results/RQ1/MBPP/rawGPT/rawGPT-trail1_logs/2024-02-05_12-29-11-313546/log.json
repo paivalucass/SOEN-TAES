@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-11-313546",
+    "task": "def subject_marks(subjectmarks):\n'''Write a function to sort a list of tuples using the second value of each tuple.\nassert subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])==[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:11",
+        "task-id": "2024-02-05 12:29:11",
+        "workflow": "2024-02-05 12:29:11",
+        "Prompt": "2024-02-05 12:29:14",
+        "FinalCode": "2024-02-05 12:29:14"
+    },
+    "task-id": 64,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def subject_marks(subjectmarks):\\n'''Write a function to sort a list of tuples using the second value of each tuple.\\nassert subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])==[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]'''\\n\"",
+    "FinalCode": "def subject_marks(subjectmarks):\n    return sorted(subjectmarks, key=lambda x: x[1])\n\nassert subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])==[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+}

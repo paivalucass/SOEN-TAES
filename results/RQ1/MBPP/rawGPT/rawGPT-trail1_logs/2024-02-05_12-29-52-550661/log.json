@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-52-550661",
+    "task": "def next_power_of_2(n): \n'''Write a python function to find the smallest power of 2 greater than or equal to n.\nassert next_power_of_2(0) == 1'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:52",
+        "task-id": "2024-02-05 12:29:52",
+        "workflow": "2024-02-05 12:29:52",
+        "Prompt": "2024-02-05 12:29:56",
+        "FinalCode": "2024-02-05 12:29:56"
+    },
+    "task-id": 167,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def next_power_of_2(n): \\n'''Write a python function to find the smallest power of 2 greater than or equal to n.\\nassert next_power_of_2(0) == 1'''\\n\"",
+    "FinalCode": "def next_power_of_2(n):\n    '''Write a python function to find the smallest power of 2 greater than or equal to n.'''\n    result = 1\n    while result < n:\n        result <<= 1\n    return result\n\nassert next_power_of_2(0) == 1"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-22-945269",
+    "task": "def Extract(lst): \n'''Write a python function to get the first element of each sublist.\nassert Extract([[1, 2], [3, 4, 5], [6, 7, 8, 9]]) == [1, 3, 6]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:22",
+        "task-id": "2024-02-05 12:31:22",
+        "workflow": "2024-02-05 12:31:22",
+        "Prompt": "2024-02-05 12:31:29",
+        "FinalCode": "2024-02-05 12:31:29"
+    },
+    "task-id": 460,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def Extract(lst): \\n'''Write a python function to get the first element of each sublist.\\nassert Extract([[1, 2], [3, 4, 5], [6, 7, 8, 9]]) == [1, 3, 6]'''\\n\"",
+    "FinalCode": "def Extract(lst):\n    return [sublist[0] for sublist in lst]\n\n# Test the function\nassert Extract([[1, 2], [3, 4, 5], [6, 7, 8, 9]]) == [1, 3, 6]"
+}

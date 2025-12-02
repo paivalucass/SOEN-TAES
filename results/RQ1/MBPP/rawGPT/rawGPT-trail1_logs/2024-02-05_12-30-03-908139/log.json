@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-03-908139",
+    "task": "def babylonian_squareroot(number):\n'''Write a function for computing square roots using the babylonian method.\nassert math.isclose(babylonian_squareroot(10), 3.162277660168379, rel_tol=0.001)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:03",
+        "task-id": "2024-02-05 12:30:03",
+        "workflow": "2024-02-05 12:30:03",
+        "Prompt": "2024-02-05 12:30:08",
+        "FinalCode": "2024-02-05 12:30:08"
+    },
+    "task-id": 246,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def babylonian_squareroot(number):\\n'''Write a function for computing square roots using the babylonian method.\\nassert math.isclose(babylonian_squareroot(10), 3.162277660168379, rel_tol=0.001)'''\\n\"",
+    "FinalCode": "import math\n\ndef babylonian_squareroot(number):\n    guess = number / 2\n    while abs(guess * guess - number) > 0.0001:\n        guess = (guess + number / guess) / 2\n    return guess\n\nassert math.isclose(babylonian_squareroot(10), 3.162277660168379, rel_tol=0.001)"
+}

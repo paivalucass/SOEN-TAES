@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-03-655920",
+    "task": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:03",
+        "task-id": "2024-01-08 12:34:03",
+        "workflow": "2024-01-08 12:34:03",
+        "Prompt": "2024-01-08 12:34:07",
+        "FinalCode": "2024-01-08 12:34:07"
+    },
+    "task-id": "HumanEval/33",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef sort_third(l: list):\\n    \\\"\\\"\\\"This function takes a list l and returns a list l' such that\\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\\n    to the values of the corresponding indicies of l, but sorted.\\n    >>> sort_third([1, 2, 3])\\n    [1, 2, 3]\\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\\n    [2, 6, 3, 4, 8, 9, 5]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indices that are not divisible by three, while its values at the indices that are divisible by three are equal\n    to the values of the corresponding indices of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n    non_divisible_by_three = [x for i, x in enumerate(l) if i % 3 != 0]\n    divisible_by_three = sorted([x for i, x in enumerate(l) if i % 3 == 0])\n    result = [non_divisible_by_three[i] if i % 3 != 0 else divisible_by_three.pop(0) for i in range(len(l))]\n    return result"
+}

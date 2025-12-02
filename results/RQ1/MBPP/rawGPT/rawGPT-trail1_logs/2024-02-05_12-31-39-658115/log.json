@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-39-658115",
+    "task": "def count_Pairs(arr,n): \n'''Write a python function which takes a list of integers and counts the number of possible unordered pairs where both elements are unequal.\nassert count_Pairs([1,2,1],3) == 2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:39",
+        "task-id": "2024-02-05 12:31:39",
+        "workflow": "2024-02-05 12:31:39",
+        "Prompt": "2024-02-05 12:31:42",
+        "FinalCode": "2024-02-05 12:31:42"
+    },
+    "task-id": 564,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_Pairs(arr,n): \\n'''Write a python function which takes a list of integers and counts the number of possible unordered pairs where both elements are unequal.\\nassert count_Pairs([1,2,1],3) == 2'''\\n\"",
+    "FinalCode": "def count_Pairs(arr,n):\n   count = 0\n   for i in range(n):\n      for j in range(i+1, n):\n         if arr[i] != arr[j]:\n            count += 1\n   return count\n\nassert count_Pairs([1,2,1],3) == 2"
+}

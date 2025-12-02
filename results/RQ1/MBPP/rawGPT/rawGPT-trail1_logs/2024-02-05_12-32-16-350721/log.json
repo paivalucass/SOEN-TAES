@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-16-350721",
+    "task": "def sample_nam(sample_names):\n'''Write a function to sum the length of the names of a given list of names after removing the names that start with a lowercase letter.\nassert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith'])==16'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:16",
+        "task-id": "2024-02-05 12:32:16",
+        "workflow": "2024-02-05 12:32:16",
+        "Prompt": "2024-02-05 12:32:20",
+        "FinalCode": "2024-02-05 12:32:20"
+    },
+    "task-id": 639,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sample_nam(sample_names):\\n'''Write a function to sum the length of the names of a given list of names after removing the names that start with a lowercase letter.\\nassert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith'])==16'''\\n\"",
+    "FinalCode": "def sample_nam(sample_names):\n    total_length = 0\n    for name in sample_names:\n        if not name[0].islower():\n            total_length += len(name)\n    return total_length\n\n# Test the function\nassert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith']) == 16"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-51-346386",
+    "task": "\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"u\"\n    get_closest_vowel(\"FULL\") ==> \"U\"\n    get_closest_vowel(\"quick\") ==> \"\"\n    get_closest_vowel(\"ab\") ==> \"\"\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:51",
+        "task-id": "2024-01-08 12:34:51",
+        "workflow": "2024-01-08 12:34:51",
+        "Prompt": "2024-01-08 12:34:54",
+        "FinalCode": "2024-01-08 12:34:54"
+    },
+    "task-id": "HumanEval/118",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef get_closest_vowel(word):\\n    \\\"\\\"\\\"You are given a word. Your task is to find the closest vowel that stands between \\n    two consonants from the right side of the word (case sensitive).\\n    \\n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\\n    find any vowel met the above condition. \\n\\n    You may assume that the given string contains English letter only.\\n\\n    Example:\\n    get_closest_vowel(\\\"yogurt\\\") ==> \\\"u\\\"\\n    get_closest_vowel(\\\"FULL\\\") ==> \\\"U\\\"\\n    get_closest_vowel(\\\"quick\\\") ==> \\\"\\\"\\n    get_closest_vowel(\\\"ab\\\") ==> \\\"\\\"\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"u\"\n    get_closest_vowel(\"FULL\") ==> \"U\"\n    get_closest_vowel(\"quick\") ==> \"\"\n    get_closest_vowel(\"ab\") ==> \"\"\n    \"\"\""
+}

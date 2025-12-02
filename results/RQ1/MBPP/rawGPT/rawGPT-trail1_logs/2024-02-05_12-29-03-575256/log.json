@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-03-575256",
+    "task": "def is_Power_Of_Two (x): \n'''Write a python function to check whether the two numbers differ at one bit position only or not.\nassert differ_At_One_Bit_Pos(13,9) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:03",
+        "task-id": "2024-02-05 12:29:03",
+        "workflow": "2024-02-05 12:29:03",
+        "Prompt": "2024-02-05 12:29:05",
+        "FinalCode": "2024-02-05 12:29:05"
+    },
+    "task-id": 6,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def is_Power_Of_Two (x): \\n'''Write a python function to check whether the two numbers differ at one bit position only or not.\\nassert differ_At_One_Bit_Pos(13,9) == True'''\\n\"",
+    "FinalCode": "def is_Power_Of_Two (x):\n    return x != 0 and (x & (x - 1)) == 0\n\n#Example usage\nresult = is_Power_Of_Two(8)\nprint(result)  # Output: True"
+}

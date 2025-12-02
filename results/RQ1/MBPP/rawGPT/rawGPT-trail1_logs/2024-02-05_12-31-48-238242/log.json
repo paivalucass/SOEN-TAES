@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-48-238242",
+    "task": "def perfect_squares(a, b):\n'''Write a function to find perfect squares between two given numbers.\nassert perfect_squares(1,30)==[1, 4, 9, 16, 25]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:48",
+        "task-id": "2024-02-05 12:31:48",
+        "workflow": "2024-02-05 12:31:48",
+        "Prompt": "2024-02-05 12:31:52",
+        "FinalCode": "2024-02-05 12:31:52"
+    },
+    "task-id": 589,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def perfect_squares(a, b):\\n'''Write a function to find perfect squares between two given numbers.\\nassert perfect_squares(1,30)==[1, 4, 9, 16, 25]'''\\n\"",
+    "FinalCode": "def perfect_squares(a, b):\n    '''Write a function to find perfect squares between two given numbers.'''\n    squares = [x*x for x in range(int(a), int(b)+1) if (x*x >= a and x*x <= b)]\n    return squares\n\nassert perfect_squares(1,30)==[1, 4, 9, 16, 25]"
+}

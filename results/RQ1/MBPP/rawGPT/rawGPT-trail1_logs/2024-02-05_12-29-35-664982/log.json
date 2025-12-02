@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-35-664982",
+    "task": "def list_to_float(test_list):\n'''Write a function to convert all possible convertible elements in a list of lists to floats.\nassert list_to_float( [(\"3\", \"4\"), (\"1\", \"26.45\"), (\"7.32\", \"8\"), (\"4\", \"8\")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:35",
+        "task-id": "2024-02-05 12:29:35",
+        "workflow": "2024-02-05 12:29:35",
+        "Prompt": "2024-02-05 12:29:42",
+        "FinalCode": "2024-02-05 12:29:42"
+    },
+    "task-id": 117,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def list_to_float(test_list):\\n'''Write a function to convert all possible convertible elements in a list of lists to floats.\\nassert list_to_float( [(\\\"3\\\", \\\"4\\\"), (\\\"1\\\", \\\"26.45\\\"), (\\\"7.32\\\", \\\"8\\\"), (\\\"4\\\", \\\"8\\\")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]'''\\n\"",
+    "FinalCode": "def list_to_float(test_list):\n    '''Write a function to convert all possible convertible elements in a list of lists to floats.'''\n    result = []\n    for inner_list in test_list:\n        float_inner = tuple(float(num) if num.replace('.', '', 1).isdigit() else num for num in inner_list)\n        result.append(float_inner)\n    return result\n\n# Test\nassert list_to_float( [(\"3\", \"4\"), (\"1\", \"26.45\"), (\"7.32\", \"8\"), (\"4\", \"8\")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-22-148305",
+    "task": "def merge_dictionaries_three(dict1,dict2, dict3):\n'''Write a function to merge three dictionaries into a single dictionary.\nassert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{ \"O\": \"Orange\", \"W\": \"White\", \"B\": \"Black\" })=={'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:22",
+        "task-id": "2024-02-05 12:29:22",
+        "workflow": "2024-02-05 12:29:22",
+        "Prompt": "2024-02-05 12:29:25",
+        "FinalCode": "2024-02-05 12:29:25"
+    },
+    "task-id": 87,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def merge_dictionaries_three(dict1,dict2, dict3):\\n'''Write a function to merge three dictionaries into a single dictionary.\\nassert merge_dictionaries_three({ \\\"R\\\": \\\"Red\\\", \\\"B\\\": \\\"Black\\\", \\\"P\\\": \\\"Pink\\\" }, { \\\"G\\\": \\\"Green\\\", \\\"W\\\": \\\"White\\\" },{ \\\"O\\\": \\\"Orange\\\", \\\"W\\\": \\\"White\\\", \\\"B\\\": \\\"Black\\\" })=={'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}'''\\n\"",
+    "FinalCode": "def merge_dictionaries_three(dict1,dict2, dict3):\n    '''Write a function to merge three dictionaries into a single dictionary.'''\n    merged_dict = {**dict1, **dict2, **dict3}\n    return merged_dict\n\nassert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{ \"O\": \"Orange\", \"W\": \"White\", \"B\": \"Black\" })=={'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-46-375455",
+    "task": "def is_decimal(num):\n'''Write a function to check whether a given string is a decimal number with a precision of 2.\nassert is_decimal('123.11')==True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:46",
+        "task-id": "2024-02-05 12:32:46",
+        "workflow": "2024-02-05 12:32:46",
+        "Prompt": "2024-02-05 12:32:51",
+        "FinalCode": "2024-02-05 12:32:51"
+    },
+    "task-id": 759,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def is_decimal(num):\\n'''Write a function to check whether a given string is a decimal number with a precision of 2.\\nassert is_decimal('123.11')==True'''\\n\"",
+    "FinalCode": "def is_decimal(num):\n    '''Write a function to check whether a given string is a decimal number with a precision of 2.'''\n    try:\n        float_num = float(num)\n        if '.' in num:\n            decimal_part = num.split('.')[1]\n            if len(decimal_part) <= 2:\n                return True\n            else:\n                return False\n        else:\n            return False\n    except ValueError:\n        return False\n\n# Test\nassert is_decimal('123.11')==True"
+}

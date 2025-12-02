@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-00-739320",
+    "task": "\n\ndef largest_divisor(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    >>> largest_divisor(15)\n    5\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:00",
+        "task-id": "2024-01-08 12:34:00",
+        "workflow": "2024-01-08 12:34:00",
+        "Prompt": "2024-01-08 12:34:02",
+        "FinalCode": "2024-01-08 12:34:02"
+    },
+    "task-id": "HumanEval/24",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef largest_divisor(n: int) -> int:\\n    \\\"\\\"\\\" For a given number n, find the largest number that divides n evenly, smaller than n\\n    >>> largest_divisor(15)\\n    5\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def largest_divisor(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly, smaller than n\n    >>> largest_divisor(15)\n    5\n    \"\"\"\n    for i in range(n-1, 1, -1):\n        if n % i == 0:\n            return i\n    return 1"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-07-774344",
+    "task": "def remove_nested(test_tup):\n'''Write a function to remove tuples from the given tuple.\nassert remove_nested((1, 5, 7, (4, 6), 10)) == (1, 5, 7, 10)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:07",
+        "task-id": "2024-02-05 12:33:07",
+        "workflow": "2024-02-05 12:33:07",
+        "Prompt": "2024-02-05 12:33:10",
+        "FinalCode": "2024-02-05 12:33:10"
+    },
+    "task-id": 791,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def remove_nested(test_tup):\\n'''Write a function to remove tuples from the given tuple.\\nassert remove_nested((1, 5, 7, (4, 6), 10)) == (1, 5, 7, 10)'''\\n\"",
+    "FinalCode": "def remove_nested(test_tup):\n    result = tuple(item for item in test_tup if not isinstance(item, tuple))\n    return result\n\nassert remove_nested((1, 5, 7, (4, 6), 10)) == (1, 5, 7, 10)"
+}

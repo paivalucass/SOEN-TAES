@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-48-417242",
+    "task": "\ndef reverse_delete(s,c):\n    \"\"\"Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is palindrome.\n    A string is called palindrome if it reads the same backward as forward.\n    You should return a tuple containing the result string and True/False for the check.\n    Example\n    For s = \"abcde\", c = \"ae\", the result should be ('bcd',False)\n    For s = \"abcdef\", c = \"b\"  the result should be ('acdef',False)\n    For s = \"abcdedcba\", c = \"ab\", the result should be ('cdedc',True)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:48",
+        "task-id": "2024-01-08 12:34:48",
+        "workflow": "2024-01-08 12:34:48",
+        "Prompt": "2024-01-08 12:34:51",
+        "FinalCode": "2024-01-08 12:34:51"
+    },
+    "task-id": "HumanEval/112",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef reverse_delete(s,c):\\n    \\\"\\\"\\\"Task\\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\\n    then check if the result string is palindrome.\\n    A string is called palindrome if it reads the same backward as forward.\\n    You should return a tuple containing the result string and True/False for the check.\\n    Example\\n    For s = \\\"abcde\\\", c = \\\"ae\\\", the result should be ('bcd',False)\\n    For s = \\\"abcdef\\\", c = \\\"b\\\"  the result should be ('acdef',False)\\n    For s = \\\"abcdedcba\\\", c = \\\"ab\\\", the result should be ('cdedc',True)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def reverse_delete(s,c):\n    \"\"\"\n    Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is palindrome.\n    A string is called palindrome if it reads the same backward as forward.\n    You should return a tuple containing the result string and True/False for the check.\n    \n    Example\n    For s = \"abcde\", c = \"ae\", the result should be ('bcd',False)\n    For s = \"abcdef\", c = \"b\"  the result should be ('acdef',False)\n    For s = \"abcdedcba\", c = \"ab\", the result should be ('cdedc',True)\n    \"\"\"\n    # Your code here"
+}

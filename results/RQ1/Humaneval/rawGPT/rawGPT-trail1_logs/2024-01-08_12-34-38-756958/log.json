@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-38-756958",
+    "task": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears 2 places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TGST'\n    >>> encode('This is a message')\n    'tHKS KS C MGSSCGG'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:38",
+        "task-id": "2024-01-08 12:34:38",
+        "workflow": "2024-01-08 12:34:38",
+        "Prompt": "2024-01-08 12:34:41",
+        "FinalCode": "2024-01-08 12:34:41"
+    },
+    "task-id": "HumanEval/93",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef encode(message):\\n    \\\"\\\"\\\"\\n    Write a function that takes a message, and encodes in such a \\n    way that it swaps case of all letters, replaces all vowels in \\n    the message with the letter that appears 2 places ahead of that \\n    vowel in the english alphabet. \\n    Assume only letters. \\n    \\n    Examples:\\n    >>> encode('test')\\n    'TGST'\\n    >>> encode('This is a message')\\n    'tHKS KS C MGSSCGG'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears 2 places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TGST'\n    >>> encode('This is a message')\n    'tHKS KS C MGSSCGG'\n    \"\"\"\n    encoded_message = \"\"\n    vowels = \"aeiouAEIOU\"\n    for char in message:\n        if char.isalpha():\n            if char.lower() in vowels:\n                encoded_message += chr(ord(char) + 2)\n            else:\n                if char.islower():\n                    encoded_message += char.upper()\n                else:\n                    encoded_message += char.lower()\n        else:\n            encoded_message += char\n    return encoded_message"
+}

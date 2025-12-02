@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-13-784624",
+    "task": "def square_Sum(n):  \n'''Write a python function that takes in an integer n and returns the sum of the squares of the first n odd natural numbers.\nassert square_Sum(2) == 10'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:13",
+        "task-id": "2024-02-05 12:30:13",
+        "workflow": "2024-02-05 12:30:13",
+        "Prompt": "2024-02-05 12:30:16",
+        "FinalCode": "2024-02-05 12:30:16"
+    },
+    "task-id": 267,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def square_Sum(n):  \\n'''Write a python function that takes in an integer n and returns the sum of the squares of the first n odd natural numbers.\\nassert square_Sum(2) == 10'''\\n\"",
+    "FinalCode": "def square_Sum(n):  \n    odd_nums = [i for i in range(1, 2*n, 2)]\n    sum_of_squares = sum([num**2 for num in odd_nums])\n    return sum_of_squares\n\nassert square_Sum(2) == 10"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-10-403664",
+    "task": "def replace_spaces(string):\n'''Write a function to replace all spaces in the given string with '%20'.\nassert replace_spaces(\"My Name is Dawood\") == 'My%20Name%20is%20Dawood''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:10",
+        "task-id": "2024-02-05 12:32:10",
+        "workflow": "2024-02-05 12:32:10",
+        "Prompt": "2024-02-05 12:33:04",
+        "FinalCode": "2024-02-05 12:33:04"
+    },
+    "task-id": 628,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def replace_spaces(string):\\n'''Write a function to replace all spaces in the given string with '%20'.\\nassert replace_spaces(\\\"My Name is Dawood\\\") == 'My%20Name%20is%20Dawood''''\\n\"",
+    "FinalCode": "def replace_spaces(string):\n    return string.replace(\" \", \"%20\")\n\nassert replace_spaces(\"My Name is Dawood\") == 'My%20Name%20is%20Dawood'"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-47-306744",
+    "task": "def find_lists(Input): \n'''Write a function to find number of lists present in the given tuple.\nassert find_lists(([1, 2, 3, 4], [5, 6, 7, 8])) == 2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:47",
+        "task-id": "2024-02-05 12:29:47",
+        "workflow": "2024-02-05 12:29:47",
+        "Prompt": "2024-02-05 12:29:50",
+        "FinalCode": "2024-02-05 12:29:50"
+    },
+    "task-id": 143,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_lists(Input): \\n'''Write a function to find number of lists present in the given tuple.\\nassert find_lists(([1, 2, 3, 4], [5, 6, 7, 8])) == 2'''\\n\"",
+    "FinalCode": "def find_lists(Input): \n    count = 0\n    for item in Input:\n        if isinstance(item, list):\n            count += 1\n    return count\n\nassert find_lists(([1, 2, 3, 4], [5, 6, 7, 8])) == 2"
+}

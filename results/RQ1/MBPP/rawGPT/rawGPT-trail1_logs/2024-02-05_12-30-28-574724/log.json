@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-28-574724",
+    "task": "def find_Element(arr,ranges,rotations,index) :  \n'''Write a python function to find element at a given index after number of rotations.\nassert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:28",
+        "task-id": "2024-02-05 12:30:28",
+        "workflow": "2024-02-05 12:30:28",
+        "Prompt": "2024-02-05 12:30:30",
+        "FinalCode": "2024-02-05 12:30:30"
+    },
+    "task-id": 304,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_Element(arr,ranges,rotations,index) :  \\n'''Write a python function to find element at a given index after number of rotations.\\nassert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3'''\\n\"",
+    "FinalCode": "\ndef find_Element(arr,ranges,rotations,index) :\n    for r in ranges:\n        start = r[0]\n        end = r[1]\n        arr = arr[start:end+1]\n        for i in range(rotations):\n            arr = arr[-1:] + arr[:-1]\n    return arr[index]\n\nassert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3"
+}

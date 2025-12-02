@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-31-573332",
+    "task": "def sort_counter(dict1):\n'''Write a function to sort a dictionary by value.\nassert sort_counter({'Math':81, 'Physics':83, 'Chemistry':87})==[('Chemistry', 87), ('Physics', 83), ('Math', 81)]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:31",
+        "task-id": "2024-02-05 12:31:31",
+        "workflow": "2024-02-05 12:31:31",
+        "Prompt": "2024-02-05 12:31:35",
+        "FinalCode": "2024-02-05 12:31:35"
+    },
+    "task-id": 475,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sort_counter(dict1):\\n'''Write a function to sort a dictionary by value.\\nassert sort_counter({'Math':81, 'Physics':83, 'Chemistry':87})==[('Chemistry', 87), ('Physics', 83), ('Math', 81)]'''\\n\"",
+    "FinalCode": "def sort_counter(dict1):\n    '''Write a function to sort a dictionary by value.'''\n    sorted_dict = sorted(dict1.items(), key=lambda x: x[1], reverse=True)\n    return sorted_dict\n\nassert sort_counter({'Math':81, 'Physics':83, 'Chemistry':87})==[('Chemistry', 87), ('Physics', 83), ('Math', 81)]"
+}

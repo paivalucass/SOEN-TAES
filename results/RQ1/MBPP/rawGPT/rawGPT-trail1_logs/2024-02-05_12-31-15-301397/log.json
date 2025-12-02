@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-15-301397",
+    "task": "def cube_nums(nums):\n'''Write a function to find cubes of individual elements in a list.\nassert cube_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:15",
+        "task-id": "2024-02-05 12:31:15",
+        "workflow": "2024-02-05 12:31:15",
+        "Prompt": "2024-02-05 12:31:19",
+        "FinalCode": "2024-02-05 12:31:19"
+    },
+    "task-id": 447,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def cube_nums(nums):\\n'''Write a function to find cubes of individual elements in a list.\\nassert cube_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]'''\\n\"",
+    "FinalCode": "def cube_nums(nums):\n    '''Write a function to find cubes of individual elements in a list'''\n    return [num**3 for num in nums]"
+}

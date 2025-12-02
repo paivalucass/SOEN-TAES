@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-59-540160",
+    "task": "def find_combinations(test_list):\n'''Write a function to find the combinations of sums with tuples in the given tuple list. https://www.geeksforgeeks.org/python-combinations-of-sum-with-tuples-in-tuple-list/\nassert find_combinations([(2, 4), (6, 7), (5, 1), (6, 10)]) == [(8, 11), (7, 5), (8, 14), (11, 8), (12, 17), (11, 11)]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:59",
+        "task-id": "2024-02-05 12:32:59",
+        "workflow": "2024-02-05 12:32:59",
+        "Prompt": "2024-02-05 12:33:05",
+        "FinalCode": "2024-02-05 12:33:05"
+    },
+    "task-id": 780,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_combinations(test_list):\\n'''Write a function to find the combinations of sums with tuples in the given tuple list. https://www.geeksforgeeks.org/python-combinations-of-sum-with-tuples-in-tuple-list/\\nassert find_combinations([(2, 4), (6, 7), (5, 1), (6, 10)]) == [(8, 11), (7, 5), (8, 14), (11, 8), (12, 17), (11, 11)]'''\\n\"",
+    "FinalCode": "def find_combinations(test_list):\n    '''Write a function to find the combinations of sums with tuples in the given tuple list.'''\n    \n    from itertools import combinations\n    \n    result = []\n    for i in combinations(test_list, 2):\n        result.append((i[0][0] + i[1][0], i[0][1] + i[1][1]))\n    return result\n\n# Test the function with an assertion\nassert find_combinations([(2, 4), (6, 7), (5, 1), (6, 10)]) == [(8, 11), (7, 5), (8, 14), (11, 8), (12, 17), (11, 11)]"
+}

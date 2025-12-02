@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-13-520605",
+    "task": "def remove_all_spaces(text):\n'''Write a function to remove all whitespaces from a string.\nassert remove_all_spaces('python  program')==('pythonprogram')'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:13",
+        "task-id": "2024-02-05 12:33:13",
+        "workflow": "2024-02-05 12:33:13",
+        "Prompt": "2024-02-05 12:33:15",
+        "FinalCode": "2024-02-05 12:33:15"
+    },
+    "task-id": 800,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def remove_all_spaces(text):\\n'''Write a function to remove all whitespaces from a string.\\nassert remove_all_spaces('python  program')==('pythonprogram')'''\\n\"",
+    "FinalCode": "def remove_all_spaces(text):\n    '''Write a function to remove all whitespaces from a string.'''\n    return text.replace(\" \", \"\")"
+}

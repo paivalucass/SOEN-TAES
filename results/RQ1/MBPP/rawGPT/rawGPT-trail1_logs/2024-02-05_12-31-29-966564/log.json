@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-29-966564",
+    "task": "def tuple_intersection(test_list1, test_list2):\n'''Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.\nassert tuple_intersection([(3, 4), (5, 6), (9, 10), (4, 5)] , [(5, 4), (3, 4), (6, 5), (9, 11)]) == {(4, 5), (3, 4), (5, 6)}'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:29",
+        "task-id": "2024-02-05 12:31:29",
+        "workflow": "2024-02-05 12:31:29",
+        "Prompt": "2024-02-05 12:31:35",
+        "FinalCode": "2024-02-05 12:31:35"
+    },
+    "task-id": 473,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def tuple_intersection(test_list1, test_list2):\\n'''Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.\\nassert tuple_intersection([(3, 4), (5, 6), (9, 10), (4, 5)] , [(5, 4), (3, 4), (6, 5), (9, 11)]) == {(4, 5), (3, 4), (5, 6)}'''\\n\"",
+    "FinalCode": "def tuple_intersection(test_list1, test_list2):\n    '''Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.'''\n    set1 = set(test_list1)\n    set2 = set(test_list2)\n    intersection = set1.intersection(set2)\n    return intersection\n\nassert tuple_intersection([(3, 4), (5, 6), (9, 10), (4, 5)] , [(5, 4), (3, 4), (6, 5), (9, 11)]) == {(4, 5), (3, 4), (5, 6)}"
+}

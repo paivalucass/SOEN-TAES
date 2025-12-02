@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-10-399474",
+    "task": "def division_elements(test_tup1, test_tup2):\n'''Write a function that takes in two tuples and performs mathematical division operation element-wise across the given tuples.\nassert division_elements((10, 4, 6, 9),(5, 2, 3, 3)) == (2, 2, 2, 3)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:10",
+        "task-id": "2024-02-05 12:30:10",
+        "workflow": "2024-02-05 12:30:10",
+        "Prompt": "2024-02-05 12:30:12",
+        "FinalCode": "2024-02-05 12:30:12"
+    },
+    "task-id": 261,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def division_elements(test_tup1, test_tup2):\\n'''Write a function that takes in two tuples and performs mathematical division operation element-wise across the given tuples.\\nassert division_elements((10, 4, 6, 9),(5, 2, 3, 3)) == (2, 2, 2, 3)'''\\n\"",
+    "FinalCode": "def division_elements(test_tup1, test_tup2):\n    '''Write a function that takes in two tuples and performs mathematical division operation element-wise across the given tuples.\n    assert division_elements((10, 4, 6, 9),(5, 2, 3, 3)) == (2, 2, 2, 3)'''\n    \n    result = tuple(x // y for x, y in zip(test_tup1, test_tup2))\n    return result"
+}

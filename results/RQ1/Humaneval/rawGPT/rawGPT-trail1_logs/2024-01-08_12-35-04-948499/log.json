@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-35-04-948499",
+    "task": "\ndef compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None if the values are equal.\n    Note: If a real number is represented as a string, the floating point might be . or ,\n\n    compare_one(1, 2.5) \u279e 2.5\n    compare_one(1, \"2,3\") \u279e \"2,3\"\n    compare_one(\"5,1\", \"6\") \u279e \"6\"\n    compare_one(\"1\", 1) \u279e None\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:35:04",
+        "task-id": "2024-01-08 12:35:04",
+        "workflow": "2024-01-08 12:35:04",
+        "Prompt": "2024-01-08 12:35:10",
+        "FinalCode": "2024-01-08 12:35:10"
+    },
+    "task-id": "HumanEval/137",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef compare_one(a, b):\\n    \\\"\\\"\\\"\\n    Create a function that takes integers, floats, or strings representing\\n    real numbers, and returns the larger variable in its given variable type.\\n    Return None if the values are equal.\\n    Note: If a real number is represented as a string, the floating point might be . or ,\\n\\n    compare_one(1, 2.5) \\u279e 2.5\\n    compare_one(1, \\\"2,3\\\") \\u279e \\\"2,3\\\"\\n    compare_one(\\\"5,1\\\", \\\"6\\\") \\u279e \\\"6\\\"\\n    compare_one(\\\"1\\\", 1) \\u279e None\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None if the values are equal.\n    Note: If a real number is represented as a string, the floating point might be . or ,\n\n    compare_one(1, 2.5) \u279e 2.5\n    compare_one(1, \"2,3\") \u279e \"2,3\"\n    compare_one(\"5,1\", \"6\") \u279e \"6\"\n    compare_one(\"1\", 1) \u279e None\n    \"\"\"\n    if isinstance(a, int) and isinstance(b, int):\n        if a > b:\n            return a\n        elif b > a:\n            return b\n        else:\n            return None\n    elif isinstance(a, float) and isinstance(b, float):\n        if a > b:\n            return a\n        elif b > a:\n            return b\n        else:\n            return None\n    elif isinstance(a, str) and isinstance(b, str):\n        if is_number(a) and is_number(b):  # check if both strings can be converted to numbers\n            a = convert_to_number(a)\n            b = convert_to_number(b)\n            if a > b:\n                return str(a)\n            elif b > a:\n                return str(b)\n            else:\n                return None\n        else:\n            return None\n    else:\n        return None\n\ndef is_number(s):\n    try:\n        float(s.replace(',', '.'))  # replace comma with dot for European number format\n        return True\n    except ValueError:\n        return False\n\ndef convert_to_number(s):\n    return float(s.replace(',', '.'))  # replace comma with dot for European number format"
+}

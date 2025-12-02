@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-08-727014",
+    "task": "def is_upper(string):\n'''Write a python function to convert a given string to uppercase.\nassert is_upper(\"person\") ==\"PERSON\"'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:08",
+        "task-id": "2024-02-05 12:32:08",
+        "workflow": "2024-02-05 12:32:08",
+        "Prompt": "2024-02-05 12:32:10",
+        "FinalCode": "2024-02-05 12:32:10"
+    },
+    "task-id": 624,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def is_upper(string):\\n'''Write a python function to convert a given string to uppercase.\\nassert is_upper(\\\"person\\\") ==\\\"PERSON\\\"'''\\n\"",
+    "FinalCode": "def is_upper(string):\n    return string.upper()"
+}

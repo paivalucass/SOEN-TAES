@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-49-296936",
+    "task": "import math\n\ndef max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 6\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 5\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 0\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:49",
+        "task-id": "2024-01-08 12:34:49",
+        "workflow": "2024-01-08 12:34:49",
+        "Prompt": "2024-01-08 12:34:50",
+        "FinalCode": "2024-01-08 12:34:50"
+    },
+    "task-id": "HumanEval/115",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"import math\\n\\ndef max_fill(grid, capacity):\\n    \\\"\\\"\\\"\\n    You are given a rectangular grid of wells. Each row represents a single well,\\n    and each 1 in a row represents a single unit of water.\\n    Each well has a corresponding bucket that can be used to extract water from it, \\n    and all buckets have the same capacity.\\n    Your task is to use the buckets to empty the wells.\\n    Output the number of times you need to lower the buckets.\\n\\n    Example 1:\\n        Input: \\n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\\n            bucket_capacity : 1\\n        Output: 6\\n\\n    Example 2:\\n        Input: \\n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\\n            bucket_capacity : 2\\n        Output: 5\\n    \\n    Example 3:\\n        Input: \\n            grid : [[0,0,0], [0,0,0]]\\n            bucket_capacity : 5\\n        Output: 0\\n\\n    Constraints:\\n        * all wells have the same length\\n        * 1 <= grid.length <= 10^2\\n        * 1 <= grid[:,1].length <= 10^2\\n        * grid[i][j] -> 0 | 1\\n        * 1 <= capacity <= 10\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def max_fill(grid, capacity):\n    total_water = 0\n    for row in grid:\n        for well in row:\n            total_water += well\n    \n    return total_water // capacity + (1 if total_water % capacity != 0 else 0)"
+}

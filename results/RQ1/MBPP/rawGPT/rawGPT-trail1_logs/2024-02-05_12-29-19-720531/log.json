@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-19-720531",
+    "task": "def word_len(s): \n'''Write a python function to check whether the length of the word is odd or not.\nassert word_len(\"Hadoop\") == False'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:19",
+        "task-id": "2024-02-05 12:29:19",
+        "workflow": "2024-02-05 12:29:19",
+        "Prompt": "2024-02-05 12:29:22",
+        "FinalCode": "2024-02-05 12:29:22"
+    },
+    "task-id": 79,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def word_len(s): \\n'''Write a python function to check whether the length of the word is odd or not.\\nassert word_len(\\\"Hadoop\\\") == False'''\\n\"",
+    "FinalCode": "def word_len(s):\n    '''Write a python function to check whether the length of the word is odd or not'''\n\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True\n\nassert word_len(\"Hadoop\") == False"
+}

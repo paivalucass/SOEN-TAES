@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-26-482947",
+    "task": "def lateralsurface_cone(r,h):\n'''Write a function to find the lateral surface area of a cone given radius r and the height h.\nassert lateralsurface_cone(5,12)==204.20352248333654'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:26",
+        "task-id": "2024-02-05 12:32:26",
+        "workflow": "2024-02-05 12:32:26",
+        "Prompt": "2024-02-05 12:32:28",
+        "FinalCode": "2024-02-05 12:32:28"
+    },
+    "task-id": 731,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def lateralsurface_cone(r,h):\\n'''Write a function to find the lateral surface area of a cone given radius r and the height h.\\nassert lateralsurface_cone(5,12)==204.20352248333654'''\\n\"",
+    "FinalCode": "def lateralsurface_cone(r, h):\n    import math\n    return math.pi * r * math.sqrt(r**2 + h**2)\n\nassert lateralsurface_cone(5, 12) == 204.20352248333654"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-52-445429",
+    "task": "def min_Swaps(str1,str2) : \n'''Write a python function to count minimum number of swaps required to convert one binary number represented as a string to another.\nassert min_Swaps(\"1101\",\"1110\") == 1'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:52",
+        "task-id": "2024-02-05 12:31:52",
+        "workflow": "2024-02-05 12:31:52",
+        "Prompt": "2024-02-05 12:31:58",
+        "FinalCode": "2024-02-05 12:31:58"
+    },
+    "task-id": 595,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def min_Swaps(str1,str2) : \\n'''Write a python function to count minimum number of swaps required to convert one binary number represented as a string to another.\\nassert min_Swaps(\\\"1101\\\",\\\"1110\\\") == 1'''\\n\"",
+    "FinalCode": "def min_Swaps(str1, str2):\n    count_1 = 0\n    count_0 = 0\n    for i in range(len(str1)):\n        if str1[i] != str2[i]:\n            if str1[i] == '1':\n                count_1 += 1\n            else:\n                count_0 += 1\n    return max(count_1, count_0)\n\n# Test the function with the given example\nassert min_Swaps(\"1101\",\"1110\") == 1"
+}

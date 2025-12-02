@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-23-345279",
+    "task": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:23",
+        "task-id": "2024-01-08 12:34:23",
+        "workflow": "2024-01-08 12:34:23",
+        "Prompt": "2024-01-08 12:34:27",
+        "FinalCode": "2024-01-08 12:34:27"
+    },
+    "task-id": "HumanEval/70",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef strange_sort_list(lst):\\n    '''\\n    Given list of integers, return list in strange order.\\n    Strange sorting, is when you start with the minimum value,\\n    then maximum of the remaining integers, then minimum and so on.\\n\\n    Examples:\\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\\n    strange_sort_list([]) == []\\n    '''\\n\"",
+    "FinalCode": "\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n    if not lst:\n        return lst\n\n    sorted_lst = []\n    lst.sort()\n    while lst:\n        sorted_lst.append(lst.pop(0))\n        if lst:\n            sorted_lst.append(lst.pop(-1))\n    \n    return sorted_lst"
+}

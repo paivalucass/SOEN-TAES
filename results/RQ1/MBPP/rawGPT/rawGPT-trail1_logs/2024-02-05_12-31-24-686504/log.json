@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-24-686504",
+    "task": "def max_subarray_product(arr):\n'''Write a function to find the maximum product subarray of the given array.\nassert max_subarray_product([1, -2, -3, 0, 7, -8, -2]) == 112'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:24",
+        "task-id": "2024-02-05 12:31:24",
+        "workflow": "2024-02-05 12:31:24",
+        "Prompt": "2024-02-05 12:31:30",
+        "FinalCode": "2024-02-05 12:31:30"
+    },
+    "task-id": 463,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_subarray_product(arr):\\n'''Write a function to find the maximum product subarray of the given array.\\nassert max_subarray_product([1, -2, -3, 0, 7, -8, -2]) == 112'''\\n\"",
+    "FinalCode": "def max_subarray_product(arr):\n    max_product = arr[0]\n    min_product = arr[0]\n    result = arr[0]\n    \n    for i in range(1, len(arr)):\n        if arr[i] < 0:\n            max_product, min_product = min_product, max_product\n        \n        max_product = max(arr[i], max_product * arr[i])\n        min_product = min(arr[i], min_product * arr[i])\n        \n        result = max(result, max_product)\n    \n    return result\n\nassert max_subarray_product([1, -2, -3, 0, 7, -8, -2]) == 112"
+}

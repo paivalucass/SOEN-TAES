@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-54-424711",
+    "task": "def cube_Sum(n): \n'''Write a python function to find the cube sum of first n even natural numbers.\nassert cube_Sum(2) == 72'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:54",
+        "task-id": "2024-02-05 12:30:54",
+        "workflow": "2024-02-05 12:30:54",
+        "Prompt": "2024-02-05 12:30:56",
+        "FinalCode": "2024-02-05 12:30:56"
+    },
+    "task-id": 420,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def cube_Sum(n): \\n'''Write a python function to find the cube sum of first n even natural numbers.\\nassert cube_Sum(2) == 72'''\\n\"",
+    "FinalCode": "def cube_Sum(n):\n    sum = 0\n    for i in range(1, n+1):\n        sum += (2*i)**3\n    return sum\n\n# Test\nassert cube_Sum(2) == 72"
+}

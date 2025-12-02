@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-12-084446",
+    "task": "def recursive_list_sum(data_list):\n'''Write a function to flatten a list and sum all of its elements.\nassert recursive_list_sum(([1, 2, [3,4],[5,6]]))==21'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:12",
+        "task-id": "2024-02-05 12:29:12",
+        "workflow": "2024-02-05 12:29:12",
+        "Prompt": "2024-02-05 12:29:17",
+        "FinalCode": "2024-02-05 12:29:17"
+    },
+    "task-id": 65,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def recursive_list_sum(data_list):\\n'''Write a function to flatten a list and sum all of its elements.\\nassert recursive_list_sum(([1, 2, [3,4],[5,6]]))==21'''\\n\"",
+    "FinalCode": "Here's the implementation of the recursive_list_sum function in Python:\n\n```python\ndef recursive_list_sum(data_list):\n    total_sum = 0\n    for element in data_list:\n        if isinstance(element, list):\n            total_sum += recursive_list_sum(element)\n        else:\n            total_sum += element\n    return total_sum\n\n# Test the function\nassert recursive_list_sum([1, 2, [3,4],[5,6]]) == 21\n```\n\nThis function takes a list as input and recursively iterates through its elements. If an element is another list, it calls itself recursively to sum the elements within that sublist. If the element is a numerical value, it adds it to the total sum. Finally, it returns the total sum of all elements in the input list."
+}

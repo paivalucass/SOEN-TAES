@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-20-085172",
+    "task": "def tetrahedral_number(n): \n'''Write a function to find the nth tetrahedral number.\nassert tetrahedral_number(5) == 35'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:20",
+        "task-id": "2024-02-05 12:29:20",
+        "workflow": "2024-02-05 12:29:20",
+        "Prompt": "2024-02-05 12:29:24",
+        "FinalCode": "2024-02-05 12:29:24"
+    },
+    "task-id": 80,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def tetrahedral_number(n): \\n'''Write a function to find the nth tetrahedral number.\\nassert tetrahedral_number(5) == 35'''\\n\"",
+    "FinalCode": "def tetrahedral_number(n): \n    '''Write a function to find the nth tetrahedral number.'''\n    return (n * (n + 1) * (n + 2)) / 6\n\nassert tetrahedral_number(5) == 35"
+}

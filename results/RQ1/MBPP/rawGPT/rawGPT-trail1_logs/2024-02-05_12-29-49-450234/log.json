@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-49-450234",
+    "task": "def sum_series(n):\n'''Write a function to calculate the sum (n - 2*i) from i=0 to n // 2, for instance n + (n-2) + (n-4)... (until n-x =< 0).\nassert sum_series(6) == 12'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:49",
+        "task-id": "2024-02-05 12:29:49",
+        "workflow": "2024-02-05 12:29:49",
+        "Prompt": "2024-02-05 12:29:53",
+        "FinalCode": "2024-02-05 12:29:53"
+    },
+    "task-id": 162,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sum_series(n):\\n'''Write a function to calculate the sum (n - 2*i) from i=0 to n // 2, for instance n + (n-2) + (n-4)... (until n-x =< 0).\\nassert sum_series(6) == 12'''\\n\"",
+    "FinalCode": "\nHere is the corrected code for the function `sum_series`:\n\n```python\ndef sum_series(n):\n    '''Write a function to calculate the sum (n - 2*i) from i=0 to n // 2, for instance n + (n-2) + (n-4)... (until n-x =< 0).'''\n    total_sum = 0\n    for i in range(n // 2 + 1):\n        total_sum += (n - 2*i)\n    return total_sum\n\nassert sum_series(6) == 12\n```\n\nThe function now correctly calculates the sum of (n - 2*i) from i=0 to n // 2 and returns the total sum. The assertion also checks if the function returns the expected value for the input 6."
+}

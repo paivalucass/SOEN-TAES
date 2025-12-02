@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-10-527000",
+    "task": "def text_starta_endb(text):\n'''Write a function that matches a string that has an 'a' followed by anything, ending in 'b'.\nassert text_starta_endb(\"aabbbb\")'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:10",
+        "task-id": "2024-02-05 12:33:10",
+        "workflow": "2024-02-05 12:33:10",
+        "Prompt": "2024-02-05 12:33:13",
+        "FinalCode": "2024-02-05 12:33:13"
+    },
+    "task-id": 794,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def text_starta_endb(text):\\n'''Write a function that matches a string that has an 'a' followed by anything, ending in 'b'.\\nassert text_starta_endb(\\\"aabbbb\\\")'''\\n\"",
+    "FinalCode": "\ndef text_starta_endb(text):\n    '''Write a function that matches a string that has an 'a' followed by anything, ending in 'b'.\n    assert text_starta_endb(\"aabbbb\")'''\n    if text[0] == 'a' and text[-1] == 'b':\n        return True\n    else:\n        return False"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-25-055793",
+    "task": "def max_val(listval):\n'''Write a function to find the maximum value in a given heterogeneous list.\nassert max_val(['Python', 3, 2, 4, 5, 'version'])==5'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:25",
+        "task-id": "2024-02-05 12:30:25",
+        "workflow": "2024-02-05 12:30:25",
+        "Prompt": "2024-02-05 12:31:27",
+        "FinalCode": "2024-02-05 12:31:27"
+    },
+    "task-id": 294,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_val(listval):\\n'''Write a function to find the maximum value in a given heterogeneous list.\\nassert max_val(['Python', 3, 2, 4, 5, 'version'])==5'''\\n\"",
+    "FinalCode": "def max_val(listval):\n    return max([x for x in listval if isinstance(x, int)])\n\nassert max_val(['Python', 3, 2, 4, 5, 'version']) == 5"
+}

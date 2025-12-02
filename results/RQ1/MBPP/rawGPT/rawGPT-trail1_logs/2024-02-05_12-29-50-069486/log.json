@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-50-069486",
+    "task": "def area_polygon(s, l):\n'''Write a function to calculate the area of a regular polygon given the length and number of its sides.\nassert math.isclose(area_polygon(4, 20), 400., rel_tol=0.001)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:50",
+        "task-id": "2024-02-05 12:29:50",
+        "workflow": "2024-02-05 12:29:50",
+        "Prompt": "2024-02-05 12:29:51",
+        "FinalCode": "2024-02-05 12:29:51"
+    },
+    "task-id": 163,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def area_polygon(s, l):\\n'''Write a function to calculate the area of a regular polygon given the length and number of its sides.\\nassert math.isclose(area_polygon(4, 20), 400., rel_tol=0.001)'''\\n\"",
+    "FinalCode": "import math\n\ndef area_polygon(s, l):\n    area = (s * l ** 2) / (4 * math.tan(math.pi / s))\n    return area\n\nassert math.isclose(area_polygon(4, 20), 400., rel_tol=0.001)"
+}

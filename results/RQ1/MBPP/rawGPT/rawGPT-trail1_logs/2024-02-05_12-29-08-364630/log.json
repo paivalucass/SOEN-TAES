@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-08-364630",
+    "task": "def rev(num):    \n'''Write a python function to check if a given number is one less than twice its reverse.\nassert check(70) == False'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:08",
+        "task-id": "2024-02-05 12:29:08",
+        "workflow": "2024-02-05 12:29:08",
+        "Prompt": "2024-02-05 12:29:10",
+        "FinalCode": "2024-02-05 12:29:10"
+    },
+    "task-id": 56,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def rev(num):    \\n'''Write a python function to check if a given number is one less than twice its reverse.\\nassert check(70) == False'''\\n\"",
+    "FinalCode": "def rev(num):\n    '''Write a python function to check if a given number is one less than twice its reverse.'''\n    reverse_num = int(str(num)[::-1])\n    if num == 2 * reverse_num - 1:\n        return True\n    else:\n        return False\n\n# Test case\nassert rev(70) == False"
+}

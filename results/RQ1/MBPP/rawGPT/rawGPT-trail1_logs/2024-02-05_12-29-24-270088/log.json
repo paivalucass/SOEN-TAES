@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-24-270088",
+    "task": "def find_substring(str1, sub_str):\n'''Write a function to check if a string is present as a substring in a given list of string values.\nassert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:24",
+        "task-id": "2024-02-05 12:29:24",
+        "workflow": "2024-02-05 12:29:24",
+        "Prompt": "2024-02-05 12:29:26",
+        "FinalCode": "2024-02-05 12:29:26"
+    },
+    "task-id": 91,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_substring(str1, sub_str):\\n'''Write a function to check if a string is present as a substring in a given list of string values.\\nassert find_substring([\\\"red\\\", \\\"black\\\", \\\"white\\\", \\\"green\\\", \\\"orange\\\"],\\\"ack\\\")==True'''\\n\"",
+    "FinalCode": "def find_substring(str1, sub_str):\n    '''Write a function to check if a string is present as a substring in a given list of string values.'''\n    for s in str1:\n        if sub_str in s:\n            return True\n    return False\n\nassert find_substring([\"red\", \"black\", \"white\", \"green\", \"orange\"],\"ack\")==True"
+}

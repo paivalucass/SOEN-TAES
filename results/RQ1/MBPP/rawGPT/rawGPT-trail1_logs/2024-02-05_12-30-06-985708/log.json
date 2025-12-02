@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-06-985708",
+    "task": "def insert_element(list,element):\n'''Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.\nassert insert_element(['Red', 'Green', 'Black'] ,'c')==['c', 'Red', 'c', 'Green', 'c', 'Black']'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:06",
+        "task-id": "2024-02-05 12:30:06",
+        "workflow": "2024-02-05 12:30:06",
+        "Prompt": "2024-02-05 12:30:08",
+        "FinalCode": "2024-02-05 12:30:08"
+    },
+    "task-id": 251,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def insert_element(list,element):\\n'''Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.\\nassert insert_element(['Red', 'Green', 'Black'] ,'c')==['c', 'Red', 'c', 'Green', 'c', 'Black']'''\\n\"",
+    "FinalCode": "def insert_element(lst, element):\n    new_lst = []\n    for item in lst:\n        new_lst.append(element)\n        new_lst.append(item)\n    return new_lst\n\n# Example usage\nresult = insert_element(['Red', 'Green', 'Black'], 'c')\nprint(result)  # Output: ['c', 'Red', 'c', 'Green', 'c', 'Black']"
+}

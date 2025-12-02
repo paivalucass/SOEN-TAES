@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-44-963318",
+    "task": "def is_Sum_Of_Powers_Of_Two(n): \n'''Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.\nassert is_Sum_Of_Powers_Of_Two(10) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:44",
+        "task-id": "2024-02-05 12:29:44",
+        "workflow": "2024-02-05 12:29:44",
+        "Prompt": "2024-02-05 12:29:49",
+        "FinalCode": "2024-02-05 12:29:49"
+    },
+    "task-id": 138,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def is_Sum_Of_Powers_Of_Two(n): \\n'''Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.\\nassert is_Sum_Of_Powers_Of_Two(10) == True'''\\n\"",
+    "FinalCode": "def is_Sum_Of_Powers_Of_Two(n):\n    if n <= 0:\n        return False\n    binary_rep = bin(n)[2:]\n    for i in range(len(binary_rep)):\n        if binary_rep[i] == '1':\n            if n & (n-1) != 0:\n                return False\n    return True\n\nassert is_Sum_Of_Powers_Of_Two(10) == True"
+}

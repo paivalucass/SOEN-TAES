@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-58-401373",
+    "task": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:58",
+        "task-id": "2024-01-08 12:33:58",
+        "workflow": "2024-01-08 12:33:58",
+        "Prompt": "2024-01-08 12:34:03",
+        "FinalCode": "2024-01-08 12:34:03"
+    },
+    "task-id": "HumanEval/20",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Tuple\\n\\n\\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\\n    \\\"\\\"\\\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\\n    other and return them in order (smaller number, larger number).\\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\\n    (2.0, 2.2)\\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\\n    (2.0, 2.0)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\"\n    From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n    numbers.sort()  # Sort the numbers in ascending order\n    min_diff = float('inf')  # Set the initial minimum difference to positive infinity\n    result = None  # Initialize the result variable to None\n\n    for i in range(len(numbers) - 1):  # Iterate through the sorted list of numbers\n        diff = numbers[i + 1] - numbers[i]  # Calculate the difference between the current number and the next number\n        if diff < min_diff:  # If the difference is smaller than the current minimum difference\n            min_diff = diff  # Update the minimum difference\n            result = (numbers[i], numbers[i + 1])  # Update the result with the current pair of numbers\n\n    return result  # Return the pair of numbers with the smallest difference\n"
+}

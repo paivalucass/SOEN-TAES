@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-53-585819",
+    "task": "def check_expression(exp):\n'''Write a function to check if the given expression is balanced or not. https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/\nassert check_expression(\"{()}[{}]\") == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:53",
+        "task-id": "2024-02-05 12:32:53",
+        "workflow": "2024-02-05 12:32:53",
+        "Prompt": "2024-02-05 12:32:59",
+        "FinalCode": "2024-02-05 12:32:59"
+    },
+    "task-id": 771,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def check_expression(exp):\\n'''Write a function to check if the given expression is balanced or not. https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/\\nassert check_expression(\\\"{()}[{}]\\\") == True'''\\n\"",
+    "FinalCode": "def check_expression(exp):\n    '''Write a function to check if the given expression is balanced or not. https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/\n    assert check_expression(\"{()}[{}]\") == True'''\n\n    stack = []\n    opening_brackets = [\"(\", \"{\", \"[\"]\n    closing_brackets = [\")\", \"}\", \"]\"]\n    for char in exp:\n        if char in opening_brackets:\n            stack.append(char)\n        elif char in closing_brackets:\n            if not stack:\n                return False\n            if opening_brackets.index(stack.pop()) != closing_brackets.index(char):\n                return False\n    return not stack\n\n# Test the function\nprint(check_expression(\"{()}[{}]\"))  # Output: True"
+}

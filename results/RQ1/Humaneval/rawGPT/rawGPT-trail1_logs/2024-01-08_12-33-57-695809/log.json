@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-57-695809",
+    "task": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'one three five'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:57",
+        "task-id": "2024-01-08 12:33:57",
+        "workflow": "2024-01-08 12:33:57",
+        "Prompt": "2024-01-08 12:34:01",
+        "FinalCode": "2024-01-08 12:34:01"
+    },
+    "task-id": "HumanEval/19",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef sort_numbers(numbers: str) -> str:\\n    \\\"\\\"\\\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\\n    Return the string with numbers sorted from smallest to largest\\n    >>> sort_numbers('three one five')\\n    'one three five'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def sort_numbers(numbers: str) -> str:\n    \"\"\"\n    Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'one three five'\n    \"\"\"\n    num_dict = {'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9}\n    numbers_list = numbers.split()\n    numbers_list.sort(key=lambda x: num_dict[x])\n    return ' '.join(numbers_list)"
+}

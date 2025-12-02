@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-42-682159",
+    "task": "def sort_sublists(list1):\n'''Write a function to sort each sublist of strings in a given list of lists.\nassert sort_sublists([['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange']])==[['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:42",
+        "task-id": "2024-02-05 12:31:42",
+        "workflow": "2024-02-05 12:31:42",
+        "Prompt": "2024-02-05 12:31:44",
+        "FinalCode": "2024-02-05 12:31:44"
+    },
+    "task-id": 569,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sort_sublists(list1):\\n'''Write a function to sort each sublist of strings in a given list of lists.\\nassert sort_sublists([['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange']])==[['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]'''\\n\"",
+    "FinalCode": "def sort_sublists(list1):\n    sorted_list = [sorted(sublist) for sublist in list1]\n    return sorted_list\n\n# Test the function\nassert sort_sublists([['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange']]) == [['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]"
+}

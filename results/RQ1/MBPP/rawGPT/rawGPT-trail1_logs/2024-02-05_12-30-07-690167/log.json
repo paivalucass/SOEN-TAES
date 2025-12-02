@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-07-690167",
+    "task": "def count_integer(list1):\n'''Write a python function that returns the number of integer elements in a given list.\nassert count_integer([1,2,'abc',1.2]) == 2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:07",
+        "task-id": "2024-02-05 12:30:07",
+        "workflow": "2024-02-05 12:30:07",
+        "Prompt": "2024-02-05 12:30:09",
+        "FinalCode": "2024-02-05 12:30:09"
+    },
+    "task-id": 253,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_integer(list1):\\n'''Write a python function that returns the number of integer elements in a given list.\\nassert count_integer([1,2,'abc',1.2]) == 2'''\\n\"",
+    "FinalCode": "def count_integer(list1):\n    count = 0\n    for element in list1:\n        if isinstance(element, int):\n            count += 1\n    return count\n\n# Test the function\nassert count_integer([1,2,'abc',1.2]) == 2"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-27-001959",
+    "task": "def frequency_lists(list1):\n'''Write a function to find frequency of each element in a flattened list of lists, returned in a dictionary.\nassert frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]])=={1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:27",
+        "task-id": "2024-02-05 12:29:27",
+        "workflow": "2024-02-05 12:29:27",
+        "Prompt": "2024-02-05 12:29:30",
+        "FinalCode": "2024-02-05 12:29:30"
+    },
+    "task-id": 97,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def frequency_lists(list1):\\n'''Write a function to find frequency of each element in a flattened list of lists, returned in a dictionary.\\nassert frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]])=={1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}'''\\n\"",
+    "FinalCode": "def frequency_lists(list1):\n    '''Write a function to find frequency of each element in a flattened list of lists, returned in a dictionary.'''\n    flattened_list = [item for sublist in list1 for item in sublist]\n    frequency_dict = {}\n    for item in flattened_list:\n        if item in frequency_dict:\n            frequency_dict[item] += 1\n        else:\n            frequency_dict[item] = 1\n    return frequency_dict\n\nassert frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]]) == {1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}"
+}

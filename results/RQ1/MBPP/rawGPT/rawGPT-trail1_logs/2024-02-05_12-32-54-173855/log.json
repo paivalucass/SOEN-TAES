@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-54-173855",
+    "task": "def occurance_substring(text,pattern):\n'''Write a function to find the occurrence and position of the substrings within a string. Return None if there is no match.\nassert occurance_substring('python programming, python language','python')==('python', 0, 6)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:54",
+        "task-id": "2024-02-05 12:32:54",
+        "workflow": "2024-02-05 12:32:54",
+        "Prompt": "2024-02-05 12:32:58",
+        "FinalCode": "2024-02-05 12:32:58"
+    },
+    "task-id": 773,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def occurance_substring(text,pattern):\\n'''Write a function to find the occurrence and position of the substrings within a string. Return None if there is no match.\\nassert occurance_substring('python programming, python language','python')==('python', 0, 6)'''\\n\"",
+    "FinalCode": "def occurance_substring(text, pattern):\n    '''Write a function to find the occurrence and position of the substrings within a string. Return None if there is no match.\n    assert occurance_substring('python programming, python language','python')==('python', 0, 6)'''\n    occurrences = []\n    start = 0\n    while start < len(text):\n        start = text.find(pattern, start)\n        if start == -1:\n            break\n        occurrences.append((pattern, start, start + len(pattern) - 1))\n        start += 1\n    if occurrences:\n        return occurrences\n    else:\n        return None"
+}

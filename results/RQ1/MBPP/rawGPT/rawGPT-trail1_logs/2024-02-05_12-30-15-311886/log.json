@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-15-311886",
+    "task": "def sum_even_and_even_index(arr):  \n'''Write a python function to find the sum of even numbers at even positions of a list.\nassert sum_even_and_even_index([5, 6, 12, 1, 18, 8]) == 30'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:15",
+        "task-id": "2024-02-05 12:30:15",
+        "workflow": "2024-02-05 12:30:15",
+        "Prompt": "2024-02-05 12:30:16",
+        "FinalCode": "2024-02-05 12:30:16"
+    },
+    "task-id": 270,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sum_even_and_even_index(arr):  \\n'''Write a python function to find the sum of even numbers at even positions of a list.\\nassert sum_even_and_even_index([5, 6, 12, 1, 18, 8]) == 30'''\\n\"",
+    "FinalCode": "def sum_even_and_even_index(arr):\n    total = 0\n    for i in range(len(arr)):\n        if i % 2 == 0 and arr[i] % 2 == 0:\n            total += arr[i]\n    return total\n\nprint(sum_even_and_even_index([5, 6, 12, 1, 18, 8]))  # output: 30"
+}

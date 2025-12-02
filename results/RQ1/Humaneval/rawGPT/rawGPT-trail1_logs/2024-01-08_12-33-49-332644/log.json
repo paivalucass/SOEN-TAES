@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-49-332644",
+    "task": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:49",
+        "task-id": "2024-01-08 12:33:49",
+        "workflow": "2024-01-08 12:33:49",
+        "Prompt": "2024-01-08 12:33:52",
+        "FinalCode": "2024-01-08 12:33:52"
+    },
+    "task-id": "HumanEval/5",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\\n    \\\"\\\"\\\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\\n    >>> intersperse([], 4)\\n    []\\n    >>> intersperse([1, 2, 3], 4)\\n    [1, 4, 2, 4, 3]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n    result = []\n    for i in range(len(numbers)):\n        if i != 0:\n            result.append(delimeter)\n        result.append(numbers[i])\n    return result"
+}

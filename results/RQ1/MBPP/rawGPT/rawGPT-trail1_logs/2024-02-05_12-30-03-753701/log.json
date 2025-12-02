@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-03-753701",
+    "task": "def next_Perfect_Square(N): \n'''Write a python function to find the next perfect square greater than a given number.\nassert next_Perfect_Square(35) == 36'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:03",
+        "task-id": "2024-02-05 12:30:03",
+        "workflow": "2024-02-05 12:30:03",
+        "Prompt": "2024-02-05 12:30:07",
+        "FinalCode": "2024-02-05 12:30:07"
+    },
+    "task-id": 244,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def next_Perfect_Square(N): \\n'''Write a python function to find the next perfect square greater than a given number.\\nassert next_Perfect_Square(35) == 36'''\\n\"",
+    "FinalCode": "def next_Perfect_Square(N):\n    # Find the square root of the given number\n    root = int(N ** 0.5)\n    \n    # Check if the square root is a perfect square\n    if root * root == N:\n        # If it is a perfect square, return the next perfect square\n        return (root + 1) ** 2\n    else:\n        # If it is not a perfect square, find the next perfect square\n        return (root + 1) ** 2\n\n# Test the function\nassert next_Perfect_Square(35) == 36"
+}

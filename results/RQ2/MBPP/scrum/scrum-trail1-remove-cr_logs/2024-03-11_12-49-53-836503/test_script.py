@@ -1,0 +1,10 @@
+def frequency(a, x):
+    return a.count(x)
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(frequency([1,2,3], 4), 0)
+
+if __name__ == '__main__':
+    unittest.main()

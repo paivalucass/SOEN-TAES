@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-46-601066",
+    "task": "def expensive_items(items,n):\n'''Write a function to find the n most expensive items in a given dataset.\nassert expensive_items([{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}],1)==[{'name': 'Item-2', 'price': 555.22}]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:46",
+        "task-id": "2024-02-05 12:31:46",
+        "workflow": "2024-02-05 12:31:46",
+        "Prompt": "2024-02-05 12:31:48",
+        "FinalCode": "2024-02-05 12:31:48"
+    },
+    "task-id": 585,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def expensive_items(items,n):\\n'''Write a function to find the n most expensive items in a given dataset.\\nassert expensive_items([{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}],1)==[{'name': 'Item-2', 'price': 555.22}]'''\\n\"",
+    "FinalCode": "def expensive_items(items, n):\n    sorted_items = sorted(items, key=lambda x: x['price'], reverse=True)\n    return sorted_items[:n]\n\nassert expensive_items([{'name': 'Item-1', 'price': 101.1}, {'name': 'Item-2', 'price': 555.22}], 1) == [{'name': 'Item-2', 'price': 555.22}]"
+}

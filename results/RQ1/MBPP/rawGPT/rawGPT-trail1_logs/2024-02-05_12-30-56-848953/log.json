@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-56-848953",
+    "task": "def extract_rear(test_tuple):\n'''Write a function to extract only the rear index element of each string in the given tuple.\nassert extract_rear(('Mers', 'for', 'Vers') ) == ['s', 'r', 's']'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:56",
+        "task-id": "2024-02-05 12:30:56",
+        "workflow": "2024-02-05 12:30:56",
+        "Prompt": "2024-02-05 12:30:59",
+        "FinalCode": "2024-02-05 12:30:59"
+    },
+    "task-id": 424,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def extract_rear(test_tuple):\\n'''Write a function to extract only the rear index element of each string in the given tuple.\\nassert extract_rear(('Mers', 'for', 'Vers') ) == ['s', 'r', 's']'''\\n\"",
+    "FinalCode": "def extract_rear(test_tuple):\n    '''Write a function to extract only the rear index element of each string in the given tuple.'''\n    return [x[-1] for x in test_tuple]\n\nassert extract_rear(('Mers', 'for', 'Vers') ) == ['s', 'r', 's']"
+}

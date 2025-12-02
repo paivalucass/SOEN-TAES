@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-11-201755",
+    "task": "\n\ndef median(l: list):\n    \"\"\"Return median of elements in the list l.\n    >>> median([3, 1, 2, 4, 5])\n    3\n    >>> median([-10, 4, 6, 1000, 10, 20])\n    15.0\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:11",
+        "task-id": "2024-01-08 12:34:11",
+        "workflow": "2024-01-08 12:34:11",
+        "Prompt": "2024-01-08 12:34:13",
+        "FinalCode": "2024-01-08 12:34:13"
+    },
+    "task-id": "HumanEval/47",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef median(l: list):\\n    \\\"\\\"\\\"Return median of elements in the list l.\\n    >>> median([3, 1, 2, 4, 5])\\n    3\\n    >>> median([-10, 4, 6, 1000, 10, 20])\\n    15.0\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "    sorted_list = sorted(l)\n    n = len(sorted_list)\n    if n % 2 == 0:\n        return (sorted_list[n//2 - 1] + sorted_list[n//2]) / 2\n    else:\n        return sorted_list[n//2]"
+}

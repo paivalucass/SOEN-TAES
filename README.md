@@ -1,1 +1,1 @@
-### SOEN-TAES replication using CHAT-GPT5
+### SOEN-101 replication using CHAT-GPT5 (TAES discipline)

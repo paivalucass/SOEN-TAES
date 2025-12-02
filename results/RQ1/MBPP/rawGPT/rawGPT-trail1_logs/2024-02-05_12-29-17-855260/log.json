@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-17-855260",
+    "task": "def is_samepatterns(colors, patterns):    \n'''Write a function to check whether it follows the sequence given in the patterns array.\nassert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:17",
+        "task-id": "2024-02-05 12:29:17",
+        "workflow": "2024-02-05 12:29:17",
+        "Prompt": "2024-02-05 12:29:20",
+        "FinalCode": "2024-02-05 12:29:20"
+    },
+    "task-id": 74,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def is_samepatterns(colors, patterns):    \\n'''Write a function to check whether it follows the sequence given in the patterns array.\\nassert is_samepatterns([\\\"red\\\",\\\"green\\\",\\\"green\\\"], [\\\"a\\\", \\\"b\\\", \\\"b\\\"])==True'''\\n\"",
+    "FinalCode": "def is_samepatterns(colors, patterns):\n    pattern_dict = {}\n    for i in range(len(colors)):\n        if patterns[i] in pattern_dict:\n            if pattern_dict[patterns[i]] != colors[i]:\n                return False\n        else:\n            if colors[i] in pattern_dict.values():\n                return False\n            pattern_dict[patterns[i]] = colors[i]\n    return True\n\nassert is_samepatterns([\"red\",\"green\",\"green\"], [\"a\", \"b\", \"b\"])==True"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-28-967754",
+    "task": "def set_middle_bits(n):  \n'''Write a python function to toggle bits of the number except the first and the last bit. https://www.geeksforgeeks.org/toggle-bits-number-expect-first-last-bits/\nassert toggle_middle_bits(9) == 15'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:28",
+        "task-id": "2024-02-05 12:32:28",
+        "workflow": "2024-02-05 12:32:28",
+        "Prompt": "2024-02-05 12:32:30",
+        "FinalCode": "2024-02-05 12:32:30"
+    },
+    "task-id": 735,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def set_middle_bits(n):  \\n'''Write a python function to toggle bits of the number except the first and the last bit. https://www.geeksforgeeks.org/toggle-bits-number-expect-first-last-bits/\\nassert toggle_middle_bits(9) == 15'''\\n\"",
+    "FinalCode": "def toggle_middle_bits(n):\n    if n == 0:\n        return 1\n    else:\n        num_bits = n.bit_length()\n        mask = (1 << (num_bits - 1)) | 1\n        return n ^ mask\n\nassert toggle_middle_bits(9) == 15"
+}

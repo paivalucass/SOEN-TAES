@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-40-182190",
+    "task": "def sum_digits(n):\n'''Write a function to get the sum of the digits of a non-negative integer.\nassert sum_digits(345)==12'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:40",
+        "task-id": "2024-02-05 12:31:40",
+        "workflow": "2024-02-05 12:31:40",
+        "Prompt": "2024-02-05 12:31:41",
+        "FinalCode": "2024-02-05 12:31:41"
+    },
+    "task-id": 566,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sum_digits(n):\\n'''Write a function to get the sum of the digits of a non-negative integer.\\nassert sum_digits(345)==12'''\\n\"",
+    "FinalCode": "def sum_digits(n):\n    '''Write a function to get the sum of the digits of a non-negative integer.'''\n    return sum(int(digit) for digit in str(n))"
+}

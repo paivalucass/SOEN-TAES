@@ -1,0 +1,19 @@
+def same_chars(s0: str, s1: str) -> bool:
+    s0 = s0.lower()
+    s1 = s1.lower()
+    if not s0 or not s1:
+        return False
+    return set(s0) == set(s1)
+import unittest
+
+class Test(unittest.TestCase):
+    def test_same_chars(self):
+        self.assertTrue(same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc'))
+        self.assertTrue(same_chars('abcd', 'dddddddabc'))
+        self.assertTrue(same_chars('dddddddabc', 'abcd'))
+        self.assertFalse(same_chars('eabcd', 'dddddddabc'))
+        self.assertFalse(same_chars('abcd', 'dddddddabce'))
+        self.assertFalse(same_chars('eabcdzzzz', 'dddzzzzzzzddddabc'))
+
+if __name__ == '__main__':
+    unittest.main()

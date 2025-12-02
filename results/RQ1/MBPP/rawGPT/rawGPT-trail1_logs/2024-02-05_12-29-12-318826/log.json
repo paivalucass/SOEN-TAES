@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-12-318826",
+    "task": "def pos_count(list):\n'''Write a python function to count the number of positive numbers in a list.\nassert pos_count([1,-2,3,-4]) == 2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:12",
+        "task-id": "2024-02-05 12:29:12",
+        "workflow": "2024-02-05 12:29:12",
+        "Prompt": "2024-02-05 12:29:19",
+        "FinalCode": "2024-02-05 12:29:19"
+    },
+    "task-id": 66,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def pos_count(list):\\n'''Write a python function to count the number of positive numbers in a list.\\nassert pos_count([1,-2,3,-4]) == 2'''\\n\"",
+    "FinalCode": "def pos_count(list):\n    count = 0\n    for num in list:\n        if num > 0:\n            count += 1\n    return count\n\n# Test the function\nassert pos_count([1,-2,3,-4]) == 2"
+}

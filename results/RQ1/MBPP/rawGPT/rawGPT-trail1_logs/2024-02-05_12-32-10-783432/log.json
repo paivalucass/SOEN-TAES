@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-10-783432",
+    "task": "def Split(list): \n'''Write a python function to find even numbers from a list of numbers.\nassert Split([1,2,3,4,5]) == [2,4]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:10",
+        "task-id": "2024-02-05 12:32:10",
+        "workflow": "2024-02-05 12:32:10",
+        "Prompt": "2024-02-05 12:32:16",
+        "FinalCode": "2024-02-05 12:32:16"
+    },
+    "task-id": 629,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def Split(list): \\n'''Write a python function to find even numbers from a list of numbers.\\nassert Split([1,2,3,4,5]) == [2,4]'''\\n\"",
+    "FinalCode": "def Split(list): \n    '''Write a python function to find even numbers from a list of numbers.\n    assert Split([1,2,3,4,5]) == [2,4]'''\n    even_numbers = [num for num in list if num % 2 == 0]\n    return even_numbers"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-38-109596",
+    "task": "def capital_words_spaces(str1):\n'''Write a function to put spaces between words starting with capital letters in a given string.\nassert capital_words_spaces(\"Python\") == 'Python''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:38",
+        "task-id": "2024-02-05 12:32:38",
+        "workflow": "2024-02-05 12:32:38",
+        "Prompt": "2024-02-05 12:32:42",
+        "FinalCode": "2024-02-05 12:32:42"
+    },
+    "task-id": 748,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def capital_words_spaces(str1):\\n'''Write a function to put spaces between words starting with capital letters in a given string.\\nassert capital_words_spaces(\\\"Python\\\") == 'Python''''\\n\"",
+    "FinalCode": "def capital_words_spaces(str1):\n    result = \"\"\n    for i in range(len(str1)):\n        if str1[i].isupper() and i > 0:\n            result += \" \" + str1[i]\n        else:\n            result += str1[i]\n    return result\n\nassert capital_words_spaces(\"Python\") == 'Python'"
+}

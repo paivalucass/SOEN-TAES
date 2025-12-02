@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-21-306846",
+    "task": "def count_same_pair(nums1, nums2):\n'''The input is defined as two lists of the same length. Write a function to count indices where the lists have the same values.\nassert count_same_pair([1, 2, 3, 4, 5, 6, 7, 8],[2, 2, 3, 1, 2, 6, 7, 9])==4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:21",
+        "task-id": "2024-02-05 12:32:21",
+        "workflow": "2024-02-05 12:32:21",
+        "Prompt": "2024-02-05 12:32:24",
+        "FinalCode": "2024-02-05 12:32:24"
+    },
+    "task-id": 723,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_same_pair(nums1, nums2):\\n'''The input is defined as two lists of the same length. Write a function to count indices where the lists have the same values.\\nassert count_same_pair([1, 2, 3, 4, 5, 6, 7, 8],[2, 2, 3, 1, 2, 6, 7, 9])==4'''\\n\"",
+    "FinalCode": "def count_same_pair(nums1, nums2):\n    count = 0\n    for i in range(len(nums1)):\n        if nums1[i] == nums2[i]:\n            count += 1\n    return count\n\n# Test the function\nassert count_same_pair([1, 2, 3, 4, 5, 6, 7, 8],[2, 2, 3, 1, 2, 6, 7, 9]) == 4"
+}

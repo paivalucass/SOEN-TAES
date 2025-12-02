@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-34-116243",
+    "task": "\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:34",
+        "task-id": "2024-01-08 12:34:34",
+        "workflow": "2024-01-08 12:34:34",
+        "Prompt": "2024-01-08 12:34:39",
+        "FinalCode": "2024-01-08 12:34:39"
+    },
+    "task-id": "HumanEval/89",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef encrypt(s):\\n    \\\"\\\"\\\"Create a function encrypt that takes a string as an argument and\\n    returns a string encrypted with the alphabet being rotated. \\n    The alphabet should be rotated in a manner such that the letters \\n    shift down by two multiplied to two places.\\n    For example:\\n    encrypt('hi') returns 'lm'\\n    encrypt('asdfghjkl') returns 'ewhjklnop'\\n    encrypt('gf') returns 'kj'\\n    encrypt('et') returns 'ix'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'lm'\n    encrypt('asdfghjkl') returns 'ewhjklnop'\n    encrypt('gf') returns 'kj'\n    encrypt('et') returns 'ix'\n    \"\"\"\n\n    alphabet = 'abcdefghijklmnopqrstuvwxyz'\n    encrypted_text = ''\n\n    for char in s:\n        if char in alphabet:\n            index = (alphabet.index(char) + 2 * 2) % 26\n            encrypted_text += alphabet[index]\n        else:\n            encrypted_text += char\n\n    return encrypted_text"
+}

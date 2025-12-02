@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-33-696606",
+    "task": "def all_Characters_Same(s) :\n'''Write a python function to check whether all the characters are same or not.\nassert all_Characters_Same(\"python\") == False'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:33",
+        "task-id": "2024-02-05 12:32:33",
+        "workflow": "2024-02-05 12:32:33",
+        "Prompt": "2024-02-05 12:32:36",
+        "FinalCode": "2024-02-05 12:32:36"
+    },
+    "task-id": 741,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def all_Characters_Same(s) :\\n'''Write a python function to check whether all the characters are same or not.\\nassert all_Characters_Same(\\\"python\\\") == False'''\\n\"",
+    "FinalCode": "def all_Characters_Same(s) :\n    '''Write a python function to check whether all the characters are same or not.'''\n    return all(char == s[0] for char in s)\n\nassert all_Characters_Same(\"python\") == False"
+}

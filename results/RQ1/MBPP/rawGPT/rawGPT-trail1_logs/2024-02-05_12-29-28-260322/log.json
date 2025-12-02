@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-28-260322",
+    "task": "def next_smallest_palindrome(num):\n'''Write a function to find the next smallest palindrome of a specified integer, returned as an integer.\nassert next_smallest_palindrome(99)==101'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:28",
+        "task-id": "2024-02-05 12:29:28",
+        "workflow": "2024-02-05 12:29:28",
+        "Prompt": "2024-02-05 12:29:31",
+        "FinalCode": "2024-02-05 12:29:31"
+    },
+    "task-id": 100,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def next_smallest_palindrome(num):\\n'''Write a function to find the next smallest palindrome of a specified integer, returned as an integer.\\nassert next_smallest_palindrome(99)==101'''\\n\"",
+    "FinalCode": "def next_smallest_palindrome(num):\n    num += 1\n    while str(num) != str(num)[::-1]:\n        num += 1\n    return num\n\n# Test case\nassert next_smallest_palindrome(99) == 101"
+}

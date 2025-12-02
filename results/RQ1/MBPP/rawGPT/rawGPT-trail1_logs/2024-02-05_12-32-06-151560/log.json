@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-06-151560",
+    "task": "def div_list(nums1,nums2):\n'''Write a function to divide two lists element wise.\nassert div_list([4,5,6],[1, 2, 3])==[4.0,2.5,2.0]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:06",
+        "task-id": "2024-02-05 12:32:06",
+        "workflow": "2024-02-05 12:32:06",
+        "Prompt": "2024-02-05 12:32:07",
+        "FinalCode": "2024-02-05 12:32:07"
+    },
+    "task-id": 618,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def div_list(nums1,nums2):\\n'''Write a function to divide two lists element wise.\\nassert div_list([4,5,6],[1, 2, 3])==[4.0,2.5,2.0]'''\\n\"",
+    "FinalCode": "def div_list(nums1,nums2):\n    '''Write a function to divide two lists element wise.'''\n    return [float(nums1[i])/nums2[i] for i in range(len(nums1))]"
+}

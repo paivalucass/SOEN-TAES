@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-51-886505",
+    "task": "def pair_wise(l1):\n'''Write a function to return a list of all pairs of consecutive items in a given list.\nassert pair_wise([1,1,2,3,3,4,4,5])==[(1, 1), (1, 2), (2, 3), (3, 3), (3, 4), (4, 4), (4, 5)]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:51",
+        "task-id": "2024-02-05 12:32:51",
+        "workflow": "2024-02-05 12:32:51",
+        "Prompt": "2024-02-05 12:32:55",
+        "FinalCode": "2024-02-05 12:32:55"
+    },
+    "task-id": 766,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def pair_wise(l1):\\n'''Write a function to return a list of all pairs of consecutive items in a given list.\\nassert pair_wise([1,1,2,3,3,4,4,5])==[(1, 1), (1, 2), (2, 3), (3, 3), (3, 4), (4, 4), (4, 5)]'''\\n\"",
+    "FinalCode": "def pair_wise(l1):\n    pairs = []\n    for i in range(len(l1)-1):\n        pairs.append((l1[i], l1[i+1]))\n    return pairs\n\n# Test the function with the given example\nassert pair_wise([1,1,2,3,3,4,4,5])==[(1, 1), (1, 2), (2, 3), (3, 3), (3, 4), (4, 4), (4, 5)]"
+}

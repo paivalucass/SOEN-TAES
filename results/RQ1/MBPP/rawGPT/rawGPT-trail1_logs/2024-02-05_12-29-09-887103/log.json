@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-09-887103",
+    "task": "def opposite_Signs(x,y): \n'''Write a python function to check whether the given two integers have opposite sign or not.\nassert opposite_Signs(1,-2) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:09",
+        "task-id": "2024-02-05 12:29:09",
+        "workflow": "2024-02-05 12:29:09",
+        "Prompt": "2024-02-05 12:29:11",
+        "FinalCode": "2024-02-05 12:29:11"
+    },
+    "task-id": 58,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def opposite_Signs(x,y): \\n'''Write a python function to check whether the given two integers have opposite sign or not.\\nassert opposite_Signs(1,-2) == True'''\\n\"",
+    "FinalCode": "def opposite_Signs(x, y):\n    if (x < 0 and y > 0) or (x > 0 and y < 0):\n        return True\n    else:\n        return False\n\n# Test the function\nassert opposite_Signs(1, -2) == True"
+}

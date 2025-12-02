@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-25-442115",
+    "task": "def sum_list(lst1,lst2):\n'''Write a function takes as input two lists [a_1,...,a_n], [b_1,...,b_n] and returns [a_1+b_1,...,a_n+b_n].\nassert sum_list([10,20,30],[15,25,35])==[25,45,65]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:25",
+        "task-id": "2024-02-05 12:32:25",
+        "workflow": "2024-02-05 12:32:25",
+        "Prompt": "2024-02-05 12:32:29",
+        "FinalCode": "2024-02-05 12:32:29"
+    },
+    "task-id": 728,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sum_list(lst1,lst2):\\n'''Write a function takes as input two lists [a_1,...,a_n], [b_1,...,b_n] and returns [a_1+b_1,...,a_n+b_n].\\nassert sum_list([10,20,30],[15,25,35])==[25,45,65]'''\\n\"",
+    "FinalCode": "\ndef sum_list(lst1, lst2):\n    '''\n    Write a function takes as input two lists [a_1,...,a_n], [b_1,...,b_n] and returns [a_1+b_1,...,a_n+b_n].\n    assert sum_list([10,20,30],[15,25,35])==[25,45,65]\n    '''\n    return [a + b for a, b in zip(lst1, lst2)]"
+}

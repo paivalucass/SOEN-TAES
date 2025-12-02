@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-21-763650",
+    "task": "def centered_hexagonal_number(n):\n'''Write a function to find nth centered hexagonal number.\nassert centered_hexagonal_number(10) == 271'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:21",
+        "task-id": "2024-02-05 12:29:21",
+        "workflow": "2024-02-05 12:29:21",
+        "Prompt": "2024-02-05 12:29:24",
+        "FinalCode": "2024-02-05 12:29:24"
+    },
+    "task-id": 86,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def centered_hexagonal_number(n):\\n'''Write a function to find nth centered hexagonal number.\\nassert centered_hexagonal_number(10) == 271'''\\n\"",
+    "FinalCode": "def centered_hexagonal_number(n):\n    return 3*n*(n-1) + 1\n\n# Test the function\nassert centered_hexagonal_number(10) == 271"
+}

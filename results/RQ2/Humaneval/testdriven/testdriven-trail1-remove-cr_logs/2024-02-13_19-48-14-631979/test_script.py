@@ -1,0 +1,27 @@
+def sort_array(array):
+    if len(array) == 0:
+        return array
+    if len(array) == 1:
+        return array[:]
+    if (array[0] + array[-1]) % 2 == 1:
+        return sorted(array)
+    else:
+        return sorted(array, reverse=True)
+
+import unittest
+
+class Test(unittest.TestCase):
+    def test_empty_array(self):
+        self.assertEqual(sort_array([]), [])
+    
+    def test_single_element_array(self):
+        self.assertEqual(sort_array([5]), [5])
+    
+    def test_odd_sum_array(self):
+        self.assertEqual(sort_array([2, 4, 3, 0, 1, 5]), [0, 1, 2, 3, 4, 5])
+    
+    def test_even_sum_array(self):
+        self.assertEqual(sort_array([2, 4, 3, 0, 1, 5, 6]), [6, 5, 4, 3, 2, 1, 0])
+
+if __name__ == '__main__':
+    unittest.main()

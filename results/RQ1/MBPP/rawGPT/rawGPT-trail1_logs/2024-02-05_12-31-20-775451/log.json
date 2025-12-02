@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-20-775451",
+    "task": "def Find_Min(lst): \n'''Write a python function to find the sublist having minimum length.\nassert Find_Min([[1],[1,2],[1,2,3]]) == [1]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:20",
+        "task-id": "2024-02-05 12:31:20",
+        "workflow": "2024-02-05 12:31:20",
+        "Prompt": "2024-02-05 12:31:27",
+        "FinalCode": "2024-02-05 12:31:27"
+    },
+    "task-id": 457,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def Find_Min(lst): \\n'''Write a python function to find the sublist having minimum length.\\nassert Find_Min([[1],[1,2],[1,2,3]]) == [1]'''\\n\"",
+    "FinalCode": "def Find_Min(lst):\n    min_length = float('inf')\n    min_sublist = []\n    \n    for sub in lst:\n        if len(sub) < min_length:\n            min_length = len(sub)\n            min_sublist = sub\n    \n    return min_sublist\n\n# Test cases\nassert Find_Min([[1],[1,2],[1,2,3]]) == [1]"
+}

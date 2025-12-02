@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-16-348729",
+    "task": "def even_binomial_Coeff_Sum( n): \n'''Write a python function that takes in a positive integer n and finds the sum of even index binomial coefficients.\nassert even_binomial_Coeff_Sum(4) == 8'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:16",
+        "task-id": "2024-02-05 12:30:16",
+        "workflow": "2024-02-05 12:30:16",
+        "Prompt": "2024-02-05 12:30:19",
+        "FinalCode": "2024-02-05 12:30:19"
+    },
+    "task-id": 274,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def even_binomial_Coeff_Sum( n): \\n'''Write a python function that takes in a positive integer n and finds the sum of even index binomial coefficients.\\nassert even_binomial_Coeff_Sum(4) == 8'''\\n\"",
+    "FinalCode": "def even_binomial_Coeff_Sum(n):\n    sum = 0\n    for i in range(n+1):\n        if i % 2 == 0:\n            sum += math.comb(n, i)\n    return sum\n\n# Test the function\nassert even_binomial_Coeff_Sum(4) == 8"
+}

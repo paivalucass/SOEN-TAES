@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-23-395449",
+    "task": "def upper_ctr(str):\n'''Write a python function to count the upper case characters in a given string.\nassert upper_ctr('PYthon') == 1'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:23",
+        "task-id": "2024-02-05 12:31:23",
+        "workflow": "2024-02-05 12:31:23",
+        "Prompt": "2024-02-05 12:31:25",
+        "FinalCode": "2024-02-05 12:31:25"
+    },
+    "task-id": 461,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def upper_ctr(str):\\n'''Write a python function to count the upper case characters in a given string.\\nassert upper_ctr('PYthon') == 1'''\\n\"",
+    "FinalCode": "def upper_ctr(str):\n    count = 0\n    for char in str:\n        if char.isupper():\n            count += 1\n    return count\n\nassert upper_ctr('PYthon') == 1"
+}

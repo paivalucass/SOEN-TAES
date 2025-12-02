@@ -1,0 +1,26 @@
+def modp(n: int, p: int) -> int:
+    if n < 0 or p <= 0:
+        raise ValueError("n must be non-negative and p must be positive")
+
+    result = 1
+    base = 2
+
+    while n > 0:
+        if n % 2 == 1:
+            result = (result * base) % p
+        base = (base * base) % p
+        n = n // 2
+
+    return result
+import unittest
+
+class Test(unittest.TestCase):
+    def test_modp(self):
+        self.assertEqual(modp(3, 5), 3)
+        self.assertEqual(modp(1101, 101), 2)
+        self.assertEqual(modp(0, 101), 1)
+        self.assertEqual(modp(3, 11), 8)
+        self.assertEqual(modp(100, 101), 1)
+
+if __name__ == '__main__':
+    unittest.main()

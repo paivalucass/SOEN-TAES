@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-56-516558",
+    "task": "\n\ndef count_distinct_characters(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    3\n    >>> count_distinct_characters('Jerry')\n    4\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:56",
+        "task-id": "2024-01-08 12:33:56",
+        "workflow": "2024-01-08 12:33:56",
+        "Prompt": "2024-01-08 12:33:58",
+        "FinalCode": "2024-01-08 12:33:58"
+    },
+    "task-id": "HumanEval/16",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef count_distinct_characters(string: str) -> int:\\n    \\\"\\\"\\\" Given a string, find out how many distinct characters (regardless of case) does it consist of\\n    >>> count_distinct_characters('xyzXYZ')\\n    3\\n    >>> count_distinct_characters('Jerry')\\n    4\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def count_distinct_characters(string: str) -> int:\n    distinct_chars = set(string.lower())\n    return len(distinct_chars)\n\nprint(count_distinct_characters('xyzXYZ'))  # Output: 3\nprint(count_distinct_characters('Jerry'))   # Output: 4"
+}

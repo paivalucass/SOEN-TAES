@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-06-424365",
+    "task": "def text_lowercase_underscore(text):\n'''Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.\nassert text_lowercase_underscore(\"aab_cbbbc\")==(True)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:06",
+        "task-id": "2024-02-05 12:29:06",
+        "workflow": "2024-02-05 12:29:06",
+        "Prompt": "2024-02-05 12:29:11",
+        "FinalCode": "2024-02-05 12:29:11"
+    },
+    "task-id": 16,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def text_lowercase_underscore(text):\\n'''Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.\\nassert text_lowercase_underscore(\\\"aab_cbbbc\\\")==(True)'''\\n\"",
+    "FinalCode": "def text_lowercase_underscore(text):\n    '''Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.'''\n    if '_' in text:\n        words = text.split('_')\n        for word in words:\n            if word.islower() == False:\n                return False\n        return True\n    else:\n        return False\n\nassert text_lowercase_underscore(\"aab_cbbbc\")==(True)"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-05-409686",
+    "task": "def remove_Occ(s,ch): \n'''Write a python function to remove first and last occurrence of a given character from the string.\nassert remove_Occ(\"hello\",\"l\") == \"heo\"'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:05",
+        "task-id": "2024-02-05 12:29:05",
+        "workflow": "2024-02-05 12:29:05",
+        "Prompt": "2024-02-05 12:29:09",
+        "FinalCode": "2024-02-05 12:29:09"
+    },
+    "task-id": 11,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def remove_Occ(s,ch): \\n'''Write a python function to remove first and last occurrence of a given character from the string.\\nassert remove_Occ(\\\"hello\\\",\\\"l\\\") == \\\"heo\\\"'''\\n\"",
+    "FinalCode": "def remove_Occ(s,ch):\n    first_occ = s.find(ch)\n    last_occ = s.rfind(ch)\n    \n    if first_occ != -1 and last_occ != -1:\n        new_str = s[:first_occ] + s[first_occ+1:last_occ] + s[last_occ+1:]\n        return new_str\n    else:\n        return s\n\n# Test the function\nassert remove_Occ(\"hello\",\"l\") == \"heo\""
+}

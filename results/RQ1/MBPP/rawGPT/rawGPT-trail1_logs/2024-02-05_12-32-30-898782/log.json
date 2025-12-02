@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-30-898782",
+    "task": "def find_Index(n): \n'''Write a python function to find the index of smallest triangular number with n digits. https://www.geeksforgeeks.org/index-of-smallest-triangular-number-with-n-digits/\nassert find_Index(2) == 4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:30",
+        "task-id": "2024-02-05 12:32:30",
+        "workflow": "2024-02-05 12:32:30",
+        "Prompt": "2024-02-05 12:32:33",
+        "FinalCode": "2024-02-05 12:32:33"
+    },
+    "task-id": 739,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_Index(n): \\n'''Write a python function to find the index of smallest triangular number with n digits. https://www.geeksforgeeks.org/index-of-smallest-triangular-number-with-n-digits/\\nassert find_Index(2) == 4'''\\n\"",
+    "FinalCode": "Here's the Python function to find the index of the smallest triangular number with n digits:\n\n```python\ndef find_Index(n):\n    current_triangular = 0\n    index = 1\n    while True:\n        current_triangular += index\n        if len(str(current_triangular)) >= n:\n            return index\n        index += 1\n\n# Test the function\nassert find_Index(2) == 4\n```\n\nThis function calculates the triangular numbers and checks the length of the number until the length is greater than or equal to n. When the condition is met, it returns the index of the smallest triangular number with n digits. The `assert` statement is used to verify that the function returns the expected result."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-08-903380",
+    "task": "def find_Max_Num(arr) : \n'''Write a python function to find the largest number that can be formed with the given list of digits.\nassert find_Max_Num([1,2,3]) == 321'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:08",
+        "task-id": "2024-02-05 12:29:08",
+        "workflow": "2024-02-05 12:29:08",
+        "Prompt": "2024-02-05 12:29:10",
+        "FinalCode": "2024-02-05 12:29:10"
+    },
+    "task-id": 57,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_Max_Num(arr) : \\n'''Write a python function to find the largest number that can be formed with the given list of digits.\\nassert find_Max_Num([1,2,3]) == 321'''\\n\"",
+    "FinalCode": "\ndef find_Max_Num(arr):\n    arr.sort(reverse=True)\n    result = ''.join(map(str, arr))\n    return int(result)\n\n# Test the function\nassert find_Max_Num([1,2,3]) == 321"
+}

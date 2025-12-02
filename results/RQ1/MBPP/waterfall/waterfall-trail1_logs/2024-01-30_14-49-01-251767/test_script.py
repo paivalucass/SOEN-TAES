@@ -1,0 +1,23 @@
+def bell_Number(n):
+    if not isinstance(n, int) or n < 0:
+        return None
+    
+    # Initialize bell array
+    bell = [[0 for i in range(n+1)] for j in range(n+1)]
+    bell[0][0] = 1
+    
+    # Calculate bell numbers
+    for i in range(1, n+1):
+        bell[i][0] = bell[i-1][i-1]
+        for j in range(1, i+1):
+            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]
+    
+    return bell[n][0]
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(bell_Number(2), 2)
+
+if __name__ == '__main__':
+    unittest.main()

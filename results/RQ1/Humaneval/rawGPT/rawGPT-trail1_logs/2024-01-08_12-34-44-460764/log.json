@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-44-460764",
+    "task": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any even digit.\n\n    Note: Returned list should be sorted in increasing order.\n    \n    For example:\n    >>> unique_digits([15, 33, 1422, 1])\n    [1, 15, 33]\n    >>> unique_digits([152, 323, 1422, 10])\n    []\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:44",
+        "task-id": "2024-01-08 12:34:44",
+        "workflow": "2024-01-08 12:34:44",
+        "Prompt": "2024-01-08 12:34:48",
+        "FinalCode": "2024-01-08 12:34:48"
+    },
+    "task-id": "HumanEval/104",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef unique_digits(x):\\n    \\\"\\\"\\\"Given a list of positive integers x. return a sorted list of all \\n    elements that hasn't any even digit.\\n\\n    Note: Returned list should be sorted in increasing order.\\n    \\n    For example:\\n    >>> unique_digits([15, 33, 1422, 1])\\n    [1, 15, 33]\\n    >>> unique_digits([152, 323, 1422, 10])\\n    []\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def unique_digits(x):\n    \"\"\"Given a list of positive integers x, return a sorted list of all \n    elements that don't have any even digit.\n\n    Note: Returned list should be sorted in increasing order.\n    \n    For example:\n    >>> unique_digits([15, 33, 1422, 1])\n    [1, 15, 33]\n    >>> unique_digits([152, 323, 1422, 10])\n    []\n    \"\"\"\n    result = []\n    for num in x:\n        has_even_digit = False\n        for digit in str(num):\n            if int(digit) % 2 == 0:\n                has_even_digit = True\n                break\n        if not has_even_digit:\n            result.append(num)\n    return sorted(result)"
+}

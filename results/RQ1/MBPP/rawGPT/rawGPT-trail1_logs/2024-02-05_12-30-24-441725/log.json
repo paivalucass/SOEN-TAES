@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-24-441725",
+    "task": "def find(n,m):  \n'''Write a python function to find quotient of two numbers (rounded down to the nearest integer).\nassert find(10,3) == 3'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:24",
+        "task-id": "2024-02-05 12:30:24",
+        "workflow": "2024-02-05 12:30:24",
+        "Prompt": "2024-02-05 12:30:27",
+        "FinalCode": "2024-02-05 12:30:27"
+    },
+    "task-id": 292,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find(n,m):  \\n'''Write a python function to find quotient of two numbers (rounded down to the nearest integer).\\nassert find(10,3) == 3'''\\n\"",
+    "FinalCode": "def find(n,m):\n    return n//m\n\nassert find(10,3) == 3"
+}

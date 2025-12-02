@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-31-653353",
+    "task": "\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:31",
+        "task-id": "2024-01-08 12:34:31",
+        "workflow": "2024-01-08 12:34:31",
+        "Prompt": "2024-01-08 12:34:33",
+        "FinalCode": "2024-01-08 12:34:33"
+    },
+    "task-id": "HumanEval/83",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef starts_one_ends(n):\\n    \\\"\\\"\\\"\\n    Given a positive integer n, return the count of the numbers of n-digit\\n    positive integers that start or end with 1.\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n    count = 0\n    if n == 1:\n        return 1\n    else:\n        count = 9 * (10**(n-1)) - 9**(n)\n    return count"
+}

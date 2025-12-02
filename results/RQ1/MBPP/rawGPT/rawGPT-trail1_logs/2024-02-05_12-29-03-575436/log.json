@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-03-575436",
+    "task": "def square_nums(nums):\n'''Write a function to find squares of individual elements in a list.\nassert square_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:03",
+        "task-id": "2024-02-05 12:29:03",
+        "workflow": "2024-02-05 12:29:03",
+        "Prompt": "2024-02-05 12:29:06",
+        "FinalCode": "2024-02-05 12:29:06"
+    },
+    "task-id": 8,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def square_nums(nums):\\n'''Write a function to find squares of individual elements in a list.\\nassert square_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]'''\\n\"",
+    "FinalCode": "def square_nums(nums):\n    '''Write a function to find squares of individual elements in a list.\n    assert square_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]'''\n    return [num**2 for num in nums]"
+}

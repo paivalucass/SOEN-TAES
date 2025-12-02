@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-27-607861",
+    "task": "\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => true\n    is_simple_power(2, 2) => true\n    is_simple_power(8, 2) => true\n    is_simple_power(3, 2) => false\n    is_simple_power(3, 1) => false\n    is_simple_power(5, 3) => false\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:27",
+        "task-id": "2024-01-08 12:34:27",
+        "workflow": "2024-01-08 12:34:27",
+        "Prompt": "2024-01-08 12:34:30",
+        "FinalCode": "2024-01-08 12:34:30"
+    },
+    "task-id": "HumanEval/76",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_simple_power(x, n):\\n    \\\"\\\"\\\"Your task is to write a function that returns true if a number x is a simple\\n    power of n and false in other cases.\\n    x is a simple power of n if n**int=x\\n    For example:\\n    is_simple_power(1, 4) => true\\n    is_simple_power(2, 2) => true\\n    is_simple_power(8, 2) => true\\n    is_simple_power(3, 2) => false\\n    is_simple_power(3, 1) => false\\n    is_simple_power(5, 3) => false\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def is_simple_power(x, n):\n    if x == 1:\n        return True\n    elif n == 1:\n        return False\n    else:\n        power = 1\n        while n ** power < x:\n            power += 1\n        return n ** power == x\n\n# Test cases\nprint(is_simple_power(1, 4)) # True\nprint(is_simple_power(2, 2)) # True\nprint(is_simple_power(8, 2)) # True\nprint(is_simple_power(3, 2)) # False\nprint(is_simple_power(3, 1)) # False\nprint(is_simple_power(5, 3)) # False"
+}

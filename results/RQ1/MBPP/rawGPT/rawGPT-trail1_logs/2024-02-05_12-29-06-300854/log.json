@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-06-300854",
+    "task": "def find_Volume(l,b,h) : \n'''Write a python function to find the volume of a triangular prism.\nassert find_Volume(10,8,6) == 240'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:06",
+        "task-id": "2024-02-05 12:29:06",
+        "workflow": "2024-02-05 12:29:06",
+        "Prompt": "2024-02-05 12:29:07",
+        "FinalCode": "2024-02-05 12:29:07"
+    },
+    "task-id": 14,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_Volume(l,b,h) : \\n'''Write a python function to find the volume of a triangular prism.\\nassert find_Volume(10,8,6) == 240'''\\n\"",
+    "FinalCode": "def find_Volume(l,b,h):\n    '''Write a python function to find the volume of a triangular prism.'''\n    return (1/2) * l * b * h\n\nassert find_Volume(10,8,6) == 240"
+}

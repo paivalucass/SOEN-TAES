@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-44-694743",
+    "task": "def count_reverse_pairs(test_list):\n'''Write a function to count the pairs of reverse strings in the given string list. https://www.geeksforgeeks.org/python-program-to-count-the-pairs-of-reverse-strings/\nassert count_reverse_pairs([\"julia\", \"best\", \"tseb\", \"for\", \"ailuj\"])== 2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:44",
+        "task-id": "2024-02-05 12:32:44",
+        "workflow": "2024-02-05 12:32:44",
+        "Prompt": "2024-02-05 12:32:46",
+        "FinalCode": "2024-02-05 12:32:46"
+    },
+    "task-id": 757,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_reverse_pairs(test_list):\\n'''Write a function to count the pairs of reverse strings in the given string list. https://www.geeksforgeeks.org/python-program-to-count-the-pairs-of-reverse-strings/\\nassert count_reverse_pairs([\\\"julia\\\", \\\"best\\\", \\\"tseb\\\", \\\"for\\\", \\\"ailuj\\\"])== 2'''\\n\"",
+    "FinalCode": "def count_reverse_pairs(test_list):\n    count = 0\n    for i in range(len(test_list)):\n        for j in range(i+1, len(test_list)):\n            if test_list[i] == test_list[j][::-1]:\n                count += 1\n    return count\n\n# Test the function\nassert count_reverse_pairs([\"julia\", \"best\", \"tseb\", \"for\", \"ailuj\"]) == 2"
+}

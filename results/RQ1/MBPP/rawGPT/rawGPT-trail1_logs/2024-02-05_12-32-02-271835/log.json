@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-02-271835",
+    "task": "def merge(lst):  \n'''Write a python function which takes a list of lists, where each sublist has two elements, and returns a list of two lists where the first list has the first element of each sublist and the second one has the second.\nassert merge([['x', 'y'], ['a', 'b'], ['m', 'n']]) == [['x', 'a', 'm'], ['y', 'b', 'n']]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:02",
+        "task-id": "2024-02-05 12:32:02",
+        "workflow": "2024-02-05 12:32:02",
+        "Prompt": "2024-02-05 12:32:07",
+        "FinalCode": "2024-02-05 12:32:07"
+    },
+    "task-id": 612,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def merge(lst):  \\n'''Write a python function which takes a list of lists, where each sublist has two elements, and returns a list of two lists where the first list has the first element of each sublist and the second one has the second.\\nassert merge([['x', 'y'], ['a', 'b'], ['m', 'n']]) == [['x', 'a', 'm'], ['y', 'b', 'n']]'''\\n\"",
+    "FinalCode": "def merge(lst):  \n    result = [[], []]\n    for sublst in lst:\n        result[0].append(sublst[0])\n        result[1].append(sublst[1])\n    return result\n\n# Test the function\nassert merge([['x', 'y'], ['a', 'b'], ['m', 'n']]) == [['x', 'a', 'm'], ['y', 'b', 'n']]"
+}

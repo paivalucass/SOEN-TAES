@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-53-617709",
+    "task": "def remove_length(test_str, K):\n'''Write a function to remove all the words with k length in the given string.\nassert remove_length('The person is most value tet', 3) == 'person is most value''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:53",
+        "task-id": "2024-02-05 12:32:53",
+        "workflow": "2024-02-05 12:32:53",
+        "Prompt": "2024-02-05 12:32:58",
+        "FinalCode": "2024-02-05 12:32:58"
+    },
+    "task-id": 772,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def remove_length(test_str, K):\\n'''Write a function to remove all the words with k length in the given string.\\nassert remove_length('The person is most value tet', 3) == 'person is most value''''\\n\"",
+    "FinalCode": "def remove_length(test_str, K):\n    '''Write a function to remove all the words with k length in the given string.'''\n    words = test_str.split()\n    result = [word for word in words if len(word) != K]\n    return ' '.join(result)\n\n# Test the function\nassert remove_length('The person is most value tet', 3) == 'person is most value'"
+}

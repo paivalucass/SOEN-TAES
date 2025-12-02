@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-35-18-881270",
+    "task": "\ndef generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [2, 4, 6, 8]\n    generate_integers(8, 2) => [2, 4, 6, 8]\n    generate_integers(10, 14) => []\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:35:18",
+        "task-id": "2024-01-08 12:35:18",
+        "workflow": "2024-01-08 12:35:18",
+        "Prompt": "2024-01-08 12:35:21",
+        "FinalCode": "2024-01-08 12:35:21"
+    },
+    "task-id": "HumanEval/163",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef generate_integers(a, b):\\n    \\\"\\\"\\\"\\n    Given two positive integers a and b, return the even digits between a\\n    and b, in ascending order.\\n\\n    For example:\\n    generate_integers(2, 8) => [2, 4, 6, 8]\\n    generate_integers(8, 2) => [2, 4, 6, 8]\\n    generate_integers(10, 14) => []\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [2, 4, 6, 8]\n    generate_integers(8, 2) => [2, 4, 6, 8]\n    generate_integers(10, 14) => []\n    \"\"\"\n    if a > b:\n        a, b = b, a\n    return [i for i in range(a, b+1) if i % 2 == 0]"
+}

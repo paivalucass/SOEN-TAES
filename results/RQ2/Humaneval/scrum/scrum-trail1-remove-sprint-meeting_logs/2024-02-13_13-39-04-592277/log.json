@@ -1,0 +1,16 @@
+{
+    "start_time": "2024-02-13_13-39-04-592277",
+    "task": "\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-13 13:39:04",
+        "task-id": "2024-02-13 13:39:04",
+        "workflow": "2024-02-13 13:39:04",
+        "UserStoryDraft0": "2024-02-13 13:40:59",
+        "AnalyzeMeetings": "2024-02-13 13:41:03"
+    },
+    "task-id": "HumanEval/13",
+    "workflow": "agile/agile_version_0.0.5_remove_stage.json",
+    "UserStoryDraft0": "{\n  \"UserStory\": {\n    \"As a product owner, I want to provide a function that can calculate the greatest common divisor of two integers, so that users can easily find the greatest common divisor of any given pair of numbers.\"\n \t\t\t\t\t\n \t\t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n \t\n ",
+    "UserStoryDraft0_prompt": "{\"Role\": \"You need to act as a professional product owner. Your task is to write a UserStory\", \"Instruction\": \"According to the Context, please analyze the requirement and write your response. Response in JSON format. Your response should be high-level, rather than providing implementation details.\", \"Example\": \"\", \"Context\": [], \"Question\": \"Follow the Instruction. The requirement is as follows:\\n\\n\\ndef greatest_common_divisor(a: int, b: int) -> int:\\n    \\\"\\\"\\\" Return a greatest common divisor of two integers a and b\\n    >>> greatest_common_divisor(3, 5)\\n    1\\n    >>> greatest_common_divisor(25, 15)\\n    5\\n    \\\"\\\"\\\"\\n\"}",
+    "AnalyzeMeetings": "{\n  \"Architect\": \"I suggest using a well-known algorithm like Euclid's algorithm to calculate the greatest common divisor efficiently. Also, consider the input validation and error handling to ensure the function can handle various edge cases.\",\n  \"Tester\": \"I suggest thoroughly testing the function with different input combinations, including positive and negative integers, large numbers, and edge cases like zero and one. Also, test for performance to ensure the function can handle calculations quickly and accurately.\"\n}"
+}

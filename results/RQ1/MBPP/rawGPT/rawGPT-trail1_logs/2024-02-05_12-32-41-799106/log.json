@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-41-799106",
+    "task": "def check_min_heap_helper(arr, i):\n'''Write a function to check if the given array represents min heap or not. https://www.geeksforgeeks.org/how-to-check-if-a-given-array-represents-a-binary-heap/\nassert check_min_heap([1, 2, 3, 4, 5, 6]) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:41",
+        "task-id": "2024-02-05 12:32:41",
+        "workflow": "2024-02-05 12:32:41",
+        "Prompt": "2024-02-05 12:32:44",
+        "FinalCode": "2024-02-05 12:32:44"
+    },
+    "task-id": 751,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def check_min_heap_helper(arr, i):\\n'''Write a function to check if the given array represents min heap or not. https://www.geeksforgeeks.org/how-to-check-if-a-given-array-represents-a-binary-heap/\\nassert check_min_heap([1, 2, 3, 4, 5, 6]) == True'''\\n\"",
+    "FinalCode": "def check_min_heap_helper(arr, i):\n    '''Write a function to check if the given array represents min heap or not. https://www.geeksforgeeks.org/how-to-check-if-a-given-array-represents-a-binary-heap/\n    assert check_min_heap([1, 2, 3, 4, 5, 6]) == True'''\n    if i >= len(arr):\n        return True\n    \n    left = 2*i + 1\n    right = 2*i + 2\n    \n    if left < len(arr) and arr[left] < arr[i]:\n        return False\n    if right < len(arr) and arr[right] < arr[i]:\n        return False\n    \n    return check_min_heap_helper(arr, left) and check_min_heap_helper(arr, right)\n\ndef check_min_heap(arr):\n    return check_min_heap_helper(arr, 0)"
+}

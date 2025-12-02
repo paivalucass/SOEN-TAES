@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-35-425132",
+    "task": "def check_none(test_tup):\n'''Write a function to check if the given tuple has any none value or not.\nassert check_none((10, 4, 5, 6, None)) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:35",
+        "task-id": "2024-02-05 12:32:35",
+        "workflow": "2024-02-05 12:32:35",
+        "Prompt": "2024-02-05 12:32:36",
+        "FinalCode": "2024-02-05 12:32:36"
+    },
+    "task-id": 744,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def check_none(test_tup):\\n'''Write a function to check if the given tuple has any none value or not.\\nassert check_none((10, 4, 5, 6, None)) == True'''\\n\"",
+    "FinalCode": "def check_none(test_tup):\n    for item in test_tup:\n        if item is None:\n            return True\n    return False\n\nassert check_none((10, 4, 5, 6, None)) == True"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-53-734583",
+    "task": "def count_occurance(s):\n'''Write a function to count the number of occurence of the string 'std' in a given string.\nassert count_occurance(\"letstdlenstdporstd\") == 3'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:53",
+        "task-id": "2024-02-05 12:29:53",
+        "workflow": "2024-02-05 12:29:53",
+        "Prompt": "2024-02-05 12:29:55",
+        "FinalCode": "2024-02-05 12:29:55"
+    },
+    "task-id": 172,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def count_occurance(s):\\n'''Write a function to count the number of occurence of the string 'std' in a given string.\\nassert count_occurance(\\\"letstdlenstdporstd\\\") == 3'''\\n\"",
+    "FinalCode": "def count_occurance(s):\n    '''Write a function to count the number of occurence of the string 'std' in a given string.'''\n    count = 0\n    for i in range(len(s) - 2):\n        if s[i:i + 3] == \"std\":\n            count += 1\n    return count\n\nassert count_occurance(\"letstdlenstdporstd\") == 3"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-19-420099",
+    "task": "def sub_list(nums1,nums2):\n'''Write a function to subtract two lists element-wise.\nassert sub_list([1, 2, 3],[4,5,6])==[-3,-3,-3]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:19",
+        "task-id": "2024-02-05 12:30:19",
+        "workflow": "2024-02-05 12:30:19",
+        "Prompt": "2024-02-05 12:30:21",
+        "FinalCode": "2024-02-05 12:30:21"
+    },
+    "task-id": 282,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sub_list(nums1,nums2):\\n'''Write a function to subtract two lists element-wise.\\nassert sub_list([1, 2, 3],[4,5,6])==[-3,-3,-3]'''\\n\"",
+    "FinalCode": "def sub_list(nums1, nums2):\n    '''Write a function to subtract two lists element-wise.'''\n    return [nums1[i] - nums2[i] for i in range(len(nums1))]"
+}

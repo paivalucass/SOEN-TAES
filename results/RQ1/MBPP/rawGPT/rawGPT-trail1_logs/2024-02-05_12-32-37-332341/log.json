@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-37-332341",
+    "task": "def lcs_of_three(X, Y, Z): \n'''Write a function to find the longest common subsequence for the given three string sequence. https://www.geeksforgeeks.org/lcs-longest-common-subsequence-three-strings/\nassert lcs_of_three('AGGT12', '12TXAYB', '12XBA') == 2'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:37",
+        "task-id": "2024-02-05 12:32:37",
+        "workflow": "2024-02-05 12:32:37",
+        "Prompt": "2024-02-05 12:32:44",
+        "FinalCode": "2024-02-05 12:32:44"
+    },
+    "task-id": 747,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def lcs_of_three(X, Y, Z): \\n'''Write a function to find the longest common subsequence for the given three string sequence. https://www.geeksforgeeks.org/lcs-longest-common-subsequence-three-strings/\\nassert lcs_of_three('AGGT12', '12TXAYB', '12XBA') == 2'''\\n\"",
+    "FinalCode": "\nHere is a Python function to find the longest common subsequence for the given three string sequence:\n\n```python\ndef lcs_of_three(X, Y, Z):\n    m = len(X)\n    n = len(Y)\n    o = len(Z)\n \n    L = [[[0 for i in range(o+1)] for j in range(n+1)]\n         for k in range(m+1)]\n \n    for i in range(m+1):\n        for j in range(n+1):\n            for k in range(o+1):\n                if (i == 0 or j == 0 or k == 0):\n                    L[i][j][k] = 0\n                elif (X[i-1] == Y[j-1] and X[i-1] == Z[k-1]):\n                    L[i][j][k] = L[i-1][j-1][k-1] + 1\n                else:\n                    L[i][j][k] = max(max(L[i-1][j][k], L[i][j-1][k]), L[i][j][k-1])\n \n    return L[m][n][o]\n\nassert lcs_of_three('AGGT12', '12TXAYB', '12XBA') == 2\n```\n\nThis function uses dynamic programming to find the longest common subsequence of the three input strings. The provided test case is also validated with the expected result."
+}

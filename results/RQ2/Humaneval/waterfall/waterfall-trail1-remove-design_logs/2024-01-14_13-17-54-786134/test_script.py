@@ -1,0 +1,26 @@
+def maximum(arr, k):
+    """
+    Given an array arr of integers and a positive integer k, return a sorted list 
+    of length k with the maximum k numbers in arr.
+    """
+    
+    import heapq
+    
+    if not all(isinstance(x, int) for x in arr):
+        return []
+    
+    return sorted(arr)[-k:]
+import unittest
+
+class Test(unittest.TestCase):
+    def test_example1(self):
+        self.assertEqual(maximum([-3, -4, 5], 3), [-4, -3, 5])
+
+    def test_example2(self):
+        self.assertEqual(maximum([4, -4, 4], 2), [4, 4])
+
+    def test_example3(self):
+        self.assertEqual(maximum([-3, 2, 1, 2, -1, -2, 1], 1), [2])
+
+if __name__ == '__main__':
+    unittest.main()

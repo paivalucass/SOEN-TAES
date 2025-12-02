@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-43-091584",
+    "task": "def extract_index_list(l1, l2, l3):\n'''We say that an element is common for lists l1, l2, l3 if it appears in all three lists under the same index. Write a function to find common elements from three lists. The function should return a list.\nassert extract_index_list([1, 1, 3, 4, 5, 6, 7],[0, 1, 2, 3, 4, 5, 7],[0, 1, 2, 3, 4, 5, 7])==[1, 7]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:43",
+        "task-id": "2024-02-05 12:32:43",
+        "workflow": "2024-02-05 12:32:43",
+        "Prompt": "2024-02-05 12:32:46",
+        "FinalCode": "2024-02-05 12:32:46"
+    },
+    "task-id": 754,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def extract_index_list(l1, l2, l3):\\n'''We say that an element is common for lists l1, l2, l3 if it appears in all three lists under the same index. Write a function to find common elements from three lists. The function should return a list.\\nassert extract_index_list([1, 1, 3, 4, 5, 6, 7],[0, 1, 2, 3, 4, 5, 7],[0, 1, 2, 3, 4, 5, 7])==[1, 7]'''\\n\"",
+    "FinalCode": "def extract_index_list(l1, l2, l3):\n    common_elements = []\n    for i in range(min(len(l1), len(l2), len(l3))):\n        if l1[i] == l2[i] == l3[i]:\n            common_elements.append(l1[i])\n    return common_elements\n\nassert extract_index_list([1, 1, 3, 4, 5, 6, 7],[0, 1, 2, 3, 4, 5, 7],[0, 1, 2, 3, 4, 5, 7])==[1, 7]"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-07-164623",
+    "task": "def str_to_list(string): \n'''Write a function to remove characters from the first string which are present in the second string.\nassert remove_dirty_chars(\"probasscurve\", \"pros\") == 'bacuve''''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:07",
+        "task-id": "2024-02-05 12:29:07",
+        "workflow": "2024-02-05 12:29:07",
+        "Prompt": "2024-02-05 12:29:08",
+        "FinalCode": "2024-02-05 12:29:08"
+    },
+    "task-id": 18,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def str_to_list(string): \\n'''Write a function to remove characters from the first string which are present in the second string.\\nassert remove_dirty_chars(\\\"probasscurve\\\", \\\"pros\\\") == 'bacuve''''\\n\"",
+    "FinalCode": "def str_to_list(string, remove_string):\n    return ''.join([char for char in string if char not in remove_string]) \n\nprint(str_to_list(\"probasscurve\", \"pros\")) # outputs: 'bacuve'"
+}

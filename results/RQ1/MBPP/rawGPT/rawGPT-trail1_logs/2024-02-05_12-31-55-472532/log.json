@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-55-472532",
+    "task": "def tuple_size(tuple_list):\n'''Write a function to find the size in bytes of the given tuple.\nassert tuple_size((\"A\", 1, \"B\", 2, \"C\", 3) ) == sys.getsizeof((\"A\", 1, \"B\", 2, \"C\", 3))'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:55",
+        "task-id": "2024-02-05 12:31:55",
+        "workflow": "2024-02-05 12:31:55",
+        "Prompt": "2024-02-05 12:31:56",
+        "FinalCode": "2024-02-05 12:31:56"
+    },
+    "task-id": 596,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def tuple_size(tuple_list):\\n'''Write a function to find the size in bytes of the given tuple.\\nassert tuple_size((\\\"A\\\", 1, \\\"B\\\", 2, \\\"C\\\", 3) ) == sys.getsizeof((\\\"A\\\", 1, \\\"B\\\", 2, \\\"C\\\", 3))'''\\n\"",
+    "FinalCode": "import sys\n\ndef tuple_size(tuple_list):\n    return sys.getsizeof(tuple_list)\n\nassert tuple_size((\"A\", 1, \"B\", 2, \"C\", 3)) == sys.getsizeof((\"A\", 1, \"B\", 2, \"C\", 3))"
+}

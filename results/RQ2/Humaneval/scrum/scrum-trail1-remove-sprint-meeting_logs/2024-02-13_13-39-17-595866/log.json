@@ -1,0 +1,16 @@
+{
+    "start_time": "2024-02-13_13-39-17-595866",
+    "task": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-02-13 13:39:17",
+        "task-id": "2024-02-13 13:39:17",
+        "workflow": "2024-02-13 13:39:17",
+        "UserStoryDraft0": "2024-02-13 13:41:15",
+        "AnalyzeMeetings": "2024-02-13 13:41:19"
+    },
+    "task-id": "HumanEval/14",
+    "workflow": "agile/agile_version_0.0.5_remove_stage.json",
+    "UserStoryDraft0": "{\n  \"UserStory\": {\n    \"As a product owner, I want to have a function that takes a string as input and returns a list of all prefixes from shortest to longest, so that I can use it for various string manipulation tasks.\"\n \t\t\t\n \t\n \t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t",
+    "UserStoryDraft0_prompt": "{\"Role\": \"You need to act as a professional product owner. Your task is to write a UserStory\", \"Instruction\": \"According to the Context, please analyze the requirement and write your response. Response in JSON format. Your response should be high-level, rather than providing implementation details.\", \"Example\": \"\", \"Context\": [], \"Question\": \"Follow the Instruction. The requirement is as follows:\\nfrom typing import List\\n\\n\\ndef all_prefixes(string: str) -> List[str]:\\n    \\\"\\\"\\\" Return list of all prefixes from shortest to longest of the input string\\n    >>> all_prefixes('abc')\\n    ['a', 'ab', 'abc']\\n    \\\"\\\"\\\"\\n\"}",
+    "AnalyzeMeetings": "{\n  \"Architect\": \"The function should be designed to handle edge cases such as empty input string and strings with special characters. It should also be efficient in terms of time complexity, especially for longer input strings.\",\n  \"Tester\": \"I would suggest testing the function with various input strings including empty string, strings with special characters, and very long strings to ensure its correctness and efficiency.\"\n}"
+}

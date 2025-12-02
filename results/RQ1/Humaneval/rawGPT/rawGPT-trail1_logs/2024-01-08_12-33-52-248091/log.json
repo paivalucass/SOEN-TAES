@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-52-248091",
+    "task": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:52",
+        "task-id": "2024-01-08 12:33:52",
+        "workflow": "2024-01-08 12:33:52",
+        "Prompt": "2024-01-08 12:33:57",
+        "FinalCode": "2024-01-08 12:33:57"
+    },
+    "task-id": "HumanEval/6",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef parse_nested_parens(paren_string: str) -> List[int]:\\n    \\\"\\\"\\\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\\n    For each of the group, output the deepest level of nesting of parentheses.\\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\\n\\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\\n    [2, 3, 1, 3]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n    # Split the input string by spaces to get individual groups\n    groups = paren_string.split()\n    \n    # Initialize an empty list to store the deepest level of nesting for each group\n    depths = []\n    \n    # Iterate through each group\n    for group in groups:\n        max_depth = 0  # Initialize the maximum depth to 0\n        depth = 0  # Initialize the current depth to 0\n        \n        # Iterate through each character in the group\n        for char in group:\n            if char == '(':  # If the character is an opening parenthesis\n                depth += 1  # Increment the current depth\n                if depth > max_depth:  # Update the maximum depth if the current depth is greater\n                    max_depth = depth\n            elif char == ')':  # If the character is a closing parenthesis\n                depth -= 1  # Decrement the current depth\n        \n        # Append the maximum depth for the current group to the depths list\n        depths.append(max_depth)\n    \n    return depths  # Return the list of maximum depths for each group\n"
+}

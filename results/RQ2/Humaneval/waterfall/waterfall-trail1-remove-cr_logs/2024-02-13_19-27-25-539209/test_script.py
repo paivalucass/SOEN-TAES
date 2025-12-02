@@ -1,0 +1,21 @@
+def get_odd_collatz(n):
+    collatz_sequence = [n]
+    while n != 1:
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+        collatz_sequence.append(n)
+        
+    odd_numbers = [num for num in collatz_sequence if num % 2 != 0]
+    odd_numbers.sort()
+    
+    return odd_numbers
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(get_odd_collatz(5), [1, 5])
+
+if __name__ == '__main__':
+    unittest.main()

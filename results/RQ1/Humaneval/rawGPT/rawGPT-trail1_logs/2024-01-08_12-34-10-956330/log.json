@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-10-956330",
+    "task": "\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:10",
+        "task-id": "2024-01-08 12:34:10",
+        "workflow": "2024-01-08 12:34:10",
+        "Prompt": "2024-01-08 12:34:12",
+        "FinalCode": "2024-01-08 12:34:12"
+    },
+    "task-id": "HumanEval/45",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\n\\ndef triangle_area(a, h):\\n    \\\"\\\"\\\"Given length of a side and high return area for a triangle.\\n    >>> triangle_area(5, 3)\\n    7.5\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def triangle_area(a, h):\n    \"\"\"Given length of a side and height, return the area of a triangle.\"\"\"\n    return 0.5 * a * h\n\nprint(triangle_area(5, 3))  # Output: 7.5"
+}

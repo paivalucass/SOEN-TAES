@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-58-636673",
+    "task": "from typing import List, Any\n\n\ndef filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:58",
+        "task-id": "2024-01-08 12:33:58",
+        "workflow": "2024-01-08 12:33:58",
+        "Prompt": "2024-01-08 12:34:00",
+        "FinalCode": "2024-01-08 12:34:00"
+    },
+    "task-id": "HumanEval/22",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List, Any\\n\\n\\ndef filter_integers(values: List[Any]) -> List[int]:\\n    \\\"\\\"\\\" Filter given list of any python values only for integers\\n    >>> filter_integers(['a', 3.14, 5])\\n    [5]\\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\\n    [1, 2, 3]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n    return [x for x in values if isinstance(x, int)]"
+}

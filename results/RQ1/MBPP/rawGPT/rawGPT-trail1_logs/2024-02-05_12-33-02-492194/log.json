@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-02-492194",
+    "task": "def odd_length_sum(arr):\n'''Write a python function to find the sum of all odd length subarrays. https://www.geeksforgeeks.org/sum-of-all-odd-length-subarrays/\nassert odd_length_sum([1,2,4]) == 14'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:02",
+        "task-id": "2024-02-05 12:33:02",
+        "workflow": "2024-02-05 12:33:02",
+        "Prompt": "2024-02-05 12:33:06",
+        "FinalCode": "2024-02-05 12:33:06"
+    },
+    "task-id": 782,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def odd_length_sum(arr):\\n'''Write a python function to find the sum of all odd length subarrays. https://www.geeksforgeeks.org/sum-of-all-odd-length-subarrays/\\nassert odd_length_sum([1,2,4]) == 14'''\\n\"",
+    "FinalCode": "Here's a possible implementation of the odd_length_sum function:\n\n```python\ndef odd_length_sum(arr):\n    result = 0\n    n = len(arr)\n    for i in range(n):\n        for j in range(i, n, 2):\n            for k in range(i, j + 1):\n                result += arr[k]\n    return result\n```\n\nThis implementation uses three nested loops to iterate through all possible odd length subarrays of the input array and calculate their sum. The result variable is used to accumulate the sum of all odd length subarrays. Finally, the result is returned.\n\nThe assert statement at the end of the function is a test case that checks if the function returns the expected result for a specific input. In this case, it checks if the odd_length_sum function returns 14 when given the input [1, 2, 4]. If the function passes this test case, it means the function is working as expected."
+}

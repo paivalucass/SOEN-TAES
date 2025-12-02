@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-39-737639",
+    "task": "def bitwise_xor(test_tup1, test_tup2):\n'''Write a function to perform the mathematical bitwise xor operation across the given tuples.\nassert bitwise_xor((10, 4, 6, 9), (5, 2, 3, 3)) == (15, 6, 5, 10)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:39",
+        "task-id": "2024-02-05 12:30:39",
+        "workflow": "2024-02-05 12:30:39",
+        "Prompt": "2024-02-05 12:30:45",
+        "FinalCode": "2024-02-05 12:30:45"
+    },
+    "task-id": 399,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def bitwise_xor(test_tup1, test_tup2):\\n'''Write a function to perform the mathematical bitwise xor operation across the given tuples.\\nassert bitwise_xor((10, 4, 6, 9), (5, 2, 3, 3)) == (15, 6, 5, 10)'''\\n\"",
+    "FinalCode": "def bitwise_xor(test_tup1, test_tup2):\n    '''Write a function to perform the mathematical bitwise xor operation across the given tuples.'''\n    \n    result = tuple(x ^ y for x, y in zip(test_tup1, test_tup2))\n    \n    return result\n\nassert bitwise_xor((10, 4, 6, 9), (5, 2, 3, 3)) == (15, 6, 5, 10)"
+}

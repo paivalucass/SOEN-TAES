@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-00-064461",
+    "task": "def number_of_substrings(str): \n'''Write a python function to count the number of non-empty substrings of a given string.\nassert number_of_substrings(\"abc\") == 6'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:00",
+        "task-id": "2024-02-05 12:30:00",
+        "workflow": "2024-02-05 12:30:00",
+        "Prompt": "2024-02-05 12:30:03",
+        "FinalCode": "2024-02-05 12:30:03"
+    },
+    "task-id": 238,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def number_of_substrings(str): \\n'''Write a python function to count the number of non-empty substrings of a given string.\\nassert number_of_substrings(\\\"abc\\\") == 6'''\\n\"",
+    "FinalCode": "def number_of_substrings(str):\n    count = 0\n    n = len(str)\n    for i in range(n):\n        for j in range(i, n):\n            count += 1\n    return count\n\n# Test the function\nassert number_of_substrings(\"abc\") == 6"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-48-775072",
+    "task": "def find_solution(a, b, n):\n'''Write a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists.\nassert find_solution(2, 3, 7) == (2, 1)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:48",
+        "task-id": "2024-02-05 12:29:48",
+        "workflow": "2024-02-05 12:29:48",
+        "Prompt": "2024-02-05 12:29:53",
+        "FinalCode": "2024-02-05 12:29:53"
+    },
+    "task-id": 160,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_solution(a, b, n):\\n'''Write a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists.\\nassert find_solution(2, 3, 7) == (2, 1)'''\\n\"",
+    "FinalCode": "def find_solution(a, b, n):\n    for x in range(n+1):\n        for y in range(n+1):\n            if a*x + b*y == n:\n                return (x, y)\n    return None\n\nassert find_solution(2, 3, 7) == (2, 1)"
+}

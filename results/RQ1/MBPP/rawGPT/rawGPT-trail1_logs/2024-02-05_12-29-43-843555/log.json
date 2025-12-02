@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-43-843555",
+    "task": "def hexagonal_num(n): \n'''Write a function to find the nth hexagonal number.\nassert hexagonal_num(10) == 190'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:43",
+        "task-id": "2024-02-05 12:29:43",
+        "workflow": "2024-02-05 12:29:43",
+        "Prompt": "2024-02-05 12:29:45",
+        "FinalCode": "2024-02-05 12:29:45"
+    },
+    "task-id": 135,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def hexagonal_num(n): \\n'''Write a function to find the nth hexagonal number.\\nassert hexagonal_num(10) == 190'''\\n\"",
+    "FinalCode": "def hexagonal_num(n): \n    '''Write a function to find the nth hexagonal number.'''\n    return n * (2 * n - 1)\n\nassert hexagonal_num(10) == 190"
+}

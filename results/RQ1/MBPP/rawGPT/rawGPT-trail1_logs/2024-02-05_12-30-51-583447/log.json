@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-51-583447",
+    "task": "def group_tuples(Input): \n'''Write a function to find common first element in given list of tuple.\nassert group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]) == [('x', 'y', 'z'), ('w', 't')]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:51",
+        "task-id": "2024-02-05 12:30:51",
+        "workflow": "2024-02-05 12:30:51",
+        "Prompt": "2024-02-05 12:30:54",
+        "FinalCode": "2024-02-05 12:30:54"
+    },
+    "task-id": 417,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def group_tuples(Input): \\n'''Write a function to find common first element in given list of tuple.\\nassert group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]) == [('x', 'y', 'z'), ('w', 't')]'''\\n\"",
+    "FinalCode": "def group_tuples(Input):\n    result = []\n    for i in Input:\n        for j in result:\n            if i[0] == j[0]:\n                j += (i[1],)\n                break\n        else:\n            result.append(i)\n    return result\n\n# Test the function with example input\nprint(group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]))"
+}

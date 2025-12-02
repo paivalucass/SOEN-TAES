@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-58-841045",
+    "task": "def larg_nnum(list1,n):\n'''Write a function that takes in a list and an integer n and returns a list containing the n largest items from the list.\nassert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],2))==set([100,90])'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:58",
+        "task-id": "2024-02-05 12:29:58",
+        "workflow": "2024-02-05 12:29:58",
+        "Prompt": "2024-02-05 12:30:01",
+        "FinalCode": "2024-02-05 12:30:01"
+    },
+    "task-id": 232,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def larg_nnum(list1,n):\\n'''Write a function that takes in a list and an integer n and returns a list containing the n largest items from the list.\\nassert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],2))==set([100,90])'''\\n\"",
+    "FinalCode": "def larg_nnum(list1,n):\n    sorted_list = sorted(list1, reverse=True)\n    return sorted_list[:n]\n\n# Test the function\nassert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],2))==set([100,90])"
+}

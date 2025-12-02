@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-39-421902",
+    "task": "def add_tuple(test_list, test_tup):\n'''Write a function to add the given tuple to the given list.\nassert add_tuple([5, 6, 7], (9, 10)) == [5, 6, 7, 9, 10]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:39",
+        "task-id": "2024-02-05 12:32:39",
+        "workflow": "2024-02-05 12:32:39",
+        "Prompt": "2024-02-05 12:32:43",
+        "FinalCode": "2024-02-05 12:32:43"
+    },
+    "task-id": 750,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def add_tuple(test_list, test_tup):\\n'''Write a function to add the given tuple to the given list.\\nassert add_tuple([5, 6, 7], (9, 10)) == [5, 6, 7, 9, 10]'''\\n\"",
+    "FinalCode": "def add_tuple(test_list, test_tup):\n    '''Write a function to add the given tuple to the given list.'''\n    test_list.extend(test_tup)\n    return test_list\n\n# Test the function\nassert add_tuple([5, 6, 7], (9, 10)) == [5, 6, 7, 9, 10]"
+}

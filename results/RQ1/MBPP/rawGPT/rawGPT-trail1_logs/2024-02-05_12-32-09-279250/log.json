@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-09-279250",
+    "task": "def swap_List(newList): \n'''Write a python function to interchange the first and last element in a given list.\nassert swap_List([1,2,3]) == [3,2,1]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:09",
+        "task-id": "2024-02-05 12:32:09",
+        "workflow": "2024-02-05 12:32:09",
+        "Prompt": "2024-02-05 12:32:10",
+        "FinalCode": "2024-02-05 12:32:10"
+    },
+    "task-id": 625,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def swap_List(newList): \\n'''Write a python function to interchange the first and last element in a given list.\\nassert swap_List([1,2,3]) == [3,2,1]'''\\n\"",
+    "FinalCode": "def swap_List(newList):\n    '''Write a python function to interchange the first and last element in a given list.'''\n    newList[0], newList[-1] = newList[-1], newList[0]\n    return newList\n\nassert swap_List([1,2,3]) == [3,2,1]"
+}

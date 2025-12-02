@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-36-197535",
+    "task": "def get_max_sum (n):\n'''Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).\nassert get_max_sum(60) == 106'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:36",
+        "task-id": "2024-02-05 12:30:36",
+        "workflow": "2024-02-05 12:30:36",
+        "Prompt": "2024-02-05 12:30:40",
+        "FinalCode": "2024-02-05 12:30:40"
+    },
+    "task-id": 392,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def get_max_sum (n):\\n'''Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).\\nassert get_max_sum(60) == 106'''\\n\"",
+    "FinalCode": "Here's a possible implementation for the get_max_sum function in Python:\n\n```python\ndef get_max_sum(n):\n    if n <= 1:\n        return n\n    else:\n        return max(n, get_max_sum(n//2) + get_max_sum(n//3) + get_max_sum(n//4) + get_max_sum(n//5))\n\nassert get_max_sum(60) == 106\n```\n\nThis implementation uses recursion to calculate the maximum sum possible using the given equation. It checks for the base case where n is less than or equal to 1 and returns n. Otherwise, it calculates the maximum sum by recursively calling the get_max_sum function for n/2, n/3, n/4, and n/5, and adding them together along with n itself. Finally, the result is compared against the expected value using an assertion."
+}

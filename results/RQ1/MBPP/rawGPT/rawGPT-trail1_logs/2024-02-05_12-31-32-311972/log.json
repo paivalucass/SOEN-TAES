@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-32-311972",
+    "task": "def big_sum(nums):\n'''Write a python function to find the sum of the largest and smallest value in a given array.\nassert big_sum([1,2,3]) == 4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:32",
+        "task-id": "2024-02-05 12:31:32",
+        "workflow": "2024-02-05 12:31:32",
+        "Prompt": "2024-02-05 12:31:34",
+        "FinalCode": "2024-02-05 12:31:34"
+    },
+    "task-id": 476,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def big_sum(nums):\\n'''Write a python function to find the sum of the largest and smallest value in a given array.\\nassert big_sum([1,2,3]) == 4'''\\n\"",
+    "FinalCode": "\ndef big_sum(nums):\n    '''Write a python function to find the sum of the largest and smallest value in a given array.'''\n    nums.sort()\n    return nums[0] + nums[-1]\n\nassert big_sum([1,2,3]) == 4"
+}

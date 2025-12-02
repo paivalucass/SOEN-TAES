@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-27-514306",
+    "task": "def dict_depth(d):\n'''Write a function to find the depth of a dictionary.\nassert dict_depth({'a':1, 'b': {'c': {'d': {}}}})==4'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:27",
+        "task-id": "2024-02-05 12:30:27",
+        "workflow": "2024-02-05 12:30:27",
+        "Prompt": "2024-02-05 12:30:31",
+        "FinalCode": "2024-02-05 12:30:31"
+    },
+    "task-id": 301,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def dict_depth(d):\\n'''Write a function to find the depth of a dictionary.\\nassert dict_depth({'a':1, 'b': {'c': {'d': {}}}})==4'''\\n\"",
+    "FinalCode": "def dict_depth(d):\n    if not isinstance(d, dict) or len(d) == 0:\n        return 0\n    return 1 + max(dict_depth(v) for k, v in d.items() if isinstance(v, dict))\n\n# Test the function with an example\nassert dict_depth({'a':1, 'b': {'c': {'d': {}}}}) == 4"
+}

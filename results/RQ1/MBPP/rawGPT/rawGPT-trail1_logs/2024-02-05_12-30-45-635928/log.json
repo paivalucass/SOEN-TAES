@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-45-635928",
+    "task": "def min_product_tuple(list1):\n'''Write a function to find the minimum product from the pairs of tuples within a given list.\nassert min_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==8'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:45",
+        "task-id": "2024-02-05 12:30:45",
+        "workflow": "2024-02-05 12:30:45",
+        "Prompt": "2024-02-05 12:30:48",
+        "FinalCode": "2024-02-05 12:30:48"
+    },
+    "task-id": 409,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def min_product_tuple(list1):\\n'''Write a function to find the minimum product from the pairs of tuples within a given list.\\nassert min_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==8'''\\n\"",
+    "FinalCode": "def min_product_tuple(list1):\n    '''Write a function to find the minimum product from the pairs of tuples within a given list.'''\n    min_product = float('inf')\n    for pair in list1:\n        product = pair[0] * pair[1]\n        if product < min_product:\n            min_product = product\n    return min_product\n\nassert min_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==8"
+}

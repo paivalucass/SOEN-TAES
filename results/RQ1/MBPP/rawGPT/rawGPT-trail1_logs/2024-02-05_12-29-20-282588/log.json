@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-20-282588",
+    "task": "def get_Char(strr):  \n'''Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.\nassert get_Char(\"abc\") == \"f\"'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:20",
+        "task-id": "2024-02-05 12:29:20",
+        "workflow": "2024-02-05 12:29:20",
+        "Prompt": "2024-02-05 12:29:22",
+        "FinalCode": "2024-02-05 12:29:22"
+    },
+    "task-id": 83,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def get_Char(strr):  \\n'''Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.\\nassert get_Char(\\\"abc\\\") == \\\"f\\\"'''\\n\"",
+    "FinalCode": "def get_Char(strr):\n    total = sum(ord(char) for char in strr) % 26\n    return chr(total + 97)  # Adding 97 to convert back to ASCII character\n\nprint(get_Char(\"abc\"))  # Output: \"f\""
+}

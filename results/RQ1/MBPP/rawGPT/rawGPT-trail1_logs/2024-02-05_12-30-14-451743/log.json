@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-14-451743",
+    "task": "def find_star_num(n): \n'''Write a function to find the n'th star number.\nassert find_star_num(3) == 37'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:14",
+        "task-id": "2024-02-05 12:30:14",
+        "workflow": "2024-02-05 12:30:14",
+        "Prompt": "2024-02-05 12:30:16",
+        "FinalCode": "2024-02-05 12:30:16"
+    },
+    "task-id": 268,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_star_num(n): \\n'''Write a function to find the n'th star number.\\nassert find_star_num(3) == 37'''\\n\"",
+    "FinalCode": "def find_star_num(n): \n    '''Write a function to find the n'th star number.'''\n    return 6 * n * (n - 1) + 1\n\nassert find_star_num(3) == 37"
+}

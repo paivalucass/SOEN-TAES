@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-33-04-799688",
+    "task": "def tuple_str_int(test_str):\n'''Write a function to convert tuple string to integer tuple.\nassert tuple_str_int(\"(7, 8, 9)\") == (7, 8, 9)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:33:04",
+        "task-id": "2024-02-05 12:33:04",
+        "workflow": "2024-02-05 12:33:04",
+        "Prompt": "2024-02-05 12:33:06",
+        "FinalCode": "2024-02-05 12:33:06"
+    },
+    "task-id": 785,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def tuple_str_int(test_str):\\n'''Write a function to convert tuple string to integer tuple.\\nassert tuple_str_int(\\\"(7, 8, 9)\\\") == (7, 8, 9)'''\\n\"",
+    "FinalCode": "def tuple_str_int(test_str):\n    '''Write a function to convert tuple string to integer tuple.'''\n    tuple_str = test_str.strip('()').split(',')\n    int_tuple = tuple(map(int, tuple_str))\n    return int_tuple\n\nassert tuple_str_int(\"(7, 8, 9)\") == (7, 8, 9)"
+}

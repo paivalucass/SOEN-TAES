@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-51-472677",
+    "task": "def max_Product(arr): \n'''Write a python function to find a pair with highest product from a given array of integers.\nassert max_Product([1,2,3,4,7,0,8,4]) == (7,8)'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:51",
+        "task-id": "2024-02-05 12:30:51",
+        "workflow": "2024-02-05 12:30:51",
+        "Prompt": "2024-02-05 12:30:54",
+        "FinalCode": "2024-02-05 12:30:54"
+    },
+    "task-id": 415,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_Product(arr): \\n'''Write a python function to find a pair with highest product from a given array of integers.\\nassert max_Product([1,2,3,4,7,0,8,4]) == (7,8)'''\\n\"",
+    "FinalCode": "def max_Product(arr):\n    max_product = 0\n    pair = ()\n    for i in range(len(arr)):\n        for j in range(i+1, len(arr)):\n            product = arr[i] * arr[j]\n            if product > max_product:\n                max_product = product\n                pair = (arr[i], arr[j])\n    return pair\n\n# Test the function\nassert max_Product([1,2,3,4,7,0,8,4]) == (7,8)"
+}

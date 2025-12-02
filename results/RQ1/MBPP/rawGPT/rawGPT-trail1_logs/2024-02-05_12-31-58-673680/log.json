@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-58-673680",
+    "task": "def prime_num(num):\n'''Write a function to check if the given integer is a prime number.\nassert prime_num(13)==True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:58",
+        "task-id": "2024-02-05 12:31:58",
+        "workflow": "2024-02-05 12:31:58",
+        "Prompt": "2024-02-05 12:32:02",
+        "FinalCode": "2024-02-05 12:32:02"
+    },
+    "task-id": 605,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def prime_num(num):\\n'''Write a function to check if the given integer is a prime number.\\nassert prime_num(13)==True'''\\n\"",
+    "FinalCode": "def prime_num(num):\n    '''Write a function to check if the given integer is a prime number.'''\n    if num <= 1:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\nassert prime_num(13)==True"
+}

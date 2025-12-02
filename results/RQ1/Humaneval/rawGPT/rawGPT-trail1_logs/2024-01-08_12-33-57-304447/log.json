@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-33-57-304447",
+    "task": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:33:57",
+        "task-id": "2024-01-08 12:33:57",
+        "workflow": "2024-01-08 12:33:57",
+        "Prompt": "2024-01-08 12:33:59",
+        "FinalCode": "2024-01-08 12:33:59"
+    },
+    "task-id": "HumanEval/17",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef parse_music(music_string: str) -> List[int]:\\n    \\\"\\\"\\\" Input to this function is a string representing musical notes in a special ASCII format.\\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\\n    not last.\\n\\n    Here is a legend:\\n    'o' - whole note, lasts four beats\\n    'o|' - half note, lasts two beats\\n    '.|' - quater note, lasts one beat\\n\\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "This code defines a function called parse_music that takes a string representing musical notes in a special ASCII format as input and returns a list of integers corresponding to how many beats each note lasts. The legend for the notation is provided in the function's docstring.\n\nThe function is annotated with type hints to indicate that it takes a string as input and returns a list of integers.\n\nThe function is then provided with an example input and output in the docstring using the doctest module.\n\nThe actual implementation of the parse_music function is not provided in the code snippet."
+}

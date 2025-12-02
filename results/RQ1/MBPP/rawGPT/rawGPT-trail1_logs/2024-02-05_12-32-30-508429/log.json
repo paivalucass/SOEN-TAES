@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-30-508429",
+    "task": "def geometric_sum(n):\n'''Write a function to calculate the geometric sum of n-1. https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion-exercise-9.php\nassert geometric_sum(7) == 1.9921875'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:30",
+        "task-id": "2024-02-05 12:32:30",
+        "workflow": "2024-02-05 12:32:30",
+        "Prompt": "2024-02-05 12:32:33",
+        "FinalCode": "2024-02-05 12:32:33"
+    },
+    "task-id": 738,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def geometric_sum(n):\\n'''Write a function to calculate the geometric sum of n-1. https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion-exercise-9.php\\nassert geometric_sum(7) == 1.9921875'''\\n\"",
+    "FinalCode": "\nHere's a Python function to calculate the geometric sum of n-1:\n\n```python\ndef geometric_sum(n):\n    if n == 0:\n        return 1\n    else:\n        return 1 / (pow(2, n-1)) + geometric_sum(n-1)\n\n# Test the function\nassert geometric_sum(7) == 1.9921875\n```\n\nThis function uses recursion to calculate the geometric sum, and the base case is when n equals 0, in which case the function returns 1. Otherwise, it calculates 1 divided by 2 raised to the power of (n-1) and adds it to the result of the function called with n-1."
+}

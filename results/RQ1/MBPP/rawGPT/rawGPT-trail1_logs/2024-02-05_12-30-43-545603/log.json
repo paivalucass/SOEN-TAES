@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-43-545603",
+    "task": "def rearrange_bigger(n):\n'''Write a function to create the next bigger number by rearranging the digits of a given number.\nassert rearrange_bigger(12)==21'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:43",
+        "task-id": "2024-02-05 12:30:43",
+        "workflow": "2024-02-05 12:30:43",
+        "Prompt": "2024-02-05 12:30:49",
+        "FinalCode": "2024-02-05 12:30:49"
+    },
+    "task-id": 407,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def rearrange_bigger(n):\\n'''Write a function to create the next bigger number by rearranging the digits of a given number.\\nassert rearrange_bigger(12)==21'''\\n\"",
+    "FinalCode": "def rearrange_bigger(n):\n    '''Write a function to create the next bigger number by rearranging the digits of a given number.'''\n    num_list = list(str(n))\n    i = len(num_list) - 1\n    while i > 0 and num_list[i-1] >= num_list[i]:\n        i -= 1\n    if i <= 0:\n        return \"Not possible\"\n\n    j = len(num_list) - 1\n    while num_list[j] <= num_list[i-1]:\n        j -= 1\n    num_list[i-1], num_list[j] = num_list[j], num_list[i-1]\n\n    num_list[i:] = num_list[len(num_list)-1:i-1:-1]\n    result = int(''.join(num_list))\n    return result\n\nassert rearrange_bigger(12)==21"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-03-889292",
+    "task": "def max_sum(arr): \n'''Write a function that takes an array and finds the maximum sum of a bitonic subsequence for the given array, where a sequence is bitonic if it is first increasing and then decreasing.\nassert max_sum([1, 15, 51, 45, 33, 100, 12, 18, 9]) == 194'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:03",
+        "task-id": "2024-02-05 12:30:03",
+        "workflow": "2024-02-05 12:30:03",
+        "Prompt": "2024-02-05 12:30:09",
+        "FinalCode": "2024-02-05 12:30:09"
+    },
+    "task-id": 245,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_sum(arr): \\n'''Write a function that takes an array and finds the maximum sum of a bitonic subsequence for the given array, where a sequence is bitonic if it is first increasing and then decreasing.\\nassert max_sum([1, 15, 51, 45, 33, 100, 12, 18, 9]) == 194'''\\n\"",
+    "FinalCode": "\nHere's a possible implementation of the max_sum function:\n\n```python\ndef max_sum(arr):\n    n = len(arr)\n    lis = [0] * n\n    lds = [0] * n\n\n    for i in range(n):\n        lis[i] = arr[i]\n        lds[i] = arr[i]\n\n    for i in range(1, n):\n        for j in range(i):\n            if arr[i] > arr[j] and lis[i] < lis[j] + arr[i]:\n                lis[i] = lis[j] + arr[i]\n\n    for i in range(n - 2, -1, -1):\n        for j in range(n - 1, i, -1):\n            if arr[i] > arr[j] and lds[i] < lds[j] + arr[i]:\n                lds[i] = lds[j] + arr[i]\n\n    max_sum = 0\n    for i in range(n):\n        max_sum = max(max_sum, lis[i] + lds[i] - arr[i])\n\n    return max_sum\n\nassert max_sum([1, 15, 51, 45, 33, 100, 12, 18, 9]) == 194\n```\n\nThis implementation uses dynamic programming to find the maximum sum of a bitonic subsequence in the given array. It first finds the longest increasing subsequence ending at each index, and then finds the longest decreasing subsequence starting at each index. Finally, it calculates the maximum sum of bitonic subsequence using the precomputed values."
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-27-990548",
+    "task": "def max_product(arr):   \n'''Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array.\nassert max_product([3, 100, 4, 5, 150, 6]) == 3000'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:27",
+        "task-id": "2024-02-05 12:31:27",
+        "workflow": "2024-02-05 12:31:27",
+        "Prompt": "2024-02-05 12:31:31",
+        "FinalCode": "2024-02-05 12:31:31"
+    },
+    "task-id": 468,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_product(arr):   \\n'''Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array.\\nassert max_product([3, 100, 4, 5, 150, 6]) == 3000'''\\n\"",
+    "FinalCode": "def max_product(arr):\n    n = len(arr)\n    max_product = 0\n    for i in range(n):\n        product = arr[i]\n        for j in range(i+1, n):\n            if arr[j] > arr[i]:\n                product *= arr[j]\n        \n        if product > max_product:\n            max_product = product\n    \n    return max_product\n\nassert max_product([3, 100, 4, 5, 150, 6]) == 3000"
+}

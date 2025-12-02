@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-01-487479",
+    "task": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:01",
+        "task-id": "2024-01-08 12:34:01",
+        "workflow": "2024-01-08 12:34:01",
+        "Prompt": "2024-01-08 12:34:03",
+        "FinalCode": "2024-01-08 12:34:03"
+    },
+    "task-id": "HumanEval/26",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef remove_duplicates(numbers: List[int]) -> List[int]:\\n    \\\"\\\"\\\" From a list of integers, remove all elements that occur more than once.\\n    Keep order of elements left the same as in the input.\\n    >>> remove_duplicates([1, 2, 3, 2, 4])\\n    [1, 3, 4]\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\"From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 3, 4]\n    \"\"\"\n    return list(dict.fromkeys(numbers))"
+}

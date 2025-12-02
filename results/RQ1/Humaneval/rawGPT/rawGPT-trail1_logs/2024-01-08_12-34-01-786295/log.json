@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-34-01-786295",
+    "task": "from typing import List\n\n\ndef concatenate(strings: List[str]) -> str:\n    \"\"\" Concatenate list of strings into a single string\n    >>> concatenate([])\n    ''\n    >>> concatenate(['a', 'b', 'c'])\n    'abc'\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:34:01",
+        "task-id": "2024-01-08 12:34:01",
+        "workflow": "2024-01-08 12:34:01",
+        "Prompt": "2024-01-08 12:34:03",
+        "FinalCode": "2024-01-08 12:34:03"
+    },
+    "task-id": "HumanEval/28",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"from typing import List\\n\\n\\ndef concatenate(strings: List[str]) -> str:\\n    \\\"\\\"\\\" Concatenate list of strings into a single string\\n    >>> concatenate([])\\n    ''\\n    >>> concatenate(['a', 'b', 'c'])\\n    'abc'\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def concatenate(strings: List[str]) -> str:\n    \"\"\" Concatenate list of strings into a single string\n    >>> concatenate([])\n    ''\n    >>> concatenate(['a', 'b', 'c'])\n    'abc'\n    \"\"\"\n    return ''.join(strings)"
+}

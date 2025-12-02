@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-21-307273",
+    "task": "def filter_data(students,h,w):\n'''The input is given as - a dictionary with a student name as a key and a tuple of float (student_height, student_weight) as a value, - minimal height, - minimal weight. Write a function to filter students that have height and weight above the minimum.\nassert filter_data({'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)},6.0,70)=={'Cierra Vega': (6.2, 70)}'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:21",
+        "task-id": "2024-02-05 12:32:21",
+        "workflow": "2024-02-05 12:32:21",
+        "Prompt": "2024-02-05 12:32:26",
+        "FinalCode": "2024-02-05 12:32:26"
+    },
+    "task-id": 722,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def filter_data(students,h,w):\\n'''The input is given as - a dictionary with a student name as a key and a tuple of float (student_height, student_weight) as a value, - minimal height, - minimal weight. Write a function to filter students that have height and weight above the minimum.\\nassert filter_data({'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)},6.0,70)=={'Cierra Vega': (6.2, 70)}'''\\n\"",
+    "FinalCode": "def filter_data(students, h, w):\n    filtered_students = {}\n    for student, data in students.items():\n        if data[0] >= h and data[1] >= w:\n            filtered_students[student] = data\n    return filtered_students\n\nassert filter_data({'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)}, 6.0, 70) == {'Cierra Vega': (6.2, 70)}"
+}

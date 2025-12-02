@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-18-605016",
+    "task": "def find_tuples(test_list, K):\n'''Write a function to find tuples which have all elements divisible by k from the given list of tuples.\nassert find_tuples([(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6) == [(6, 24, 12)]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:18",
+        "task-id": "2024-02-05 12:29:18",
+        "workflow": "2024-02-05 12:29:18",
+        "Prompt": "2024-02-05 12:29:20",
+        "FinalCode": "2024-02-05 12:29:20"
+    },
+    "task-id": 75,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def find_tuples(test_list, K):\\n'''Write a function to find tuples which have all elements divisible by k from the given list of tuples.\\nassert find_tuples([(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6) == [(6, 24, 12)]'''\\n\"",
+    "FinalCode": "\ndef find_tuples(test_list, K):\n    result = []\n    for tup in test_list:\n        if all(elem % K == 0 for elem in tup):\n            result.append(tup)\n    return result\n\nassert find_tuples([(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6) == [(6, 24, 12)]"
+}

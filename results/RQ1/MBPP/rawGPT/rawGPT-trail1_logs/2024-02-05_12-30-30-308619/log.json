@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-30-308619",
+    "task": "def max_sum_increasing_subseq(a, n, index, k):\n'''Write a function to find the maximum sum of increasing subsequence from prefix until ith index and also including a given kth element which is after i, i.e., k > i .\nassert max_sum_increasing_subseq([1, 101, 2, 3, 100, 4, 5 ], 7, 4, 6) == 11'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:30",
+        "task-id": "2024-02-05 12:30:30",
+        "workflow": "2024-02-05 12:30:30",
+        "Prompt": "2024-02-05 12:30:35",
+        "FinalCode": "2024-02-05 12:30:35"
+    },
+    "task-id": 306,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def max_sum_increasing_subseq(a, n, index, k):\\n'''Write a function to find the maximum sum of increasing subsequence from prefix until ith index and also including a given kth element which is after i, i.e., k > i .\\nassert max_sum_increasing_subseq([1, 101, 2, 3, 100, 4, 5 ], 7, 4, 6) == 11'''\\n\"",
+    "FinalCode": "\nHere is a possible implementation of the function max_sum_increasing_subseq:\n\n```python\ndef max_sum_increasing_subseq(a, n, index, k):\n    max_sum = 0\n    dp = [0] * n\n    \n    for i in range(index+1):\n        dp[i] = a[i]\n    \n    for i in range(index+1, k):\n        for j in range(index+1):\n            if a[i] > a[j] and dp[i] < dp[j] + a[i]:\n                dp[i] = dp[j] + a[i]\n    \n    for i in range(k):\n        max_sum = max(max_sum, dp[i])\n    \n    return max_sum\n\nassert max_sum_increasing_subseq([1, 101, 2, 3, 100, 4, 5 ], 7, 4, 6) == 11\n```\n\nThis function uses dynamic programming to calculate the maximum sum of increasing subsequence from the prefix until the ith index and including the kth element. It initializes a list `dp` to store the maximum sum at each index and then iterates through the elements to calculate the maximum sum. Finally, it returns the maximum sum calculated."
+}

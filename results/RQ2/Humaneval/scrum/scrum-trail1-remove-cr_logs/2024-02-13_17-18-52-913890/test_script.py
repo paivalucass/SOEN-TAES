@@ -1,0 +1,15 @@
+def specialFilter(nums):
+    count = 0
+    for num in nums:
+        if num > 10 and int(str(num)[0]) % 2 != 0 and int(str(num)[-1]) % 2 != 0:
+            count += 1
+    return count
+import unittest
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(function_under_test([15, -73, 14, -15]), 1)
+        self.assertEqual(function_under_test([33, -2, -3, 45, 21, 109]), 2)
+
+if __name__ == '__main__':
+    unittest.main()

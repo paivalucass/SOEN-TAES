@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-13-458679",
+    "task": "def pair_xor_Sum(arr,n) : \n'''Write a python function to find the sum of xor of all pairs of numbers in the given list.\nassert pair_xor_Sum([5,9,7,6],4) == 47'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:13",
+        "task-id": "2024-02-05 12:32:13",
+        "workflow": "2024-02-05 12:32:13",
+        "Prompt": "2024-02-05 12:32:16",
+        "FinalCode": "2024-02-05 12:32:16"
+    },
+    "task-id": 633,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def pair_xor_Sum(arr,n) : \\n'''Write a python function to find the sum of xor of all pairs of numbers in the given list.\\nassert pair_xor_Sum([5,9,7,6],4) == 47'''\\n\"",
+    "FinalCode": "def pair_xor_Sum(arr,n) :\n    result = 0\n    for i in range(n) :\n        for j in range(i+1, n) :\n            result += arr[i]^arr[j]\n    return result\n\n# Test the function\nassert pair_xor_Sum([5,9,7,6],4) == 47"
+}

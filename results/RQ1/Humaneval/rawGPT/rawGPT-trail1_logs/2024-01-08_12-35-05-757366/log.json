@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-35-05-757366",
+    "task": "\ndef is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == False\n    is_equal_to_sum_even(6) == False\n    is_equal_to_sum_even(8) == True\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:35:05",
+        "task-id": "2024-01-08 12:35:05",
+        "workflow": "2024-01-08 12:35:05",
+        "Prompt": "2024-01-08 12:35:07",
+        "FinalCode": "2024-01-08 12:35:07"
+    },
+    "task-id": "HumanEval/138",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef is_equal_to_sum_even(n):\\n    \\\"\\\"\\\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\\n    Example\\n    is_equal_to_sum_even(4) == False\\n    is_equal_to_sum_even(6) == False\\n    is_equal_to_sum_even(8) == True\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "    even_count = 0\n    current_num = 2\n    while even_count < 4 and current_num < n:\n        if n - current_num >= 0 and (n - current_num) % 2 == 0:\n            even_count += 1\n        current_num += 2\n    return even_count == 4"
+}

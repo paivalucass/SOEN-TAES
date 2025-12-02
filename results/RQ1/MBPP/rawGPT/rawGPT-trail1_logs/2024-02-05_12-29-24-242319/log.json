@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-24-242319",
+    "task": "def closest_num(N):\n'''Write a function to find the closest smaller number than n.\nassert closest_num(11) == 10'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:24",
+        "task-id": "2024-02-05 12:29:24",
+        "workflow": "2024-02-05 12:29:24",
+        "Prompt": "2024-02-05 12:29:26",
+        "FinalCode": "2024-02-05 12:29:26"
+    },
+    "task-id": 89,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def closest_num(N):\\n'''Write a function to find the closest smaller number than n.\\nassert closest_num(11) == 10'''\\n\"",
+    "FinalCode": "def closest_num(N):\n    '''Write a function to find the closest smaller number than n.'''\n    return N - 1\n\nassert closest_num(11) == 10"
+}

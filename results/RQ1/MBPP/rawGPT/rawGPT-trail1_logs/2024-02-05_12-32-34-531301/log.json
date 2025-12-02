@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-32-34-531301",
+    "task": "def rotate_right(list, m):\n'''Write a function to rotate a given list by specified number of items to the right direction. https://www.geeksforgeeks.org/python-program-right-rotate-list-n/\nassert rotate_right([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],3)==[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:32:34",
+        "task-id": "2024-02-05 12:32:34",
+        "workflow": "2024-02-05 12:32:34",
+        "Prompt": "2024-02-05 12:32:38",
+        "FinalCode": "2024-02-05 12:32:38"
+    },
+    "task-id": 743,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def rotate_right(list, m):\\n'''Write a function to rotate a given list by specified number of items to the right direction. https://www.geeksforgeeks.org/python-program-right-rotate-list-n/\\nassert rotate_right([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],3)==[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]'''\\n\"",
+    "FinalCode": "def rotate_right(lst, m):\n    return lst[-m % len(lst):] + lst[:-m % len(lst)]\n    \n# Test the function\nassert rotate_right([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3) == [8, 9, 10, 1, 2, 3, 4, 5, 6, 7]"
+}

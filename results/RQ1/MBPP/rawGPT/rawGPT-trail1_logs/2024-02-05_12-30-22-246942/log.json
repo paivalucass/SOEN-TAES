@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-22-246942",
+    "task": "def square_Sum(n):  \n'''Write a python function takes in an integer n and returns the sum of squares of first n even natural numbers.\nassert square_Sum(2) == 20'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:22",
+        "task-id": "2024-02-05 12:30:22",
+        "workflow": "2024-02-05 12:30:22",
+        "Prompt": "2024-02-05 12:30:24",
+        "FinalCode": "2024-02-05 12:30:24"
+    },
+    "task-id": 287,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def square_Sum(n):  \\n'''Write a python function takes in an integer n and returns the sum of squares of first n even natural numbers.\\nassert square_Sum(2) == 20'''\\n\"",
+    "FinalCode": "def square_Sum(n):\n    sum = 0\n    for i in range(1, n*2+1):\n        if i % 2 == 0:\n            sum += i*i\n    return sum\n\nassert square_Sum(2) == 20"
+}

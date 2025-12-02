@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-42-677703",
+    "task": "def two_unique_nums(nums):\n'''Write a python function to remove duplicate numbers from a given number of lists.\nassert two_unique_nums([1,2,3,2,3,4,5]) == [1, 4, 5]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:42",
+        "task-id": "2024-02-05 12:31:42",
+        "workflow": "2024-02-05 12:31:42",
+        "Prompt": "2024-02-05 12:31:44",
+        "FinalCode": "2024-02-05 12:31:44"
+    },
+    "task-id": 572,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def two_unique_nums(nums):\\n'''Write a python function to remove duplicate numbers from a given number of lists.\\nassert two_unique_nums([1,2,3,2,3,4,5]) == [1, 4, 5]'''\\n\"",
+    "FinalCode": "```python\ndef two_unique_nums(nums):\n    return [x for x in nums if nums.count(x) == 1]\n\nassert two_unique_nums([1,2,3,2,3,4,5]) == [1, 4, 5]\n```"
+}

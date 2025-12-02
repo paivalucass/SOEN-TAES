@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-06-146140",
+    "task": "def sort_matrix(M):\n'''Write a function to sort a given matrix in ascending order according to the sum of its rows.\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:06",
+        "task-id": "2024-02-05 12:29:06",
+        "workflow": "2024-02-05 12:29:06",
+        "Prompt": "2024-02-05 12:29:08",
+        "FinalCode": "2024-02-05 12:29:08"
+    },
+    "task-id": 12,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def sort_matrix(M):\\n'''Write a function to sort a given matrix in ascending order according to the sum of its rows.\\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])==[[1, 1, 1], [1, 2, 3], [2, 4, 5]]'''\\n\"",
+    "FinalCode": "Here is a possible implementation of the sort_matrix function:\n\n```python\ndef sort_matrix(M):\n    return sorted(M, key=lambda row: sum(row))\n\n# Test the function with the given example\nassert sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]]) == [[1, 1, 1], [1, 2, 3], [2, 4, 5]]\n```\n\nThis implementation uses the `sorted` function with a custom sorting key, which is a lambda function that calculates the sum of each row. This sorts the matrix M in ascending order according to the sum of its rows."
+}

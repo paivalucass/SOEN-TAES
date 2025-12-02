@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-56-548762",
+    "task": "def all_Bits_Set_In_The_Given_Range(n,l,r):  \n'''Write a python function to check whether all the bits are unset in the given range or not.\nassert all_Bits_Set_In_The_Given_Range(4,1,2) == True'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:56",
+        "task-id": "2024-02-05 12:29:56",
+        "workflow": "2024-02-05 12:29:56",
+        "Prompt": "2024-02-05 12:29:59",
+        "FinalCode": "2024-02-05 12:29:59"
+    },
+    "task-id": 228,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def all_Bits_Set_In_The_Given_Range(n,l,r):  \\n'''Write a python function to check whether all the bits are unset in the given range or not.\\nassert all_Bits_Set_In_The_Given_Range(4,1,2) == True'''\\n\"",
+    "FinalCode": "def all_Bits_Set_In_The_Given_Range(n, l, r):\n    for i in range(l, r+1):\n        if n & (1 << i) == 0:\n            return False\n    return True\n\n# Test cases\nassert all_Bits_Set_In_The_Given_Range(4, 1, 2) == True"
+}

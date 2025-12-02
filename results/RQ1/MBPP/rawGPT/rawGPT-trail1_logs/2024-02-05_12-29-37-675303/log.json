@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-29-37-675303",
+    "task": "def amicable_numbers_sum(limit):\n'''Write a function to sum all amicable numbers from 1 to a specified number.\nassert amicable_numbers_sum(999)==504'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:29:37",
+        "task-id": "2024-02-05 12:29:37",
+        "workflow": "2024-02-05 12:29:37",
+        "Prompt": "2024-02-05 12:29:39",
+        "FinalCode": "2024-02-05 12:29:39"
+    },
+    "task-id": 123,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def amicable_numbers_sum(limit):\\n'''Write a function to sum all amicable numbers from 1 to a specified number.\\nassert amicable_numbers_sum(999)==504'''\\n\"",
+    "FinalCode": "def amicable_numbers_sum(limit):\n    def divisor_sum(n):\n        return sum([i for i in range(1, n) if n % i == 0])\n    \n    amicable_sum = 0\n    for a in range(1, limit+1):\n        b = divisor_sum(a)\n        if a != b and divisor_sum(b) == a:\n            amicable_sum += a\n    \n    return amicable_sum\n\nassert amicable_numbers_sum(999) == 504"
+}

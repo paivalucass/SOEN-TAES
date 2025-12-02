@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-31-46-864472",
+    "task": "def split_Arr(l, n):\n'''Write a python function to split a list at the nth eelment and add the first part to the end.\nassert split_Arr([12,10,5,6,52,36],2) == [5,6,52,36,12,10]'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:31:46",
+        "task-id": "2024-02-05 12:31:46",
+        "workflow": "2024-02-05 12:31:46",
+        "Prompt": "2024-02-05 12:31:49",
+        "FinalCode": "2024-02-05 12:31:49"
+    },
+    "task-id": 586,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def split_Arr(l, n):\\n'''Write a python function to split a list at the nth eelment and add the first part to the end.\\nassert split_Arr([12,10,5,6,52,36],2) == [5,6,52,36,12,10]'''\\n\"",
+    "FinalCode": "\nHere is the corrected function:\n\n```python\ndef split_Arr(l, n):\n    '''Write a python function to split a list at the nth element and add the first part to the end.'''\n    return l[n:] + l[:n]\n\nassert split_Arr([12,10,5,6,52,36],2) == [5,6,52,36,12,10]\n```"
+}

@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-01-08_12-35-15-406020",
+    "task": "\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (1, 2)\n    \"\"\"\n",
+    "datetime": {
+        "task": "2024-01-08 12:35:15",
+        "task-id": "2024-01-08 12:35:15",
+        "workflow": "2024-01-08 12:35:15",
+        "Prompt": "2024-01-08 12:35:17",
+        "FinalCode": "2024-01-08 12:35:17"
+    },
+    "task-id": "HumanEval/155",
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"\\ndef even_odd_count(num):\\n    \\\"\\\"\\\"Given an integer. return a tuple that has the number of even and odd digits respectively.\\n\\n     Example:\\n        even_odd_count(-12) ==> (1, 1)\\n        even_odd_count(123) ==> (1, 2)\\n    \\\"\\\"\\\"\\n\"",
+    "FinalCode": "def even_odd_count(num):\n    even_count = 0\n    odd_count = 0\n    num_str = str(abs(num))\n    for digit in num_str:\n        if int(digit) % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    if num < 0:\n        return (odd_count, even_count)\n    else:\n        return (even_count, odd_count)"
+}

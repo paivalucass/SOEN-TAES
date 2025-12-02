@@ -1,0 +1,15 @@
+{
+    "start_time": "2024-02-05_12-30-29-701330",
+    "task": "def start_withp(words):\n'''Write a function to return two words from a list of words starting with letter 'p'.\nassert start_withp([\"Python PHP\", \"Java JavaScript\", \"c c++\"])==('Python', 'PHP')'''\n",
+    "datetime": {
+        "task": "2024-02-05 12:30:29",
+        "task-id": "2024-02-05 12:30:29",
+        "workflow": "2024-02-05 12:30:29",
+        "Prompt": "2024-02-05 12:30:34",
+        "FinalCode": "2024-02-05 12:30:34"
+    },
+    "task-id": 305,
+    "workflow": "raw_openai/raw_openai_version_0.0.4.json",
+    "Prompt": "\"def start_withp(words):\\n'''Write a function to return two words from a list of words starting with letter 'p'.\\nassert start_withp([\\\"Python PHP\\\", \\\"Java JavaScript\\\", \\\"c c++\\\"])==('Python', 'PHP')'''\\n\"",
+    "FinalCode": "def start_withp(words):\n    p_words = [word for word in words if word.lower().startswith('p')]\n    p_words = [word.split() for word in p_words]\n    return tuple(p_words[0])\n\n# Example usage\nprint(start_withp([\"Python PHP\", \"Java JavaScript\", \"c c++\"])) # Output: ('Python', 'PHP')"
+}
