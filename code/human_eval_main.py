@@ -6,6 +6,9 @@
 import os
 import json
 from utils.workflow import Workflow, return_root_absolute_path
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+
 
 workflow_dir = os.path.join(return_root_absolute_path(), "workflow")
 
@@ -27,57 +30,65 @@ def main(prompt, flowPath=f"rawGPT/rawGPT.json"):
         result = json.load(f)["FinalCode"]
     return result, workspace
 
+def process_single_problem(item):
+    """Helper function to run one benchmark task"""
+    task_id, problem_data = item
+    prompt_text = problem_data['prompt']
+    
+    
+    task_number = int(task_id.split("/")[-1])
+    
+    if (task_number < 27):
+        return {"task_id": task_id, "completion": ""}
+    
+    try:
+        # Run FlowGen
+        generated_code, _ = main(prompt=prompt_text, flowPath=FLOW_PATH)
+        # Clean the code (remove markdown)
+        return {"task_id": task_id, "completion": generated_code}
+    except Exception as e:
+        print(f"FAILED {task_id}: {e}")
+        return {"task_id": task_id, "completion": ""}
+
 if __name__ == "__main__":
     # 1. Import HumanEval tools (ensure you installed human-eval)
     from human_eval.data import read_problems, write_jsonl
     import time
-    
+
     # 2. Configuration
     # Select which workflow you want to test:
-    FLOW_PATH = "rawGPT/rawGPT.json"         # Baseline
-    # FLOW_PATH = "scrum/scrum.json"           # The Agent Framework
+    # FLOW_PATH = "rawGPT/rawGPT.json"         # Baseline
+    FLOW_PATH = "scrum/scrum.json"
     # FLOW_PATH = "waterfall/waterfall.json"
-    
+
     OUTPUT_FILE = "Chat_GPT5_flowgen_humaneval_results.jsonl"
-    
+
     print(f"--- Starting Benchmark ---")
     print(f"Workflow: {FLOW_PATH}")
     print(f"Output File: {OUTPUT_FILE}")
 
-    # 3. Load the dataset
-    # This returns a dictionary: {"HumanEval/0": {...}, "HumanEval/1": {...}}
     problems = read_problems()
     
     samples = []
     
-    # 4. Iterate through every problem in the benchmark
-    for task_id, problem_data in problems.items():
-        print(f"\nProcessing Task: {task_id}")
+    # RUN PARALLEL (5 workers means 5 problems running at once)
+    # Don't go too high or you will hit OpenAI Rate Limits!
+    MAX_WORKERS = 5
+    
+    print(f"Starting Parallel Execution with {MAX_WORKERS} workers...")
+    
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        # Submit all tasks
+        future_to_task = {executor.submit(process_single_problem, item): item[0] for item in problems.items()}
         
-        # 'prompt' contains the function signature and docstring
-        # e.g., "def has_close_elements(numbers, threshold): ..."
-        prompt_text = problem_data['prompt']
-        
-        try:
-            # 5. Call your existing main function
-            # We pass the benchmark prompt into your workflow
-            generated_code, workspace_path = main(prompt=prompt_text, flowPath=FLOW_PATH)
-            
-            # 6. Append to samples in the required format
-            samples.append({
-                "task_id": task_id,
-                "completion": generated_code
-            })
-            print(f"Success! Workspace: {workspace_path}")
+        for future in as_completed(future_to_task):
+            task_id = future_to_task[future]
+            try:
+                result = future.result()
+                samples.append(result)
+                print(f"Completed: {task_id}")
+            except Exception as exc:
+                print(f"{task_id} generated an exception: {exc}")
 
-        except Exception as e:
-            # Error handling is crucial so one crash doesn't stop the whole experiment
-            print(f"ERROR on {task_id}: {e}")
-            samples.append({
-                "task_id": task_id,
-                "completion": "" # Empty completion on failure
-            })
-
-    # 7. Save all results to a .jsonl file
     write_jsonl(OUTPUT_FILE, samples)
-    print(f"\nBenchmark Complete. Results saved to {OUTPUT_FILE}")
+    print("Done.")

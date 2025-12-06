@@ -22,12 +22,12 @@ class OpenaiAPI(BaseKey):
         # We pick a random key from your list
         self.client = OpenAI(api_key=random.choice(api_key_list))
         
-        self.temperature = 0.8
+        self.temperature = 1.0
         
         # --- MODEL SELECTION ---
         # self.model = "gpt-3.5-turbo-1106"  # OLD
         # self.model = "gpt-4o"                # NEW (Current State-of-the-Art)
-        self.model = "gpt-5"               # FUTURE (Uncomment if you have specific access)
+        self.model = "gpt-5-nano"               # FUTURE (Uncomment if you have specific access)
 
     version_map = {
         "default": "version_0_0_1",
@@ -57,7 +57,7 @@ class OpenaiAPI(BaseKey):
         return prompt
 
     def version_0_0_1(self, prompt, **kwargs):
-        try_times = kwargs.get("try_times", 3)
+        try_times = kwargs.get("try_times", 5)
         temperature = kwargs.get("temperature", self.temperature)
         for i in range(try_times):
             try:
@@ -68,7 +68,7 @@ class OpenaiAPI(BaseKey):
                         {"role": "user", "content": prompt}
                     ],
                     temperature=temperature,
-                    timeout=60,  
+                    timeout=300,  
                 )
                 # We use .model_dump() to convert the object back to a dictionary
                 # This ensures the rest of FlowGen (which expects a dict) doesn't break.
@@ -78,7 +78,7 @@ class OpenaiAPI(BaseKey):
                 continue
 
     def json_response_prompt(self, prompt, **kwargs):
-        try_times = kwargs.get("try_times", 3)
+        try_times = kwargs.get("try_times", 5)
         temperature = kwargs.get("temperature", self.temperature)
         for i in range(try_times):
             try:
@@ -90,7 +90,7 @@ class OpenaiAPI(BaseKey):
                     ],
                     response_format={"type": "json_object"},
                     temperature=temperature,
-                    timeout=60,
+                    timeout=300,
                 )
                 return completion.choices[0].message.model_dump()
             except Exception as e:
@@ -98,7 +98,7 @@ class OpenaiAPI(BaseKey):
                 continue
 
     def json_response_message(self, messages, **kwargs):
-        try_times = kwargs.get("try_times", 3)
+        try_times = kwargs.get("try_times", 5)
         temperature = kwargs.get("temperature", self.temperature)
         for i in range(try_times):
             try:
@@ -108,7 +108,7 @@ class OpenaiAPI(BaseKey):
                     messages=messages,
                     response_format={"type": "json_object"},
                     temperature=temperature,
-                    timeout=60,
+                    timeout=300,
                 )
                 return completion.choices[0].message.model_dump()
             except Exception as e:
