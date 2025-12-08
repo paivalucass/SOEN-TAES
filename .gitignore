@@ -1,7 +1,7 @@
-results/
 venv/
-RQ1/
-RQ1/
-RQ3/
+logs/
 conf.json
 *.pyc
+RQ1/
+RQ2/
+RQ3/

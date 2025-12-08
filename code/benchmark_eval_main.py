@@ -3,7 +3,7 @@ import os
 import json
 import argparse
 import re
-import threading  # <--- NEW: Required for safe writing
+import threading 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # --- Libraries for benchmarks ---
@@ -15,10 +15,23 @@ from utils.workflow import Workflow, return_root_absolute_path
 workflow_dir = os.path.join(return_root_absolute_path(), "workflow")
 
 # --- GLOBAL LOCK ---
-# This prevents 2 threads from writing to the file at the exact same time
 file_lock = threading.Lock()
 
-# --- 1. The Core FlowGen Function (Unchanged) ---
+# --- HELPER: Extract Correct Function Name ---
+def get_target_function_name(code_snippet):
+    """
+    Scans the reference code to find the function name.
+    It returns the LAST defined function, which handles cases where
+    helper functions are defined before the main entry point.
+    """
+    # Find all strings that look like "def function_name"
+    matches = re.findall(r"def\s+([a-zA-Z_]\w*)(?=\s*\()", code_snippet)
+    
+    if matches:
+        return matches[-1] # Return the last one (The main entry point)
+    return None
+
+# --- 1. The Core FlowGen Function ---
 def main(prompt, flowPath):
     workflow = Workflow()
     flow = workflow.loads_workflow(file_path=os.path.join(workflow_dir, flowPath))
@@ -34,39 +47,55 @@ def main(prompt, flowPath):
         result = json.load(f)["FinalCode"]
     return result, workspace
 
-# --- 2. The Worker Function ---
+# --- 2. The Worker Function (Updated) ---
 def process_single_problem(item, dataset_type, flow_path):
     try:
         # --- A. PARSE INPUT ---
         if dataset_type == "humaneval":
             task_id = item[0]
             problem_data = item[1]
-            prompt_text = problem_data['prompt']
+            raw_prompt = problem_data['prompt']
+            target_name_instruction = "" # HumanEval usually includes the signature in the prompt
             
         elif dataset_type == "mbpp":
-            task_id = item['task_id']
-            prompt_text = item['text']
+            # Ensure ID is formatted correctly for EvalPlus
+            task_id = f"Mbpp/{item['task_id']}"
+            
+            # 1. Get the correct name from the reference code (The last def)
+            target_name = get_target_function_name(item['code'])
+            
+            # 2. Add the specific name instruction to the prompt
+            if target_name:
+                raw_prompt = f"{item['prompt']}\n\nREQUIRED: You must name your function '{target_name}'."
+            else:
+                raw_prompt = item['prompt']
 
-        # --- B. RUN FLOWGEN ---
-        generated_code, _ = main(prompt=prompt_text, flowPath=flow_path)
-                
+        # --- B. INJECT STRICT INSTRUCTIONS ---
+        strict_wrapper = (
+            f"{raw_prompt}\n\n"
+            "IMPORTANT INSTRUCTION:\n"
+            "1. You are a code generator. Write the solution in Python.\n"
+            "2. Output ONLY the valid Python code. Do not write 'Here is the code'.\n"
+            "3. Do not wrap the code in markdown blocks (no ```).\n"
+            "4. Do not include usage examples or tests outside the function."
+        )
+
+        # --- C. RUN FLOWGEN ---
+        generated_code, _ = main(prompt=strict_wrapper, flowPath=flow_path)
+
         return {"task_id": task_id, "completion": generated_code}
 
     except Exception as e:
-        t_id = item[0] if dataset_type == "humaneval" else item['task_id']
+        # Fallback ID extraction for error logging
+        t_id = item[0] if dataset_type == "humaneval" else f"Mbpp/{item.get('task_id', '?')}"
         print(f"FAILED Task {t_id}: {e}")
         return {"task_id": t_id, "completion": ""}
-
-# --- 3. NEW: Immediate Save Function ---
-def save_result_immediately(filepath, result_dict):
-    """
-    Appends a single result to the file safely using a lock.
-    """
-    json_str = json.dumps(result_dict)
     
-    # Acquire the lock before opening the file
+# --- 3. Immediate Save Function ---
+def save_result_immediately(filepath, result_dict):
+    json_str = json.dumps(result_dict)
     with file_lock:
-        with open(filepath, 'a') as f: # 'a' for Append mode
+        with open(filepath, 'a') as f: 
             f.write(json_str + "\n")
 
 # --- 4. Main Execution Block ---
@@ -79,9 +108,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Configuration
-    FLOW_PATH = "scrum/scrum.json"  
+    # FLOW_PATH = "rawGPT/rawGPT.json"         # Baseline
+    FLOW_PATH = "scrum/scrum.json"
+    # FLOW_PATH = "waterfall/waterfall.json"      
     
-    # Setup based on argument
     if args.dataset == "humaneval":
         print("--- Loading HumanEval ---")
         raw_data = read_problems()
@@ -89,23 +119,20 @@ if __name__ == "__main__":
         output_file = "flowgen_humaneval_results.jsonl"
         
     elif args.dataset == "mbpp":
-        print("--- Loading MBPP (Sanitized) ---")
-        dataset = load_dataset("mbpp", "sanitized", split="test")
+        print("--- Loading MBPP-Plus (EvalPlus Standard) ---")
+        dataset = load_dataset("evalplus/mbppplus", split="test")
         tasks_list = [item for item in dataset]
-        output_file = "flowgen_mbpp_results.jsonl"
-
+        output_file = "flowgen_mbpp_plus_results.jsonl"
+        
     print(f"Workflow: {FLOW_PATH}")
     print(f"Output File: {output_file}")
     print(f"Total Tasks: {len(tasks_list)}")
     print(f"Workers: {args.workers}")
 
-    # --- CRITICAL STEP: Initialize File ---
-    # We open in 'w' mode once to clear old data or create the file
     print("Initializing output file...")
     with open(output_file, 'w') as f:
-        pass # Just creating/clearing the file
+        pass 
 
-    # Run Parallel Execution
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         future_to_task = {
             executor.submit(process_single_problem, item, args.dataset, FLOW_PATH): item 
@@ -115,10 +142,7 @@ if __name__ == "__main__":
         for future in as_completed(future_to_task):
             try:
                 result = future.result()
-                
-                # --- SAVE IMMEDIATELY HERE ---
                 save_result_immediately(output_file, result)
-                
                 print(f"Finished & Saved: {result['task_id']}")
             except Exception as exc:
                 print(f"Thread exception: {exc}")

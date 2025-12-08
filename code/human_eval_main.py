@@ -57,8 +57,8 @@ if __name__ == "__main__":
 
     # 2. Configuration
     # Select which workflow you want to test:
-    # FLOW_PATH = "rawGPT/rawGPT.json"         # Baseline
-    FLOW_PATH = "scrum/scrum.json"
+    FLOW_PATH = "rawGPT/rawGPT.json"         # Baseline
+    # FLOW_PATH = "scrum/scrum.json"
     # FLOW_PATH = "waterfall/waterfall.json"
 
     OUTPUT_FILE = "Chat_GPT5_flowgen_humaneval_results.jsonl"
