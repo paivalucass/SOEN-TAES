@@ -70,18 +70,8 @@ def process_single_problem(item, dataset_type, flow_path):
             else:
                 raw_prompt = item['prompt']
 
-        # --- B. INJECT STRICT INSTRUCTIONS ---
-        strict_wrapper = (
-            f"{raw_prompt}\n\n"
-            "IMPORTANT INSTRUCTION:\n"
-            "1. You are a code generator. Write the solution in Python.\n"
-            "2. Output ONLY the valid Python code. Do not write 'Here is the code'.\n"
-            "3. Do not wrap the code in markdown blocks (no ```).\n"
-            "4. Do not include usage examples or tests outside the function."
-        )
-
-        # --- C. RUN FLOWGEN ---
-        generated_code, _ = main(prompt=strict_wrapper, flowPath=flow_path)
+        # --- B. RUN FLOWGEN ---
+        generated_code, _ = main(prompt=raw_prompt, flowPath=flow_path)
 
         return {"task_id": task_id, "completion": generated_code}
 
