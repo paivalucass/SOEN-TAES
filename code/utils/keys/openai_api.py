@@ -27,7 +27,7 @@ class OpenaiAPI(BaseKey):
         # --- MODEL SELECTION ---
         # self.model = "gpt-3.5-turbo-1106"  # OLD
         # self.model = "gpt-4o"                # NEW (Current State-of-the-Art)
-        self.model = "gpt-5-nano"               # FUTURE (Uncomment if you have specific access)
+        self.model = "gpt-5-nano"               #
 
     version_map = {
         "default": "version_0_0_1",
